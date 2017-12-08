@@ -1,0 +1,161 @@
+<include file="Public/head"/>
+<body class="no-skin">
+<include file="Public/header"/>
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+        ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+
+    <include file="Public/sidebar"/>
+    <div class="main-content">
+        <div class="main-content-inner">
+            <!-- #section:basics/content.breadcrumbs -->
+            <include file="Public/breadcrumbs"/>
+
+            <!-- /section:basics/content.breadcrumbs -->
+            <div class="page-content">
+                <include file="Public/set"/>
+
+                <!-- /section:settings.box -->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <!-- PAGE CONTENT BEGINS -->
+                        <form id="form" class="form-horizontal" action="" method="post" >
+  <input type="hidden" name="id" value="{$point.id}" id="id"/>
+                            <div class="space-4"></div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-0">
+                                    题目分类 </label>
+                                <div class="col-sm-9">
+<!--                                    <select name="course" id="province">
+                                        <option value="" >课程</option>
+                                        <volist name="province" id="vo">
+                                            <option  value="{$vo.id}" <if condition="$vo.id eq $point['cid']"> selected="selected" </if>>{$vo.name}</option>
+                                        </volist>
+                                    </select>
+                                    <select name="chapter" id="city"> 
+                                        <option value="">章节</option>
+                                    </select>-->
+                                    <select name="course" id="province">
+                                    <option value="" >课程</option>
+                                    <volist name="province" id="vo">
+                                        <option  value="{$vo.id}" <if condition="$vo.id eq $point['cid']"> selected="selected" </if>>{$vo.name}</option>
+                                    </volist>
+                                </select>
+                            <select name="chapter" id="city"> 
+                                <option value="">章</option>
+                            </select>
+                            <select name="point" id="town">
+                                <option value="">节</option>
+                            </select>   
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-8">
+                                    知识点: </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="knowledge" id="field_1" placeholder="知识点名称"
+                                           class="col-xs-10 col-sm-5" value="{$point['name']}">
+                                    <span class="help-inline col-xs-12 col-sm-7">
+                                        <span class="middle">知识点。如有多个知识点请用中文状态下逗号隔开</span>
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="space-4"></div>
+
+                            <div class="col-md-offset-2 col-md-9">
+                                <button class="btn btn-info" type="button" id="getsubmit">
+                                    <i class="icon-ok bigger-110"></i>
+                                    提交
+                                </button>
+
+                                &nbsp; &nbsp; &nbsp;
+                                <button class="btn" type="reset">
+                                    <i class="icon-undo bigger-110"></i>
+                                    重置
+                                </button>
+                            </div>
+                        </form>
+                        <!-- PAGE CONTENT ENDS -->
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.page-content -->
+        </div>
+    </div><!-- /.main-content -->
+    <include file="Public/footer"/>
+
+</div><!-- /.main-container -->
+
+<include file="Public/footerjs"/>
+<!-- inline scripts related to this page -->
+<script src="__PUBLIC__/admin/js/date-time/bootstrap-datepicker.js"></script>
+
+<script type="text/javascript">
+       $(function () {
+        loadRegion('#city', {$point['cid']},'',{$point['zid']});
+        loadRegion('#town', {$point['zid']},'',{$point['pid']});
+        
+
+    });
+    
+    
+    function loadRegion(obj,id,type,check){
+        $.ajax({
+            url:"{:U('getRegion')}",
+            type:'post',
+            data:{'id':id,'type':type,'check':check},
+            success:function(data){
+                $(obj).html(data);
+            }
+            
+        })
+    }
+    
+    $('#province').change(function(){
+        var val = $('#province option:selected').val();
+        loadRegion('#city',val);
+    })
+    $('#city').change(function(){
+        var val = $('#city option:selected').val();
+        loadRegion('#town',val);
+    })
+</script>
+
+<script type="text/javascript">
+    //ajax表单提交数据
+    setTimeout(function(){
+
+        $("#getsubmit").click(function(){
+            var cont = $("form").serialize();
+            $.ajax({
+                url:"{:U('update')}",
+                type:'POST',
+                dataType:'json',
+                data:cont,
+                success:function(data,status) {
+
+                    if(data.status == 0){
+                        alert('未修改内容');
+                    }
+
+                    if(data.status == 2){
+                        alert('恭喜，知识点修改成功！');
+
+                    }
+
+                }
+
+            });
+
+        });
+    });
+
+</script>
+</body>
+</html>

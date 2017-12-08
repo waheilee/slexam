@@ -1,0 +1,18 @@
+[ 2017-12-07T15:57:53+08:00 ] 127.0.0.1 /www/slcms/index.php/wx
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001140s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002158s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002224s ]
+ERR: 模板不存在:./Application/Wx/View/Index/index.html
+
+[ 2017-12-07T15:58:30+08:00 ] 127.0.0.1 /www/slcms/index.php/wx/assace
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001496s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002815s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002934s ]
+ERR: 无法加载控制器:Assace
+

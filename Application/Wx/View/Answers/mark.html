@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- 编码格式 -->
+    <meta charset="utf-8">
+    <!-- IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 设置 viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <meta name="Keywords" content="桑磊法考,司法考试,考试,司法,律师">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- 兼容国产浏览器的高速模式 -->
+    <meta name="renderer" content="webkit">
+    <title>历年真题库 - {$examin['nickname']}</title>
+    <!--设置网页的图标-->
+    <link rel="shortcut icon" href="">
+    <!--公用的css-->
+    <link type="text/css" href="__PUBLIC__/Wx/css/public.css" rel="stylesheet"/>
+    <!--本页面的css-->
+    <link type="text/css" href="__PUBLIC__/Wx/css/mark.css" rel="stylesheet"/>
+</head>
+<body>
+<!--题目要求-->
+<div class="stem-title" id="stem-title-way">
+    <div class="wrap">
+        <div class="left">
+            <span class="st-name">恭喜完成答题</span>
+            （共&nbsp;&nbsp;<span class="st-class-num">{$examin['num']}</span>&nbsp;&nbsp;道题，<span class="st-class-f">150</span>满分/卷。）
+        </div>
+        <div class="right">
+            <span class="st-num">{$examin['num']}</span><span>/{$examin['num']}</span>
+        </div>
+    </div>
+</div>
+<!--用户名  分数  时间-->
+<div id="banner">
+    <img src="__PUBLIC__/Wx/images/mark/bannerbg.png" class="imgbg" alt=""/>
+    <div class="b-name">亲爱的用户 <span>YuKii</span></div>
+    <div class="b-content">
+        <div class="bc-name">所得分数：</div>
+        <div class="bc-num"><span>{$score['score']}</span>分</div>
+        <div class="bc-time">用时：{$score['usetime']}</div>
+    </div>
+</div>
+<!--排名  成绩优良   科目最佳-->
+<div id="markmsg">
+    <div class="wrap">
+        预计打榜排名：<a href="javascript:void(0)">{$ranking}</a>名<span>丨</span>成绩报告评选：{:checkGb($score['score'])}<span>丨</span>相关科目最佳：{$good['score']}分（{$good['usetime']}）
+    </div>
+</div>
+<!--成绩报告-->
+<div id="scorereport">
+    <div class="wrap">
+        <p class="report-title">成绩报告</p>
+        <!--对错的个数-->
+        <p class="report-titletab">共计 {$examin['num']}道选择题<span>答对</span>{$right}题 <span>错误</span>{$score['error_num']}题</p>
+        <!--成绩图表-->
+        <div id="main"></div>
+        <!--错误详情-->
+        <p class="report-details">
+            其中：
+            <volist name='show' id="vo">
+                <span>{$vo['name']}（{$vo['percent']}%）错误<span>{$vo['error']}</span>道</span>
+            </volist>
+        </p>
+    </div>
+</div>
+<form action="{:U('wrong')}" id='goError' method='post'>
+    <input type="hidden" name='id' id='id' value='{$score["id"]}'>
+</form>
+<!--功能菜单-->
+<div id="shopnav">
+    <div class="wrap">
+        <ul>
+            <li onClick="window.location.href='{:U('Bands/info',array('code'=>base64_encode($score['exmainid'])))}'">
+                <img src="__PUBLIC__/Wx/images/mark/shopnav/1.png" alt=""/>
+                <p>历史打榜</p>
+            </li>
+            <li onClick='document.getElementById("goError").submit()'>
+                <img src="__PUBLIC__/Wx/images/mark/shopnav/2.png" alt=""/>
+                <p style="margin-top: 0.04rem;">查看错误</p>
+            </li>
+            <li onclick="shopNav('dzkt')">
+                <img src="__PUBLIC__/Wx/images/mark/shopnav/3.png" alt=""/>
+                <p>订制课堂</p>
+            </li>
+            <li onclick="shopNav('cydb')">
+                <img src="__PUBLIC__/Wx/images/mark/shopnav/4.png" alt=""/>
+                <p class="timeTextBox" onClick="goBand(this)" style="margin-top: -0.06rem;">参与打榜</p>
+            </li>
+            <div class="clearfix"></div>
+        </ul>
+    </div>
+</div>
+<!--弹出层-->
+<div id="modelbox" style="display: none">
+    <!--订制课堂-->
+    <div id="madetoclass" style="display: none" class="modelbox-children">
+        <!--title-->
+        <div class="mtc-title">
+            订制课堂
+            <span>(5元/题，20元/卷)</span>
+        </div>
+        <!--这个隐藏域是订制题的值-->
+        <input type="hidden" name="" value=""/>
+        <div class="m-name" data="no" onclick="gainMessageName(this)">
+            <div class="wrap">
+                <div class="left">
+                    您即将订制的是
+                </div>
+                <div class="right m-arrow">
+                    <span>&nbsp;&nbsp;&gt;</span>
+                </div>
+                <div class="m-name-look right">
+                    本道题
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="m-name-children">
+            <div class="wrap">
+                <div class="m-name-children-text">测试测试测测试测试测测试测试测测试测试测测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
+                <div class="m-name-children-text">测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
+                <div class="m-name-children-text">测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
+            </div>
+        </div>
+        <!--这个隐藏域是付费分类的值-->
+        <input type="hidden" name="" value=""/>
+        <div class="m-name" data="no" onclick="gainMessageName(this)">
+            <div class="wrap">
+                <div class="left">
+                    您选择付费分类
+                </div>
+                <div class="right m-arrow">
+                    <span>&nbsp;&nbsp;&gt;</span>
+                </div>
+                <div class="m-name-look right">
+                    众筹预定 <span>（9.5折）</span>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="m-name-children">
+            <div class="wrap">
+                <div class="m-name-children-text">测试测试测测试测试测测试测试测测试测试测测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
+                <div class="m-name-children-text">测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
+                <div class="m-name-children-text">测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
+            </div>
+        </div>
+        <!--备注信息-->
+        <div class="wrap">
+            <div class="m-name">
+                <div class="left">
+                    请添加备注信息
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <textarea name=""></textarea>
+        </div>
+        <!--法豆支付-->
+        <button onclick="submitMadeToClass(this)" type="button" class="mtc-button">
+            <img src="__PUBLIC__/Wx/images/answer/pay/fd.png" alt=""/>
+            <span>法豆支付</span>
+            <span class="little">(法豆不足，余28法豆)</span>
+        </button>
+        <!--微信支付-->
+        <button onclick="submitMadeToClass(this)" type="button" class="mtc-button mtc-button-wx">
+            <img src="__PUBLIC__/Wx/images/answer/pay/wx.png" alt=""/>
+        </button>
+        <div class="mtc-note">
+            <div class="wrap">
+                * 注：此订单为预约订单，提交审核过后，1.自己买断，独家订制；2.等待满额人数，人数满每单所需的法豆/金额，会给您发送邮件。
+            </div>
+        </div>
+    </div>
+    <!--参与打榜-->
+    <div id="partrank" class="modelbox-children">
+        <div class="pr-title">感谢您参与打榜！</div>
+        <div class="pr-table bor">
+            <div class="wrap">
+                <div class="left">您对本试卷的评星</div>
+                <div class="right"><span id="givestart"></span></div>
+                <!--这个input的value是评星的个数-->
+                <input type="hidden" value="" name="" id="havestarnum"/>
+            </div>
+        </div>
+        <div class="pr-table">
+            <div class="wrap">
+                <div class="left">留下您的宝贵评语</div>
+            </div>
+        </div>
+        <div class="wrap">
+             <!--这个input的value 是用户评论的内容 以text分隔-->
+            <input type="hidden" id="havediscuss"/>
+            <!--数据传过来时的 评价语  放在data里-->
+            <div class="pr-discuss">
+                <button type="button" data="题霸打榜必争题型"></button>
+                <button type="button" data="难易程度还算适中"></button>
+                <button type="button" data="题型刁钻还有难度"></button>
+                <button type="button" data="知识点很全面精细"></button>
+                <button type="button" data="谁来敢挑战我？"></button>
+                <button type="button" data="拿下容易打榜难"></button>
+                <button type="button" data="想要打榜还有难度"></button>
+                <button type="button" data="每年必考的题目"></button>
+                <button type="button" data="这就是个坑"></button>
+            </div>
+        </div>
+        <button type="button" class="submit" onClick="discussSubmit()">提交评级</button>
+        <div class="wrap">
+            <div class="textnote">
+                您的宝贵评语可以帮助我们更好的完善答题机制，感谢您。个人中心查看 <a href="#">我的打榜</a>。
+            </div>
+        </div>
+    </div>
+    <!--关闭的掩盖层-->
+    <div id="closemodelbox" onclick="closeModelBox()"></div>
+</div>
+<script src="__PUBLIC__/wx/js/echarts.common.min.js"></script>
+<!--echarts图表-->
+<script>
+    //图表的数据
+    var markData = {$record};
+
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'));
+    // 指定图表的配置项和数据
+    var option = {
+        title : {
+            text: '',
+            subtext: '百分比'
+        },
+        tooltip : {
+            trigger: 'axis'
+        },
+        legend: {
+            data: markData.course
+        },
+        toolbox: {
+            show : false,
+            feature : {
+                mark : {show: true},
+                dataView : {show: true, readOnly: false},
+                magicType : {show: true, type: ['line', 'bar']},
+                restore : {show: true},
+                saveAsImage : {show: true}
+            }
+        },
+        calculable : true,
+        xAxis : [
+            {
+                type : 'category',
+                data : markData.course,
+                axisLabel:{
+                    interval:0,//横轴信息全部显示
+                    rotate:-30,//-30度角倾斜显示
+                    textStyle: {
+                        color: '#666',
+                    }
+                }
+            }
+        ],
+//        y轴
+        yAxis : [
+            {
+                type : 'value',
+//                name: '单位: %',
+                axisLabel: {
+                    formatter: '{value}%',
+                    textStyle: {
+                        color: '#666',
+                    }
+                },
+            }
+        ],
+        series : [
+            {
+                name:'答题数',
+                type:'bar',
+                data:markData.data,
+                barWidth : 20,//柱图宽度
+                itemStyle: {
+                    normal: {
+                        color: function(params) {
+                            var colorList = [
+                                '#FFC766','#84B4DC','#67D4D9','#ED6B77','#84B4DC',
+                                '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
+                                '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+                            ];
+                            return colorList[params.dataIndex]
+                        },label: {
+                            show: true,
+                            position: 'top',
+                            formatter: '{b}\n{c}%'
+                        },
+                        //柱形图圆角，初始化效果
+                        barBorderRadius:[0, 0, 0, 0]
+                    }
+                }
+            }
+        ]
+    };
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>
+<script src="__PUBLIC__/Wx/js/jquery-1.11.3.js" type="text/javascript"></script>
+<!--功能菜单-->
+<script type="text/javascript">
+//    关闭弹出层
+function closeModelBox(){
+    $("#modelbox").hide();
+    $("#modelbox").find(".modelbox-children").hide();
+};
+//菜单
+function shopNav(t){
+    if(t=="dzkt"){
+        $("#modelbox").show();
+        $("#modelbox").find(".modelbox-children").hide();
+        $("#madetoclass").show();
+    }else if(t=="cydb"){
+        $("#modelbox").show();
+        $("#modelbox").find(".modelbox-children").hide();
+        $("#partrank").show();
+    }
+}
+//参与打榜
+    function goBand(t){
+       var id = {$score["exmainid"]};
+       $.ajax({
+            url:'Band',
+            type:'post',
+            data:{'id':id},
+            beforeSend: function () {
+                // $('#loading').show();
+                $(t).attr('disabled',true);
+            },
+            success:function(msg){
+                // $('#loading').hide();
+                if(msg == 'yes'){
+                    alert('参与打榜成功！');
+                }
+            }
+       }) 
+    }
+</script>
+<!--订制课堂-->
+<script type="text/javascript">
+    function submitMadeToClass(t){
+        $(t).parents("#madetoclass").slideUp(200);
+        $(t).parents("#modelbox").fadeOut();
+    };
+</script>
+<!--选择问题调用函数-->
+<script type="text/javascript">
+    //    选择问题
+    function gainMessageName(t){
+        if($(t).attr("data")=="no"){
+            $(t).attr("yesno","yes").find(".m-arrow").addClass("active");
+            $(t).next(".m-name-children").slideDown();
+            $(t).attr("data","yes");
+        }else{
+            $(t).attr("yesno","yes").find(".m-arrow").removeClass("active");
+            $(t).next(".m-name-children").slideUp();
+            $(t).attr("data","no");
+        }
+//        绑定事件点击把值赋给隐藏域
+        $(t).next(".m-name-children").find(".m-name-children-text").bind("click",function(){
+            $(t).find(".m-name-look").html($(this).html());
+            $(t).prev("input").val($(this).html());
+            $(t).attr("yesno","yes").find(".m-arrow").removeClass("active");
+            $(t).next(".m-name-children").slideUp();
+            $(t).attr("data","no");
+        });
+    };
+</script>
+<script src="__PUBLIC__/Wx/js/jquery.raty.js" type="text/javascript"></script>
+<!--评星-->
+<script>
+    //    评星
+    $('#givestart').raty({
+        path:"__PUBLIC__/Wx/images/raty",
+        click: function (score, evt){
+            $("#havestarnum").val(score);
+        }
+    });
+</script>
+<!--//参与打榜   评价-->
+<script type="text/javascript">
+    //    评论
+    function discuss(){
+        var box = $("#partrank").find(".pr-discuss");
+        var btn = box.find("button");
+        for(var i = 0;i<btn.length;i++){
+            $(btn[i]).html($(btn[i]).attr("data"));
+        }
+        $(box).on("click","button",function(){
+            if($(this).attr("yn")=="no"){
+                $(this).removeClass("active");
+                $(this).attr("yn","yes");
+            }else{
+                $(this).addClass("active");
+                $(this).attr("yn","no");
+            }
+        })
+    };
+    discuss();
+    //    提交
+    function discussSubmit(){
+        var btn = $("#partrank").find(".pr-discuss").find("button");
+        var str = "";
+        for(var i = 0;i<btn.length;i++){
+            if($(btn[i]).hasClass("active")){
+                str += "__" + $(btn[i]).attr("data");
+            }
+        }
+        $("#havediscuss").val(str);
+
+        var id = {$score["exmainid"]};
+        var star = $('#havestarnum').val();
+
+        $.ajax({
+            url:'{:U("assess")}',
+            type:'post',
+            data:{'id':id,'star':star,'assess':str},
+            beforeSend: function () {
+                $('#loading').show();
+                $(".submit").attr('disabled',true);
+            },
+            success:function(msg){
+                $('#loading').hide();
+                $(".submit").attr('disabled',false);
+                closeModelBox();
+                if(msg == 'ok'){
+                    alert('评价已提交！');
+                }else if(msg == 'cz'){
+                    alert('您已评价过此试卷！');
+                }else{
+                    alert('评价失败！');
+                }
+            }
+        })
+    };
+</script>
+</body>
+</html>

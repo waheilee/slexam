@@ -1,0 +1,161 @@
+<include file="Public/head"/>
+<body class="no-skin">
+<include file="Public/header"/>
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+        ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+
+    <include file="Public/sidebar"/>
+    <div class="main-content">
+        <div class="main-content-inner">
+            <!-- #section:basics/content.breadcrumbs -->
+            <include file="Public/breadcrumbs"/>
+
+            <!-- /section:basics/content.breadcrumbs -->
+            <div class="page-content">
+                <include file="Public/set"/>
+
+                <!-- /section:settings.box -->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <!-- PAGE CONTENT BEGINS -->
+                        <form class="form-horizontal" action="{:U('update')}" method="post" >
+                            <a href="#" id="AddMoreFileBox" class="btn btn-info">添加更多的节</a></span></p>  
+                            <div id="InputsWrapper">  
+                                <div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-1 control-label no-padding-right" for="form-field-0">
+                                            课程及章节 </label>
+                                        <div class="col-sm-9">
+                                            <select name="course" id="province" onchange="loadRegion('province', 2, 'city', '{:U('getRegions')}');">
+                                                <option value="" selected>课程</option><volist name="province" id="vo">
+                                                    <option value="{$vo.id}" >{$vo.name}</option></volist>
+                                            </select>
+                                            <select name="chapter" id="city" onchange="loadRegion('city', 3, 'town', '{:U('getRegions')}');">
+                                                <option value="">章</option>
+                                            </select>
+                                            
+                                          
+                                        </div>
+                                    </div>
+                                    <div class="space-4"></div>
+                                    <div class="form-group">
+                                        <label class="col-sm-1 control-label no-padding-right" for="form-field-8">
+                                            节: </label>
+                                        <div class="col-sm-9">
+                                            <input type="text" name="point[]" id="field_1" placeholder="节"
+                                                   class="col-xs-10 col-sm-5" value="{$member['name']}">
+                                            <span class="help-inline col-xs-12 col-sm-7">
+                                                <span class="middle">节</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>  
+                            </div> 
+
+                            <div class="space-4"></div>
+
+                            <div class="col-md-offset-2 col-md-9">
+                                <button class="btn btn-info" type="submit">
+                                    <i class="icon-ok bigger-110"></i>
+                                    提交
+                                </button>
+
+                                &nbsp; &nbsp; &nbsp;
+                                <button class="btn" type="reset">
+                                    <i class="icon-undo bigger-110"></i>
+                                    重置
+                                </button>
+                            </div>
+                        </form>
+                        <!-- PAGE CONTENT ENDS -->
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.page-content -->
+        </div>
+    </div><!-- /.main-content -->
+    <include file="Public/footer"/>
+
+</div><!-- /.main-container -->
+
+<include file="Public/footerjs"/>
+<!-- inline scripts related to this page -->
+<script src="__PUBLIC__/admin/js/date-time/bootstrap-datepicker.js"></script>
+<script src="__PUBLIC__/admin/js/uploadPreview.js"></script>
+<script src="__PUBLIC__/admin/js/function.js"></script>
+<script type="text/javascript">
+ 
+    jQuery(function ($) {
+                                $('#birthday').datepicker({
+                                format: 'yyyy-mm-dd',
+                                        weekStart: 1,
+                                        autoclose: true,
+                                        todayBtn: 'linked',
+                                        language: 'cn'
+                                });
+                                });
+                                $(document).ready(function() {
+
+                                var MaxInputs = 12; //maximum input boxes allowed  
+                                var InputsWrapper = $("#InputsWrapper"); //Input boxes wrapper ID  
+                                var AddButton = $("#AddMoreFileBox"); //Add button ID  
+
+                                var x = InputsWrapper.length; //initlal text box count  
+                                var FieldCount = 1; //to keep track of text box added  
+
+                                $(AddButton).click(function (e)  //on add input button click  
+                                        {
+                                        if (x <= MaxInputs) //max input box allowed  
+                                        {
+                                        FieldCount++; //text box added increment  
+                                        //add input box  
+                                        $(InputsWrapper).append('<div><div class="form-group"><label class="col-sm-1 control-label no-padding-right" for="form-field-8">节: </label> <div class="col-sm-9"><input type="text" name="point[]" class="col-xs-10 col-sm-5" id="field_' + FieldCount + '" placeholder="节 ' + FieldCount + '"/><a href="#" class="removeclass">×</a></div></div></div>');
+                                        x++; //text box increment  
+                                        }
+                                        return false;
+                                      });
+                                $("body").on("click", ".removeclass", function(e){ //user click on remove text  
+                                if (x > 1) {
+                                 $(this).parent('div').prev("div").remove();
+                                 $(this).parent('div').prev("label").remove();
+                                $(this).parent('div').remove(); //remove text box  
+                                x--; //decrement textbox  
+                                }
+                                return false;
+                                })
+
+                                        });
+                                        
+        //三级联动                                
+        
+    
+    
+    function loadRegion(obj,id,type,check){
+        $.ajax({
+            url:"{:U('getRegion')}",
+            type:'post',
+            data:{'id':id,'type':type,'check':check},
+            success:function(data){
+                $(obj).html(data);
+            }
+            
+        })
+    }
+    
+    $('#province').change(function(){
+        var val = $('#province option:selected').val();
+        loadRegion('#city',val);
+    })
+    $('#city').change(function(){
+        var val = $('#city option:selected').val();
+        loadRegion('#town',val);
+    })
+
+</script>
+</body>
+</html>

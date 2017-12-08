@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- 编码格式 -->
+    <meta charset="utf-8">
+    <!-- IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 设置 viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <meta name="Keywords" content="桑磊法考,司法考试,考试,司法,律师">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- 兼容国产浏览器的高速模式 -->
+    <meta name="renderer" content="webkit">
+    <title>桑磊题库 - 题霸打榜</title>
+    <!--设置网页的图标-->
+    <link rel="shortcut icon" href="">
+    <!--公用的css-->
+    <link type="text/css" href="__PUBLIC__/Wx/css/public.css" rel="stylesheet"/>
+    <!--本页面的css-->
+    <link type="text/css" href="__PUBLIC__/Wx/css/makelist.css" rel="stylesheet"/>
+    <style>
+        .title{
+            width: 50%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+<!--banner图-->
+<img src="__PUBLIC__/Wx/images/makelist/banner.png" width="100%" alt=""/>
+<!--内容-->
+<div id="makelistcontent">
+    <!--标头 题卷名称   评星-->
+    <div class="wrap">
+        <div class="ml-list-title">
+        <p class="left title">【{$one['nickname']}】题霸排行榜</p>
+        <!--评星个数放在data里-->
+        <p class="right startnum" data="{$one['star']}">综合评星：</p>
+    </div>
+    </div>
+    <!--标头 题卷人数  用时-->
+    <div class="ml-list-title-2">
+        <div class="wrap">
+            <span>难易程度：{:checkType($one['difficulty'])}</span>
+            <span>答题人数：{$one['usenum']}人</span>
+            <span>最高得分用时：{$one['usetime']}</span>
+            <span>最高分数：{$one['score']}分</span>
+        </div>
+    </div>
+    <!--标头-->
+    <div class="ml-list-title-3">
+        <div class="wrap">
+            <div class="dbph-one left">选手</div>
+            <div class="dbph-two left">总分</div>
+            <div class="dbph-three left">用时</div>
+            <div class="dbph-four left">正确率</div>
+            <div class="dbph-five left">操作</div>
+        </div>
+    </div>
+    <div class="dbph-big-box">
+        <!--追加开始-->
+        <volist name="exmain" id="vo">
+            <div class="dbph-box">
+                <div class="wrap">
+                    <div class="bor dbph-one left">
+                        <img src="{$vo['head']}" alt=""/>
+                        {$vo['username']}
+                    </div>
+                    <div class="bor dbph-two left">{$vo['score']}分</div>
+                    <div class="bor dbph-three left">{$vo['usetime']}</div>
+                    <div class="bor dbph-four left">{:getBfb($one['num'],$vo['error_num'])}%</div>
+                    <div class="dbph-five left">
+                        <if condition="checkLaud($vo['laud_info'],$userid) eq 'yes'">
+                            <a href="javascript:void(0)" class="mr" data="yes" onclick="giveZz(this,{$vo['id']})">
+                                <img src="__PUBLIC__/Wx/images/makelist/z.png" alt=""/>
+                                点赞
+                            </a>
+                        <else />
+                            <a href="javascript:void(0)" class="mr" data="no" onclick="giveZz(this,{$vo['id']})">
+
+                                <img src="__PUBLIC__/Home/images/makelist/zed.png" alt=""/>
+                                已赞
+                            </a>
+                        </if>
+                        <!-- <a href="javascript:void(0)"><img src="__PUBLIC__/Wx/images/makelist/send.png" alt=""/>发消息</a> -->
+                    </div>
+                </div>
+            </div>
+        </volist>
+        <!--追加结束-->
+    </div>
+</div>
+<if condition="$count GT 10">
+    <!--没有更多了-->
+    <div class="notmore" id='getMore'>
+        查看更多
+    </div>
+</if>
+<!--底部-->
+<include fiel="Public/foot" />
+<script src="__PUBLIC__/Wx/js/jquery-1.11.3.js" type="text/javascript"></script>
+<!--星星的追加-->
+<script type="text/javascript">
+    $(function(){
+        function startNum(){
+            var s =$('body').find(".startnum");
+            for(var i = 0;i<s.length;i++){
+                if($(s[i]).hasClass('ed') === false){
+                    for(var k = 0;k<$(s[i]).attr("data");k++){
+                        $(s[i]).append('<img src="__PUBLIC__/Wx/images/img/yellow-star.png"/>');
+                    }
+                    $(s[i]).addClass('ed');  
+                }
+            }
+        };
+        startNum();
+
+        var page = 2;
+        //查看更多 
+        $('#getMore').click(function(){
+
+            var count = {$count | default=0};
+            var id = "{:base64_encode($one['id'])}";
+
+            $.ajax({
+                url:'{:U("info")}',
+                type:'get',
+                data:{'p':page,'code':id},
+                success:function(data){
+                    console.log(data);
+                    $('.dbph-big-box').append(data);
+                    if((page * 10) >= count){
+                        $('#getMore').hide();
+                    }
+                    page ++ ;
+                    startNum();
+                }
+            })
+        })
+
+    });
+</script>
+<!--点赞-->
+<script type="text/javascript">
+    function giveZz(t,id){
+        var img = $(t).find("img");
+        var s = img.attr("src");
+        var num = parseInt($(t).prev('a').attr('data')) +1;
+        if($(t).attr("data")=="yes"){
+            img.attr("src",s.slice(0,-4)+"ed.png");
+            $.ajax({
+                url:'{:U("laud")}',
+                type:'post',
+                data:{'id':id},
+                beforeSend: function () {
+                    $(t).attr('disabled',true);    
+                },
+                success:function(msg){
+                    console.log(msg)
+                    $(t).attr('disabled',true);
+                    if(msg == 'true'){
+                        alert('点赞成功');
+                        $(t).attr("data","no");
+                        $(t).prev('a').html('（'+num+'）个')
+                    }
+                }
+            })
+        }else if($(t).attr("data")=="no"){
+            alert("您已经点过赞了!");
+        }
+    };
+</script>
+<!--榜单抬头的追加-->
+<script type="text/javascript">
+//    榜单抬头的追加
+    function addTop(){
+        var b = $("#makelistcontent").find(".dbph-big-box").children(".dbph-box");
+        var i = 0;
+        while(i!=3){
+            $(b[i]).append('<img class="top" src="__PUBLIC__/Wx/images/makelist/'+(i+1)+'.png"/>')
+            i++;
+        }
+    };
+    addTop();
+</script>
+</body>
+</html>

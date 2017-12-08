@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>用户中心-历史答题-试卷内容</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta name=”keyword” content=”桑磊法考,司法考试,考试,司法,律师“>
+    <!-- 公用的css -->
+    <link rel="stylesheet" href="__PUBLIC__/home/css/user-center-public.css"/>
+    <!-- 本页面的css -->
+    <link rel="stylesheet" href="__PUBLIC__/home/css/user-center-lsdt-fxpg.css"/>
+</head>
+<body>
+<div class="wrap">
+    <!--侧边栏导航-->
+    <div id="sidebar-nav">
+        <!--头像 用户名-->
+         <include file="Public/head" />
+        <!--菜单-->
+        <include file="Public/menucenter" />
+        <!--二维码-->
+        <div class="qrcode">
+            <img src="__PUBLIC__/home/images/usercenter/qrcode.png" alt=""/>
+            <p>扫描二维码登录手机端</p>
+        </div>
+    </div>
+    <!--主导航-->
+    <include file="Public/navcenter" />
+    <!--成绩报告   这个元素里面的东西不一样-->
+    <div class="content-box">
+        <!--********-->
+        <div id="historyfxpg">
+            <div class="vip"><img src="__PUBLIC__/home/images/usercenter/ordinary.png" alt=""/></div>
+            <div class="hf-title-name">
+                <div class="left"><a href="#">【查看试卷-{$nickname}】</a></div>
+                <div class="right"><a href="#">返回历史答卷列表</a></div>
+            </div>
+            <div class="hf-title-content">
+                <div class="left">
+                    <span class="startnum" data="{$star}">综合评星：</span>
+                    <span>得分：{$score}分</span>
+                    <span>最好成绩：{$time}</span>
+                </div>
+                <div class="right">
+                    <a href="javascript:void(0)" onclick="lookClass()">订制课堂</a>丨
+                    <a href="#">分享试卷</a>丨
+                    <a href="#" class="ph">查看排行</a>
+                </div>
+            </div>
+            <div class="hf-title-nav">
+                <div class="left">
+                    {$nickname}
+                </div>
+                <div class="right">
+                    <a href="{:U('answer/tomark',array('i'=>base64_encode($scoreid)))}" class="org">成绩分析评估</a>
+                    <a href="{:U('answer/lists',array('i'=>base64_encode($scoreid)))}">试卷内容</a>
+                </div>
+            </div>
+            <div class="hf-sjnr">
+                <div class="hf-title-name">
+                    单项选择题：<span>1-20小题，每小题1分，共20分。下列每题给出的四个选项中，只有一项是符合试题要求的。</span>
+                </div>
+            </div>
+
+        </div>
+        <!--********-->
+    </div>
+    <div class="clearfix"></div>
+</div>
+<!--订制课堂的弹出框-->
+<div id="modelview">
+    <div class="m-box">
+        <div class="m-title">
+            <ul>
+                <li class="active" onclick="mNav(this)">订制课堂</li>
+                <li onclick="mNav(this)">在线交流</li>
+                <li onclick="mNav(this)">欢迎评价</li>
+            </ul>
+            <img onclick="closeLookClass()" src="__PUBLIC__/home/images/usercenter/close-white.png" alt=""/>
+        </div>
+        <div class="m-content">
+            <div class="m-content-view m-content-dzkt">
+                <form action="">
+                    <div class="col-1">
+                        <span>选择订制：</span>
+                        <select name="" id="">
+                            <option value="">整张试卷</option>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <span>添加备注：</span>
+                        <textarea name=""></textarea>
+                    </div>
+                    <div class="col-2">
+                        <span>支付方式：</span>
+                        <input type="radio" checked="checked" name="style" id="stylezfb"/>
+                        <label for="stylezfb"><img src="__PUBLIC__/home/images/usercenter/zfb.png" alt=""/></label>
+                        <input type="radio" name="style" id="stylewx"/>
+                        <label for="stylewx"><img src="__PUBLIC__/home/images/usercenter/wx.png" alt=""/></label>
+                        <input type="radio" name="style" id="stylezj"/>
+                        <label for="stylezj"><img src="__PUBLIC__/home/images/usercenter/zjdz.png" alt=""/></label>
+                    </div>
+                    <button type="submit" class="submit">提交订制申请</button>
+                </form>
+                <div class="explain">
+                    <a href="javascript:void(0)">*</a>提交订制申请后，我们会针对您选择的试卷/题目安排课程时间，请留意 <a href="#">站内消息 </a>。
+                    <a href="javascript:void(0)">收费标准：5元/每道题目，50元/整张试卷 。</a>
+                </div>
+            </div>
+            <div class="m-content-view m-content-zxjl">
+                <form action="">
+                    <div class="col-1">
+                        <span>选择问题：</span>
+                        <select name="" id="">
+                            <option value="">题目69</option>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <span>附加留言：</span>
+                        <textarea name=""></textarea>
+                    </div>
+                    <button type="submit" class="submit">确认提交问题</button>
+                </form>
+                <div class="explain">
+                    <a href="javascript:void(0)">*</a>提交问题后，我们会安排老师针对您选择的题目进行回答，请留意 <a href="#">站内消息 </a>。
+                </div>
+            </div>
+            <div class="m-content-view m-content-hypj">
+                <form action="" id="discussform">
+                    <div class="col-1">
+                        <span>出题星级：</span>
+                        <span id="givestart"></span>
+                        <span class="little">（感谢您的评星！）</span>
+                    </div>
+                    <!--这个input的value是评星的个数-->
+                    <input type="hidden" value="" name="" id="havestarnum"/>
+                    <!--这个input的value 是用户评论的内容 以text分隔-->
+                    <input type="hidden" id="havediscuss"/>
+                    <!--数据传过来时的 评价语  放在data里-->
+                    <div class="discuss">
+                        <button type="button" data="题霸打榜必争题型"></button>
+                        <button type="button" data="难易程度还算适中"></button>
+                        <button type="button" data="题型刁钻还有难度"></button>
+                        <button type="button" data="知识点很全面精细"></button>
+                        <button type="button" data="谁来敢挑战我？"></button>
+                        <button type="button" data="拿下容易打榜难"></button>
+                        <button type="button" data="想要打榜还有难度"></button>
+                        <button type="button" data="每年必考的题目"></button>
+                        <button type="button" data="这就是个坑"></button>
+                    </div>
+                    <button type="button" class="submit" onclick="discussSubmit()">提交星级评价</button>
+                </form>
+                <div class="explain">
+                    <a href="javascript:void(0)">*</a>您的评价对我们而言是非常宝贵的，能够帮助我们针对性的完善题型与课程。
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--底部-->
+<div id="footer" style="position: relative">
+    <div class="hf-sjnr-nav">
+        <div class="hf-sjnr-nav-box">
+            <a href="javascript:void(0)">单项选择题</a>
+            <a href="javascript:void(0)">多项选择题</a>
+            <a href="javascript:void(0)">不定项选择题</a>
+            <a href="javascript:void(0)">我的错误题</a>
+        </div>
+    </div>
+    <div class="wrap">
+        <p>
+            <a href="#">首页</a>
+            <span>丨</span>
+            <a href="#">网站声明</a>
+            <span>丨</span>
+            <a href="#">联系方式</a>
+            <span>丨</span>
+            <a href="#">加入我们</a>
+        </p>
+        <p>
+            Copyright&nbsp;&copy;&nbsp;2017-&nbsp;桑磊法考(sangleifk.com)&nbsp;京批字第直123456号&nbsp;京ICP备12345678号-1
+        </p>
+        <p>
+            联系电话：&nbsp;&nbsp;&nbsp;4000-000-000&nbsp;&nbsp;&nbsp;&nbsp;010-12345678
+        </p>
+    </div>
+</div>
+<script src="__PUBLIC__/home/js/jquery-1.11.3.js" type="text/javascript"></script>
+<script src="__PUBLIC__/home/js/jquery.raty.js" type="text/javascript"></script>
+<!--星星的追加-->
+<script>
+    $(function(){
+        function startNum(){
+            var s =$("body").find(".startnum");
+            for(var i = 0;i<s.length;i++){
+                for(var k = 0;k<$(s[i]).attr("data");k++){
+                    $(s[i]).append('<img style="margin-top: -3px" src="__PUBLIC__/home/images/makelist/yellow-star.png"/>');
+                }
+            }
+        };
+//        星星的追加
+        startNum();
+    });
+</script>
+<!--弹出层-->
+<script>
+//    显示
+    function lookClass(){
+      $("#modelview").fadeIn(500);
+    };
+function closeLookClass(){
+    $("#modelview").fadeOut(500);
+};
+//    菜单切换
+    function mNav(t){
+        $(t).addClass("active").siblings("li").removeClass("active");
+        if($(t).index()==0){
+            $("#modelview .m-box .m-content .m-content-dzkt").show().siblings(".m-content-view").hide();
+        }else if($(t).index()==1){
+            $("#modelview .m-box .m-content .m-content-zxjl").show().siblings(".m-content-view").hide();
+        }else if($(t).index()==2){
+            $("#modelview .m-box .m-content .m-content-hypj").show().siblings(".m-content-view").hide();
+        }
+    }
+</script>
+<!--评星-->
+<script>
+//    评星
+    $('#givestart').raty({
+        path:"images/img",
+        click: function (score, evt){
+            $("#havestarnum").val(score);
+        }
+    });
+//    评论
+    function discuss(){
+        var box = $("#modelview .m-box .m-content .m-content-hypj").find(".discuss");
+        var btn = box.find("button");
+        for(var i = 0;i<btn.length;i++){
+            $(btn[i]).html($(btn[i]).attr("data"));
+        }
+        $(box).on("click","button",function(){
+            if($(this).attr("yn")=="no"){
+                $(this).removeClass("active");
+            }else{
+                $(this).addClass("active");
+                $(this).attr("yn","no");
+            }
+        })
+    };
+    discuss();
+    //提交
+    function discussSubmit(){
+        var btn = $("#modelview .m-box .m-content .m-content-hypj").find(".discuss").find("button");
+        var str = "";
+        for(var i = 0;i<btn.length;i++){
+            if($(btn[i]).hasClass("active")){
+                str += "text" + $(btn[i]).attr("data");
+            }
+        }
+        $("#havediscuss").val(str);
+        $("#discussform").submit();
+    };
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<div class="top">
+            <img src="__PUBLIC__/home/images/usercenter/logo.png" class="logo" alt=""/>
+            <div class="avatar">
+                 <if condition="$user['head'] eq ''" >
+                <img src="__PUBLIC__/home/images/usercenter/tx.png" alt=""id="imgReLook"/>
+                <else/>
+                 <img src="__ROOT__{$user['head']}" alt="" width="100" height="100" id="imgReLook"/>
+                 </if>
+            </div>
+            <div class="name">{$user['username']}</div>
+            <div class="account">
+                账户：[普通账户]
+                <img src="__PUBLIC__/home/images/usercenter/quanone.png" style="margin-top: -7px;" alt=""/>
+            </div>
+        </div>

@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- 编码格式 -->
+    <meta charset="utf-8">
+    <!-- IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 设置 viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <meta name="Keywords" content="桑磊法考,司法考试,考试,司法,律师">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- 兼容国产浏览器的高速模式 -->
+    <meta name="renderer" content="webkit">
+    <title>自定义题库 - 历史自定义题型</title>
+    <!--设置网页的图标-->
+    <link rel="shortcut icon" href="">
+    <!--公用的css-->
+    <link type="text/css" href="__PUBLIC__/Wx/css/public.css" rel="stylesheet"/>
+    <!--本页面的css-->
+    <link type="text/css" href="__PUBLIC__/Wx/css/makelistpaper.css" rel="stylesheet"/>
+    <link type="text/css" href="__PUBLIC__/Wx/css/udsingle.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="topnote">
+    <div class="wrap">
+        友情提示：司法考试分为客观题与主观题，桑磊法考题库抽取的全部为客观题。
+    </div>
+</div>
+<!--榜单菜单-->
+<div id="singletopmenu">
+    <ul>
+        <li class="active" onclick="openSubject('k')"><span>按科目</span><div class="triangle"></div></li>
+        <li onclick="openSubject('z')"><span>按章</span><div class="triangle"></div></li>
+        <li onclick="openSubject('j')"><span>按节</span><div class="triangle"></div></li>
+        <li onclick="openSubject('d')"><span>按知识点</span><div class="triangle"></div></li>
+    </ul>
+</div>
+<!--筛选榜单-->
+<div id="choselist">
+    <div class="wrap">
+        <div class="cl-box">
+            <span class="cl-name">全部题库</span>&nbsp;&nbsp;<img src="__PUBLIC__/Wx/images/makelist/b-arrow.png" alt=""/>
+            <ul class="cl-select">
+                <li onClick="getData(1,'type')">真题题库</li>
+                <li onClick="getData(2,'type')">模拟题库</li>
+                <li onClick="getData(3,'type')">自定义题库</li>
+            </ul>
+        </div>
+        <div class="cl-box">
+            <span class="cl-name">难易程度</span>&nbsp;&nbsp;<img src="__PUBLIC__/Wx/images/makelist/b-arrow.png" alt=""/>
+            <ul class="cl-select">
+                <li onClick="getData(1,'difficulty')">简单</li>
+                <li onClick="getData(2,'difficulty')">中等</li>
+                <li onClick="getData(3,'difficulty')">偏难</li>
+            </ul>
+        </div>
+        <!-- <div class="cl-box">分值排序</div> -->
+        <div class="right">共计&nbsp;<span id='count'>{$count}</span>&nbsp;张试卷</div>
+    </div>
+</div>
+<!--列表-->
+<ul id="oldexam">
+    <volist name="examin" id="vo">
+        <li>
+            <div class="oe-topmenu">
+                <div class="wrap">
+                    <div class="left">
+                        综合评星：<span class="startnum" data="{$vo['star']}"></span>
+                    </div>
+                    <div class="right">
+                        <a href="javascript:void(0)" onclick="shopNav('dzkt')">订制课堂</a>
+                        <span>丨</span>
+                        <a href="javascript:void(0)">分享试卷</a>
+                        <span>丨</span>
+                        <a href="javascript:void(0)" class="blue">查看打榜</a>
+                    </div>
+                </div>
+            </div>
+            <div class="oe-middlename wrap">
+                <div class="left">
+                    <img src="__PUBLIC__/Wx/images/makelist/zxpaper.png" alt=""/>
+                    <p class="oem-name">{$vo['nickname']}</p>
+                </div>
+                <div class="left oe-num"><span>{$vo['score'] | default=0}分</span></div>
+                <div class="right">
+                    <a href="{:U('Answers/examin',array('code'=>base64_encode($vo['id'])))}"><img src="__PUBLIC__/Wx/images/yearoldexam/penanswer.png" alt=""/></a>
+                </div>
+            </div>
+            <div class="oe-bottom">
+                <div class="wrap">
+                    <span>难易程度：{:checkType($vo['difficulty'])}</span>
+                    <span>答题人数：{$vo['usenum']}人</span>
+                    <span>最高得分用时：{$vo['usetime']}</span>
+                </div>
+            </div>
+        </li>
+    </volist>
+</ul>
+<!--没有更多了-->
+<if condition="$count GT 5">
+    <!--没有更多了-->
+    <div class="notmore" id='getMore' onClick="getData()">
+        查看更多
+    </div>
+</if>
+<!--底部-->
+<include fiel="Public/foot" />
+<!--弹出层-->
+<div id="modelbox" style="display: none;">
+    <!--订制课堂-->
+    <div id="madetoclass" style="display: none" class="modelbox-children">
+        <!--title-->
+        <div class="mtc-title">
+            订制课堂
+            <span>(5元/题，20元/卷)</span>
+        </div>
+        <!--这个隐藏域是订制题的值-->
+        <input type="hidden" name="" value=""/>
+        <div class="m-name" data="no" onclick="gainMessageName(this)">
+            <div class="wrap">
+                <div class="left">
+                    您即将订制的是
+                </div>
+                <div class="right m-arrow">
+                    <span>&nbsp;&nbsp;&gt;</span>
+                </div>
+                <div class="m-name-look right">
+                    本道题
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="m-name-children">
+            <div class="wrap">
+                <div class="m-name-children-text">测试测试测测试测试测测试测试测测试测试测测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
+                <div class="m-name-children-text">测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
+                <div class="m-name-children-text">测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
+            </div>
+        </div>
+        <!--这个隐藏域是付费分类的值-->
+        <input type="hidden" name="" value=""/>
+        <div class="m-name" data="no" onclick="gainMessageName(this)">
+            <div class="wrap">
+                <div class="left">
+                    您选择付费分类
+                </div>
+                <div class="right m-arrow">
+                    <span>&nbsp;&nbsp;&gt;</span>
+                </div>
+                <div class="m-name-look right">
+                    众筹预定 <span>（9.5折）</span>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="m-name-children">
+            <div class="wrap">
+                <div class="m-name-children-text">测试测试测测试测试测测试测试测测试测试测测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
+                <div class="m-name-children-text">测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
+                <div class="m-name-children-text">测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
+            </div>
+        </div>
+        <!--备注信息-->
+        <div class="wrap">
+            <div class="m-name">
+                <div class="left">
+                    请添加备注信息
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <textarea name=""></textarea>
+        </div>
+        <!--法豆支付-->
+        <button onclick="submitMadeToClass(this)" type="button" class="mtc-button">
+            <img src="__PUBLIC__/Wx/images/answer/pay/fd.png" alt=""/>
+            <span>法豆支付</span>
+            <span class="little">(法豆不足，余28法豆)</span>
+        </button>
+        <!--微信支付-->
+        <button onclick="submitMadeToClass(this)" type="button" class="mtc-button mtc-button-wx">
+            <img src="__PUBLIC__/Wx/images/answer/pay/wx.png" alt=""/>
+        </button>
+        <div class="mtc-note">
+            <div class="wrap">
+                * 注：此订单为预约订单，提交审核过后，1.自己买断，独家订制；2.等待满额人数，人数满每单所需的法豆/金额，会给您发送邮件。
+            </div>
+        </div>
+    </div>
+    <!--关闭的掩盖层-->
+    <div id="closemodelbox" onclick="closeModelBox()"></div>
+</div>
+<!--筛查条件-->
+<div id="chosesubject">
+    <div class="cs-k cs-siblings">
+        <div class="cs-title">
+            <div class="wrap">
+                <div class="left">按科目</div>
+                <div class="right" onclick="closeSubject()">关闭</div>
+            </div>
+        </div>
+        <ul class="cs-content">
+            <volist name="tree" id='vo'>
+                <li data="{$vo['id']}"><div class="left cs-name">{$vo['name']}</div><div class="right"><img style="display: inline-block" src="__PUBLIC__/Wx/images/userdefined/grayadd.png" alt=""></div> </li>
+            </volist>
+        </ul>
+    </div>
+    <div class="cs-z cs-siblings" style="display: none">
+        <div class="cs-title">
+            <div class="wrap">
+                <div class="left">按章</div>
+                <div class="right" onclick="closeSubject()">关闭</div>
+            </div>
+        </div>
+        <ul class="cs-content"></ul>
+    </div>
+    <div class="cs-j cs-siblings" style="display: none">
+        <div class="cs-title">
+            <div class="wrap">
+                <div class="left">按节</div>
+                <div class="right" onclick="closeSubject()">关闭</div>
+            </div>
+        </div>
+        <ul class="cs-content"></ul>
+    </div>
+    <div class="cs-d cs-siblings" style="display: none">
+        <div class="cs-title">
+            <div class="wrap">
+                <div class="left">按知识点</div>
+                <div class="right" onclick="closeSubject()">关闭</div>
+            </div>
+        </div>
+        <ul class="cs-content"></ul>
+    </div>
+    <div class="cs-model" onclick="closeSubject()"></div>
+</div>
+<input type="hidden" id='check-k'>
+<input type="hidden" id='check-z'>
+<input type="hidden" id='check-j'>
+<input type="hidden" id='check-d'>
+<input type="hidden" id='type'>
+<input type="hidden" id='difficulty'>
+<script src="__PUBLIC__/Wx/js/jquery-1.11.3.js" type="text/javascript"></script>
+<!--筛选的加载-->
+<script type="text/javascript">
+    $(function(){
+        function chosesubjectCsk(){
+            //        绑定点击事件
+            $("#chosesubject .cs-k .cs-content li").bind("click",function(){
+                if($(this).hasClass("active")===false){
+                     $(this).addClass("active");
+                    $(this).children(".right").children("img").attr("src","__PUBLIC__/Wx/images/userdefined/blueright.png");
+                }else{
+                     $(this).removeClass("active");
+                    $(this).children(".right").children("img").attr("src","__PUBLIC__/Wx/images/userdefined/grayadd.png");
+                }
+                page = 1;
+                getData();
+            });
+        };
+        chosesubjectCsk();
+    })
+    var subjectData = {$tree};
+    //    筛选的遍历 d为筛选数据的数组
+    function cyclicSubject(t,d){
+        var str = '';
+        for(var i = 0;i<d.length;i++){
+            str +=  '<li data="'+d[i]['id']+'">' +
+                    '<div class="left cs-name">'+d[i]['name']+'</div>' +
+                    '<div class="right"><img style="display: inline-block" src="__PUBLIC__/Wx/images/userdefined/grayadd.png" alt=""/></div> ' +
+                    '</li>'
+        }
+        $("#chosesubject").children(".cs-"+t).children(".cs-content").html('');
+        $("#chosesubject").children(".cs-"+t).children(".cs-content").append(str);
+        $("#chosesubject").children(".cs-"+t).show().siblings(".cs-siblings").hide();
+        //        绑定点击事件
+        $("#chosesubject .cs-"+t+" .cs-content").on("click","li",function(){
+            if($(this).hasClass("active")===false){
+                 $(this).addClass("active");
+                $(this).children(".right").children("img").attr("src","__PUBLIC__/Wx/images/userdefined/blueright.png");
+            }else{
+                $(this).removeClass("active");
+                $(this).children(".right").children("img").attr("src","__PUBLIC__/Wx/images/userdefined/grayadd.png");
+            }
+            page = 1;
+            getData();
+        });
+
+    };
+var page = 1;
+var count = {$count}
+//数据请求
+function getData(id,type)
+{   
+    if(type == 'type'){
+        page = 1;
+        $('#type').val(id);
+    }
+    if(type == 'difficulty'){
+        page = 1;
+        $('#difficulty').val(id)
+    }
+    var k = $('#chosesubject').children('.cs-k').find('li.active');
+    var z = $('#chosesubject').children('.cs-z').find('li.active');
+    var j = $('#chosesubject').children('.cs-j').find('li.active');
+    var d = $('#chosesubject').children('.cs-d').find('li.active');
+
+
+    var kid='';
+    var zid='';
+    var jid='';
+    var did='';
+    for(var i = 0;i<$(k).length;i++){
+        kid = kid + $(k[i]).attr('data')+',';
+    }
+
+    for(var i = 0;i<$(z).length;i++){
+        zid = zid + $(z[i]).attr('data')+',';
+    }
+    for(var i = 0;i<$(j).length;i++){
+        jid = jid + $(j[i]).attr('data')+',';
+    }
+    for(var i = 0;i<$(d).length;i++){
+        did = did + $(d[i]).attr('data')+',';
+    }
+
+    //获取题库类型
+    var type = $('#type').val();
+
+    // 获取难易程度 
+    var difficulty = $('#difficulty').val();
+    $.ajax({
+        url:'{:U("getRes")}',
+        type:'post',
+        dataType:'json',
+        data:{'kid':kid,'zid':zid,'jid':jid,'did':did,'type':type,'difficulty':difficulty,'page':page},
+        success:function(msg){
+            if(msg['type'] == 'all'){
+                page++;
+            }
+
+            if(page == 1 && (kid || difficulty || type)){
+                $('#oldexam').html(msg['msg']);
+                $('#count').html(msg['count']);
+                if(msg['count'] > 5){
+                    $('#getMore').show();
+                    count = msg['count'];
+                    page = msg['page'];
+                }else{
+                    $('#getMore').hide();
+                }
+                
+            }else{
+                if((page * 5) > count){
+                    $('#getMore').hide();
+                }
+                 page ++ ;
+                $('#oldexam').append(msg['msg']);
+            }
+            startNum();
+        }    
+    })
+}
+
+//      打开选择筛选 km为按科目 z为按章 j为按节  zsd为按知识点
+    function openSubject(t){
+        if(t=="k"){
+            $("#chosesubject").children(".cs-k").show().siblings(".cs-siblings").hide();
+        }else{
+            getRes(t);
+        }
+        $("#chosesubject").slideDown();
+    
+    };
+//      关闭选择筛选
+    function closeSubject(){
+        $("#chosesubject").slideUp();
+    };
+
+
+    function getRes(type){
+        var check = $('#check-'+type).val();
+        if(type == 'z'){
+            var obj = $('#chosesubject').children('.cs-k').find('li.active');
+        }else if(type == 'j'){
+            var obj = $('#chosesubject').children('.cs-z').find('li.active');
+        }else{
+            var obj = $('#chosesubject').children('.cs-j').find('li.active');
+        }
+        var id = '';
+
+        for(var i = 0;i<$(obj).length;i++){
+            id = id + $(obj[i]).attr('data')+',';
+        }    
+
+        if(check != id && id != ''){
+            $('#check-'+type).val(id);
+            $.ajax({
+                url:'{:U("getTree")}',
+                type:'post',
+                dataType:'json',
+                data:{'id':id,'type':type},
+                success:function(msg){
+                    if(msg != ''){
+                        data = $.parseJSON(msg);
+ 
+                        cyclicSubject(type,data);
+                        
+                    }
+                }
+            })
+        }else{
+            $("#chosesubject").children(".cs-"+type).show().siblings(".cs-siblings").hide(); 
+        }
+    }
+</script>
+<!--选择问题调用函数-->
+<script type="text/javascript">
+    //    选择问题
+    function gainMessageName(t){
+        if($(t).attr("data")=="no"){
+            $(t).attr("yesno","yes").find(".m-arrow").addClass("active");
+            $(t).next(".m-name-children").slideDown();
+            $(t).attr("data","yes");
+        }else{
+            $(t).attr("yesno","yes").find(".m-arrow").removeClass("active");
+            $(t).next(".m-name-children").slideUp();
+            $(t).attr("data","no");
+        }
+//        绑定事件点击把值赋给隐藏域
+        $(t).next(".m-name-children").find(".m-name-children-text").bind("click",function(){
+            $(t).find(".m-name-look").html($(this).html());
+            $(t).prev("input").val($(this).html());
+            $(t).attr("yesno","yes").find(".m-arrow").removeClass("active");
+            $(t).next(".m-name-children").slideUp();
+            $(t).attr("data","no");
+        });
+    };
+</script>
+<!--试卷菜单-->
+<script type="text/javascript">
+    $("#singletopmenu").find("li").bind("click",function(){
+        $("#singletopmenu").find("li").removeClass("active");
+        $(this).addClass("active");
+    });
+</script>
+<!--功能菜单-->
+<script type="text/javascript">
+    //    关闭弹出层
+    function closeModelBox(){
+        $("#modelbox").slideUp();
+        $("#modelbox").find(".modelbox-children").slideUp();
+    };
+    //菜单
+    function shopNav(t){
+        if(t=="dzkt"){
+            $("#modelbox").slideDown();
+            $("#modelbox").find(".modelbox-children").slideUp();
+            $("#madetoclass").slideDown();
+        }
+    }
+</script>
+<!--选择题库-->
+<script type="text/javascript">
+    $("#choselist").find(".cl-box").bind("click",function(){
+        if($(this).hasClass("ed")===false){
+            $(this).children(".cl-select").slideDown();
+            $(this).addClass("ed");
+        }else{
+            $(this).children(".cl-select").slideUp();
+            $(this).removeClass("ed");
+        }
+    });
+    $("#choselist").find("li").bind("click",function(){
+        $(this).parents(".cl-box").children(".cl-name").html($(this).html());
+    })
+</script>
+<!--订制课堂-->
+<script type="text/javascript">
+    function submitMadeToClass(t){
+        $(t).parents("#madetoclass").slideUp(200);
+        $(t).parents("#modelbox").fadeOut();
+    };
+</script>
+<!--星星的追加-->
+<script type="text/javascript">
+    function startNum(){
+            var s =$('body').find(".startnum");
+            for(var i = 0;i<s.length;i++){
+                if($(s[i]).hasClass('ed') === false){
+                    for(var k = 0;k<$(s[i]).attr("data");k++){
+                        $(s[i]).append('<img src="__PUBLIC__/Wx/images/img/yellow-star.png"/>');
+                    }
+                    $(s[i]).addClass('ed');    
+                }
+            }
+        };
+        startNum();
+</script>
+</body>
+</html>

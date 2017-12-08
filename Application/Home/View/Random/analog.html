@@ -1,0 +1,141 @@
+<extend name="index" />
+<block name="content">
+    <!--模拟综合试卷-->
+    <div id="simulationpaper">
+        <div class="wrap">
+            <!--模拟试卷 标题-->
+            <div class="radom-answer-title">
+                <img src="__PUBLIC__/home/images/random-answer/paper.png" alt=""/>
+                <span class="radom-answer-title-name">模拟综合试卷</span>
+                为随机抽选题型；试卷分为3科（除试卷四主观题外）；卷内都为选择题，分值为150分；本卷限时答题（3小时/卷）。
+            </div>
+            <!--模拟试卷-->
+            <ul>
+                <form action="{:U('Answer/index')}" method="post" id='goForm'>
+                    <input type="hidden" name='range' id='range' value='1'>
+                    <input type="hidden" name="nycd" id='nycd' value=''>
+                </form>
+                <!--模拟试卷1 -->
+                    <li class="simulation-list">
+                        <div class="list-top">
+                            <img src="__PUBLIC__/home/images/random-answer/list-1.png" alt=""/>
+                            <p class="list-title">模拟试卷一</p>
+                        </div>
+                        <div class="list-bottom">
+                            <div class="list-bottom-top">
+                                <div class="left">
+                                    <img src="__PUBLIC__/home/images/random-answer/list-paper.png" alt=""/>
+                                </div>
+                                <div class="left">
+                                    <p class="name">随机模拟试卷一</p>
+                                    <p>
+                                        难度系数：
+                                        <a href="javascript:void(0)" onClick='goAnswer(1,1)' style="color: #aaa9a9;">简单</a>
+                                        <a href="javascript:void(0)" onClick='goAnswer(2,1)' style="color: #aaa9a9;">中等</a> 
+                                        <a href="javascript:void(0)" onClick='goAnswer(3,1)' style="color: #aaa9a9;">困难</a>
+                                    </p >
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="list-bottom-bottom">
+                                <div class="left">
+                                    <img src="__PUBLIC__/home/images/random-answer/list-man.png" alt=""/>
+                                    <span>3698</span>
+                                    人
+                                </div>
+                                <div class="right">
+                                    <img src="__PUBLIC__/home/images/random-answer/list-giveup.png" alt=""/>
+                                    <span>75</span>
+                                    分
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </li>
+                <!--模拟试卷2 -->
+                    <li class="simulation-list mlr20">
+                        <div class="list-top">
+                            <img src="__PUBLIC__/home/images/random-answer/list-2.png" alt=""/>
+                            <p class="list-title">模拟试卷二</p>
+                        </div>
+                        <div class="list-bottom">
+                            <div class="list-bottom-top">
+                                <div class="left">
+                                    <img src="__PUBLIC__/home/images/random-answer/list-paper.png" alt=""/>
+                                </div>
+                                <div class="left">
+                                    <p class="name">随机模拟试卷二</p>
+                                    <p>
+                                        难度系数：
+                                        <a href="javascript:void(0)" onClick='goAnswer(1,2)' style="color: #aaa9a9;">简单</a>
+                                        <a href="javascript:void(0)" onClick='goAnswer(2,2)' style="color: #aaa9a9;">中等</a> 
+                                        <a href="javascript:void(0)" onClick='goAnswer(3,2)' style="color: #aaa9a9;" >困难</a>
+                                    </p >
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="list-bottom-bottom">
+                                <div class="left">
+                                    <img src="__PUBLIC__/home/images/random-answer/list-man.png" alt=""/>
+                                    <span>3698</span>
+                                    人
+                                </div>
+                                <div class="right">
+                                    <img src="__PUBLIC__/home/images/random-answer/list-giveup.png" alt=""/>
+                                    <span>75</span>
+                                    分
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </li>
+                <!--模拟试卷3 -->
+                    <li class="simulation-list">
+                        <div class="list-top">
+                            <img src="__PUBLIC__/home/images/random-answer/list-3.png" alt=""/>
+                            <p class="list-title">模拟试卷三</p>
+                        </div>
+                        <div class="list-bottom">
+                            <div class="list-bottom-top">
+                                <div class="left">
+                                    <img src="__PUBLIC__/home/images/random-answer/list-paper.png" alt=""/>
+                                </div>
+                                <div class="left">
+                                    <p class="name">随机模拟试卷三</p>
+                                    <p>
+                                        难度系数：
+                                        <a href="javascript:void(0)" onClick='goAnswer(1,3)' style="color: #aaa9a9;">简单</a>
+                                        <a href="javascript:void(0)" onClick='goAnswer(2,3)' style="color: #aaa9a9;">中等</a> 
+                                        <a href="javascript:void(0)" onClick='goAnswer(3,3)' style="color: #aaa9a9;" >困难</a>
+                                    </p >
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="list-bottom-bottom">
+                                <div class="left">
+                                    <img src="__PUBLIC__/home/images/random-answer/list-man.png" alt=""/>
+                                    <span>3698</span>
+                                    人
+                                </div>
+                                <div class="right">
+                                    <img src="__PUBLIC__/home/images/random-answer/list-giveup.png" alt=""/>
+                                    <span>75</span>
+                                    分
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </li>
+                <div class="clearfix"></div>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+    function goAnswer(num,type){
+        $('#range').val(type);
+        $('#nycd').val(num);
+        $('#goForm').submit();
+    }
+    </script>
+</block>

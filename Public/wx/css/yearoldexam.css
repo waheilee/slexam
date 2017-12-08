@@ -1,0 +1,112 @@
+@charset "UTF-8";
+.topnote{
+    width: 100%;
+    padding: 0.25rem 0;
+    line-height: 0.6rem;
+    font-size: 0.3rem;
+    color: #999999;
+    text-align: justify;
+}
+.topnote.gray{
+    background: #F1F1F1;
+}
+.topnote.fff{
+    background: #fff;
+}
+#topmenu{
+    width: 100%;
+    height: 1.1rem;
+}
+#topmenu ul{
+    width: 100%;
+}
+#topmenu ul li{
+    float: left;
+    width: 33.33%;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    background: #fff;
+    font-size: 0.38rem;
+    text-align: center;
+    color: #999;
+}
+#topmenu ul li.active,#topmenu ul li:hover{
+    background: #e0e0e0;
+}
+/*列表*/
+#oldexam{
+    width: 100%;
+}
+#oldexam li{
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+#oldexam li .oe-topmenu{
+    width: 100%;
+    height: 1.05rem;
+    line-height: 1.05rem;
+    border-top: 1px solid #ecedee;
+    background: #F5F5F5;
+    font-size: 0.34rem;
+    color: #9c9c9c;
+}
+#oldexam li .oe-topmenu a{
+    color: #9c9c9c;
+}
+#oldexam li .oe-topmenu a.blue{
+    color: #3482c4;
+}
+#oldexam li .oe-topmenu span{
+    margin: 0.15rem;
+}
+.startnum img{
+    margin-top: -0.1rem;
+    margin-right: 0.05rem;
+}
+#oldexam li .oe-middlename{
+    height: 1.5rem;
+    line-height: 1.5rem;
+}
+#oldexam li .oe-middlename .left{
+    height: 1.5rem;
+    font-size: 0;
+}
+#oldexam li .oe-middlename .left img{
+    width: 0.6rem;
+    margin-right: 0.25rem;
+    float: left;
+    margin-top: 0.4rem;
+}
+#oldexam li .oe-middlename .left .oem-name{
+    font-size: 0.4rem;
+    color: #666;
+    width: 6.7rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: left;
+}
+#oldexam li .oe-middlename .right img{
+    width: 0.5rem;
+    margin-top: -0.3rem;
+}
+#oldexam .oe-bottom{
+    width: 100%;
+    height: 1.05rem;
+    line-height: 1.05rem;
+    font-size: 0.32rem;
+    color: #9c9c9c;
+    background: url("../images/yearoldexam/listbg.jpg") center bottom;
+}
+#oldexam .oe-bottom span{
+    margin-right: 0.1rem;
+}
+.notmore{
+    width: 100%;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    text-align: center;
+    background: #fff;
+    color: #9c9c9c;
+    font-size: 0.28rem;
+}

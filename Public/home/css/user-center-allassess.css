@@ -1,0 +1,64 @@
+@charset "utf-8";
+html,body{
+    background: #f5f5f5;
+}
+#allassess{
+    position: relative;
+    width: 890px;
+    margin: 0 auto;
+}
+#allassess .allassess-title{
+    width: 100%;
+    font-size: 36px;
+    color: #525252;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+#allassess .allassess-chose{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+#allassess .allassess-chose select{
+    width: 150px;
+    padding-left: 15px;
+    height: 40px;
+    border: 1px solid #ecedee;
+    background: #f5f5f5;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+#allassess .allassess-chose button{
+    width: 100px;
+    height: 40px;
+    border: 1px solid #ecedee;
+    background: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    outline: none;
+}
+#allassess .allassess-chose button.active{
+    background: #f5f5f5;
+}
+#allassess .allassess-title-text{
+    font-size: 14px;
+    color: #919191;
+    text-align: center;
+    margin-bottom: 15px;
+}
+#allassess .allassess-title-text span{
+    color: #525252;
+}
+#allassess .allassess-title-text a{
+    display: block;
+    padding: 10px;
+    border: 1px solid #ecedee;
+    background: #f5f5f5;
+    color: #525252;
+    float: left;
+    margin-right: 5px;
+    border-radius: 3px;
+    text-align: center;
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- 编码格式 -->
+    <meta charset="utf-8">
+    <!-- IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 设置 viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <meta name="Keywords" content="桑磊法考,司法考试,考试,司法,律师">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- 兼容国产浏览器的高速模式 -->
+    <meta name="renderer" content="webkit">
+    <title>用户中心 - 订制课堂</title>
+    <!--设置网页的图标-->
+    <link rel="shortcut icon" href="">
+    <!--公用的css-->
+    <link type="text/css" href="__PUBLIC__/wx/css/public.css" rel="stylesheet"/>
+    <!--本页面的css-->
+    <link type="text/css" href="__PUBLIC__/wx/css/videopublic.css" rel="stylesheet"/>
+</head>
+<body>
+<div id="makeclass">
+    <div class="wrap">
+        <p class="mc-title">已完成订制课堂</p>
+        <p class="mc-num"><span>{$count2+$comcounts}</span>（节）</p>
+    </div>
+    <div class="mc-menu-nav">
+        <a href="{:U('indexp')}" class="active">
+            <p>私人订制</p>
+            <p class="mc-m-num">{$count}</p>
+        </a>
+        <div class="bor"></div>
+        <a href="{:U('indexc')}">
+            <p>众筹订制</p>
+            <p class="mc-m-num">{$comcountall}</p>
+        </a>
+    </div>
+</div>
+<!--排序按钮-->
+<div id="rankmenunav">
+    <div class="wrap">
+        <div class="left">
+            <a href="{:U('indexp')}" <if condition='I("typeid") eq ""'>class="active blue"<else/>class="blue"</if> onclick="shopNav(this)">全部课堂</a>
+            <a href="{:U('indexp',array('typeid'=>2))}" <if condition='I("typeid") eq "2"'>class="active blue"<else/>class="blue"</if>  onclick="shopNav(this)">完成订制 ({$count2})</a>
+            <a href="{:U('indexp',array('typeid'=>3))}" <if condition='I("typeid") eq "3"'>class="active blue"<else/>class="blue"</if>  onclick="shopNav(this)">等待完成 ({$count3})</a>
+        </div>
+        <div class="right">
+            共计 <span>{$count}</span>个视频
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!--列表-->
+<!--收藏课堂视频列表-->
+<ul class="videolist">
+    <volist name="custompri" id="val">
+        <if condition="$val['status'] eq 2">
+    <li>
+        <div class="left vl-img">
+            <img src="__PUBLIC__/wx/images/video/srktdz/listimg.png" alt=""/>
+        </div>
+        <div class="left vl-content">
+            <p class="vl-c-name">法理学难点解析100题</p>
+            <p class="vl-c-subject">
+                <span class="vl-c-mr">所属学科：法理学</span>
+                <span>主讲老师：桑磊</span>
+            </p>
+            <p class="vl-c-time">
+                <span class="vl-c-mr vl-c-blue">
+                    <img src="__PUBLIC__/wx/images/video/img/listmoney.png" alt=""/>
+                    <span>花费50法豆</span>
+                </span>
+                <span>
+                    <img src="__PUBLIC__/wx/images/video/img/listtime.png" alt=""/>
+                    00:52:30
+                </span>
+            </p>
+        </div>
+        <div class="right vl-look">
+            <p class="vl-look-text vl-look-text-blue">分享视频</p>
+            <a class="gray" href="#">完成订制</a>
+        </div>
+    </li>
+    <else/>
+    <li>
+        <div class="left vl-img">
+            <img src="__PUBLIC__/wx/images/video/srktdz/listimg.png" alt=""/>
+        </div>
+        <div class="left vl-content">
+            <p class="vl-c-name">法理学难点解析100题</p>
+            <p class="vl-c-subject">
+                <span class="vl-c-mr">所属学科：法理学</span>
+                <span>主讲老师：桑磊</span>
+            </p>
+            <p class="vl-c-time">
+                <span class="vl-c-mr vl-c-blue">
+                    <img src="__PUBLIC__/wx/images/video/img/listmoney.png" alt=""/>
+                    <span>花费50法豆</span>
+                </span>
+                <span>
+                    <img src="__PUBLIC__/wx/images/video/img/listtime.png" alt=""/>
+                    00:52:30
+                </span>
+            </p>
+        </div>
+        <div class="right vl-look">
+            <a class="blue" href="#">等待完成</a>
+        </div>
+    </li>
+        </if>
+    </volist>
+</ul>
+<div class="notmore">没有更多了</div>
+<!--底部-->
+<div id="footer">
+    CopyRight©2017&nbsp;&nbsp;&nbsp;桑磊法考中心版权所有&nbsp;&nbsp;&nbsp;侵者必究
+</div>
+<script type="text/javascript" src="__PUBLIC__/wx/js/jquery-1.11.3.js"></script>
+<!--热词搜索的显示-->
+<script type="text/javascript">
+    function hotWordShow(t){
+        $(t).parents("#search").find(".hotword").slideDown();
+    };
+    function hotWordHide(t){
+        $(t).parents("#search").find(".hotword").slideUp();
+    };
+</script>
+<!--功能菜单的点击事件-->
+<script type="text/javascript">
+    function shopNav(t){
+        $(t).addClass("active").siblings("a").removeClass("active");
+    }
+    function triangle(t){
+        if($(t).hasClass("ed")===false){
+            $(t).find(".triangle").children(".top").css("border-bottom","0.18rem solid #5de1ef");
+            $(t).find(".triangle").children(".bottom").css("border-top","0.18rem solid #c0c0c0");
+            $(t).addClass("ed");
+        }else{
+            $(t).find(".triangle").children(".top").css("border-bottom","0.18rem solid #c0c0c0");
+            $(t).find(".triangle").children(".bottom").css("border-top","0.18rem solid #5de1ef");
+            $(t).removeClass("ed");
+        }
+    }
+</script>
+</body>
+</html>

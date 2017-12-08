@@ -1,0 +1,255 @@
+@charset "utf-8";
+html,body{
+    background: #f5f5f5;
+}
+#recharge{
+    position: relative;
+    width: 890px;
+    margin: 0 auto;
+}
+#recharge .vip{
+    position: absolute;
+    right: -40px;
+    top: -30px;
+}
+#recharge .name-title{
+    padding: 0 40px;
+    background: #f5f5f5;
+    width: 590px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    color: #525252;
+    font-weight: bold;
+    margin-left: -40px;
+}
+#recharge .name-title .czye{
+    color: #fcb60f;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+}
+#recharge .name-title img{
+    cursor: pointer;
+}
+#recharge .recharge-style{
+    width: 630px;
+}
+#recharge .recharge-dou-style{
+    width: 630px;
+    display: none;
+}
+#recharge .recharge-style .recharge-style-title{
+    height: 60px;
+    line-height: 60px;
+    color: #525252;
+    font-size: 14px;
+}
+#recharge .recharge-dou-style .recharge-style-title{
+    height: 60px;
+    line-height: 60px;
+    color: #525252;
+    font-size: 14px;
+}
+#recharge .recharge-style .recharge-style-chose{
+    height: 50px;
+    line-height: 50px;
+}
+#recharge .recharge-dou-style .recharge-style-chose{
+    height: 70px;
+    line-height: 70px;
+}
+#recharge .recharge-style .recharge-style-chose input{
+    margin-right: 5px;
+}
+#recharge .recharge-style .recharge-style-chose img{
+    margin-right: 65px;
+    cursor: pointer;
+}
+#recharge .recharge-style .recharge-num button{
+    width: 120px;
+    height: 38px;
+    border: 1px solid #ecedee;
+    background: #fbfbfc;
+    margin-right: 3px;
+    font-size: 14px;
+    color: #525252;
+    border-radius: 3px;
+    cursor: pointer;
+    outline: none;
+}
+#recharge .recharge-dou-style .recharge-num button{
+    width: 150px;
+    height: 68px;
+    border: 1px solid #ecedee;
+    background: #fbfbfc;
+    margin-right: 5px;
+    font-size: 24px;
+    color: #525252;
+    border-radius: 3px;
+    cursor: pointer;
+    outline: none;
+}
+#recharge .recharge-dou-style .recharge-num button span{
+    font-size: 14px;
+}
+#recharge .recharge-style .recharge-num button.active{
+    border: 1px solid #4ea6d2;
+}
+#recharge .recharge-dou-style .recharge-num button.active{
+    border: 1px solid #fcb60f;
+    color: #fcb60f;
+}
+#recharge .recharge-style .recharge-num .inputbox{
+    width: 373px;
+    height: 38px;
+    border: 1px solid #ecedee;
+    margin: 15px 0;
+}
+#recharge .recharge-dou-style .recharge-num .inputbox{
+    width: 625px;
+    height: 68px;
+    border: 1px solid #ecedee;
+    margin: 15px 0;
+    margin-top: 25px;
+}
+#recharge .recharge-style .recharge-num .inputbox button{
+    border: none;
+    border-right: 1px solid #ecedee;
+}
+#recharge .recharge-dou-style .recharge-num .inputbox button{
+    border: none;
+    border-right: 1px solid #ecedee;
+    font-size: 16px;
+}
+#recharge .recharge-style .recharge-num .inputbox input{
+    height: 38px;
+    width: 220px;
+    outline: none;
+}
+#recharge .recharge-dou-style .recharge-num .inputbox input{
+    height: 68px;
+    width: 460px;
+    outline: none;
+    font-size: 24px;
+}
+#recharge .recharge-style .recharge-num .gorecharge{
+    width: 100%;
+    height: 35px;
+    background: #fbfbfc;
+    border: 1px solid #ecedee;
+    margin-bottom: 25px;
+}
+#recharge .recharge-style .recharge-num .gorecharge:hover{
+    background: #4EA6D2;
+    color: #fff;
+}
+#recharge .recharge-dou-style .recharge-num .gorecharge{
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    background: #fbfbfc;
+    border: 1px solid #ecedee;
+    margin: 25px 0;
+    font-weight: bold;
+}
+#recharge .recharge-dou-style .recharge-num .gorecharge:hover{
+    background: #4EA6D2;
+    color: #fff;
+}
+#recharge .recharge-dou-style .recharge-num .gorecharge span{
+    color: #fcb60f;
+}
+#recharge .balance{
+    width: 225px;
+    border-top: 1px solid #ecedee;
+    border-bottom: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#recharge .balance .balance-title{
+    width: 100%;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    font-size: 14px;
+    color: #525252;
+    border-bottom: 1px solid #ecedee;
+    background: #fbfbfc;
+    border-left: 1px solid #ecedee;
+    border-right: 1px solid #ecedee;
+}
+#recharge .balance .balance-num{
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    font-size: 14px;
+    color: #525252;
+    border-bottom: 1px solid #ecedee;
+    border-left: 1px solid #ecedee;
+    border-right: 1px solid #ecedee;
+}
+#recharge .balance .balance-num span{
+    font-size: 24px;
+}
+#recharge .balance .text{
+    font-size: 12px;
+    color: #b5b5b5;
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
+    line-height: 20px;
+    margin-top: 10px;
+}
+#recharge .qrcode .qrcode-title{
+    height: 50px;
+    line-height: 50px;
+    font-size: 12px;
+    color: #525252;
+    padding-left: 150px;
+}
+#recharge .qrcode .qrcode-title span{
+    margin-right: 162px;
+}
+#recharge .qrcode .col-1{
+    width: 510px;
+    height: 200px;
+    border: 1px solid #ecedee;
+    background: #fbfbfc;
+}
+#recharge .qrcode .col-1 .qrcode-name{
+    height: 150px;
+    padding-top: 50px;
+    width: 75px;
+    background: #f5f5f5;
+    font-size: 18px;
+    color: #525252;
+    text-align: center;
+}
+#recharge .qrcode .col-1 .qrcode-img{
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    background: #f5f5f5;
+    margin: 15px;
+}
+#recharge .qrcode .col-1 .qrcode-img img{
+    width: 150px;
+    height: 150px;
+}
+#recharge .qrcode .col-1 .qrcode-bor{
+    width: 1px;
+    height: 200px;
+    background: #ecedee;
+    margin: 0 15px;
+}
+#recharge  .note{
+    font-size: 14px;
+    color: #828282;
+    line-height: 30px;
+    border-top: 1px solid #ecedee;
+    margin-top: 60px;
+}

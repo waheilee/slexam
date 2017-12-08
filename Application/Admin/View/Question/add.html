@@ -1,0 +1,563 @@
+<include file="Public/head"/>
+<body class="no-skin">
+<include file="Public/header"/>
+<link href="__PUBLIC__/admin/css/common.css" type="text/css" rel="stylesheet">
+<link href="__PUBLIC__/admin/css/index.css" type="text/css" rel="stylesheet">
+<script src="__PUBLIC__/admin/js/imgUp.js"></script>
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+    <style>
+        /*分割线样式*/
+        .sigma-content{
+            margin: 50px;
+            text-align: center;
+            background-color: #fff;
+        }
+        .sigma-middle-line:before{
+            content: '';
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: red;/*颜色需与主题大背景色一致*/ 
+            position: relative;
+            top: 10px;/*调节线高*/
+            left: 0;
+        }
+        .sigma-line-text{
+            display: inline-block;
+            background: #fff;
+            padding: 0 18px 0 18px;
+            position: relative;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    </style>
+    <include file="Public/sidebar"/>
+    <div class="main-content">
+        <div class="main-content-inner">
+            <!-- #section:basics/content.breadcrumbs -->
+            <include file="Public/breadcrumbs"/>
+
+            <!-- /section:basics/content.breadcrumbs -->
+            <div class="page-content">
+                <include file="Public/set"/>
+
+                <!-- /section:settings.box -->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <form class="form-horizontal" id="form" method="post" action="{:U('update')}">
+                            <input type="hidden" name="aid" value="{$article.aid}" id="aid"/>
+                            <!-- PAGE CONTENT BEGINS -->
+                            <div class="space-4"></div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-3">
+                                    故事</label>
+                                <div class="col-sm-9">
+                                    <textarea name="story" id="stoty" placeholder="故事"
+                                              class="col-xs-10 col-sm-5"
+                                              rows="10">{$article['stoty']}</textarea>
+                                    <span class="help-inline col-xs-12 col-sm-7">
+                                        <span class="middle">故事</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-1">
+                                    题数 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="contentcount" id="contentcount" placeholder="题数"
+                                           class="col-xs-10 col-sm-5" value="{$article['title']}">
+                                    <span class="help-inline col-xs-12 col-sm-7">
+                                        <span class="middle">题数不能为空。</span>
+                                    </span>
+                                </div>
+                            </div>
+                           <div class="space-4"></div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-3">
+                                    所属知识点</label>
+                                <div class="col-sm-9">
+                                    <textarea name="knowledge" id="knowledge" placeholder="知识点（多个知识点请用中文状态下的逗号隔开）"
+                                              class="col-xs-10 col-sm-5"
+                                              rows="5">{$question['know']}</textarea>
+                                    <span class="help-inline col-xs-12 col-sm-7">
+                                        <span class="middle">知识点（多个知识点请用中文状态下的逗号隔开）</span>
+                                    </span>
+                                </div>
+                            </div>
+                             <div class="space-4"></div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-0">
+                                    题目类型 </label>
+                                <div class="col-sm-9">
+
+                                 模拟题&nbsp;&nbsp;<input type="radio" name="model[]" id="model" value="1" checked="checked" />
+                                    &nbsp;&nbsp;真题&nbsp;&nbsp;<input type="radio" name="model[]" id="model" value="2"  />
+<!--                                <select name="model1" id="model">
+
+                                    <option value="" >类型</option>
+                                        <option  value="1" >模拟题</option>
+                                        <option  value="2" >真题</option>
+                               
+                                </select>-->
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-0">
+                                    试题时间 </label>
+
+                                <div class="col-sm-9">
+                                    <input  id="birthday" placeholder="选择时间" name="questiontime" type="text" data-date-format="yyyy-mm-dd" 
+                                            value="<if condition="
+                                            $time neq '' ">{$time1|date="Y-m-d ",###}</if>"
+                                    />
+                                    <span >
+                                        <i class="ace-icon fa fa-calendar bigger-110"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <a href="#" id="AddMoreFileBox" class="btn btn-info">添加更多的题目</a>
+                            <div id="InputsWrapper">  
+                                <div>
+
+                                    <div class="space-4"></div>
+                                    <div class="form-group">
+                                        <label class="col-sm-1 control-label no-padding-right" for="form-field-1">
+                                            题目 </label>
+                                        <div class="col-sm-9">
+                                           <textarea name="content1" id="content" placeholder="题目"
+                                              class="col-xs-10 col-sm-5"
+                                              rows="8">{$quest['content']}</textarea>
+                                            <span class="help-inline col-xs-12 col-sm-7">
+                                                <span class="middle">题目不能为空。</span>
+                                            </span>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="space-4"></div>
+                                    <div class="form-group">
+                                        <label class="col-sm-1 control-label no-padding-right" for="form-field-3">
+                                            A</label>
+                                        <div class="col-sm-9">
+
+                                            <textarea name="aa1" id="aa1" placeholder="A选项"
+
+                                                      class="col-xs-10 col-sm-5"
+                                                      rows="5">{$article['description']}</textarea>
+                                            <span class="help-inline col-xs-12 col-sm-7">
+                                                <span class="middle">A选项</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="space-4"></div>
+                                    <div class="form-group">
+                                        <label class="col-sm-1 control-label no-padding-right" for="form-field-3">
+                                            B</label>
+                                        <div class="col-sm-9">
+
+                                            <textarea name="bb1" id="bb1" placeholder="B选项"
+
+                                                      class="col-xs-10 col-sm-5"
+                                                      rows="5">{$article['description']}</textarea>
+                                            <span class="help-inline col-xs-12 col-sm-7">
+                                                <span class="middle">B选项</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="space-4"></div>
+                                    <div class="form-group">
+                                        <label class="col-sm-1 control-label no-padding-right" for="form-field-3">
+                                            C</label>
+                                        <div class="col-sm-9">
+
+                                            <textarea name="cc1" id="cc1" placeholder="C选项"
+
+                                                      class="col-xs-10 col-sm-5"
+                                                      rows="5">{$article['description']}</textarea>
+                                            <span class="help-inline col-xs-12 col-sm-7">
+                                                <span class="middle">C选项</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="space-4"></div>
+                                    <div class="form-group">
+                                        <label class="col-sm-1 control-label no-padding-right" for="form-field-3">
+                                            D</label>
+                                        <div class="col-sm-9">
+
+                                            <textarea name="dd1" id="dd1" placeholder="D选项"
+
+                                                      class="col-xs-10 col-sm-5"
+                                                      rows="5">{$article['description']}</textarea>
+                                            <span class="help-inline col-xs-12 col-sm-7">
+                                                <span class="middle">D选项</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="space-4"></div>
+                                    <div class="form-group">
+                                        <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                            单选/多选 </label>
+                                        <div class="col-sm-9">
+
+                              单选&nbsp;&nbsp;<input type="radio" name="multiple1[]" id="multiple1" value="1" checked="checked" />
+                              &nbsp;&nbsp;多选&nbsp;&nbsp;<input type="radio" name="multiple1[]" id="multiple" value="2"  />
+<!--                                            <select name="multiple1" class="col-xs-10 col-sm-5">
+
+                                                <option value="1">--单选--</option>
+                                                <option value="2">--多选--</option>
+                                            </select>-->
+                                        </div>
+                                    </div>
+                                    <div class="space-4"></div>
+                                    <div class="form-group">
+                                        <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                            答案： </label>
+                                        <div class="col-sm-9">
+                                            <label>A<input name="answer1[]" type="checkbox" value="aa" style='margin-left: 10px;'/></label> 
+                                            <label style='margin-left: 10px;'>B <input name="answer1[]" type="checkbox" value="bb" style='margin-left: 10px;'/></label> 
+                                            <label style='margin-left: 10px;'>C <input name="answer1[]" type="checkbox" value="cc" style='margin-left: 10px;'/></label> 
+                                            <label style='margin-left: 10px;'>D<input name="answer1[]" type="checkbox" value="dd" style='margin-left: 10px;'/></label>
+                                        </div>
+                                    </div>
+
+                                    <div class="space-4"></div>
+                                    <div class="form-group">
+                                        <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                            关键词 </label>
+                                        <div class="col-sm-9">
+                                            <input type="text" name="keywords1" id="keywords" placeholder="关键词"
+                                                   class="col-xs-10 col-sm-5" value="{$article['keywords']}">
+                                            <span class="help-inline col-xs-12 col-sm-7">
+                                                <span class="middle">关键词。</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="space-4"></div>
+                              <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-0">
+                                    题目难度 </label>
+                                <div class="col-sm-9">
+
+                                易&nbsp;&nbsp;<input type="radio" name="difficulty1[]" id="difficulty1" value="1" checked="checked" />
+                                    &nbsp;&nbsp;中&nbsp;&nbsp;<input type="radio" name="difficulty1[]" id="difficulty" value="2"  />
+                                    &nbsp;&nbsp;难&nbsp;&nbsp;<input type="radio" name="difficulty1[]" id="difficulty" value="3"  />
+<!--                                <select name="difficulty1" id="province">
+
+                                    <option value="" >难度</option>
+                                     <option  value="易" <if condition="易 eq $quest['difficulty']"> selected="selected" </if>>易</option>
+                                     <option  value="中" <if condition="中 eq $quest['difficulty']"> selected="selected" </if>>中</option>
+                                     <option  value="难" <if condition="难 eq $quest['difficulty']"> selected="selected" </if>>难</option>
+                                </select>-->
+                                </div> 
+                              </div>
+                            <div class="space-4"></div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-1">
+                                   A选项分析 </label>
+                                <div class="col-sm-9">
+                                   <textarea name="aexplain1" id="aexplain1" placeholder="A选项分析"
+                                              class="col-xs-10 col-sm-5"
+                                              rows="8">{$quest['aexplain']}</textarea>
+                                    <span class="help-inline col-xs-12 col-sm-7">
+                                        <span class="middle">A选项分析。</span>
+                                    </span>
+                                </div>
+                            </div>
+                             <div class="space-4"></div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-1">
+                                    B选项分析 </label>
+                                <div class="col-sm-9">
+                                   <textarea name="bexplain1" id="bexplain1" placeholder=" B选项分析"
+                                              class="col-xs-10 col-sm-5"
+                                              rows="8">{$quest['bexplain']}</textarea>
+                                    <span class="help-inline col-xs-12 col-sm-7">
+                                        <span class="middle"> B选项分析。</span>
+                                    </span>
+                                </div>
+                            </div>
+                             <div class="space-4"></div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-1">
+                                    C选项分析 </label>
+                                <div class="col-sm-9">
+                                   <textarea name="cexplain1" id="cexplain1" placeholder="C选项分析"
+                                              class="col-xs-10 col-sm-5"
+                                              rows="8">{$quest['cexplain']}</textarea>
+                                    <span class="help-inline col-xs-12 col-sm-7">
+                                        <span class="middle">C选项分析。</span>
+                                    </span>
+                                </div>
+                            </div>
+                             <div class="space-4"></div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-1">
+                                    D选项分析 </label>
+                                <div class="col-sm-9">
+                                   <textarea name="dexplain1" id="dexplain1" placeholder="D选项分析"
+                                              class="col-xs-10 col-sm-5"
+                                              rows="8">{$quest['dexplain']}</textarea>
+                                    <span class="help-inline col-xs-12 col-sm-7">
+                                        <span class="middle">D选项分析。</span>
+                                    </span>
+                                </div>
+                            </div>
+                                    <div class="space-4"></div>
+                                    <div class="form-group">
+                                        <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                            难点解析： </label>
+                                        <div class="col-sm-9">
+                                            <textarea name="explain1" id="content"
+                                                      style="width:100%;height:400px;visibility:hidden;">{$article['content']}</textarea>
+                                        </div>
+                                    </div>
+
+                                </div></div>
+
+                            <div class="space-4"></div>
+
+
+                            <div class="col-md-offset-2 col-md-9">
+                                <button class="btn btn-info submit" type="button">
+                                    <i class="icon-ok bigger-110"></i>
+                                    提交
+                                </button>
+
+                                &nbsp; &nbsp; &nbsp;
+                                <button class="btn" type="reset">
+                                    <i class="icon-undo bigger-110"></i>
+                                    重置
+                                </button>
+                            </div>
+
+                            <!-- PAGE CONTENT ENDS -->
+
+
+                        </form>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.page-content -->
+        </div>
+    </div><!-- /.main-content -->
+    <include file="Public/footer"/>
+
+</div><!-- /.main-container -->
+
+<include file="Public/footerjs"/>
+<script src="__PUBLIC__/admin/js/date-time/bootstrap-datepicker.js"></script>
+<!-- inline scripts related to this page -->
+<script type="text/javascript">
+        $(function () {
+            jQuery(function ($) {
+                $('#birthday').datepicker({
+                    format: 'yyyy-mm-dd',
+                    weekStart: 1,
+                    autoclose: true,
+                    todayBtn: 'linked',
+                    language: 'cn'
+                });
+            });
+        });
+
+//追加
+        $(document).ready(function () {
+
+            var MaxInputs = 12; //maximum input boxes allowed  
+            var InputsWrapper = $("#InputsWrapper"); //Input boxes wrapper ID  
+            var AddButton = $("#AddMoreFileBox"); //Add button ID  
+
+            var x = InputsWrapper.length; //initlal text box count  
+            var FieldCount = 1; //to keep track of text box added  
+
+            $(AddButton).click(function (e)  //on add input button click  
+            {
+                if (x <= MaxInputs) //max input box allowed  
+                {
+                    FieldCount++; //text box added increment  
+                    //add input box  
+
+                    $(InputsWrapper).append('<div class="sigma-content"><div class="sigma-middle-line"><span class="sigma-line-text">下一题的分割线</span></div></div><div class="space-4"></div><div class="space-4"></div><div class="form-group"><label class="col-sm-1 control-label no-padding-right" for="form-field-1"> 题目' + FieldCount + ' </label><div class="col-sm-9"><textarea name="content' + FieldCount + '" id="content' + FieldCount + '" placeholder="题目' + FieldCount + '"  class="col-xs-10 col-sm-5" rows="8">{$quest["content"]}</textarea><span class="help-inline col-xs-12 col-sm-7"> <span class="middle">题目不能为空。</span></span></div></div> <div class="space-4"></div><div class="form-group"><label class="col-sm-1 control-label no-padding-right" for="form-field-3"> A</label><div class="col-sm-9"><textarea name="aa' + FieldCount + '" id="aa' + FieldCount + '" placeholder="A选项"  class="col-xs-10 col-sm-5"  rows="5">{$article["description"]}</textarea><span class="help-inline col-xs-12 col-sm-7"><span class="middle">A选项</span></span></div></div><div class="space-4"></div><div class="form-group"> <label class="col-sm-1 control-label no-padding-right" for="form-field-3"> B</label><div class="col-sm-9"><textarea name="bb' + FieldCount + '" id="bb' + FieldCount + '" placeholder="B选项" class="col-xs-10 col-sm-5"  rows="5">{$article["description"]}</textarea><span class="help-inline col-xs-12 col-sm-7"><span class="middle">B选项</span></span></div></div><div class="space-4"></div><div class="form-group"><label class="col-sm-1 control-label no-padding-right" for="form-field-3">C</label><div class="col-sm-9"><textarea name="cc' + FieldCount + '" id="cc' + FieldCount + '" placeholder="C选项"   class="col-xs-10 col-sm-5"   rows="5">{$article["description"]}</textarea> <span class="help-inline col-xs-12 col-sm-7"><span class="middle">C选项</span></span></div></div><div class="space-4"></div><div class="form-group"><label class="col-sm-1 control-label no-padding-right" for="form-field-3"> D</label><div class="col-sm-9"><textarea name="dd' + FieldCount + '" id="dd' + FieldCount + '" placeholder="D选项" class="col-xs-10 col-sm-5" rows="5">{$article["description"]}</textarea><span class="help-inline col-xs-12 col-sm-7"> <span class="middle">D选项</span></span></div></div><div class="space-4"></div><div class="form-group"><label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 单选/多选 </label> <div class="col-sm-9">单选&nbsp;&nbsp;<input type="radio" name="multiple' + FieldCount + '[]" id="multiple' + FieldCount + '" value="1" checked="checked" />&nbsp;&nbsp;多选&nbsp;&nbsp;<input type="radio" name="multiple' + FieldCount + '[]" id="multiple" value="2"  /></div></div><div class="space-4"></div><div class="form-group"><label class="col-sm-1 control-label no-padding-right" for="form-field-2">答案： </label><div class="col-sm-9"><label>A<input name="answer' + FieldCount + '[]" type="checkbox" value="aa" style="margin-left: 10px;"/></label>  <label style="margin-left: 10px;">B <input name="answer' + FieldCount + '[]" type="checkbox" value="bb" style="margin-left: 10px;"/></label> <label style="margin-left: 10px;">C <input name="answer' + FieldCount + '[]" type="checkbox" value="cc" style="margin-left: 10px;"/></label> <label style="margin-left: 10px;">D<input name="answer' + FieldCount + '[]" type="checkbox" value="dd" style="margin-left: 10px;"/></label> </div> </div><div class="space-4"></div><div class="form-group"><label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 关键词 </label><div class="col-sm-9"><input type="text" name="keywords' + FieldCount + '" id="keywords' + FieldCount + '" placeholder="关键词" class="col-xs-10 col-sm-5" value="{$article["keywords"]}"> <span class="help-inline col-xs-12 col-sm-7"> <span class="middle">关键词。</span> </span> </div> </div><div class="space-4"></div><div class="form-group"><label class="col-sm-1 control-label no-padding-right" for="form-field-0">题目难度 </label><div class="col-sm-9">易&nbsp;&nbsp;<input type="radio" name="difficulty' + FieldCount + '[]" id="difficulty" value="1" checked="checked" />&nbsp;&nbsp;中&nbsp;&nbsp;<input type="radio" name="difficulty' + FieldCount + '[]" id="difficulty" value="2"  />&nbsp;&nbsp;难&nbsp;&nbsp;<input type="radio" name="difficulty' + FieldCount + '[]" id="difficulty" value="3"  /></div> </div><div class="space-4"></div><div class="form-group"><label class="col-sm-1 control-label no-padding-right" for="form-field-1"> A选项分析 </label><div class="col-sm-9"><textarea name="aexplain' + FieldCount + '" id="aexplain" placeholder="A选项分析"   class="col-xs-10 col-sm-5" rows="8">{$quest["aexplain"]}</textarea> <span class="help-inline col-xs-12 col-sm-7"> <span class="middle">A选项分析不能为空。</span> </span></div></div><div class="space-4"></div><div class="form-group"><label class="col-sm-1 control-label no-padding-right" for="form-field-1">   B选项分析 </label><div class="col-sm-9"> <textarea name="bexplain' + FieldCount + '" id="bexplain" placeholder=" B选项分析"   class="col-xs-10 col-sm-5" rows="8">{$question["bexplain"]}</textarea><span class="help-inline col-xs-12 col-sm-7"><span class="middle"> B选项分析不能为空。</span></span></div></div><div class="space-4"></div><div class="form-group"><label class="col-sm-1 control-label no-padding-right" for="form-field-1">   C选项分析 </label><div class="col-sm-9"><textarea name="cexplain' + FieldCount + '" id="cexplain" placeholder="C选项分析"   class="col-xs-10 col-sm-5" rows="8">{$quest["cexplain"]}</textarea><span class="help-inline col-xs-12 col-sm-7"> <span class="middle">C选项分析不能为空。</span> </span></div></div><div class="space-4"></div><div class="form-group"><label class="col-sm-1 control-label no-padding-right" for="form-field-1">   D选项分析 </label><div class="col-sm-9"><textarea name="dexplain' + FieldCount + '" id="dexplain" placeholder="D选项分析"  class="col-xs-10 col-sm-5"  rows="8">{$quest["dexplain"]}</textarea><span class="help-inline col-xs-12 col-sm-7"><span class="middle">D选项分析不能为空。</span></span></div></div><div class="space-4"></div><div class="form-group"><label class="col-sm-1 control-label no-padding-right" for="form-field-2">  详解： </label><div class="col-sm-9"><textarea name="explain' + FieldCount + '" id="content"    style="width:100%;height:400px;visibility:hidden;">{$article["content"]}</textarea></div></div>');
+
+                    x++; //text box increment  
+                }
+
+
+                var editor = KindEditor.create('textarea[name="explain2"]', {
+                    uploadJson: '__PUBLIC__/kindeditor/php/upload_json.php',
+                    fileManagerJson: '__PUBLIC__/kindeditor/php/file_manager_json.php',
+                    allowFileManager: true,
+                    afterBlur: function () {
+                        this.sync();
+                    }
+                });
+                var editor = KindEditor.create('textarea[name="explain3"]', {
+                    uploadJson: '__PUBLIC__/kindeditor/php/upload_json.php',
+                    fileManagerJson: '__PUBLIC__/kindeditor/php/file_manager_json.php',
+                    allowFileManager: true,
+                    afterBlur: function () {
+                        this.sync();
+                    }
+                });
+                var editor = KindEditor.create('textarea[name="explain4"]', {
+                    uploadJson: '__PUBLIC__/kindeditor/php/upload_json.php',
+                    fileManagerJson: '__PUBLIC__/kindeditor/php/file_manager_json.php',
+                    allowFileManager: true,
+                    afterBlur: function () {
+                        this.sync();
+                    }
+                });
+                var editor = KindEditor.create('textarea[name="explain5"]', {
+                    uploadJson: '__PUBLIC__/kindeditor/php/upload_json.php',
+                    fileManagerJson: '__PUBLIC__/kindeditor/php/file_manager_json.php',
+                    allowFileManager: true,
+                    afterBlur: function () {
+                        this.sync();
+                    }
+                });
+                var editor = KindEditor.create('textarea[name="explain6"]', {
+                    uploadJson: '__PUBLIC__/kindeditor/php/upload_json.php',
+                    fileManagerJson: '__PUBLIC__/kindeditor/php/file_manager_json.php',
+                    allowFileManager: true,
+                    afterBlur: function () {
+                        this.sync();
+                    }
+                });
+                return false;
+            });
+
+            $("body").on("click", ".removeclass", function (e) { //user click on remove text  
+                if (x > 1) {
+                    $(this).parent('div').prev("label").remove();
+                    $(this).parent('div').remove(); //remove text box  
+                    x--; //decrement textbox  
+                }
+                return false;
+            })
+        });
+        $(function () {
+            $("#tabs").tabs();
+
+            var editor = KindEditor.create('textarea[name="explain1"]', {
+                uploadJson: '__PUBLIC__/kindeditor/php/upload_json.php',
+                fileManagerJson: '__PUBLIC__/kindeditor/php/file_manager_json.php',
+                allowFileManager: true,
+                afterBlur: function () {
+                    this.sync();
+                }
+            });
+
+
+            $(".submit").click(function () {
+                var contentcount = $("#contentcount").val();
+                var content = $("#content").val();
+
+                var story = $("#story").val();
+                var model = $("#model").val();
+                var knowledge = $("#knowledge").val();
+                var aa1 = $("#aa1").val();
+                var bb1 = $("#bb1").val();
+                var cc1 = $("#cc1").val();
+                var dd1 = $("#dd1").val();
+
+
+                if (contentcount == '') {
+                    bootbox.dialog({
+                        title: '友情提示：',
+                        message: "试题数目必须选择。",
+                        buttons: {
+                            "success": {
+                                "label": "确定",
+                                "className": "btn-danger"
+                            }
+                        }
+                    });
+                    return;
+                }
+                if (content == '') {
+                    bootbox.dialog({
+                        title: '友情提示：',
+                        message: "文章标题必须填写。",
+                        buttons: {
+                            "success": {
+                                "label": "确定",
+                                "className": "btn-danger"
+                            }
+                        }
+                    });
+                    return;
+                }
+
+                if (aa1 == ''||bb1 == ''||cc1 == ''||dd1 == '') {
+
+                    bootbox.dialog({
+                        title: '友情提示：',
+                        message: "试题abcd选项必须填写。",
+                        buttons: {
+                            "success": {
+                                "label": "确定",
+                                "className": "btn-danger"
+                            }
+                        }
+                    });
+                    return;
+
+                }
+
+                if (model == '') {
+                    bootbox.dialog({
+                        title: '友情提示：',
+                        message: "试题类型需要填写。",
+                        buttons: {
+                            "success": {
+                                "label": "确定",
+                                "className": "btn-danger"
+                            }
+                        }
+                    });
+
+                    return;
+                }
+
+                if (story == '') {
+                    bootbox.dialog({
+                        title: '友情提示：',
+                        message: "故事需要填写。",
+                        buttons: {
+                            "success": {
+                                "label": "确定",
+                                "className": "btn-danger"
+                            }
+                        }
+                    });
+                    return;
+                }
+                if (knowledge == '') {
+                    bootbox.dialog({
+                        title: '友情提示：',
+                        message: "知识点需要填写。",
+                        buttons: {
+                            "success": {
+                                "label": "确定",
+                                "className": "btn-danger"
+                            }
+                        }
+                    });
+                    return;
+                }
+
+                $("#form").submit();
+            });
+        });
+
+</script>
+</body>
+</html>

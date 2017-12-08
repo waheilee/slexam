@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>法理学题库集</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta name=”keyword” content=”桑磊法考,司法考试,考试,司法,律师“>
+    <!-- 公用的css -->
+    <link rel="stylesheet" href="__PUBLIC__/home/css/public.css"/>
+    <!-- 本页面的css -->
+    <link rel="stylesheet" href="__PUBLIC__/home/css/library-list.css"/>
+</head>
+<body>
+<!--主导航-->
+<include file="Public/nav" />
+<!--题库摘要-->
+<div id="summary">
+   <div class="wrap">
+       <div class="summary-content">
+           <div class="left img">
+               <img src="__PUBLIC__/home/images/index/library/1.jpg" alt=""/>
+           </div>
+           <div class="left title">
+               <p class="name">{$name}题库集</p>
+               <p class="num">
+                   <span>{$p_count|default=0}</span>个知识点&nbsp;&nbsp;&nbsp;
+                   <span>{$q_count|default=0}</span>个测试题目&nbsp;&nbsp;&nbsp;核心模拟真题评估</p>
+           </div>
+           <a href="{:U('Random/index')}" target='_blank' class="left randomlibrary">
+               <img src="__PUBLIC__/home/images/library-list/randomlibrary.png" alt=""/>
+           </a>
+           <div class="qrcode right">
+               <p class="qrcode-title">扫描二维码手机端答题</p>
+               <div class="qrcode-img">
+                   <img src="__PUBLIC__/home/images/library-list/qrcode.png" alt=""/>
+               </div>
+               <p class="qrcode-text">
+                   &nbsp;&nbsp;官方微信添加“桑磊法考”&nbsp;&nbsp;
+                   关注我们的官方微信在线答题
+               </p>
+           </div>
+           <div class="clearfix"></div>
+       </div>
+   </div>
+</div>
+<!--题库列表-->
+<div id="questionbanklist">
+    <div class="wrap">
+        <!--测试题-->
+        <volist name="examin" id='vo'>
+            <div class="bank-list">
+                <img src="__PUBLIC__/home/images/library-list/topone.png" class="topone" alt=""/>
+                <div class="left bank-img">
+                    <img src="__PUBLIC__/home/images/library-list/word.png" alt=""/>
+                </div>
+                <div class="left">
+                    <!--试题名称-->
+                    <div class="bank-name">
+                        {$vo['nickname']}
+                    </div>
+                    <!--试题属性-->
+                    <div class="bak-num">
+                        <span>年份：{:date('Y',$vo['createtime'])}</span>
+                        <span>知识难点：{$vo['count']}个</span>
+                        <span>测试题目：100道</span>
+                        <span>答题人数：{$vo['usenum']}人</span>
+                    </div>
+                </div>
+                <!--试题答分  时间-->
+                <div class="bank-time left">
+                    最高分数：<span>{$vo['score']}</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    最快计时：<span>{$vo['time']}</span>
+                </div>
+                <div class="right">
+                    <a href="{:U('Answer/examin',array('code'=>base64_encode($vo['id'])))}" target="_blank" class="bank-gotoquestion"></a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </volist>
+    </div>
+    <!--页码-->
+    <div class="page wrap newspage">
+        <div id="pagination" style="position: relative;">
+        　　{$page}        
+        </div>
+    </div>
+   
+</div>
+<!--底部导航-->
+<div id="bottomnav">
+    <div class="wrap">
+        <div class="bottomnav-list left">
+            <div class="bottomnav-top">
+                <img src="__PUBLIC__/home/images/library-list/bottomnav-1.png" alt=""/>
+                <!--相关视频-->
+                <a href="#" target="_blank">相关视频</a>
+            </div>
+            <div class="bottomnav-bottom">
+                <div class="left">
+                    <img src="__PUBLIC__/home/images/library-list/bottomnav-b1.png" alt=""/>
+                </div>
+                <div class="left">
+                    <p>查阅相关视频课堂</p>
+                    <p class="bottomnav-num">约有 <span> 50 </span> 个相关视频</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="bottomnav-list left mlr20">
+            <div class="bottomnav-top">
+                <img src="__PUBLIC__/home/images/library-list/bottomnav-2.png" alt=""/>
+                <!--相关视频-->
+                <a href="#" target="_blank">订制课堂</a>
+            </div>
+            <div class="bottomnav-bottom">
+                <div class="left">
+                    <img src="__PUBLIC__/home/images/library-list/bottomnav-b2.png" alt=""/>
+                </div>
+                <div class="left">
+                    <p>提交知识难点，订制课堂</p>
+                    <p class="bottomnav-num">已有 <span>180</span> 个人订制相关课堂</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="bottomnav-list left">
+            <div class="bottomnav-top">
+                <img src="__PUBLIC__/home/images/library-list/bottomnav-3.png" alt=""/>
+                <!--相关视频-->
+                <a href="#" target="_blank">历届打榜</a>
+            </div>
+            <div class="bottomnav-bottom">
+                <div class="left">
+                    <img src="__PUBLIC__/home/images/library-list/bottomnav-b3.png" alt=""/>
+                </div>
+                <div class="left">
+                    <p>查看相关历届打榜</p>
+                    <p class="bottomnav-num">约有 <span> 180 </span> 个相关视频</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!--底部-->
+<include file='Public/foot' />
+</body>
+</html>

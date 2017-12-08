@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- 编码格式 -->
+    <meta charset="utf-8">
+    <!-- IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 设置 viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <meta name="Keywords" content="桑磊法考,司法考试,考试,司法,律师">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- 兼容国产浏览器的高速模式 -->
+    <meta name="renderer" content="webkit">
+    <title>桑磊法考 - 账户信息</title>
+    <!--设置网页的图标-->
+    <link rel="shortcut icon" href="">
+    <!--公用的css-->
+    <link type="text/css" href="__PUBLIC__/wx/css/public.css" rel="stylesheet"/>
+    <!--本页面的css-->
+    <link type="text/css" href="__PUBLIC__/wx/css/usecenter-zhxx.css" rel="stylesheet"/>
+</head>
+<body>
+<!--切换菜单-->
+<div id="changebutton">
+    <a href="javascript:void(0)" onclick="changeNav(this,'zhcz')" class="active">账户充值</a>
+    <a href="javascript:void(0)" onclick="changeNav(this,'zhjl')">账户记录</a>
+</div>
+<!--账户充值-->
+<div id="changeone">
+    <!--个人账户信息-->
+    <div id="selfmessage">
+        <div class="wrap">
+            <div class="left headcontentheadimg">
+                <div class="headimg">
+                    <p class="headimgtext active">普通会员</p>
+                    <img src="__PUBLIC__/wx/images/usecenter/nav/tx.png" alt=""/>
+                </div>
+            </div>
+            <div class="right headcontent">
+                <p class="headname">朝阳大法官</p>
+                <div class="headnum">
+                    <img src="__PUBLIC__/wx/images/usecenter/zhxx/money.png" alt=""/>
+                    账户余额：<span class="blue">130</span>元
+                    <img src="__PUBLIC__/wx/images/usecenter/zhxx/fd.png" class="bigw" alt=""/>
+                    法豆余额：<span>888</span>个 <span><a href="javascript:void(0)" onclick="changethreeShow()">(兑换)</a></span>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!--填写金额-->
+    <div id="nummoney">
+        <!--<form action="">-->
+        <div class="wrap">
+            <!--金额的input-->
+            <input id="nummoneyvalue" type="hidden" value="" name=""/>
+            <button onclick="numMoney(this)" type="button" data="20">20 <span>元</span></button>
+            <button onclick="numMoney(this)" class="mlr" type="button" data="50">50 <span>元</span></button>
+            <button onclick="numMoney(this)" type="button" data="100">100 <span>元</span></button>
+            <button onclick="numMoney(this)" type="button" data="200">200 <span>元</span></button>
+            <button onclick="numMoney(this)" class="mlr" type="button" data="500">500 <span>元</span></button>
+            <button type="button">
+                <input type="number" value="" onblur="numMoneyInputBlur(this)" onfocus="numMoneyInput(this)" placeholder="其他金额"/>
+            </button>
+        </div>
+        <button class="submitbutton"><img src="__PUBLIC__/wx/images/usecenter/zhxx/wx.png" alt=""/></button>
+        <!--</form>-->
+        <div class="nummoneynote wrap">* 注：即时到账，平台支付偶有延时现象；本账户目前暂不支持提现服务。</div>
+    </div>
+</div>
+<!--账户记录-->
+<div id="changetwo">
+    <ul class="wrap">
+        <li>
+            <p class="zhjl-number">编号：2017111402060098</p>
+            <p class="zhjl-money">账户消费：50元</p>
+            <p class="zhjl-text">购买内容：订制视频课堂 - 私人预订 - 国际法知识要点解析法知识要点解析 </p>
+            <p class="zhjl-time">购买时间：2017年11月14日 11:21</p>
+            <img onclick="removeLi(this)" class="removeli" src="__PUBLIC__/wx/images/usecenter/zhxx/remove.png" alt=""/>
+        </li>
+        <li>
+            <p class="zhjl-number">编号：2017111402060098</p>
+            <p class="zhjl-money">账户消费：50元</p>
+            <p class="zhjl-text">购买内容：订制视频课堂 - 私人预订 - 国际法知识要点解析 </p>
+            <p class="zhjl-time">购买时间：2017年11月14日 11:21</p>
+            <img onclick="removeLi(this)" class="removeli" src="__PUBLIC__/wx/images/usecenter/zhxx/remove.png" alt=""/>
+        </li>
+        <li>
+            <p class="zhjl-number">编号：2017111402060098</p>
+            <p class="zhjl-money">账户消费：50元</p>
+            <p class="zhjl-text">购买内容：订制视频课堂 - 私人预订 - 国际法知识要点解析 </p>
+            <p class="zhjl-time">购买时间：2017年11月14日 11:21</p>
+            <img onclick="removeLi(this)" class="removeli" src="__PUBLIC__/wx/images/usecenter/zhxx/remove.png" alt=""/>
+        </li>
+        <li>
+            <p class="zhjl-number">编号：2017111402060098</p>
+            <p class="zhjl-money">账户消费：50元</p>
+            <p class="zhjl-text">购买内容：订制视频课堂 - 私人预订 - 国际法知识要点解析 </p>
+            <p class="zhjl-time">购买时间：2017年11月14日 11:21</p>
+            <img onclick="removeLi(this)" class="removeli" src="__PUBLIC__/wx/images/usecenter/zhxx/remove.png" alt=""/>
+        </li>
+    </ul>
+</div>
+<!--兑换法豆-->
+<div id="changethree">
+    <div class="fd-title">
+        <div class="wrap">
+            <div class="left"><img src="__PUBLIC__/wx/images/usecenter/zhxx/fd-white.png" alt=""/>兑换法豆</div>
+            <div class="right">10法豆 = 1元人民币</div>
+        </div>
+    </div>
+    <div class="fd-tabel">
+        <div class="wrap">
+            账户余额：<span class="blue">130</span><span>元</span>
+        </div>
+    </div>
+    <div class="fd-tabel">
+        <div class="wrap">
+            法豆余量：<span class="orange">80</span><span>个</span>
+        </div>
+    </div>
+    <div class="fd-exchange">
+       <div class="wrap">
+           <input onkeyup="fdExchange(this)" class="left" type="number" value="" placeholder="输入您要兑换的法豆数量"/>
+           <div class="left">将从账户扣除</div>
+           <div class="right">
+               <span id="fdexchangespan">0</span>元
+           </div>
+       </div>
+    </div>
+    <!--扣除的账户金额-->
+    <input id="fdexchange" type="hidden" value="" />
+    <button class="orangesubmitbutton">确认兑换</button>
+   <div class="nummoneynote wrap">*注：账户金额一经兑换成法豆后不可撤消。</div>
+    <div class="goback" onclick="changethreeHide()">返回</div>
+</div>
+<!--底部-->
+<div id="footer">
+    CopyRight©2017&nbsp;&nbsp;&nbsp;桑磊法考中心版权所有&nbsp;&nbsp;&nbsp;侵者必究
+</div>
+<script type="text/javascript" src="__PUBLIC__/wx/js/jquery-1.11.3.js"></script>
+<script type="text/javascript">
+//    菜单切换
+    function changeNav(t,d){
+        if(d=="zhcz"){
+            $("#changeone").show();
+            $("#changetwo").hide();
+            $(t).addClass("active").siblings("a").removeClass("active");
+        }else if(d=="zhjl"){
+            $("#changeone").hide();
+            $("#changetwo").show();
+            $(t).addClass("active").siblings("a").removeClass("active");
+        }
+    };
+//    选择金额
+    function numMoney(t){
+        $(t).addClass("active").siblings("button").removeClass("active");
+        $("#nummoneyvalue").val($(t).attr("data"));
+    };
+    function numMoneyInput(t){
+        $(t).parents("button").addClass("active").siblings("button").removeClass("active");
+    }
+    function numMoneyInputBlur(t){
+        $(t).addClass("active").parents("button").siblings("button").removeClass("active");
+        $("#nummoneyvalue").val($(t).val());
+    }
+//    删除记录
+    function removeLi(t){
+        $(t).parents("li").remove();
+    }
+//    法豆兑换
+    function fdExchange(t){
+//        var n = Math.ceil(($(t).val()/10));//向上取整
+        var n = ($(t).val()/10);
+        $("#fdexchange").val(n);
+        $("#fdexchangespan").html(n);
+    }
+//    法豆兑换打开
+    function changethreeShow(){
+        $("#changethree").slideDown();
+    }
+//    法豆兑换关闭
+function changethreeHide(){
+    $("#changethree").slideUp();
+}
+</script>
+</body>
+</html>

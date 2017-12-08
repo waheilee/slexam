@@ -1,0 +1,3906 @@
+[ 2017-12-07T11:08:05+08:00 ] 127.0.0.1 /www/slcms/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001504s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002273s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002388s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0189s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0180s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0055s ]
+SQL: SHOW COLUMNS FROM `qw_video` [ RunTime:0.0198s ]
+SQL: SELECT `id`,`title` FROM `qw_video` WHERE ( groom=1 ) ORDER BY addtime desc LIMIT 4   [ RunTime:0.0041s ]
+SQL: SELECT `id`,`title` FROM `qw_video` WHERE ( groom=2 ) ORDER BY addtime desc LIMIT 4   [ RunTime:0.0053s ]
+SQL: SHOW COLUMNS FROM `qw_tree` [ RunTime:0.0200s ]
+SQL: SELECT `id`,`name` FROM `qw_tree` WHERE ( pid=0 )  [ RunTime:0.0071s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0038s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 1 AND `zid` <> ''  [ RunTime:0.0047s ]
+NOTIC: [8] Undefined variable: count D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%1%' LIMIT 1   [ RunTime:0.0058s ]
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 2 AND `zid` <> ''  [ RunTime:0.0054s ]
+NOTIC: [8] Undefined variable: count D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%2%' LIMIT 1   [ RunTime:0.0042s ]
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 3 AND `zid` <> ''  [ RunTime:0.0049s ]
+NOTIC: [8] Undefined variable: count D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%3%' LIMIT 1   [ RunTime:0.0068s ]
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 4 AND `zid` <> ''  [ RunTime:0.0066s ]
+NOTIC: [8] Undefined variable: count D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%4%' LIMIT 1   [ RunTime:0.0041s ]
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 5 AND `zid` <> ''  [ RunTime:0.0058s ]
+NOTIC: [8] Undefined variable: count D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%5%' LIMIT 1   [ RunTime:0.0041s ]
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 6 AND `zid` <> ''  [ RunTime:0.0060s ]
+NOTIC: [8] Undefined variable: count D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%6%' LIMIT 1   [ RunTime:0.0039s ]
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 7 AND `zid` <> ''  [ RunTime:0.0047s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%7%' LIMIT 1   [ RunTime:0.0042s ]
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\IndexController.class.php 第 29 行.
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 8 AND `zid` <> ''  [ RunTime:0.0045s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%8%' LIMIT 1   [ RunTime:0.0039s ]
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\IndexController.class.php 第 29 行.
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 9 AND `zid` <> ''  [ RunTime:0.0045s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%9%' LIMIT 1   [ RunTime:0.0055s ]
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\IndexController.class.php 第 29 行.
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 10 AND `zid` <> ''  [ RunTime:0.0046s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%10%' LIMIT 1   [ RunTime:0.0039s ]
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\IndexController.class.php 第 29 行.
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 11 AND `zid` <> ''  [ RunTime:0.0048s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%11%' LIMIT 1   [ RunTime:0.0041s ]
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\IndexController.class.php 第 29 行.
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 12 AND `zid` <> ''  [ RunTime:0.0047s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%12%' LIMIT 1   [ RunTime:0.0039s ]
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\IndexController.class.php 第 29 行.
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 13 AND `zid` <> ''  [ RunTime:0.0067s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%13%' LIMIT 1   [ RunTime:0.0042s ]
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\IndexController.class.php 第 29 行.
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 14 AND `zid` <> ''  [ RunTime:0.0068s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%14%' LIMIT 1   [ RunTime:0.0039s ]
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\IndexController.class.php 第 29 行.
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 15 AND `zid` <> ''  [ RunTime:0.0081s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%15%' LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\IndexController.class.php 第 29 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000262s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000361s ]
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 28 行.
+NOTIC: [8] Undefined offset: 16 D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 194 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.070080s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.070197s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001733s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001815s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002121s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002220s ]
+
+[ 2017-12-07T11:17:34+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/usercenter/indexx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000706s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001465s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001530s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0198s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0188s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `qw_users` [ RunTime:0.0188s ]
+SQL: SELECT * FROM `qw_users` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0043s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0209s ]
+SQL: SELECT * FROM `qw_areas` WHERE `parent_id` = 1  [ RunTime:0.0240s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000679s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000827s ]
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\5ef89f7e12a54492b4bd531454a8862a.php 第 40 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\5ef89f7e12a54492b4bd531454a8862a.php 第 41 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\5ef89f7e12a54492b4bd531454a8862a.php 第 43 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\5ef89f7e12a54492b4bd531454a8862a.php 第 44 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\5ef89f7e12a54492b4bd531454a8862a.php 第 45 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\5ef89f7e12a54492b4bd531454a8862a.php 第 46 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\5ef89f7e12a54492b4bd531454a8862a.php 第 49 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\5ef89f7e12a54492b4bd531454a8862a.php 第 53 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058340s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058473s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002861s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002971s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003558s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003695s ]
+
+[ 2017-12-07T11:17:34+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Usercenter/getRegion.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000729s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001237s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001310s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0190s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0066s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0198s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0048s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0192s ]
+SQL: SELECT * FROM `qw_areas` WHERE `parent_id` = 54  [ RunTime:0.0039s ]
+
+[ 2017-12-07T11:17:34+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Usercenter/getRegion.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000801s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001478s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0191s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0223s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0047s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0188s ]
+SQL: SELECT * FROM `qw_areas` WHERE `parent_id` = 4  [ RunTime:0.0038s ]
+
+[ 2017-12-07T11:17:46+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Usercenter/upload.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000739s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001220s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001290s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0182s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0055s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0335s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `qw_users` [ RunTime:0.0200s ]
+SQL: UPDATE `qw_users` SET `head`=NULL WHERE `id` = 1 [ RunTime:0.0210s ]
+SQL: SELECT * FROM `qw_users` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0045s ]
+
+[ 2017-12-07T11:18:07+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Usercenter/upload.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001446s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002885s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003035s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0117s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0188s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0083s ]
+SQL: SHOW COLUMNS FROM `qw_users` [ RunTime:0.0254s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\MAMP\htdocs\www\slcms\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+NOTIC: [2] imagejpeg(/Upload/head/2017/12/07/5a28b2eedb389.jpg): failed to open stream: No such file or directory D:\MAMP\htdocs\www\slcms\ThinkPHP\Library\Think\Image\Driver\Gd.class.php 第 94 行.
+SQL: UPDATE `qw_users` SET `head`='/Upload/head/2017/12/07/5a28b2eedb389.jpg' WHERE `id` = 1 [ RunTime:0.0039s ]
+SQL: SELECT * FROM `qw_users` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0038s ]
+
+[ 2017-12-07T11:25:43+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001022s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001506s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0213s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0306s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `qw_users` [ RunTime:0.0213s ]
+SQL: SELECT * FROM `qw_users` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0053s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0237s ]
+SQL: SELECT * FROM `qw_areas` WHERE `parent_id` = 1  [ RunTime:0.0138s ]
+SQL: SHOW COLUMNS FROM `qw_message` [ RunTime:0.0196s ]
+SQL: SELECT b.username,b.head,a.* FROM qw_message a,qw_users b WHERE ( a.senderid=b.id and a.receiverid=1 ) ORDER BY a.sendtime desc  [ RunTime:0.0064s ]
+SQL: SHOW COLUMNS FROM `qw_tree` [ RunTime:0.0236s ]
+SQL: SELECT * FROM `qw_tree` WHERE `pid` = 0 AND `type` = 1  [ RunTime:0.0066s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000390s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000495s ]
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\7d4dfcc8d0e199bdf8f9736ff2dfcd6b.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043269s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043376s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002721s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003243s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003248s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003389s ]
+
+[ 2017-12-07T11:25:43+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/1.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000491s ]
+
+[ 2017-12-07T11:25:43+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/2.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000484s ]
+
+[ 2017-12-07T11:25:43+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/3.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000534s ]
+
+[ 2017-12-07T11:25:43+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/5.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000557s ]
+
+[ 2017-12-07T11:25:43+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/4.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000596s ]
+
+[ 2017-12-07T11:25:43+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/6.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000513s ]
+
+[ 2017-12-07T11:25:43+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/7.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000457s ]
+
+[ 2017-12-07T11:25:43+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/10.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000576s ]
+
+[ 2017-12-07T11:25:43+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/9.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000720s ]
+
+[ 2017-12-07T11:25:43+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/8.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000924s ]
+
+[ 2017-12-07T11:25:43+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/12.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000556s ]
+
+[ 2017-12-07T11:25:43+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/13.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000608s ]
+
+[ 2017-12-07T11:25:43+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/14.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000557s ]
+
+[ 2017-12-07T11:25:43+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/11.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001128s ]
+
+[ 2017-12-07T11:25:43+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/18.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000547s ]
+
+[ 2017-12-07T11:25:43+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/16.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000715s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/17.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000477s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/21.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000444s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/19.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000556s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/15.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000780s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/23.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000579s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/20.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000637s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/22.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006183s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/25.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000484s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/24.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000637s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/31.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000481s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/27.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000488s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/26.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000691s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/28.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000472s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/29.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000762s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/35.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000431s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/30.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010130s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/32.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000452s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/37.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000483s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/34.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000457s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/33.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002028s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/36.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000602s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/40.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000949s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/42.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000498s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/39.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001683s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/46.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000465s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/43.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000588s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/38.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.012445s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/44.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000770s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/50.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000574s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/51.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000571s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/48.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000598s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/49.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000601s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/47.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000597s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/55.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000514s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/56.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000654s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/57.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000703s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/53.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000447s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/60.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000722s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/58.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000479s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/62.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000431s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/52.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011091s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/59.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000554s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/61.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000859s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/64.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000461s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/63.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000487s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/67.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000720s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/66.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000575s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/65.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000541s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/69.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000632s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/73.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000438s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/71.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000572s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/72.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000547s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/68.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000798s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/74.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000572s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/70.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.014812s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/75.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000497s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/76.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000606s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/77.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000474s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/78.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000639s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/79.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000655s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/80.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000453s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/83.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000449s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/85.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000925s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/87.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000435s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/86.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000508s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/84.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000583s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/82.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000613s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/88.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000468s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/89.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000774s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/90.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000468s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/91.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001434s ]
+
+[ 2017-12-07T11:25:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/81.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000653s ]
+
+[ 2017-12-07T11:25:56+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/getRegion.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001573s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002133s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0189s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0211s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0179s ]
+SQL: SELECT * FROM `qw_areas` WHERE `parent_id` = 2  [ RunTime:0.0040s ]
+
+[ 2017-12-07T11:25:56+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/postRegion.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001382s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001447s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0243s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0187s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0055s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0218s ]
+SQL: SELECT * FROM `qw_areas` WHERE ( area_id=2 ) LIMIT 1   [ RunTime:0.0041s ]
+SQL: SHOW COLUMNS FROM `qw_users` [ RunTime:0.0256s ]
+SQL: SELECT `id`,`username`,`head` FROM `qw_users` WHERE `province` = '2'  [ RunTime:0.0087s ]
+
+[ 2017-12-07T11:25:56+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/null
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001384s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002713s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002828s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0195s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0041s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0226s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0067s ]
+ERR: 非法操作:null
+
+[ 2017-12-07T11:26:01+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/message.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001469s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002920s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003038s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0197s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0187s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0048s ]
+SQL: SHOW COLUMNS FROM `qw_message` [ RunTime:0.0201s ]
+SQL: INSERT INTO `qw_message` (`senderid`,`receiverid`,`content`,`sendtime`,`status`) VALUES ('0','8','神挡杀神所','1512617160','1') [ RunTime:0.0455s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003391s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003494s ]
+
+[ 2017-12-07T11:26:14+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/message.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001119s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002510s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0209s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `qw_message` [ RunTime:0.0236s ]
+SQL: INSERT INTO `qw_message` (`senderid`,`receiverid`,`content`,`sendtime`,`status`) VALUES ('0','8','山顶山顶撒多撒多所大','1512617174','1') [ RunTime:0.0475s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002361s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002462s ]
+
+[ 2017-12-07T11:46:35+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001759s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004526s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0234s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0047s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0182s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0068s ]
+SQL: SHOW COLUMNS FROM `qw_users` [ RunTime:0.0244s ]
+SQL: SELECT * FROM `qw_users` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0168s ]
+SQL: SELECT * FROM `qw_areas` WHERE `parent_id` = 1  [ RunTime:0.0052s ]
+SQL: SHOW COLUMNS FROM `qw_message` [ RunTime:0.0169s ]
+SQL: SELECT b.username,b.head,a.* FROM qw_message a,qw_users b WHERE ( a.senderid=b.id and a.receiverid=1 ) ORDER BY a.sendtime desc  [ RunTime:0.0108s ]
+SQL: SHOW COLUMNS FROM `qw_tree` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `qw_tree` WHERE `pid` = 0 AND `type` = 1  [ RunTime:0.0067s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000402s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000521s ]
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\7d4dfcc8d0e199bdf8f9736ff2dfcd6b.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044564s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044697s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002674s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002779s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003068s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003181s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/5.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000092s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000902s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/1.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000690s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/2.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000614s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/7.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000524s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/6.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000654s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/3.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001009s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/4.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010161s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/9.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000469s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/13.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000492s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/8.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000632s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/10.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000475s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/15.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000501s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/17.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000544s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/11.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000606s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/12.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000558s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/14.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000484s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/16.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.021865s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/19.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000456s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/20.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000562s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/18.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000543s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/22.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000520s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/26.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000564s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/27.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000457s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/21.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000824s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/28.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000624s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/23.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000603s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/24.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002013s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/30.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000615s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/32.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000680s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/33.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000908s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/25.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000727s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/29.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001653s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/31.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000473s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/34.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000624s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/39.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000459s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/37.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000577s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/36.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000582s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/42.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000456s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/38.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000905s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/40.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000536s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/35.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000573s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/49.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000501s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/48.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000541s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/46.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001033s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/44.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001048s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/51.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000662s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/43.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000554s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/52.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000508s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/47.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000585s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/57.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000648s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/53.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000583s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/55.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000531s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/50.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000705s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/58.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000589s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/62.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000463s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/56.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.017029s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/61.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000440s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/59.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000540s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/60.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001720s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/66.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000437s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/67.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000453s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/64.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000480s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/63.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001568s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/69.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000454s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/70.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000475s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/65.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000645s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/68.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000719s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/72.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/71.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000470s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/74.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000491s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/73.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000566s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/76.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000593s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/77.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000528s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/82.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000469s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/78.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000454s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/75.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000608s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/80.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000729s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/81.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000582s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/83.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008979s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/85.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000450s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/87.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000582s ]
+
+[ 2017-12-07T11:46:36+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/84.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000687s ]
+
+[ 2017-12-07T11:46:37+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/86.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000593s ]
+
+[ 2017-12-07T11:46:37+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/88.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000475s ]
+
+[ 2017-12-07T11:46:37+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/90.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000454s ]
+
+[ 2017-12-07T11:46:37+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/79.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000722s ]
+
+[ 2017-12-07T11:46:37+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/89.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000720s ]
+
+[ 2017-12-07T11:46:37+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/91.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001700s ]
+
+[ 2017-12-07T11:47:38+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001471s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002876s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002999s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0191s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0193s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0052s ]
+SQL: SHOW COLUMNS FROM `qw_users` [ RunTime:0.0189s ]
+SQL: SELECT * FROM `qw_users` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0045s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0179s ]
+SQL: SELECT * FROM `qw_areas` WHERE `parent_id` = 1  [ RunTime:0.0084s ]
+SQL: SHOW COLUMNS FROM `qw_message` [ RunTime:0.0382s ]
+SQL: SELECT b.username,b.head,a.* FROM qw_message a,qw_users b WHERE ( a.senderid=b.id and a.receiverid=1 ) ORDER BY a.sendtime desc  [ RunTime:0.0046s ]
+SQL: SHOW COLUMNS FROM `qw_tree` [ RunTime:0.0226s ]
+SQL: SELECT * FROM `qw_tree` WHERE `pid` = 0 AND `type` = 1  [ RunTime:0.0048s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000223s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000282s ]
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\7d4dfcc8d0e199bdf8f9736ff2dfcd6b.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021960s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022021s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001357s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001413s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001996s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002207s ]
+
+[ 2017-12-07T11:47:38+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/5.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000537s ]
+
+[ 2017-12-07T11:47:38+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/4.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000857s ]
+
+[ 2017-12-07T11:47:38+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/3.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000433s ]
+
+[ 2017-12-07T11:47:38+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/7.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000485s ]
+
+[ 2017-12-07T11:47:38+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/8.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000490s ]
+
+[ 2017-12-07T11:47:38+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/9.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+
+[ 2017-12-07T11:47:38+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/2.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000624s ]
+
+[ 2017-12-07T11:47:38+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/10.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000931s ]
+
+[ 2017-12-07T11:47:38+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/6.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000563s ]
+
+[ 2017-12-07T11:47:38+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/1.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000615s ]
+
+[ 2017-12-07T11:47:38+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/11.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000464s ]
+
+[ 2017-12-07T11:47:38+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/12.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000442s ]
+
+[ 2017-12-07T11:47:38+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/16.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000650s ]
+
+[ 2017-12-07T11:47:38+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/15.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000560s ]
+
+[ 2017-12-07T11:47:38+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/13.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000603s ]
+
+[ 2017-12-07T11:47:38+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/18.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000458s ]
+
+[ 2017-12-07T11:47:38+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/14.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000613s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/20.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000448s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/22.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000778s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/17.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001361s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/21.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000564s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/24.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000934s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/26.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000470s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/25.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000445s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/19.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000659s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/28.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000487s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/27.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000571s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/30.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000503s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/23.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000563s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/29.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001016s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/33.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000648s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/36.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000570s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/34.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000555s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/31.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000588s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/37.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000625s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/38.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000633s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/32.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/35.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000723s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/46.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000486s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/39.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000628s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/44.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000756s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/47.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000465s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/43.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000477s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/42.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000580s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/40.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000581s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/49.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000630s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/50.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000459s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/48.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000525s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/56.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000455s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/51.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000471s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/52.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000678s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/53.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000574s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/57.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000659s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/58.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000480s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/59.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000502s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/62.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000458s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/55.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000798s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/60.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/64.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000607s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/61.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000607s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/63.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000447s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/68.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000673s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/65.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000651s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/66.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000590s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/67.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000461s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/71.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000450s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/70.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000777s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/69.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000578s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/72.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000606s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/73.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000747s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/74.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000453s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/76.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000499s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/75.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000478s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/77.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000824s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/80.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/82.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000486s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/78.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000611s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/83.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000958s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/81.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000603s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/84.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000465s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/86.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000529s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/89.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000446s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/88.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000505s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/79.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001517s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/90.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000486s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/87.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000660s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/85.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000638s ]
+
+[ 2017-12-07T11:47:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/91.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000598s ]
+
+[ 2017-12-07T11:47:43+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/getRegion.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001329s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002244s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002359s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0228s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0084s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0195s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0045s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0134s ]
+SQL: SELECT * FROM `qw_areas` WHERE `parent_id` = 2  [ RunTime:0.0037s ]
+
+[ 2017-12-07T11:47:43+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/postRegion.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001398s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003542s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0208s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0196s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0048s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `qw_areas` WHERE ( area_id=2 ) LIMIT 1   [ RunTime:0.0077s ]
+SQL: SHOW COLUMNS FROM `qw_users` [ RunTime:0.0208s ]
+SQL: SELECT `id`,`username`,`head` FROM `qw_users` WHERE `province` = '2'  [ RunTime:0.0039s ]
+
+[ 2017-12-07T11:47:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/null
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001378s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004207s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004344s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0196s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0052s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0157s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0066s ]
+ERR: 非法操作:null
+
+[ 2017-12-07T11:47:46+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/postRegion.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000615s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0352s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0191s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0051s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `qw_areas` WHERE ( area_id=4 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `qw_users` [ RunTime:0.0193s ]
+SQL: SELECT `id`,`username`,`head` FROM `qw_users` WHERE `province` = '4'  [ RunTime:0.0042s ]
+
+[ 2017-12-07T11:47:46+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/getRegion.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000554s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001663s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0198s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0219s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0052s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0206s ]
+SQL: SELECT * FROM `qw_areas` WHERE `parent_id` = 4  [ RunTime:0.0045s ]
+
+[ 2017-12-07T11:47:46+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/null
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001205s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002010s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002138s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0234s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0147s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0041s ]
+ERR: 非法操作:null
+
+[ 2017-12-07T11:47:49+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/getRegion.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001106s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001533s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001641s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0272s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0044s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0325s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0198s ]
+SQL: SELECT * FROM `qw_areas` WHERE `parent_id` = 5  [ RunTime:0.0091s ]
+
+[ 2017-12-07T11:47:49+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/postRegion.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001469s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005726s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005871s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0201s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0198s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0071s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0123s ]
+SQL: SELECT * FROM `qw_areas` WHERE ( area_id=5 ) LIMIT 1   [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `qw_users` [ RunTime:0.0148s ]
+SQL: SELECT `id`,`username`,`head` FROM `qw_users` WHERE `province` = '5'  [ RunTime:0.0034s ]
+
+[ 2017-12-07T11:47:51+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/postRegion.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001581s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001553s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0109s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0100s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0141s ]
+SQL: SELECT * FROM `qw_areas` WHERE ( area_id=4 ) LIMIT 1   [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `qw_users` [ RunTime:0.0082s ]
+SQL: SELECT `id`,`username`,`head` FROM `qw_users` WHERE `province` = '4'  [ RunTime:0.0034s ]
+
+[ 2017-12-07T11:47:51+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/getRegion.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001468s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004535s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004654s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0244s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0234s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0041s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0105s ]
+SQL: SELECT * FROM `qw_areas` WHERE `parent_id` = 4  [ RunTime:0.0037s ]
+
+[ 2017-12-07T11:47:51+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/null
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001367s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002881s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003012s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0121s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0129s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0037s ]
+ERR: 非法操作:null
+
+[ 2017-12-07T12:49:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000775s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000895s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000937s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0197s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0403s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `qw_users` [ RunTime:0.0185s ]
+SQL: SELECT * FROM `qw_users` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0187s ]
+SQL: SELECT * FROM `qw_areas` WHERE `parent_id` = 1  [ RunTime:0.0057s ]
+SQL: SHOW COLUMNS FROM `qw_message` [ RunTime:0.0197s ]
+SQL: SELECT b.username,b.head,a.* FROM qw_message a,qw_users b WHERE ( a.senderid=b.id and a.receiverid=1 ) ORDER BY a.sendtime desc  [ RunTime:0.0092s ]
+SQL: SHOW COLUMNS FROM `qw_tree` [ RunTime:0.0173s ]
+SQL: SELECT * FROM `qw_tree` WHERE `pid` = 0 AND `type` = 1  [ RunTime:0.0051s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000390s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000495s ]
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\7d4dfcc8d0e199bdf8f9736ff2dfcd6b.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041637s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041739s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004769s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004930s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003234s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003341s ]
+
+[ 2017-12-07T12:49:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/3.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000559s ]
+
+[ 2017-12-07T12:49:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/6.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+
+[ 2017-12-07T12:49:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/5.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000954s ]
+
+[ 2017-12-07T12:49:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/4.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000604s ]
+
+[ 2017-12-07T12:49:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/8.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000496s ]
+
+[ 2017-12-07T12:49:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/10.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000504s ]
+
+[ 2017-12-07T12:49:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/2.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000559s ]
+
+[ 2017-12-07T12:49:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/7.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000472s ]
+
+[ 2017-12-07T12:49:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/11.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001307s ]
+
+[ 2017-12-07T12:49:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/13.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001728s ]
+
+[ 2017-12-07T12:49:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/12.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000434s ]
+
+[ 2017-12-07T12:49:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/1.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000607s ]
+
+[ 2017-12-07T12:49:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/16.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000484s ]
+
+[ 2017-12-07T12:49:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/14.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000622s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/15.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000558s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/9.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000877s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/18.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000618s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/22.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000601s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/19.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000472s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/20.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000967s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/17.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000488s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/21.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000571s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/27.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000547s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/24.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000623s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/26.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000550s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/23.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000566s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/28.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000579s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/25.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005532s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/33.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000513s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/34.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000460s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/31.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000825s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/35.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000673s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/37.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000543s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/30.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000645s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/32.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000621s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/40.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000611s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/29.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000576s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/36.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000704s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/43.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000510s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/38.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000665s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/47.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000465s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/46.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/48.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000482s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/42.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000578s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/49.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000469s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/44.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003269s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/39.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004404s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/51.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011398s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/50.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000841s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/53.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000585s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/55.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001115s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/57.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000464s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/59.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000494s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/60.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000487s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/61.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000448s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/62.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000454s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/63.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000489s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/56.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000584s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/64.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000579s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/66.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000684s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/52.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000614s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/58.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000580s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/65.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000477s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/67.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000578s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/69.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/71.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/68.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000465s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/70.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000564s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/73.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000611s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/72.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007300s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/76.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002690s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/79.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000483s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/74.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.019549s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/77.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000440s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/82.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000557s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/83.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000437s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/75.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000679s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/84.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000458s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/80.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000612s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/81.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000634s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001628s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/86.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000479s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/87.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000498s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/90.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000514s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/85.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000592s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/78.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001306s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/89.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000672s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/91.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000510s ]
+
+[ 2017-12-07T12:49:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/88.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000428s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001409s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005007s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005129s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0183s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0194s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0043s ]
+SQL: SHOW COLUMNS FROM `qw_users` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `qw_users` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0048s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0141s ]
+SQL: SELECT * FROM `qw_areas` WHERE `parent_id` = 1  [ RunTime:0.0062s ]
+SQL: SHOW COLUMNS FROM `qw_message` [ RunTime:0.0138s ]
+SQL: SELECT b.username,b.head,a.* FROM qw_message a,qw_users b WHERE ( a.senderid=b.id and a.receiverid=1 ) ORDER BY a.sendtime desc  [ RunTime:0.0063s ]
+SQL: SHOW COLUMNS FROM `qw_tree` [ RunTime:0.0115s ]
+SQL: SELECT * FROM `qw_tree` WHERE `pid` = 0 AND `type` = 1  [ RunTime:0.0042s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000386s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000488s ]
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\7d4dfcc8d0e199bdf8f9736ff2dfcd6b.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040431s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040533s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003856s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003955s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004590s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004717s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/1.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000601s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/2.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000489s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/4.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000454s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/3.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000735s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/5.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000391s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/6.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000813s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/7.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000353s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/9.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000653s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/8.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000583s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/10.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000676s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/11.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000835s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/12.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000375s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/13.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000431s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/14.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000427s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/16.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000377s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/15.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000484s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/17.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000336s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/18.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000544s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/19.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000639s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/21.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000345s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/20.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/22.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000440s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/23.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000568s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/29.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000572s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/24.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001104s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/26.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000626s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/27.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000688s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/25.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000472s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/28.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000603s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/31.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000573s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/34.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000457s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/30.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005924s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/32.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000079s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001614s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/35.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000455s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/33.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000595s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/39.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000486s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/40.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000557s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/37.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000760s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/36.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001039s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/46.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000804s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/38.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000623s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/43.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000486s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/42.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000619s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/47.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000579s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/48.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000476s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/49.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001901s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/52.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000458s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/55.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/50.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000419s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/53.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000621s ]
+
+[ 2017-12-07T16:07:20+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/51.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000560s ]
+
+[ 2017-12-07T16:07:21+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/56.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001069s ]
+
+[ 2017-12-07T16:07:21+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/57.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000474s ]
+
+[ 2017-12-07T16:07:21+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/58.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000082s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000673s ]
+
+[ 2017-12-07T16:07:21+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/60.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000769s ]
+
+[ 2017-12-07T16:07:21+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/59.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000579s ]
+
+[ 2017-12-07T16:07:21+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/62.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000575s ]
+
+[ 2017-12-07T16:07:21+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/65.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000444s ]
+
+[ 2017-12-07T16:07:21+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/63.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000481s ]
+
+[ 2017-12-07T16:07:21+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/61.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002282s ]
+
+[ 2017-12-07T16:07:21+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/64.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000470s ]
+
+[ 2017-12-07T16:07:21+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/68.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000667s ]
+
+[ 2017-12-07T16:07:21+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/69.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000921s ]
+
+[ 2017-12-07T16:07:21+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/71.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000581s ]
+
+[ 2017-12-07T16:07:21+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/70.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000443s ]
+
+[ 2017-12-07T16:07:21+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/72.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000422s ]
+
+[ 2017-12-07T16:07:21+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/66.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+
+[ 2017-12-07T16:07:21+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/67.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000580s ]
+
+[ 2017-12-07T16:07:21+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/76.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000589s ]
+
+[ 2017-12-07T16:07:21+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/74.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000533s ]
+
+[ 2017-12-07T16:07:21+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/75.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000744s ]
+
+[ 2017-12-07T16:07:21+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/77.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000798s ]
+
+[ 2017-12-07T16:07:21+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/78.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000623s ]
+
+[ 2017-12-07T16:07:21+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/81.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000482s ]
+
+[ 2017-12-07T16:07:21+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/82.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000671s ]
+
+[ 2017-12-07T16:07:21+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/80.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000791s ]
+
+[ 2017-12-07T16:07:21+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/79.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000563s ]
+
+[ 2017-12-07T16:07:21+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/84.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000488s ]
+
+[ 2017-12-07T16:07:21+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/83.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000503s ]
+
+[ 2017-12-07T16:07:21+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/89.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000538s ]
+
+[ 2017-12-07T16:07:21+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/87.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000790s ]
+
+[ 2017-12-07T16:07:21+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/85.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000606s ]
+
+[ 2017-12-07T16:07:21+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/90.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000436s ]
+
+[ 2017-12-07T16:07:21+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/91.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000495s ]
+
+[ 2017-12-07T16:07:21+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/88.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001726s ]
+
+[ 2017-12-07T16:07:21+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/86.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000674s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001378s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002154s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002234s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0191s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0215s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0054s ]
+SQL: SHOW COLUMNS FROM `qw_users` [ RunTime:0.0224s ]
+SQL: SELECT * FROM `qw_users` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0064s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0189s ]
+SQL: SELECT * FROM `qw_areas` WHERE `parent_id` = 1  [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `qw_message` [ RunTime:0.0093s ]
+SQL: SELECT b.username,b.head,a.* FROM qw_message a,qw_users b WHERE ( a.senderid=b.id and a.receiverid=1 ) ORDER BY a.sendtime desc  [ RunTime:0.0061s ]
+SQL: SHOW COLUMNS FROM `qw_tree` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `qw_tree` WHERE `pid` = 0 AND `type` = 1  [ RunTime:0.0045s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000174s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000225s ]
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\7d4dfcc8d0e199bdf8f9736ff2dfcd6b.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015684s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015728s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001401s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001448s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001431s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001484s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/4.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000538s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/1.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000712s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/6.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000442s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/3.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000573s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/9.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000570s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/5.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/11.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000506s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/10.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000608s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/7.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000749s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/12.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000648s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/13.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000448s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/8.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/15.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000565s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/17.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000453s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/16.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000624s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/2.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000629s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/14.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000614s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/20.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000479s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/18.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000475s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/19.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000588s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/21.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000717s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/23.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005473s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/25.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000450s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/22.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000618s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/26.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000470s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/28.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000641s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/29.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000455s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/24.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000578s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/27.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000731s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/30.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000442s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/31.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000465s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/32.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000607s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/35.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000503s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/33.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000552s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/37.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000523s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/34.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000768s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/39.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000848s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/36.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.009607s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/38.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000583s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/40.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000423s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/43.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000452s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/42.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000602s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/44.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002748s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/48.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001123s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/50.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000446s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/47.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000586s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/49.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000801s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/51.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000461s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/46.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006116s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/52.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000624s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/57.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000483s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/56.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000593s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/59.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000575s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/53.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000606s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/62.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000455s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/60.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010364s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/63.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000594s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/58.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000546s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/55.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007799s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/61.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000605s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/65.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002603s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/66.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000590s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/67.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000582s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/64.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000448s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/68.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/69.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000583s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/70.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004352s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/72.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000585s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/73.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000511s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/71.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000563s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/77.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000480s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/74.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000562s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/78.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000953s ]
+
+[ 2017-12-07T16:07:23+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/80.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000486s ]
+
+[ 2017-12-07T16:07:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/76.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000511s ]
+
+[ 2017-12-07T16:07:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/83.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000455s ]
+
+[ 2017-12-07T16:07:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/82.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000458s ]
+
+[ 2017-12-07T16:07:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/84.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000535s ]
+
+[ 2017-12-07T16:07:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/75.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000568s ]
+
+[ 2017-12-07T16:07:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/85.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000505s ]
+
+[ 2017-12-07T16:07:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/86.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000576s ]
+
+[ 2017-12-07T16:07:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/79.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000072s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001087s ]
+
+[ 2017-12-07T16:07:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/81.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000552s ]
+
+[ 2017-12-07T16:07:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/90.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000997s ]
+
+[ 2017-12-07T16:07:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/87.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000605s ]
+
+[ 2017-12-07T16:07:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/91.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000631s ]
+
+[ 2017-12-07T16:07:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/89.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000950s ]
+
+[ 2017-12-07T16:07:24+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/88.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000873s ]
+
+[ 2017-12-07T16:17:15+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/postRegion.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001763s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004283s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004436s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0206s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0078s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0219s ]
+SQL: SELECT * FROM `qw_areas` WHERE ( area_id=3 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `qw_users` [ RunTime:0.0201s ]
+SQL: SELECT `id`,`username`,`head` FROM `qw_users` WHERE `province` = '3'  [ RunTime:0.0048s ]
+
+[ 2017-12-07T16:17:15+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/getRegion.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004604s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0213s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0053s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0219s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0058s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0235s ]
+SQL: SELECT * FROM `qw_areas` WHERE `parent_id` = 3  [ RunTime:0.0149s ]
+
+[ 2017-12-07T16:17:15+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/null
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001100s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001573s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0206s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0046s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0211s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0054s ]
+ERR: 非法操作:null
+
+[ 2017-12-07T16:17:16+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/getRegion.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001214s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001356s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001457s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0199s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0042s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0288s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0098s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0261s ]
+SQL: SELECT * FROM `qw_areas` WHERE `parent_id` = 4  [ RunTime:0.0043s ]
+
+[ 2017-12-07T16:17:16+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/postRegion.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003463s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004975s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005116s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0201s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0195s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0044s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0272s ]
+SQL: SELECT * FROM `qw_areas` WHERE ( area_id=4 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `qw_users` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`username`,`head` FROM `qw_users` WHERE `province` = '4'  [ RunTime:0.0035s ]
+
+[ 2017-12-07T16:17:16+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/null
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001095s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001691s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001820s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0211s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0041s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0188s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0084s ]
+ERR: 非法操作:null
+
+[ 2017-12-07T16:17:45+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/postRegion.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001147s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001463s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001570s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0498s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0182s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0052s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0356s ]
+SQL: SELECT * FROM `qw_areas` WHERE ( area_id=2 ) LIMIT 1   [ RunTime:0.0041s ]
+SQL: SHOW COLUMNS FROM `qw_users` [ RunTime:0.0314s ]
+SQL: SELECT `id`,`username`,`head` FROM `qw_users` WHERE `province` = '2'  [ RunTime:0.0045s ]
+
+[ 2017-12-07T16:17:45+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/getRegion.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001444s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003751s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003881s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0216s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0219s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0202s ]
+SQL: SELECT * FROM `qw_areas` WHERE `parent_id` = 2  [ RunTime:0.0053s ]
+
+[ 2017-12-07T16:17:45+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/null
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001359s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001618s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0205s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0175s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0039s ]
+ERR: 非法操作:null
+
+[ 2017-12-07T16:17:46+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/getRegion.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001383s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001493s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002099s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0237s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0209s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0051s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0201s ]
+SQL: SELECT * FROM `qw_areas` WHERE `parent_id` = 4  [ RunTime:0.0040s ]
+
+[ 2017-12-07T16:17:46+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/postRegion.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002357s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002884s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003003s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0202s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0041s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0231s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0051s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0203s ]
+SQL: SELECT * FROM `qw_areas` WHERE ( area_id=4 ) LIMIT 1   [ RunTime:0.0068s ]
+SQL: SHOW COLUMNS FROM `qw_users` [ RunTime:0.0153s ]
+SQL: SELECT `id`,`username`,`head` FROM `qw_users` WHERE `province` = '4'  [ RunTime:0.0036s ]
+
+[ 2017-12-07T16:17:47+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/null
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001119s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001548s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001660s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0214s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0050s ]
+ERR: 非法操作:null
+
+[ 2017-12-07T16:17:51+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/message.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001093s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001448s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0191s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0268s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0077s ]
+SQL: SHOW COLUMNS FROM `qw_message` [ RunTime:0.0158s ]
+SQL: INSERT INTO `qw_message` (`senderid`,`receiverid`,`content`,`sendtime`,`status`) VALUES ('0','1','hfddfuyfuy ','1512634671','1') [ RunTime:0.0665s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002528s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002658s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002068s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001398s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001507s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0094s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0095s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `qw_users` [ RunTime:0.0093s ]
+SQL: SELECT * FROM `qw_users` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0113s ]
+SQL: SELECT * FROM `qw_areas` WHERE `parent_id` = 1  [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `qw_message` [ RunTime:0.0085s ]
+SQL: SELECT b.username,b.head,a.* FROM qw_message a,qw_users b WHERE ( a.senderid=b.id and a.receiverid=1 ) ORDER BY a.sendtime desc  [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `qw_tree` [ RunTime:0.0072s ]
+SQL: SELECT * FROM `qw_tree` WHERE `pid` = 0 AND `type` = 1  [ RunTime:0.0036s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\7d4dfcc8d0e199bdf8f9736ff2dfcd6b.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011512s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011550s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000515s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000543s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000808s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000883s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/1.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000549s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/2.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000666s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/3.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000451s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/4.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000486s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/5.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000398s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/7.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000443s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/6.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000450s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/8.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000630s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/9.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000626s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/10.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000579s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/12.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000339s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/11.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000493s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/13.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000337s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/14.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000452s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/15.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000354s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/16.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000430s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/17.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000336s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/19.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000489s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/18.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000535s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/20.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000340s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/21.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000621s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/22.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000450s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/24.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000480s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/23.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000560s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/29.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000440s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/26.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000564s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/30.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000562s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/25.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000731s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/27.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000575s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/31.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000451s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/34.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000516s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/28.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000725s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/33.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000607s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/36.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000505s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/35.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000583s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/32.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000910s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/37.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000432s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/39.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003120s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/42.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000458s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/44.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000404s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/38.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000614s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/48.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000444s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/47.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000476s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/43.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000594s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/46.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000589s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/51.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000970s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/50.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000468s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/40.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005384s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/49.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000595s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/56.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000459s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/57.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000590s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/58.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000499s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/52.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000951s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/55.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/59.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000479s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/61.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000584s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/53.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000584s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/60.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000472s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/63.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000475s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/64.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000464s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/65.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000581s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/67.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000471s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/68.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000428s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/69.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000443s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/66.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005232s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/62.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003749s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/71.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000483s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/72.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001177s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/73.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000767s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/76.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000467s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/70.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000588s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/77.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000586s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/74.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000450s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/79.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000455s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/75.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000624s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/81.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001475s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/82.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000474s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/83.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000475s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/78.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000560s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/80.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001030s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/85.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002289s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/84.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000626s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/87.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000545s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/86.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000577s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/88.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000630s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/89.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000615s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/91.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000488s ]
+
+[ 2017-12-07T16:17:55+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/90.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000656s ]
+

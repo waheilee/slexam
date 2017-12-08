@@ -1,0 +1,268 @@
+@charset "UTF-8";
+#banner{
+    width: 100%;
+    height: 606px;
+    background: url("../images/makelist/bannerbg.jpg") no-repeat center center;
+}
+#ml-content{
+    width: 818px;
+    border: 1px solid #fff;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: -390px;
+    background: #fff;
+}
+#ml-content .ml-list-box{
+    width: 779px;
+    margin: 20px auto;
+    position: relative;
+}
+#ml-content .ml-list-box .qrcode{
+    position: absolute;
+    left: -180px;
+    top: 500px;
+    font-size: 12px;
+    color: #848484;
+    line-height: 24px;
+    text-align: center;
+}
+#ml-content .ml-list-box .qrcode img{
+    display: block;
+    width: 120px;
+    border: 1px solid #ecedee;
+    margin-bottom: 15px;
+}
+#ml-content .ml-list-box .qrcode p.redtext{
+    color: #e1091e;
+    font-size: 14px;
+}
+#ml-content .ml-list-box .ml-list-nav a{
+    display: block;
+    width: 158px;
+    height: 45px;
+    line-height: 50px;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    position: absolute;
+}
+#ml-content .ml-list-box .ml-list-nav a.rjbd{
+    left: -200px;
+    top: 25px;
+}
+#ml-content .ml-list-box .ml-list-nav a.njbd{
+    left: -200px;
+    top: 110px;
+}
+#ml-content .ml-list-box .ml-list-nav a.xcbd{
+    right: -200px;
+    top: 25px;
+}
+#ml-content .ml-list-box .ml-list-nav a.fqbd{
+    right: -200px;
+    top: 110px;
+}
+#ml-content .ml-list-box .ml-list-nav a span{
+    position: relative;
+    z-index: 99;
+}
+#ml-content .ml-list-box .ml-list-nav a img{
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    z-index: 9;
+    display: none;
+}
+#ml-content .ml-list-box .ml-list-nav a.active img{
+    display: block;
+}
+#ml-content .ml-list-box .ml-list-title{
+    width: 739px;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 16px;
+    background: #3482C4;
+}
+ .ml-list-one{
+    float: left;
+    width: 440px;
+}
+ .ml-list-two{
+    float: left;
+    width: 80px;
+    text-align: center;
+}
+ .ml-list-three{
+    float: right;
+    width: 215px;
+    text-align: right;
+}
+#ml-content .ml-list-rjbd .rjbd-box{
+    width: 777px;
+    margin-bottom: 20px;
+}
+#ml-content .ml-list-rjbd .rjbd-box .rjbd-title{
+    width: 737px;
+    padding: 0 20px;
+    border: 1px solid #ecedee;
+    background: #f5f5f5;
+    height: 38px;
+    line-height: 38px;
+    color: #9c9c9c;
+    font-size: 14px;
+}
+#ml-content .startnum img{
+    margin-top: -3px;
+    margin-right: 3px;
+}
+#ml-content .ml-list-rjbd .rjbd-box .rjbd-paper{
+    width: 737px;
+    padding: 0 20px;
+    background: #fff;
+    height: 72px;
+    line-height: 72px;
+    font-size: 16px;
+    color: #525252;
+    border-left: 1px solid #ecedee;
+    border-right: 1px solid #ecedee;
+}
+#ml-content .ml-list-rjbd .rjbd-box .rjbd-paper img{
+    margin-right: 10px;
+    margin-top: -3px;
+}
+#ml-content .ml-list-rjbd .rjbd-box .rjbd-paper a{
+    font-size: 16px;
+    color: #525252;
+}
+#ml-content .ml-list-rjbd .rjbd-box .rjbd-mark{
+    width: 739px;
+    padding: 0 20px;
+    height: 58px;
+    background: url("../images/makelist/wavebg.jpg") no-repeat;
+}
+#ml-content .ml-list-rjbd .rjbd-box .rjbd-mark p{
+    margin-top: 15px;
+    color: #9c9c9c;
+    font-size: 12px;
+}
+#ml-content .ml-list-rjbd .rjbd-box .rjbd-mark p span{
+    margin: 0 5px;
+}
+#ml-content .ml-list-rjbd .rjbd-box .rjbd-mark p a{
+    color: #3482c4;
+}
+#ml-content .ml-list-page{
+    padding-top: 25px;
+    margin-bottom: 50px;
+    line-height: 40px;
+    cursor: pointer;
+    background: #fff;
+}
+#ml-content .ml-list-page .history{
+    padding: 0 15px;
+    border: 1px solid #ecedee;
+    font-size: 14px;
+    color: #525252;
+    background: #f5f5f5;
+    border-radius: 4px;
+}
+#ml-content .ml-list-dbph .ml-list-title-2{
+    width: 739px;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 16px;
+    background: #EDB800;
+}
+#ml-content .ml-list-dbph .ml-list-title-2 span{
+    margin-right: 20px;
+}
+#ml-content .ml-list-dbph .dbph-one{
+    width: 198px;
+}
+#ml-content .ml-list-dbph .dbph-two{
+    width: 95px;
+}
+#ml-content .ml-list-dbph .dbph-three{
+    width: 150px;
+}
+#ml-content .ml-list-dbph .dbph-four{
+    width: 100px;
+}
+#ml-content .ml-list-dbph .dbph-five{
+    width: 230px;
+}
+#ml-content .ml-list-dbph .ml-list-title-3{
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    height: 60px;
+    line-height: 60px;
+    background: #3482C4;
+    text-align: center;
+}
+#ml-content .ml-list-dbph{
+    background: #f5f5f5;
+}
+#ml-content .ml-list-dbph .dbph-box{
+    width: 777px;
+    margin: 0 auto;
+    height: 70px;
+    line-height: 70px;
+    border: 1px solid #ecedee;
+    background: #fff;
+    text-align: center;
+    font-size: 16px;
+    color: #525252;
+    margin-bottom: 20px;
+    position: relative;
+}
+#ml-content .ml-list-dbph .dbph-box .top{
+    position: absolute;
+    top: -1px;
+    left: 0;
+}
+#ml-content .ml-list-dbph .dbph-box .bor{
+    border-right: 1px solid #ecedee;
+}
+#ml-content .ml-list-dbph .dbph-box .dbph-one img{
+    margin-right: 5px;
+    border: 1px solid #fff;
+    width: 49px;
+    border-radius: 50%;
+}
+#ml-content .ml-list-dbph .dbph-big-box .dbph-box:nth-child(1) .dbph-one img{
+    border: 3px solid #EDB800;
+}
+#ml-content .ml-list-dbph .dbph-big-box .dbph-box:nth-child(2) .dbph-one img{
+    border: 3px solid #EDB800;
+}
+#ml-content .ml-list-dbph .dbph-big-box .dbph-box:nth-child(3) .dbph-one img{
+    border: 3px solid #EDB800;
+}
+#ml-content .ml-list-dbph .dbph-box .dbph-one{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 14px;
+}
+#ml-content .ml-list-dbph .dbph-box .dbph-five{
+    font-size: 0;
+}
+#ml-content .ml-list-dbph .dbph-box .dbph-five img{
+    margin: 0 5px;
+    margin-top: -5px;
+    width: 18px;
+
+}
+#ml-content .ml-list-dbph .dbph-box .dbph-five a{
+    margin: 0 1px;
+    color: #525252;
+    font-size: 12px;
+}

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- 编码格式 -->
+    <meta charset="utf-8">
+    <!-- IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 设置 viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <meta name="Keywords" content="桑磊法考,司法考试,考试,司法,律师">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- 兼容国产浏览器的高速模式 -->
+    <meta name="renderer" content="webkit">
+    <title>测试测试测试错题展示页</title>
+    <!--设置网页的图标-->
+    <link rel="shortcut icon" href="">
+    <!--公用的css-->
+    <link type="text/css" href="__PUBLIC__/Wx/css/public.css" rel="stylesheet"/>
+    <!--本页面的css-->
+    <link type="text/css" href="__PUBLIC__/Wx/css/answer.css" rel="stylesheet"/>
+    <link type="text/css" href="__PUBLIC__/Wx/css/swiper.css" rel="stylesheet"/>
+    <link type="text/css" href="__PUBLIC__/Wx/css/mark.css" rel="stylesheet"/>
+    <style>
+        .subject dl dd.active .sj-circle{
+            border: 1px solid #fdb610;
+            color: #fdb610;
+        }
+    </style>
+</head>
+<body>
+<!--题目要求-->
+<div class="stem-title" id="stem-title-way">
+    <div class="wrap">
+        <div class="left">
+            <span class="st-name">查看错题</span>
+            （共&nbsp;&nbsp;<span class="st-class-num singledatanum"></span>&nbsp;&nbsp;道错题。）
+        </div>
+        <div class="right">
+            <span class="st-num">1</span><span>/ <span class="singledatanum"></span></span>
+        </div>
+    </div>
+</div>
+<div class="swiper-container">
+    <div id="swiper-wrapper" class="swiper-wrapper">
+
+    </div>
+</div>
+<!--功能菜单-->
+<div id="shopnav">
+    <div class="wrap">
+        <ul>
+            <li style='opacity: 0'>
+                <img src="__PUBLIC__/Wx/images/mark/shopnav/2.png" alt=""/>
+                <p style="margin-top: 0.04rem;">查看错误</p>
+            </li>
+            <li>
+                <img src="__PUBLIC__/Wx/images/mark/shopnav/1.png" alt=""/>
+                <p>历史打榜</p>
+            </li>
+            <li onclick="shopNav('dzkt')">
+                <img src="__PUBLIC__/Wx/images/mark/shopnav/3.png" alt=""/>
+                <p>订制课堂</p>
+            </li>
+            <li style='opacity: 0'>
+                <img src="__PUBLIC__/Wx/images/mark/shopnav/4.png" alt=""/>
+                <p class="timeTextBox" style="margin-top: -0.06rem;">参与打榜</p>
+            </li>
+            <div class="clearfix"></div>
+        </ul>
+    </div>
+</div>
+<!--弹出层-->
+<div id="modelbox" style="display: none">
+    <!--订制课堂-->
+    <div id="madetoclass" style="display: none" class="modelbox-children">
+        <!--title-->
+        <div class="mtc-title">
+            订制课堂
+            <span>(5元/题，20元/卷)</span>
+        </div>
+        <!--这个隐藏域是订制题的值-->
+        <input type="hidden" name="" value=""/>
+        <div class="m-name" data="no" onclick="gainMessageName(this)">
+            <div class="wrap">
+                <div class="left">
+                    您即将订制的是
+                </div>
+                <div class="right m-arrow">
+                    <span>&nbsp;&nbsp;&gt;</span>
+                </div>
+                <div class="m-name-look right">
+                    本道题
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="m-name-children">
+            <div class="wrap">
+                <div class="m-name-children-text">测试测试测测试测试测测试测试测测试测试测测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
+                <div class="m-name-children-text">测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
+                <div class="m-name-children-text">测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
+            </div>
+        </div>
+        <!--这个隐藏域是付费分类的值-->
+        <input type="hidden" name="" value=""/>
+        <div class="m-name" data="no" onclick="gainMessageName(this)">
+            <div class="wrap">
+                <div class="left">
+                    您选择付费分类
+                </div>
+                <div class="right m-arrow">
+                    <span>&nbsp;&nbsp;&gt;</span>
+                </div>
+                <div class="m-name-look right">
+                    众筹预定 <span>（9.5折）</span>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="m-name-children">
+            <div class="wrap">
+                <div class="m-name-children-text">测试测试测测试测试测测试测试测测试测试测测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
+                <div class="m-name-children-text">测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
+                <div class="m-name-children-text">测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
+            </div>
+        </div>
+        <!--备注信息-->
+        <div class="wrap">
+            <div class="m-name">
+                <div class="left">
+                    请添加备注信息
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <textarea name=""></textarea>
+        </div>
+        <!--法豆支付-->
+        <button onclick="submitMadeToClass(this)" type="button" class="mtc-button">
+            <img src="__PUBLIC__/Wx/images/answer/pay/fd.png" alt=""/>
+            <span>法豆支付</span>
+            <span class="little">(法豆不足，余28法豆)</span>
+        </button>
+        <!--微信支付-->
+        <button onclick="submitMadeToClass(this)" type="button" class="mtc-button mtc-button-wx">
+            <img src="__PUBLIC__/Wx/images/answer/pay/wx.png" alt=""/>
+        </button>
+        <div class="mtc-note">
+            <div class="wrap">
+                * 注：此订单为预约订单，提交审核过后，1.自己买断，独家订制；2.等待满额人数，人数满每单所需的法豆/金额，会给您发送邮件。
+            </div>
+        </div>
+    </div>
+    <!--关闭的掩盖层-->
+    <div id="closemodelbox" onclick="closeModelBox()"></div>
+</div>
+<script src="__PUBLIC__/Wx/js/jquery-1.11.3.js" type="text/javascript"></script>
+<script src="__PUBLIC__/Wx/js/swiper.jquery.min.js" type="text/javascript"></script>
+<!--题目数据包-->
+<script type="text/javascript">
+    //        单选题
+    var singleData = {$data};
+    //        不定项里的故事题
+    var storyData= {$story};
+</script>
+<!--卷面排题-->
+<script>
+    //    <!--卷面排题-->
+    var rankTestPaper = function() {
+//        页面初始化加载 单选题
+        function startRankSingle() {
+            var answerBox = $("#swiper-wrapper");
+            for (var i = 0; i < singleData.length; i++) {
+                var str = '<div class="swiper-slide">' +
+                        '<div class="subject wrap single">' +
+                        '<div class="sj-title" types="single" id="' + (i + 1) + '" data="' + singleData[i].sign + '" right="' + singleData[i].sign + '">' + singleData[i].name + '</div>' +
+                        '<dl>';
+                var abcd = ["A", "B", "C", "D", "E", "F", "G", "H"];
+                for (var k = 0; k < singleData[i].option.length; k++) {
+                    str += '<dd class="'+singleData[i].option[k].active+'" data="' + singleData[i].option[k].sign + '"><div class="sj-circle">' + abcd[k] + '</div><p>' + singleData[i].option[k].answer + '</p><div class="clearfix"></div></dd> ';
+                }
+                str += '</dl> ' +
+                        '</div>' +
+                        '<div class="rightnote" style="display: block"> ' +
+                        '<div class="wrap"> ' +
+                        '<span>正确答案：';
+
+                    str += "&nbsp;&nbsp;"+singleData[i].sign;
+
+                str += '</span> ' +
+                        '<span class="rightkey"></span> ' +
+                        '</div> ' +
+                        '</div>' +
+                        '</div>'
+                answerBox.append(str);
+            }
+            ;
+        };
+//        页面初始化加载 不定项选择题故事题
+        function startRankStory() {
+            var answerBox = $("#swiper-wrapper");
+            for (var i = 0; i < storyData.length; i++) {
+                var str = '<div class="swiper-slide">' +
+                        '<div class="subject wrap story">' +
+                        '<div class="sj-title">题干：' + storyData[i].name + '<span>（请回答下面' + storyData[i].option.length + '题）</span></div> ';
+                for (var z = 0; z < storyData[i].option.length; z++) {
+                    str += '<div class="sj-title sj-title-answer" types="story" id="' + (91 + z) + '" data="' + storyData[i].option[z].id + '" right="' + storyData[i].option[z].sign + '">' + storyData[i].option[z].name + '</div><dl> '
+                    var abcd = ["A", "B", "C", "D", "E", "F", "G", "H"];
+                    for (var k = 0; k < storyData[i].option[z].option.length; k++) {
+                        str += '<dd class="'+storyData[i].option[z].option[k].active+'" data="' + storyData[i].option[z].option[k].id + '"><div class="sj-circle">' + abcd[k] + '</div><p>' + storyData[i].option[z].option[k].answer + '</p><div class="clearfix"></div></dd> '
+                    };
+                    str += '</dl> ' +
+                            '<div class="rightnote" style="display: block"> ' +
+                            '<div class="wrap"> ' +
+                            '<span>正确答案：</span> ';
+                    //for(var ri = 0;ri<singleData[i].right.length;ri++){
+                        str += "&nbsp;&nbsp;"+singleData[i].sign;
+                    //}
+                    str +=  '<span class="rightkey"></span> ' +
+                            '</div> ' +
+                            '</div>';
+                }
+                str += '</div>' +
+                        '</div>'
+                answerBox.append(str);
+            }
+            ;
+        };
+        startRankSingle();
+        startRankStory();
+    };
+    rankTestPaper();
+</script>
+<!--滑屏-->
+<script type="text/javascript">
+//    初始化滑动swiper
+    function mySwiperInitial(){
+        //    初始化swiper
+        var mySwiper = new Swiper ('.swiper-container', {
+            autoHeight: true, //高度随内容变化
+            direction: 'horizontal',//横向滑动
+            observer:true,//修改swiper自己或子元素时，自动初始化swiper
+            speed: 1200,
+            initialSlide: 0,
+            onSlideChangeEnd: function(swiper){
+//                console.log(swiper.activeIndex); //切换结束时，告诉我现在是第几个slide
+                stemTitle(parseFloat(swiper.activeIndex)+1);
+
+            },
+        });
+        //     title信息变化
+        function stemTitle(n) {
+            window.scrollTo(0,0);
+            var num = $("#stem-title-way").find(".st-num");
+            var span = $("#stem-title-way").find(".st-num").next("span");
+            var zong = $("#stem-title-way").find(".singledatanum");
+            num.html(n);
+            span.html("/"+(singleData.length+storyData.length));
+            zong.html((singleData.length+storyData.length));
+        };
+        stemTitle();
+    };
+    mySwiperInitial();
+</script>
+<!--功能菜单-->
+<script type="text/javascript">
+    //    关闭弹出层
+    function closeModelBox(){
+        $("#modelbox").hide();
+        $("#modelbox").find(".modelbox-children").hide();
+    };
+    //菜单
+    function shopNav(t){
+        if(t=="dzkt"){
+            $("#modelbox").show();
+            $("#modelbox").find(".modelbox-children").hide();
+            $("#madetoclass").show();
+        }else if(t=="cydb"){
+            $("#modelbox").show();
+            $("#modelbox").find(".modelbox-children").hide();
+            $("#partrank").show();
+        }
+    }
+</script>
+<!--订制课堂-->
+<script type="text/javascript">
+    function submitMadeToClass(t){
+        $(t).parents("#madetoclass").slideUp(200);
+        $(t).parents("#modelbox").fadeOut();
+    };
+</script>
+<!--选择问题调用函数-->
+<script type="text/javascript">
+    //    选择问题
+    function gainMessageName(t){
+        if($(t).attr("data")=="no"){
+            $(t).attr("yesno","yes").find(".m-arrow").addClass("active");
+            $(t).next(".m-name-children").slideDown();
+            $(t).attr("data","yes");
+        }else{
+            $(t).attr("yesno","yes").find(".m-arrow").removeClass("active");
+            $(t).next(".m-name-children").slideUp();
+            $(t).attr("data","no");
+        }
+//        绑定事件点击把值赋给隐藏域
+        $(t).next(".m-name-children").find(".m-name-children-text").bind("click",function(){
+            $(t).find(".m-name-look").html($(this).html());
+            $(t).prev("input").val($(this).html());
+            $(t).attr("yesno","yes").find(".m-arrow").removeClass("active");
+            $(t).next(".m-name-children").slideUp();
+            $(t).attr("data","no");
+        });
+    };
+</script>
+<script src="__PUBLIC__/Wx/js/jquery.raty.js" type="text/javascript"></script>
+<!--评星-->
+<script type="text/javascript">
+    //    评星
+    $('#givestart').raty({
+        path:"__PUBLIC__/Wx/images/raty",
+        click: function (score, evt){
+            $("#havestarnum").val(score);
+        }
+    });
+</script>
+<!--//参与打榜   评价-->
+<script type="text/javascript">
+    //    评论
+    function discuss(){
+        var box = $("#partrank").find(".pr-discuss");
+        var btn = box.find("button");
+        for(var i = 0;i<btn.length;i++){
+            $(btn[i]).html($(btn[i]).attr("data"));
+        }
+        $(box).on("click","button",function(){
+            if($(this).attr("yn")=="no"){
+                $(this).removeClass("active");
+                $(this).attr("yn","yes");
+            }else{
+                $(this).addClass("active");
+                $(this).attr("yn","no");
+            }
+        })
+    };
+    discuss();
+    //    提交
+    function discussSubmit(){
+        var btn = $("#partrank").find(".pr-discuss").find("button");
+        var str = "";
+        for(var i = 0;i<btn.length;i++){
+            if($(btn[i]).hasClass("active")){
+                str += "text" + $(btn[i]).attr("data");
+            }
+        }
+        $("#havediscuss").val(str);
+    };
+</script>
+</body>
+</html>

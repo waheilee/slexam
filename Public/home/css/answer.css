@@ -1,0 +1,205 @@
+@charset "utf-8";
+body{
+    background: #fff;
+}
+#tab{
+    width: 360px;
+    text-align: center;
+}
+#tab .top{
+    width: 300px;
+    border: 1px solid #ecedee;
+    border-top: none;
+    padding: 30px;
+    padding-top: 0;
+}
+#tab .top .img{
+    margin-bottom: 55px;
+}
+#tab .top .name{
+    margin-bottom: 25px;
+    font-size: 30px;
+    color: #3482c4;
+}
+#tab .top .answernum{
+    font-size: 14px;
+    color: #9aa7a7;
+    margin-bottom: 30px;
+}
+#tab .top .answername li{
+    line-height: 30px;
+    text-align: left;
+}
+#tab .top .answername li a{
+    font-size: 14px;
+    color: #808b8b;
+    text-decoration: underline;
+}
+#tab .top .answername li a:active,#tab .top .answername li a:hover{
+    color: #3482c4;
+    font-weight: bold;
+}
+#tab .top .answername li.active a{
+    color: #3482c4;
+    font-weight: bold;
+}
+#tab .bottom{
+    margin-top: 30px;
+}
+#tab .bottom .qrcode{
+    width: 162px;
+    margin: 0 auto;
+    border: 1px solid #ecedee;
+}
+#tab .bottom .qrcode img{
+    width: 162px;
+    border: 1px solid #ecedee;
+}
+#tab .bottom p{
+    font-size: 14px;
+    color: #848484;
+    text-align: center;
+    line-height: 25px;
+}
+#tab .bottom .redtext{
+    font-size: 14px;
+    color: #e1091e;
+    line-height: 30px;
+}
+#testpaper{
+    width: 765px;
+}
+#testpaper .col-1{
+    width: 100%;
+    line-height: 60px;
+}
+#testpaper .col-1 .left{
+    font-size: 14px;
+    color: #525252;
+}
+#testpaper .col-1 .left span{
+    font-size: 14px;
+    color: #3482c4;
+}
+#testpaper .col-1 .stoptime{
+    width: 215px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    background: #3482C4;
+    cursor: pointer;
+    margin-left: 70px;
+    border-radius: 3px;
+}
+#testpaper .col-1 .time{
+    color: #3482c4;
+    font-size: 14px;
+    line-height: 60px;
+}
+#testpaper .col-1 .time #timetext{
+    font-size: 36px;
+    color: #3482c4;
+    font-weight: bold;
+    margin-left: 15px;
+}
+#testpaper .col-2{
+    font-size: 30px;
+    color: #525252;
+    line-height: 115px;
+}
+#testpaper .col-3{
+    color: #8e8e8e;
+    font-size: 14px;
+}
+#testpaper .col-3 span{
+    color: #525252;
+    margin-left: 5px;
+    line-height: 22px;
+}
+#answer-box{
+    width: 100%;
+}
+#answer-box .list{
+    width: 100%;
+    text-align: justify;
+    margin: 40px 0;
+}
+#answer-box .list .list-title-story{
+    font-size: 18px;
+    font-weight: bold;
+    color: #525252;
+    line-height: 30px;
+    position: relative;
+    text-align: justify;
+    margin: 25px 0;
+}
+#answer-box .list .list-title{
+    font-size: 18px;
+    font-weight: bold;
+    color: #525252;
+    line-height: 30px;
+    position: relative;
+}
+#answer-box .list .list-title i{
+    font-size: 16px;
+    font-style: normal;
+    display: block;
+    background: #3482C4;
+    padding: 0 5px;
+    height: 25px;
+    line-height: 25px;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    color: #fff;
+}
+#answer-box .list .list-title p{
+    text-indent: 40px;
+}
+#answer-box .list .list-answer{
+    padding: 20px 30px;
+}
+#answer-box .list .list-answer dd{
+    font-size: 18px;
+    color: #525252;
+    margin: 15px 0;
+    position: relative;
+    cursor: pointer;
+}
+#answer-box .list .list-answer dd i{
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid #ecedee;
+    background-color: #f5f5f5;
+    position: absolute;
+    top: 5px;
+    left: -30px;
+}
+#answer-box .list .list-answer dd.active i{
+    background-image: url("../images/answer/circle.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#testpaper .finished{
+    margin: 30px 0;
+    margin-bottom: 50px;
+}
+#testpaper .finished a{
+    display: block;
+    width: 215px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    color: #fff;
+    background: #3482C4;
+    margin-right: 15px;
+    border-radius: 5px;
+    float: left;
+}
+#testpaper .finished a.checkup{
+    background: #E1091E;
+}

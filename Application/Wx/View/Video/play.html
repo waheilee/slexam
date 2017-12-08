@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- 编码格式 -->
+    <meta charset="utf-8">
+    <!-- IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 设置 viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <meta name="Keywords" content="桑磊法考,司法考试,考试,司法,律师">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- 兼容国产浏览器的高速模式 -->
+    <meta name="renderer" content="webkit">
+    <title>免费课堂 - 精品课堂</title>
+    <!--设置网页的图标-->
+    <link rel="shortcut icon" href="">
+    <!--公用的css-->
+    <link type="text/css" href="__PUBLIC__/wx/css/public.css" rel="stylesheet"/>
+    <!--本页面的css-->
+    <link type="text/css" href="__PUBLIC__/wx/css/videoplay.css" rel="stylesheet"/>
+    <link href="http://vjs.zencdn.net/5.8.0/video-js.css" rel="stylesheet">
+    <style>
+        .video-js{
+            width:100%;
+        }
+        .video-js .vjs-big-play-button{
+            top: 50%;
+            left: 50%;
+            margin-top: -0.75em;
+            margin-left: -1.5em;
+        }
+    </style>
+     <!-- If you'd like to support IE8 -->
+    <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+</head>
+<body>
+<!--播放视频-->
+<!--<div id="videoplay-container">
+    <img src="__PUBLIC__/wx/images/video/img/bigvideoplay.png" class="play" alt=""/>
+</div>-->
+<!--视频信息-->
+             <video id="my_video" class="video-js vjs-default-skin" controls preload="auto" width="640" height="550" poster="" data-setup="{}">
+
+                    <source src="__ROOT__{$videoid['url']}" type="video/mp4">
+
+                    <!--<source src="{$vo['url']}" type="video/wmv">-->
+                </video>
+<!--底部-->
+<div id="footer">
+    CopyRight©2017&nbsp;&nbsp;&nbsp;桑磊法考中心版权所有&nbsp;&nbsp;&nbsp;侵者必究
+</div>
+<script type="text/javascript" src="__PUBLIC__/wx/js/jquery-1.11.3.js"></script>
+<script src="//vjs.zencdn.net/5-unsafe/video.js"></script>
+<script>
+   (function($){
+        var list = [
+            {name:"mov_bbb", url: "http://www.w3school.com.cn/example/html5/mov_bbb.mp4", lastTime:0},
+            {name:"shichang", url: "http://www.w3school.com.cn/example/html5/mov_bbb.mp4", lastTime:0},
+        ];
+
+        var resetVideoSize = function(myPlayer){
+            var videoJsBoxWidth = $(".video-js").width();
+            var ratio = 1440/900;
+            var videoJsBoxHeight = videoJsBoxWidth/ratio;
+            myPlayer.height(videoJsBoxHeight);
+        }
+        var myPlayer = videojs("my-video").ready(function(){
+            var i = 0;
+            var videoObj = list[i];
+            var lastTime = localStorage.getItem(videoObj.name + ".currentTime") || 0;
+            this.currentTime(lastTime);
+
+            this.width("100%");
+            resetVideoSize(myPlayer);
+
+            //绑定视频播放结束事件
+            this.on("ended", function(){
+                if(i >= list.length - 1){
+                    i = 0;
+                    this.pause();
+                    return;
+                }
+                i++;
+                this.src({type: "video/mp4", src: videoObj.url});
+                localStorage.setItem(videoObj.name+".currentTime", 0);
+                this.play();
+            });
+
+            //绑定视频播放中事件
+            this.on("timeupdate", function(data){
+                if(this.currentTime() - lastTime > 2){
+                    lastTime = this.currentTime();
+                    localStorage.setItem(videoObj.name+".currentTime", lastTime);
+                }
+            })
+            this.play();
+        });
+        $(window).on("resize", function(){
+            resetVideoSize(myPlayer);
+        });
+
+    })(jQuery) 
+</script>
+</body>
+</html>

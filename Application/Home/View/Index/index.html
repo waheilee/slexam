@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>桑磊法考</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta name="keyword" content="桑磊法考,司法考试,考试,司法,律师">
+    <!-- 公用的css -->
+    <link rel="stylesheet" href="__PUBLIC__/home/css/public.css"/>
+    <!-- 本页面的css -->
+    <link rel="stylesheet" href="__PUBLIC__/home/css/index.css"/>
+</head>
+<body>
+<!--主导航-->
+<include file="Public/nav" />
+<!--banner轮播-->
+<div id="banner">
+    <!--标题背景-->
+    <div id="banner_bg" style="display: none">
+        <div class="wrap">
+            <div style="margin-left: 195px;float: left;">
+                <!--标题(图片所带的标题放在下面图片的alt里面)-->
+                <div id="banner_info" class=""left></div>
+                <div class="clearfix"></div>
+            </div>
+            <ul class="right">
+                <li class="on">1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div id="banner_list">
+        <!--注意banner图的路径放在div的style里面-->
+        <a href="#1" target="_blank"><div style="background: url('__PUBLIC__/home/images/index/banner/banner.jpg') no-repeat center center;"  class="bannerimgbox"></div></a>
+        <a href="#2" target="_blank"><div style="background: url('__PUBLIC__/home/images/index/banner/banner-1.jpg') no-repeat center center;" class="bannerimgbox"></div></a>
+        <a href="#3" target="_blank"><div style="background: url('__PUBLIC__/home/images/index/banner/banner-2.jpg') no-repeat center center;" class="bannerimgbox"></div></a>
+    </div>
+</div>
+<!--上导航-->
+<div id="topnav">
+    <div class="wrap">
+        <ul>
+            <!--桑磊题库-->
+            <li class="sltk">
+                <p class="title">精选题库提纲</p>
+                <p><span>12</span>门</p>
+                <p><span>{$count}</span>个题目</p>
+                <p>核心模拟真题评估</p>
+                <a id="turnToContent" href="#content" class="href" >
+                    桑磊题库
+                </a>
+            </li>
+            <!--法考课堂-->
+            <li class="fkkt">
+                <p class="title">在线法考辅导</p>
+                <p>各大难点题型辅导</p>
+                <p>在线订制教学视频</p>
+                <p>免费视频教学解析</p>
+                <a href="{:U('Video/index')}" class="href" target="_blank">
+                    法考课堂
+                </a>
+                <a href="#" class="dzkt">
+                    <img src="__PUBLIC__/home/images/index/icon/dzkt.png" alt=""/>
+                </a>
+            </li>
+            <!--题霸打榜-->
+            <li class="tbdb">
+                <p class="title">打榜有赏机制</p>
+                <p>等级奖励犒赏</p>
+                <p>邀请好友PK</p>
+                <p>区域赛事对接</p>
+                <a href="{:U('Band/index')}" class="href" target="_blank">
+                    题霸打榜
+                </a>
+            </li>
+            <div class="clearfix"></div>
+        </ul>
+    </div>
+</div>
+<!--视频菜单-->
+<div id="videomenu">
+    <ul class="wrap">
+        <li>
+            <div class="top">
+                <volist name="video['course']" id='vo' offset="0" length='1'>
+                    <img src="__PUBLIC__/home/images/index/video/1.png" alt=""/>
+                    <p class="title">课程：{$vo['title']}</p>
+                    <!--正在播出加playing这个class，反之不加-->
+                    <p class="isplay playing">正在播出</p>
+                    <a href="{:U('video/videoclass',array('id'=>$vo['id']))}" target="_blank" class="golook">免费观看</a>
+                </volist>
+            </div>
+            <div class="content">
+                <volist name="video['course']" id='vo' offset="1" length='3'>
+                    <a  href="{:U('video/videoclass',array('id'=>$vo['id']))}" target="_blank" class="list">
+                        <img src="__PUBLIC__/home/images/index/icon/play.png" alt=""/>
+                        {$vo['title']}
+                    </a>
+                    <a href="{:U('video/videoclass')}" target="_blank" class="lookhotvideo">
+                        查看精品课程视频
+                    </a>
+                </volist>
+            </div>
+        </li>
+        <li>
+            <div class="top">
+                <volist name="video['groom']" id='vo' offset="0" length='1'>
+                    <img src="__PUBLIC__/home/images/index/video/2.png" alt=""/>
+                    <p class="title">精品：{$vo['title']}</p>
+                    <!--正在播出加playing这个class，反之不加-->
+                    <p class="isplay">正在播出</p>
+                    <a href="{:U('video/boutique',array('id'=>$vo['id']))}" target="_blank" class="golook">免费观看</a>
+                </volist>
+            </div>
+            <div class="content">
+                <volist name="video['groom']" id='vo' offset="1" length='3'>
+                    <a  href="{:U('video/boutique',array('id'=>$vo['id']))}" target="_blank" class="list">
+                        <img src="__PUBLIC__/home/images/index/icon/play.png" alt=""/>
+                        {$vo['title']}
+                    </a>
+                </volist>
+                <a href="{:U('video/boutique')}" target="_blank" class="lookhotvideo">
+                    查看精品推荐视频
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="top">
+                <p class="title nobg">在线订制教学视频</p>
+                <!--正在播出加playing这个class，反之不加-->
+                <p class="text">题库难点、知识点 <br/>一对一教学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;订制收益</p>
+                <a href="{:U('Video/madeVideo')}" target="_blank" class="golook">我要订制</a>
+            </div>
+            <div class="content">
+                <a  href="{:U('Video/madeVideo')}" target="_blank" class="list">
+                    <!--这个图片和所有图片不一样 订制-->
+                    <img src="__PUBLIC__/home/images/index/icon/dz.png" alt=""/>
+                    在线订制视频与分享订制收益
+                </a>
+                <a  href="{:U('Video/madeVideo')}" target="_blank" class="list">
+                    <!--这个图片和所有图片不一样  参与-->
+                    <img src="__PUBLIC__/home/images/index/icon/cy.png" alt=""/>
+                    参与预约订制视频
+                    <!--这个图片和所有图片不一样  抢-->
+                    <img src="__PUBLIC__/home/images/index/icon/hot.png" alt=""/>
+                </a>
+                <a href="{:U('video/index')}" target="_blank" class="lookhotvideo">
+                    查看热点视频
+                </a>
+            </div>
+        </li>
+        <div class="clearfix"></div>
+    </ul>
+</div>
+<!--桑累法考题库-->
+<div id="questionbank">
+    <div id="content">
+    <p class="onetitle">桑磊法考题库集</p>
+    <p class="onetext">12门法考题型&nbsp;&nbsp;&nbsp;{$count}个题目&nbsp;&nbsp;&nbsp;核心模拟真题评估</p>
+    <div class="wrap" style="position: relative;">
+        <div class="banner" id="b04">
+            <ul>
+                <!--第1页题库-->
+                <li>
+                    <volist name='data' id='vo' key='k'>
+                        <a href="{:U('Examin/index',array('code'=>base64_encode($vo['id'])))}" class="library-list" target="_blank">
+                            <img src="__PUBLIC__/home/images/index/library/{$k}.jpg" alt=""/>
+                            <p class="name">{$vo['name']}题库</p>
+                            <p>{$vo['point'] | default=0}个知识点，{$vo['quest'] | default=0}个测试题目</p>
+                        </a>
+                        <if condition="(($k % 3) eq 0) && ($data[$k+1]['id'] neq null)">
+                            </li>
+                            <li>
+                        </if>
+                    </volist>
+                   
+                </li>
+            </ul>
+        </div>
+        <!--上一页-->
+        <a href="javascript:void(0);" class="unslider-arrow04 prev"><img class="arrow" id="al" src="__PUBLIC__/home/images/index/icon/banner-prev.png" ></a>
+        <!--下一页-->
+        <a href="javascript:void(0);" class="unslider-arrow04 next"><img class="arrow" id="ar" src="__PUBLIC__/home/images/index/icon/banner-next.png" ></a>
+        <!--第5页题库-->
+        <ul class="fix">
+            <li>
+                <a href="#" class="library-list" target="_blank">
+                    <img src="__PUBLIC__/home/images/index/library/lnztk.jpg" alt=""/>
+                    <p class="name">真题试题</p>
+                    <p></p>
+                    <!-- <p>10个知识点，58个测试题目</p> -->
+                </a>
+                <a href="{:U('Random/analog')}" class="library-list" target="_blank">
+                    <img src="__PUBLIC__/home/images/index/library/mnztk.jpg" alt=""/>
+                    <p class="name">模拟试题</p>
+                    <p></p>
+                    <!-- <p>10个知识点，58个测试题目</p> -->
+                </a>
+                <a href="{:U('Random/custom')}" class="library-list" target="_blank">
+                    <img src="__PUBLIC__/home/images/index/library/zdytk.jpg" alt=""/>
+                    <p class="name">自定义试题</p>
+                    <p></p>
+                    <!-- <p>10个知识点，58个测试题目</p> -->
+                </a>
+                <div class="clearfix"></div>
+            </li>
+        </ul>
+        <!--随手题库-->
+        <!-- <a href="{:U('Random/index')}" target="_blank" class="handlibrary">
+            题霸随手题库
+            <span>（随机/自定义抽选题型）</span>
+            <img src="__PUBLIC__/home/images/index/icon/goblue.png" alt=""/>
+        </a> -->
+    </div>
+    </div>
+</div>
+<!--底部-->
+<include file="Public/foot" />
+</body>
+<script src="__PUBLIC__/home/js/jquery-1.11.3.js"></script>
+<script src="__PUBLIC__/home/js/unslider.min.js"></script>
+<script src="__PUBLIC__/home/js/index.js"></script>
+<script>
+    $(function(){
+        $('a[href*=#],area[href*=#]').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var $target = $(this.hash);
+                $target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+                if ($target.length) {
+                    var targetOffset = $target.offset().top;
+                    $('html,body').animate({
+                            scrollTop: targetOffset
+                        },
+                        1000);
+                    return false;
+                }
+            }
+        });
+    })
+</script>
+</html>

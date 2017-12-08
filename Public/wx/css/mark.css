@@ -1,0 +1,170 @@
+@charset "utf-8";
+body{
+    padding-bottom: 3rem;
+    padding-top: 1rem;
+}
+#banner{
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    min-height: 3.77rem;
+    border-top: 1px solid #f5f5f5;
+}
+#banner .imgbg{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+#banner .b-name{
+    width: 100%;
+    font-size: 0.28rem;
+    color: #fff;
+    margin-top: 0.55rem;
+    text-align: center;
+}
+#banner .b-name span{
+    font-weight: bold;
+    margin: 0.05rem;
+}
+#banner .b-content{
+    width: 2.78rem;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 0.4rem;
+}
+#banner .b-content .bc-name{
+    font-size: 0.32rem;
+    color: #fff;
+    position: absolute;
+    top: 0.5rem;
+    left: -2.1rem;
+}
+#banner .b-content .bc-num{
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    color: #fff;
+    font-size: 0.32rem;
+}
+#banner .b-content .bc-num span{
+    font-size: 1rem;
+    margin: 0.2rem;
+}
+#banner .b-content .bc-time{
+    width: 100%;
+    font-size: 0.32rem;
+    text-align: center;
+    color: #fff;
+    line-height: 0.7rem;
+}
+#markmsg{
+    margin-top: 0.4rem;
+    font-size: 0.3rem;
+    color: #666;
+}
+#markmsg span{
+    margin: 0.01rem;
+}
+#markmsg a{
+    color: #3482c4;
+}
+#scorereport{
+    margin-top: 1.22rem;
+}
+#scorereport .report-title{
+    width: 100%;
+    text-align: center;
+    font-size: 0.42rem;
+    color: #666666;
+}
+#scorereport .report-titletab{
+    font-size: 0.3rem;
+    color: #9c9c9c;
+    width: 100%;
+    text-align: center;
+    margin-top: 0.4rem;
+}
+#scorereport .report-titletab span{
+    margin: 0.1rem;
+}
+#main{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+    height: 8rem;
+}
+#scorereport .report-details{
+    width: 100%;
+    line-height: 0.6rem;
+    text-align: center;
+    font-size: 0.3rem;
+    color: #666;
+}
+#scorereport .report-details span{
+    margin: 0.05rem;
+}
+/*参与打榜*/
+#partrank{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    z-index: 1001;
+}
+#partrank .pr-title{
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    background: #f5f5f5;
+    font-size: 0.46rem;
+    color: #666;
+}
+#partrank .pr-table{
+    width: 100%;
+    height: 1.08rem;
+    line-height: 1.08rem;
+}
+#partrank .pr-table.bor{
+    border-right: 1px solid #dedede;
+    border-top: 1px solid #dedede;
+}
+#partrank .pr-table .left{
+    color: #9c9c9c;
+    font-size: 0.32rem;
+}
+#givestart img{
+    width: 0.5rem;
+    margin-top: -0.15rem;
+}
+#partrank textarea{
+    width: 100%;
+    height: 1.9rem;
+    border: 1px solid #ddd;
+    border-radius: 0.1rem;
+    margin-bottom: 0.5rem;
+}
+#partrank .submit{
+    width: 100%;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    background: #3482C4;
+    font-size: 0.38rem;
+    color: #fff;
+}
+#partrank .textnote{
+    font-size: 0.32rem;
+    color: #9c9c9c;
+    margin-top: 0.45rem;
+    margin-bottom: 0.5rem;
+    line-height: 0.6rem;
+}
+#partrank .textnote a{
+    color: #3482c4;
+    margin: 0.05rem;
+}

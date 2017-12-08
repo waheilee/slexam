@@ -1,0 +1,279 @@
+@charset "UTF-8";
+#changebutton{
+    width: 100%;
+    font-size: 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+#changebutton a{
+    display: inline-block;
+    width: 50%;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    font-size: 0.34rem;
+    color: #666666;
+    text-align: center;
+}
+#changebutton a.active{
+    border-bottom: 1px solid #3482c4;
+}
+#selfmessage{
+    width: 100%;
+    margin: 0.8rem auto;
+}
+#selfmessage .headimg{
+    width: 1.94rem;
+    height: 1.94rem;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    font-size: 0;
+}
+#selfmessage .headimg .headimgtext{
+    font-size: 0.2rem;
+    width: 100%;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 0.2rem;
+    left: 0;
+    background: #3183C5;
+}
+#selfmessage .headimg img{
+    width: 100%;
+}
+#selfmessage .headcontentheadimg{
+    width: 24%;
+}
+#selfmessage .headcontent{
+    width: 76%;
+}
+#selfmessage .headname{
+    font-size: 0.44rem;
+    color: #666666;
+    line-height: 0.9rem;
+}
+#selfmessage .headnum{
+    font-size: 0.3rem;
+    color: #9c9c9c;
+    margin-top: 0.2rem;
+}
+#selfmessage .headnum img{
+    width: 0.3rem;
+    margin-top: -0.1rem;
+}
+#selfmessage .headnum img.bigw{
+    width: 0.4rem;
+    margin-left: 0.3rem;
+}
+#selfmessage .headnum span{
+    font-size: 0.38rem;
+    color: #fcb60f;
+    margin: 0 0.05rem;
+}
+#selfmessage .headnum span.blue{
+    color: #3482c4;
+}
+#selfmessage .headnum a{
+    font-size: 0.28rem;
+    color: #fcb60f;
+    margin-left: 0.05rem;
+}
+#nummoney{
+    width: 100%;
+    font-size: 0;
+}
+#nummoney form{
+    width: 100%;
+}
+#nummoney button{
+    width: 30%;
+    height: 1.1rem;
+    border: 1px solid #ecedee;
+    border-radius: 0.08rem;
+    background: #fff;
+    margin-bottom: 0.4rem;
+    font-size: 0.4rem;
+    outline: none;
+    color: #666;
+}
+#nummoney button.active{
+    border: 1px solid #6198CD;
+}
+#nummoney button span{
+    color: #9c9c9c;
+    font-size: 0.28rem;
+}
+#nummoney button.mlr{
+    margin: 0 5%;
+    margin-bottom: 0.4rem;
+}
+#nummoney input{
+    width: 80%;
+    padding: 0 10%;
+    margin: 0 auto;
+    height: 1rem;
+    outline: none;
+    font-size: 0.4rem;
+    color: #666;
+    text-align: center;
+}
+#nummoney .submitbutton{
+    width: 100%;
+    height: 1.5rem;
+    background: #00B700;
+    margin-top: 1.2rem;
+}
+#nummoney .submitbutton img{
+    width: 3.5rem;
+}
+#nummoney .nummoneynote{
+    color: #9c9c9c;
+    font-size: 0.36rem;
+    line-height: 0.6rem;
+}
+#footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+#changeone{
+    width: 100%;
+}
+#changetwo{
+    width: 100%;
+    display: none;
+}
+#changetwo ul li{
+    width: 100%;
+    margin-top: 0.6rem;
+    margin-bottom: 0.4rem;
+    position: relative;
+}
+#changetwo ul li .zhjl-number{
+    width: 100%;
+    color: #9c9c9c;
+    font-size: 0.36rem;
+    line-height: 0.6rem;
+}
+#changetwo ul li .zhjl-money{
+    width: 100%;
+    color: #666666;
+    font-size: 0.42rem;
+    margin-bottom: 0.4rem;
+}
+#changetwo ul li .zhjl-text{
+    width: 100%;
+    font-size: 0.36rem;
+    color: #666666;
+    line-height: 0.6rem;
+}
+#changetwo ul li .zhjl-time{
+    width: 100%;
+    color: #9c9c9c;
+    font-size: 0.36rem;
+}
+#changetwo ul li .removeli{
+    width: 0.5rem;
+    position: absolute;
+    right: 4%;
+    bottom: 0;
+}
+#changethree{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    display: none;
+}
+#changethree .fd-title{
+    width: 100%;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    background: #FCB60F;
+    color: #fff;
+}
+#changethree .fd-title .left{
+    font-size: 0.38rem;
+}
+#changethree .fd-title .left img{
+    width: 0.5rem;
+    margin-right: 0.2rem;
+    margin-top: -0.1rem;
+}
+#changethree .fd-title .right{
+    font-size: 0.32rem;
+}
+#changethree .fd-tabel{
+    width: 100%;
+    height: 1.15rem;
+    line-height: 1.15rem;
+    font-size: 0.38rem;
+    color: #666666;
+    border-bottom: 1px solid #ecedee;
+}
+#changethree .fd-tabel span{
+    font-size: 0.3rem;
+    color: #9c9c9c;
+}
+#changethree .fd-tabel .blue{
+    color: #3482c4;
+    font-size: 0.42rem;
+    margin: 0 0.2rem;
+}
+#changethree .fd-tabel .orange{
+    color: #fcb60f;
+    font-size: 0.42rem;
+    margin: 0 0.2rem;
+}
+#changethree .fd-exchange{
+    width: 100%;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    margin-bottom: 0.3rem;
+    font-size: 0.3rem;
+    color: #666666;
+    text-align: center;
+}
+#changethree .fd-exchange input{
+    width: 50%;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    color: #9c9c9c;
+    font-size: 0.36rem;
+    outline: none;
+}
+#changethree .fd-exchange .right{
+    color: #9c9c9c;
+    font-size: 0.3rem;
+}
+#changethree .fd-exchange .right span{
+    font-size: 0.4rem;
+    color: #fcb60f;
+    margin-right: 0.2rem;
+}
+#changethree .orangesubmitbutton{
+    width: 100%;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    background: #FCB60F;
+    font-size: 0.5rem;
+    color: #fff;
+}
+#changethree .nummoneynote{
+    color: #9c9c9c;
+    font-size: 0.3rem;
+    line-height: 1.2rem;
+}
+#changethree .goback{
+    width: 100%;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    background: #ddd;
+    font-size: 0.5rem;
+    color: #fff;
+    text-align: center;
+}

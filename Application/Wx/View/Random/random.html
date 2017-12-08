@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- 编码格式 -->
+    <meta charset="utf-8">
+    <!-- IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 设置 viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <meta name="Keywords" content="桑磊法考,司法考试,考试,司法,律师">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- 兼容国产浏览器的高速模式 -->
+    <meta name="renderer" content="webkit">
+    <title>桑磊题库 - 自定义题库</title>
+    <!--设置网页的图标-->
+    <link rel="shortcut icon" href="">
+    <!--公用的css-->
+    <link type="text/css" href="__PUBLIC__/Wx/css/public.css" rel="stylesheet"/>
+    <!--本页面的css-->
+    <link type="text/css" href="__PUBLIC__/Wx/css/udchose.css" rel="stylesheet"/>
+</head>
+<body>
+<!--筛查条件-->
+<div id="chosesubject">
+    <div class="cs-title">
+        <div class="wrap">
+            <div class="left" id="chosesubjecttitltname">选择科目</div>
+        </div>
+    </div>
+    <!--科目-->
+    <div id="chosek" class="cs-chose-box">
+        <ul id="cs-content-k" class="cs-content">
+            <!--<li>-->
+            <!--<div class="left cs-addall"><img src="__PUBLIC__/Wx/images/userdefined/grayadd.png" alt=""/></div>-->
+            <!--<div class="left cs-name">法理学</div>-->
+            <!--<div class="right cs-chosed">-->
+            <!--<span class="cs-text">选择章节<span class="cs-num"></span></span>-->
+            <!--<img src="__PUBLIC__/Wx/images/userdefined/arrow.png" alt=""/>-->
+            <!--</div>-->
+            <!--</li>-->
+        </ul>
+        <div id="paperdifficulty">
+            <div class="wrap">
+                <div class="left">请选择试卷难易程度</div>
+                <div class="right">
+                    <span class="pd-chosed">简单</span>
+                    <img src="__PUBLIC__/Wx/images/userdefined/arrow.png" alt=""/></div>
+            </div>
+            <div class="pd-select">
+                <div class="wrap">
+                    <div class="pd-option" data=1>简单</div>
+                    <div class="pd-option" data=2>中等</div>
+                    <div class="pd-option" data=3>困难</div>
+                </div>
+            </div>
+        </div>
+        <div class="submitpaper" onclick="submitPaper()">确定所选题型，随机生成试卷</div>
+    </div>
+    <!--章-->
+    <div id="chosez" style="display: none;" class="cs-chose-box">
+        <ul id="cs-content-z" class="cs-content"></ul>
+        <!-- <div class="notmore">没有更多了</div> -->
+        <div class="submitpaper" onclick="goChosek()">返回科目选择</div>
+    </div>
+    <!--节-->
+    <div id="chosej" style="display: none;" class="cs-chose-box">
+        <ul id="cs-content-j" class="cs-content">
+            <!--<li>-->
+            <!--<div class="left cs-addall"><img src="__PUBLIC__/Wx/images/userdefined/grayadd.png" alt=""/></div>-->
+            <!--<div class="left cs-name">法理学</div>-->
+            <!--<div class="right cs-chosed">-->
+            <!--<span class="cs-text">选择章节<span class="cs-num"></span></span>-->
+            <!--<img src="__PUBLIC__/Wx/images/userdefined/arrow.png" alt=""/>-->
+            <!--</div>-->
+            <!--</li>-->
+        </ul>
+        <!-- <div class="notmore">没有更多了</div> -->
+        <div class="submitpaper" onclick="goChosez()">返回章选择</div>
+    </div>
+    <!--zsd-->
+    <div id="chosed" style="display: none;" class="cs-chose-box">
+        <ul id="cs-content-d" class="cs-content">
+            <!--<li>-->
+            <!--<div class="left cs-addall"><img src="__PUBLIC__/Wx/images/userdefined/grayadd.png" alt=""/></div>-->
+            <!--<div class="left cs-name">法理学</div>-->
+            <!--<div class="right cs-chosed">-->
+            <!--<span class="cs-text">选择章节<span class="cs-num"></span></span>-->
+            <!--<img src="__PUBLIC__/Wx/images/userdefined/arrow.png" alt=""/>-->
+            <!--</div>-->
+            <!--</li>-->
+        </ul>
+        <!-- <div class="notmore">没有更多了</div> -->
+        <div class="submitpaper" onclick="goChosej()">返回节选择</div>
+    </div>
+</div>
+<form action="{:U('Answers/index')}" method="post" id='form'>
+    <input type="hidden" id='kid' name='kid' value=''>
+    <input type="hidden" id='zid' name='zid'>
+    <input type="hidden" id='jid' name='jid'>
+    <input type="hidden" id='did' name='did'>
+    <input type="hidden" id="nycd" name='nycd' value='1'>
+</form>
+
+<script src="__PUBLIC__/Wx/js/jquery-1.11.3.js" type="text/javascript"></script>
+<!--筛选的加载-->
+<script type="text/javascript">
+    var subjectData = {$tree};
+    //    初始化的科目 d为筛选数据的数组
+    function cyclicSubject(dom,d){
+        var str = '';
+        for(var i = 0;i<d.length;i++){
+            str +=  '<li data-id="'+d[i]['id']+'" data-type="kc" id="k'+d[i]['id']+'">' +
+                    '<div class="left cs-addall" onclick="choseAll(this)"><img src="__PUBLIC__/Wx/images/userdefined/grayadd.png" alt=""/></div> ' +
+                    '<div class="left cs-name">'+d[i]['name']+'</div> ' +
+                    '<div class="right cs-chosed" onclick="choseZ(this,'+d[i]['id']+')"> ' +
+                    '<span class="cs-text"><span class="cs-ed">已</span>选择<span class="cs-num">'+d[i]['num']+'</span>章</span> ' +
+                    '<img src="__PUBLIC__/Wx/images/userdefined/arrow.png" alt=""/> ' +
+                    '</div> ' +
+                    '</li>'
+        }
+        $(dom).append(str);
+    };
+    //    初始化的章 d为筛选数据的数组
+    function cyclicZhang(dom,d){
+        var str = '';
+        var val = $('#zid').val();
+        for(var i = 0;i<d.length;i++){
+                str +=  '<li data-id='+d[i]['id']+' data-type="zc" id="z'+d[i]['id']+'">' ;
+                if(val.indexOf(d[i]['id']) >= 0){
+                    str += '<div class="left cs-addall ed" onclick="choseAll(this,'+d[i]['pid']+')"><img src="__PUBLIC__/Wx/images/userdefined/blueright.png" alt=""/></div> ';
+                    
+                }else{
+                    str += '<div class="left cs-addall" onclick="choseAll(this,'+d[i]['pid']+')"><img src="__PUBLIC__/Wx/images/userdefined/grayadd.png" alt=""/></div> ';
+                } 
+                str += '<div class="left cs-name">'+d[i]['name']+'</div> ' +
+                    '<div class="right cs-chosed" onclick="choseJ(this,'+d[i]['id']+')"> ' +
+                    '<span class="cs-text"><span class="cs-ed">已</span>选择<span class="cs-num">'+d[i]['num']+'</span>节</span> ' +
+                    '<img src="__PUBLIC__/Wx/images/userdefined/arrow.png" alt=""/> ' +
+                    '</div> ' +
+                    '</li>'
+        }
+        $(dom).html('');
+        $(dom).append(str);
+    };
+    //    初始化的节 d为筛选数据的数组
+    function cyclicJie(dom,d){
+        var str = '';
+        var val = $('#jid').val();
+        var num = 0;
+        for(var i = 0;i<d.length;i++){ 
+            str +=  '<li data-id='+d[i]['id']+' data-type="j" id="j'+d[i]['id']+'">' ;
+            if(val.indexOf(d[i]['id']) >= 0){
+                str += '<div class="left cs-addall ed" onclick="choseAll(this,'+d[i]['pid']+')"><img src="__PUBLIC__/Wx/images/userdefined/blueright.png" alt=""/></div> ';
+                
+            }else{
+                str += '<div class="left cs-addall" onclick="choseAll(this,'+d[i]['pid']+')"><img src="__PUBLIC__/Wx/images/userdefined/grayadd.png" alt=""/></div> ';
+            } 
+            str +=
+                '<div class="left cs-name">'+d[i]['name']+'</div> ' +
+                '<div class="right cs-chosed" onclick="choseD(this,'+d[i]['id']+')"> ' +
+                '<span class="cs-text"><span class="cs-ed">已</span>选择<span class="cs-num">'+d[i]['num']+'</span>知识点</span> ' +
+                '<img src="__PUBLIC__/Wx/images/userdefined/arrow.png" alt=""/> ' +
+                '</div> ' +
+                '</li>'
+            
+        }
+        $(dom).html('');
+        $(dom).append(str);
+    };
+    //    初始化的知识点 d为筛选数据的数组
+    function cyclicZsd(dom,d){
+            var str = '';
+            var val = $('#did').val();
+            for(var i = 0;i<d.length;i++){
+                str +=  '<li data-id='+d[i]['name']+' data-type="zsd">' ;
+              
+                if(val.indexOf(d[i]['name']) >= 0){
+                    str += '<div class="left cs-addall ed" onclick="choseAll(this,'+d[i]['pid']+')"><img src="__PUBLIC__/Wx/images/userdefined/blueright.png" alt=""/></div> ';
+                    
+                }else{
+                    str += '<div class="left cs-addall" onclick="choseAll(this,'+d[i]['pid']+')"><img src="__PUBLIC__/Wx/images/userdefined/grayadd.png" alt=""/></div> ';
+                } 
+                str +=  '<div class="left cs-name">'+d[i]['name']+'</div>' +
+                        /*'<div class="right"><img style="display: inline-block" src="__PUBLIC__/Wx/images/userdefined/grayadd.png" alt=""/></div> ' +*/
+                        '</li>'
+            }
+            $(dom).html('');
+            $(dom).append(str);
+//        绑定点击事件
+            $(dom).on("click","li",function(){
+                if($(this).hasClass("active")===false){
+                    $(this).addClass("active");
+                    $(this).children(".right").children("img").attr("src","__PUBLIC__/Wx/images/userdefined/blueright.png");
+                }else{
+                    $(this).removeClass("active");
+                    $(this).children(".right").children("img").attr("src","__PUBLIC__/Wx/images/userdefined/grayadd.png");
+                }
+            });
+    };
+//    选择全部
+    function choseAll(t,pid){
+        var type = $(t).parent('li').attr('data-type');
+        var id = $(t).parent('li').attr('data-id');
+
+        if($(t).hasClass("ed")===false){
+            $(t).children("img").attr("src","__PUBLIC__/Wx/images/userdefined/blueright.png");
+            $(t).addClass("ed");
+        }else{
+            $(t).children("img").attr("src","__PUBLIC__/Wx/images/userdefined/grayadd.png");
+            $(t).removeClass("ed");
+        }
+
+        if(type == 'kc'){
+            var val = $('#kid').val();
+            if($(t).hasClass("ed")===false){
+                var reg = new RegExp(","+id+",","g");
+                val = val.replace(reg,"");
+            }else{
+                var reg=/,$/gi; 
+                val=val.replace(reg,"");
+                val = val +',' + id; 
+            }
+            
+            $('#kid').val(val+',');
+        }else if(type == 'zc'){
+            //获取选中数量
+            var num = parseInt($('#k'+pid).find('.cs-num').text());
+            var val = $('#zid').val();
+
+            if($(t).hasClass("ed")===false){
+                var reg = new RegExp(","+id+",","g");
+                val = val.replace(reg,"");
+                $('#k'+pid).find('.cs-num').text(num-1);
+            }else{
+                var reg=/,$/gi; 
+                val=val.replace(reg,"");
+                val = val +',' + id; 
+               $('#k'+pid).find('.cs-num').text(num+1); 
+            }
+            $('#zid').val(val+',');
+
+        }else if(type == 'j'){
+            var num = parseInt($('#z'+pid).find('.cs-num').text());
+            var val = $('#jid').val();
+            if($(t).hasClass("ed")===false){
+                var reg = new RegExp(","+id+",","g");
+                val = val.replace(reg,"");
+                $('#z'+pid).find('.cs-num').text(num-1);
+            }else{
+                var reg=/,$/gi; 
+                val=val.replace(reg,"");
+                val = val +',' + id; 
+               $('#z'+pid).find('.cs-num').text(num+1); 
+            }
+            $('#jid').val(val+',');
+
+        }else{
+            var num = parseInt($('#j'+pid).find('.cs-num').text());
+            var val = $('#did').val();
+
+            if($(t).hasClass("ed")===false){
+                var reg = new RegExp(","+id+",","g");
+                val = val.replace(reg,"");
+                $('#j'+pid).find('.cs-num').text(num-1);
+            }else{
+                var reg=/,$/gi; 
+                val=val.replace(reg,"");
+                val = val +',' + id; 
+               $('#j'+pid).find('.cs-num').text(num+1);
+            }
+            $('#did').val(val+',');
+        }
+    };
+
+    function getSubject(id,type){
+        if(type == 'z'){
+            var val = $('#jid').val();
+        }else{
+            var val = $('#did').val();
+        }
+        
+        $.ajax({
+            url:'{:U("getObj")}',
+            type:'post',
+            data:{'id':id,'type':type,'val':val},
+            dataType:'json',
+            success:function(data){
+                var data = $.parseJSON(data)
+                if(type == 'z'){
+                    cyclicZhang('#cs-content-z',data);
+                }else if(type == 'j'){
+                    cyclicJie('#cs-content-j',data);
+                }else if(type == 'zsd'){
+                    cyclicZsd('#cs-content-d',data);
+                }
+            }
+        })
+    }
+
+
+//   初始化科目
+    cyclicSubject('#cs-content-k',subjectData);
+//     打开章
+    function choseZ(t,id){
+        
+        $(t).parents("#chosesubject").find(".cs-chose-box").hide();
+        getSubject(id,'z');
+        $('#chosez').slideDown();
+        $("#chosesubjecttitltname").html("选择章");
+    }
+//     打开节
+    function choseJ(t,id){
+        $(t).parents("#chosesubject").find(".cs-chose-box").hide();
+        getSubject(id,'j');
+        $('#chosej').slideDown();
+        $("#chosesubjecttitltname").html("选择节");
+    }
+//     打开知识点
+    function choseD(t,id){
+        $(t).parents("#chosesubject").find(".cs-chose-box").hide();
+        getSubject(id,'zsd');
+        $('#chosed').slideDown();
+        $("#chosesubjecttitltname").html("选择知识点");
+    };
+</script>
+<!--试卷难易程度-->
+<script type="text/javascript">
+    function choseDifficulty(){
+        $("#paperdifficulty").bind("click",function(){
+            if($(this).hasClass("ed")===false){
+                $(this).find(".pd-select").slideDown();
+                $(this).addClass("ed");
+            }else{
+                $(this).find(".pd-select").slideUp();
+                $(this).removeClass("ed");
+            }
+            $("#paperdifficulty").find(".pd-option").bind("click",function(){
+                $("#paperdifficulty").find(".pd-chosed").html($(this).html());
+                $('#nycd').val($(this).attr('data'));
+            });
+        });
+    }
+    choseDifficulty();
+</script>
+<!--提交试卷  返回选择-->
+<script type="text/javascript">
+    function submitPaper(){
+        $('#form').submit();
+    };
+//    返回科目
+    function goChosek(){
+        $("#chosesubject").find(".cs-chose-box").hide();
+        $('#chosek').slideDown();
+        $("#chosesubjecttitltname").html("选择科目");
+    };
+//    返回章
+    function goChosez(){
+        $("#chosesubject").find(".cs-chose-box").hide();
+        $('#chosez').slideDown();
+        $("#chosesubjecttitltname").html("选择章");
+    };
+//    返回节
+    function goChosej(){
+        $("#chosesubject").find(".cs-chose-box").hide();
+        $('#chosej').slideDown();
+        $("#chosesubjecttitltname").html("选择节");
+    };
+</script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>题霸打榜</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta name=”keyword” content=”桑磊法考,司法考试,考试,司法,律师“>
+    <!-- 公用的css -->
+    <link rel="stylesheet" href="__PUBLIC__/home/css/public.css"/>
+    <!-- 本页面的css -->
+    <link rel="stylesheet" href="__PUBLIC__/home/css/makelist.css"/>
+</head>
+<body>
+<!--主导航-->
+<include file="Public/nav_2" />
+<!--banner图-->
+<div id="banner"></div>
+<!--内容框-->
+<div id="ml-content">
+    <div class="ml-list-box">
+        <!--手机二维码-->
+        <div class="qrcode">
+            <img src="__PUBLIC__/home/images/makelist/qrcode.png" alt=""/>
+            <p class="redtext">扫描二维码</p>
+            <p class="redtext">手机端打榜</p>
+            <p>微信添加“桑磊法考”</p>
+            <p>关注官方微信查看打榜</p>
+        </div>
+        <!--导航菜单-->
+        <include file="Band/nav" />
+        <!--热卷榜单-->
+        <div class="ml-list-rjbd">
+            <!--标头-->
+            <div class="ml-list-title">
+                <p class="ml-list-one">
+                    【热卷榜单】 &nbsp;打榜试卷
+                </p>
+                <p class="ml-list-two">
+                    最高分
+                </p>
+                <p class="ml-list-three">
+                    PK答题
+                </p>
+            </div>
+            <!--开始追加-->
+            <volist name='band' id="vo">
+                <div class="rjbd-box">
+                    <div class="rjbd-title">
+                        <!--评星的星星个数在data里面写-->
+                        <div class="startnum left" data="{$vo['star']}">
+                            综合评星：
+                        </div>
+                        <div class="right">
+                            点评：{$vo['assess']}
+                        </div>
+                    </div>
+                    <div class="rjbd-paper">
+                        <div class="ml-list-one">
+                            <img src="__PUBLIC__/home/images/makelist/paper.png" alt=""/>
+                            {$vo['nickname']}
+                        </div>
+                        <div class="ml-list-two">{$vo['score']}分</div>
+                        <div class="ml-list-three">
+                            <a href="{:U('Answer/examin',array('code'=>base64_encode($vo['id'])))}" target="_blank">
+                                <img src="__PUBLIC__/home/images/makelist/pen.png" alt=""/>
+                                挑战
+                            </a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="rjbd-mark">
+                        <p class="left">
+                            <span>难易程度：{:checkType($vo['difficulty'])}</span>
+                            <span>答题人数：{$vo['usenum']}人</span>
+                            <span>最高得分用时：{$vo['usetime']}</span>
+                        </p>
+                        <p class="right">
+                            <span>订制课堂</span>
+                            <span>丨</span>
+                            <span>分享试卷</span>
+                            <span>丨</span>
+                            <span><a href="{:U('Info',array('code'=>base64_encode($vo['id'])))}">查看排行</a></span>
+                        </p>
+                    </div>
+                </div>
+            </volist>
+            <!--追加结束-->
+            <div class="ml-list-page">
+                <!-- <a href="#" class="history left">
+                    历史热卷榜单
+                </a> -->
+                <div class="right page">
+                    <div id="pagination" style="position: relative;">
+                    　　{$page}        
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--底部-->
+<include fild="Public/foot" />
+<script src="__PUBLIC__/home/js/jquery-1.11.3.js"></script>
+<script>
+    $(function(){
+        function startNum(){
+            var s =$("#ml-content").find(".startnum");
+            for(var i = 0;i<s.length;i++){
+                for(var k = 0;k<$(s[i]).attr("data");k++){
+                    $(s[i]).append('<img src="__PUBLIC__/home/images/makelist/yellow-star.png"/>');
+                }
+            }
+        };
+//        星星的追加
+        startNum();
+//        榜单nav的绑定事件
+        $("#ml-content").find(".ml-list-nav").children("a").bind("click",function(){
+            $(this).addClass("active").siblings("a").removeClass("active");
+        });
+    })
+</script>
+</body>
+</html>

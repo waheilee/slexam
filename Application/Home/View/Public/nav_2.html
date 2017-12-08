@@ -1,0 +1,28 @@
+<div id="mainnav" class="mainnavwhite">
+    <div class="wrap">
+        <!--logo-->
+        <div class="left">
+            <a href="{:U('Index/index')}"><img src="__PUBLIC__/home/images/logo/logo-white.jpg" alt=""/></a>
+        </div>
+        <!--logo结束-->
+        <!--导航菜单-->
+        <div class="left">
+            <ul>
+                <a id="turnToContent" href="<?php if(strtolower($Think.CONTROLLER_NAME) == 'index'){echo '#content' ;}else{echo U('Index/index');} ?>" ><li>桑磊题库</li></a>
+                <a href="{:U('Video/index')}" target="_blank"><li>法考课堂</li></a>
+                <a href="#" target="_blank"><li>赛事活动</li></a>
+                <a href="{:U('Band/index')}" target="_blank"><li>题霸打榜</li></a>
+                <a href="{:U('Online/index')}" target="_blank"><li>在线交流</li></a>
+                <div class="clearfix"></div>
+            </ul>
+        </div>
+        <!--导航菜单结束-->
+        <div class="right">
+            <!--用户中心链接-->
+            <a href="{:U('usercenter/indexx')}" class="user" target="_blank">
+                <img src="__PUBLIC__/home/images/nav/user-gray.png" alt=""/>用户中心
+            </a>
+            <!--用户中心链接结束-->
+        </div>
+    </div>
+</div>

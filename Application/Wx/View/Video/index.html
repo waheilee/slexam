@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- 编码格式 -->
+    <meta charset="utf-8">
+    <!-- IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 设置 viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <meta name="Keywords" content="桑磊法考,司法考试,考试,司法,律师">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- 兼容国产浏览器的高速模式 -->
+    <meta name="renderer" content="webkit">
+    <title>桑磊法考 - 免费课堂</title>
+    <!--设置网页的图标-->
+    <link rel="shortcut icon" href="">
+    <!--公用的css-->
+    <link type="text/css" href="__PUBLIC__/wx/css/public.css" rel="stylesheet"/>
+    <!--本页面的css-->
+    <link type="text/css" href="__PUBLIC__/wx/css/videopublic.css" rel="stylesheet"/>
+</head>
+<body>
+<!--搜索-->
+<div id="search">
+    <div class="wrap">
+        <input type="text" placeholder="搜索课堂名称/内容" onfocus="hotWordShow(this)"/>
+        <img class="search-submit" src="__PUBLIC__/wx/images/video/img/search.png" alt=""/>
+    </div>
+    <!--热词搜索-->
+    <div class="hotword">
+        <div class="hw-title">
+            <div class="wrap">
+                <div class="left">热词搜索</div>
+                <div class="right">
+                    换一批 <img src="__PUBLIC__/wx/images/video/img/hyp.png" alt=""/>
+                </div>
+            </div>
+        </div>
+        <div class="hw-content wrap">
+            <a href="#" class="active">国际经济法</a>
+            <a href="#" class="active">刑事诉讼法</a>
+            <a href="#" class="active">桑磊法考</a>
+            <a href="#">知识点解析</a>
+        </div>
+        <div class="hw-goback" onclick="hotWordHide(this)">
+            <img src="__PUBLIC__/wx/images/video/img/goback.png" alt="">返回
+        </div>
+    </div>
+</div>
+<!--在线课堂********更多-->
+<div class="mf-nametitle">
+    <div class="wrap">
+        <div class="left">在线课堂</div>
+        <div class="right">
+            <a href="#">更多<img src="__PUBLIC__/wx/images/video/img/arrow.png" alt=""/></a>
+        </div>
+    </div>
+</div>
+<!--在线课堂标签-->
+<div class="mf-labelbutton">
+    <div class="wrap">
+        <a href="javascript:void(0)">最新课堂</a>
+        <a href="javascript:void(0)">热点直播</a>
+        <a href="javascript:void(0)">讲师在线</a>
+    </div>
+</div>
+<!--在线课堂视频列表-->
+<ul class="videolist">
+    <li>
+        <div class="left vl-img">
+            <img src="__PUBLIC__/wx/images/video/zxspkt/listimg.png" alt=""/>
+        </div>
+        <div class="left vl-content">
+            <p class="vl-c-name">法理学难点解析100题</p>
+            <p class="vl-c-subject">
+                <span class="vl-c-mr">所属学科：法理学</span>
+                <span>主讲老师：桑磊</span>
+            </p>
+            <p class="vl-c-time">
+                <span class="vl-c-mr">
+                    <img src="__PUBLIC__/wx/images/video/img/listplay.png" alt=""/>
+                    69878 次
+                </span>
+                <span>
+                    <img src="__PUBLIC__/wx/images/video/img/listtime.png" alt=""/>
+                    00:52:30
+                </span>
+            </p>
+        </div>
+        <div class="right vl-look">
+            <a class="blue" href="#">免费观看</a>
+        </div>
+    </li>
+    <li>
+        <div class="left vl-img">
+            <img src="__PUBLIC__/wx/images/video/zxspkt/listimg.png" alt=""/>
+        </div>
+        <div class="left vl-content">
+            <p class="vl-c-name">法理学难点解析100题</p>
+            <p class="vl-c-subject">
+                <span class="vl-c-mr">所属学科：法理学</span>
+                <span>主讲老师：桑磊</span>
+            </p>
+            <p class="vl-c-time">
+                <span class="vl-c-mr">
+                    <img src="__PUBLIC__/wx/images/video/img/listplay.png" alt=""/>
+                    69878 次
+                </span>
+                <span>
+                    <img src="__PUBLIC__/wx/images/video/img/listtime.png" alt=""/>
+                    00:52:30
+                </span>
+            </p>
+        </div>
+        <div class="right vl-look">
+            <a class="blue" href="#">免费观看</a>
+        </div>
+    </li>
+    <li>
+        <div class="left vl-img">
+            <img src="__PUBLIC__/wx/images/video/zxspkt/listimg.png" alt=""/>
+        </div>
+        <div class="left vl-content">
+            <p class="vl-c-name">法理学难点解析100题</p>
+            <p class="vl-c-subject">
+                <span class="vl-c-mr">所属学科：法理学</span>
+                <span>主讲老师：桑磊</span>
+            </p>
+            <p class="vl-c-time">
+                <span class="vl-c-mr">
+                    <img src="__PUBLIC__/wx/images/video/img/listplay.png" alt=""/>
+                    69878 次
+                </span>
+                <span>
+                    <img src="__PUBLIC__/wx/images/video/img/listtime.png" alt=""/>
+                    00:52:30
+                </span>
+            </p>
+        </div>
+        <div class="right vl-look">
+            <a class="blue" href="#">免费观看</a>
+        </div>
+    </li>
+</ul>
+<!--在线课堂 换一批-->
+<div class="mf-batchchange">
+    换一批 <img src="__PUBLIC__/wx/images/video/img/hyp.png" alt=""/>
+</div>
+<!--精品课堂********更多-->
+<div class="mf-nametitle bor">
+    <div class="wrap">
+        <div class="left">精品课堂</div>
+        <div class="right">
+            <a href="#">更多<img src="__PUBLIC__/wx/images/video/img/arrow.png" alt=""/></a>
+        </div>
+    </div>
+</div>
+<!--精品课堂标签-->
+<div class="mf-labelbutton">
+    <div class="wrap">
+        <a href="javascript:void(0)">讲师推荐</a>
+        <a href="javascript:void(0)">最新精品</a>
+        <a href="javascript:void(0)">最受欢迎</a>
+    </div>
+</div>
+<!--精品课堂视频列表-->
+<ul class="videolist">
+    <li>
+        <div class="left vl-img">
+            <img src="__PUBLIC__/wx/images/video/jpkt/listimg.png" alt=""/>
+        </div>
+        <div class="left vl-content">
+            <p class="vl-c-name">法理学难点解析100题</p>
+            <p class="vl-c-subject">
+                <span class="vl-c-mr">所属学科：法理学</span>
+                <span>主讲老师：桑磊</span>
+            </p>
+            <p class="vl-c-time">
+                <span class="vl-c-mr">
+                    <img src="__PUBLIC__/wx/images/video/img/listplay.png" alt=""/>
+                    69878 次
+                </span>
+                <span>
+                    <img src="__PUBLIC__/wx/images/video/img/listtime.png" alt=""/>
+                    00:52:30
+                </span>
+            </p>
+        </div>
+        <div class="right vl-look">
+            <a class="orange" href="#">免费观看</a>
+        </div>
+    </li>
+    <li>
+        <div class="left vl-img">
+            <img src="__PUBLIC__/wx/images/video/jpkt/listimg.png" alt=""/>
+        </div>
+        <div class="left vl-content">
+            <p class="vl-c-name">法理学难点解析100题</p>
+            <p class="vl-c-subject">
+                <span class="vl-c-mr">所属学科：法理学</span>
+                <span>主讲老师：桑磊</span>
+            </p>
+            <p class="vl-c-time">
+                <span class="vl-c-mr">
+                    <img src="__PUBLIC__/wx/images/video/img/listplay.png" alt=""/>
+                    69878 次
+                </span>
+                <span>
+                    <img src="__PUBLIC__/wx/images/video/img/listtime.png" alt=""/>
+                    00:52:30
+                </span>
+            </p>
+        </div>
+        <div class="right vl-look">
+            <a class="orange" href="#">免费观看</a>
+        </div>
+    </li>
+    <li>
+        <div class="left vl-img">
+            <img src="__PUBLIC__/wx/images/video/jpkt/listimg.png" alt=""/>
+        </div>
+        <div class="left vl-content">
+            <p class="vl-c-name">法理学难点解析100题</p>
+            <p class="vl-c-subject">
+                <span class="vl-c-mr">所属学科：法理学</span>
+                <span>主讲老师：桑磊</span>
+            </p>
+            <p class="vl-c-time">
+                <span class="vl-c-mr">
+                    <img src="__PUBLIC__/wx/images/video/img/listplay.png" alt=""/>
+                    69878 次
+                </span>
+                <span>
+                    <img src="__PUBLIC__/wx/images/video/img/listtime.png" alt=""/>
+                    00:52:30
+                </span>
+            </p>
+        </div>
+        <div class="right vl-look">
+            <a class="orange" href="#">免费观看</a>
+        </div>
+    </li>
+</ul>
+<!--精品课堂课堂 换一批-->
+<div class="mf-batchchange">
+    换一批 <img src="__PUBLIC__/wx/images/video/img/hyp.png" alt=""/>
+</div>
+<!--微课堂********更多-->
+<div class="mf-nametitle bor">
+    <div class="wrap">
+        <div class="left">微课堂</div>
+        <div class="right">
+            <a href="#">更多<img src="__PUBLIC__/wx/images/video/img/arrow.png" alt=""/></a>
+        </div>
+    </div>
+</div>
+<!--微课堂标签-->
+<div class="mf-labelbutton">
+    <div class="wrap">
+        <a href="javascript:void(0)">最新课程</a>
+        <a href="javascript:void(0)">最多关注</a>
+        <a href="javascript:void(0)">题型解答</a>
+    </div>
+</div>
+<!--微课堂视频列表-->
+<ul class="videolist">
+    <li>
+        <div class="left vl-img">
+            <img src="__PUBLIC__/wx/images/video/wkt/listimg.png" alt=""/>
+        </div>
+        <div class="left vl-content">
+            <p class="vl-c-name">法理学难点解析100题</p>
+            <p class="vl-c-subject">
+                <span class="vl-c-mr">所属学科：法理学</span>
+                <span>主讲老师：桑磊</span>
+            </p>
+            <p class="vl-c-time">
+                <span class="vl-c-mr">
+                    <img src="__PUBLIC__/wx/images/video/img/listplay.png" alt=""/>
+                    69878 次
+                </span>
+                <span>
+                    <img src="__PUBLIC__/wx/images/video/img/listtime.png" alt=""/>
+                    00:52:30
+                </span>
+            </p>
+        </div>
+        <div class="right vl-look">
+            <a class="purple" href="#">免费观看</a>
+        </div>
+    </li>
+    <li>
+        <div class="left vl-img">
+            <img src="__PUBLIC__/wx/images/video/wkt/listimg.png" alt=""/>
+        </div>
+        <div class="left vl-content">
+            <p class="vl-c-name">法理学难点解析100题</p>
+            <p class="vl-c-subject">
+                <span class="vl-c-mr">所属学科：法理学</span>
+                <span>主讲老师：桑磊</span>
+            </p>
+            <p class="vl-c-time">
+                <span class="vl-c-mr">
+                    <img src="__PUBLIC__/wx/images/video/img/listplay.png" alt=""/>
+                    69878 次
+                </span>
+                <span>
+                    <img src="__PUBLIC__/wx/images/video/img/listtime.png" alt=""/>
+                    00:52:30
+                </span>
+            </p>
+        </div>
+        <div class="right vl-look">
+            <a class="purple" href="#">免费观看</a>
+        </div>
+    </li>
+    <li>
+        <div class="left vl-img">
+            <img src="__PUBLIC__/wx/images/video/wkt/listimg.png" alt=""/>
+        </div>
+        <div class="left vl-content">
+            <p class="vl-c-name">法理学难点解析100题</p>
+            <p class="vl-c-subject">
+                <span class="vl-c-mr">所属学科：法理学</span>
+                <span>主讲老师：桑磊</span>
+            </p>
+            <p class="vl-c-time">
+                <span class="vl-c-mr">
+                    <img src="__PUBLIC__/wx/images/video/img/listplay.png" alt=""/>
+                    69878 次
+                </span>
+                <span>
+                    <img src="__PUBLIC__/wx/images/video/img/listtime.png" alt=""/>
+                    00:52:30
+                </span>
+            </p>
+        </div>
+        <div class="right vl-look">
+            <a class="purple" href="#">免费观看</a>
+        </div>
+    </li>
+</ul>
+<!--微课堂课堂 换一批-->
+<div class="mf-batchchange">
+    换一批 <img src="__PUBLIC__/wx/images/video/img/hyp.png" alt=""/>
+</div>
+<!--底部-->
+<div id="footer">
+    CopyRight©2017&nbsp;&nbsp;&nbsp;桑磊法考中心版权所有&nbsp;&nbsp;&nbsp;侵者必究
+</div>
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+<!--热词搜索的显示-->
+<script type="text/javascript">
+    function hotWordShow(t){
+        $(t).parents("#search").find(".hotword").slideDown();
+    };
+    function hotWordHide(t){
+        $(t).parents("#search").find(".hotword").slideUp();
+    };
+</script>
+<!--功能菜单的点击事件-->
+<script type="text/javascript">
+    function shopNav(t){
+        $(t).addClass("active").siblings("li").removeClass("active");
+    }
+</script>
+</body>
+</html>

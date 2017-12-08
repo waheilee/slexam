@@ -1,0 +1,277 @@
+@charset "UTF-8";
+#banner{
+    width: 100%;
+    height: 377px;
+    background: url("../images/mark/bannerbg.jpg") no-repeat center center;
+    border-top: 1px solid #fff;
+}
+#banner .wrap{
+    position: relative;
+}
+#banner .mark-title{
+    width: 100%;
+    font-size: 14px;
+    color: #f1f1f1;
+    text-align: center;
+    margin-top: 55px;
+}
+#banner .mark-title span{
+    margin: 0 5px;
+}
+#banner .mark-title span.name{
+    font-weight: bold;
+}
+#banner .examscore{
+    width: 250px;
+    margin: 22px auto;
+    position: relative;
+}
+#banner .examscore .score-title{
+    font-weight: 100;
+    position: absolute;
+    left: -200px;
+    top: 30px;
+    font-size: 24px;
+    color: #fff;
+    font-weight: 100;
+}
+#banner .examscore .score-num{
+    font-size: 100px;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    text-align: center;
+}
+#banner .examscore .score-num span{
+    font-size: 48px;
+    margin-left: 20px;
+}
+#banner .examscore .score-time{
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+    font-weight: 100;
+}
+#banner .examscore .score-time span{
+    margin-right: 20px;
+}
+#banner .ranking{
+    width: 100%;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+}
+#banner .link a{
+    display: block;
+    width: 160px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    position: absolute;
+}
+#banner .link a.zlyt{
+    left: 0;
+    top: 65px;
+}
+#banner .link a.fxcj{
+    left: 0;
+    top: 165px;
+}
+#banner .link a.cydb{
+    right: 0;
+    top: 65px;
+}
+#banner .link a.lsdb{
+    right: 0;
+    top: 165px;
+}
+#scorereport{
+    width: 100%;
+}
+#scorereport .report-title{
+    width: 100%;
+    text-align: center;
+    font-size: 36px;
+    color: #525252;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+#scorereport .report-titletab{
+    text-align: center;
+    font-size: 20px;
+    color: #919191;
+}
+#scorereport .report-details{
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #525252;
+    margin-top: 50px;
+    margin-top: 20px;
+}
+#scorereport .report-details span{
+    margin: 0 5px;
+}
+#scorereport .lookmore{
+    width: 485px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+#scorereport .lookmore button{
+    border: 1px solid #ecedee;
+    background: #f5f5f5;
+    margin: 0 8px;
+    color: #525252;
+    padding: 10px;
+    text-align: center;
+}
+
+/*订制课堂的弹出框*/
+#modelview{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .6);
+    z-index: 9999;
+}
+#modelview .m-box{
+    width: 535px;
+    background: #F5F5F5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -268px;
+    margin-left: -268px;
+    border-radius: 5px;
+    padding-bottom: 20px;
+}
+#modelview .m-box .m-title{
+    width: 495px;
+    padding: 20px;
+    padding-bottom: 0;
+    height: 55px;
+    background: #4ea7d3;
+}
+#modelview .m-box .m-title ul li{
+    float: left;
+    width: 135px;
+    height: 55px;
+    line-height: 55px;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+#modelview .m-box .m-title ul li:hover,#modelview .m-box .m-title ul li.active{
+    color: #4ea7d3;
+    font-size: 24px;
+    background: #fff;
+}
+#modelview .m-box .m-title img{
+    float: right;
+    cursor: pointer;
+}
+#modelview .m-box .m-content{
+    width: 455px;
+    padding: 20px;
+    margin: 0 auto;
+    background: #fff;
+}
+#modelview .m-box .m-content .col-1{
+    line-height: 40px;
+    color: #525252;
+    font-size: 0;
+}
+#modelview .m-box .m-content .col-1 span{
+    font-size: 14px;
+}
+#modelview .m-box .m-content .col-1 select{
+    width: 378px;
+    border: 1px solid #ecedee;
+    height: 40px;
+    font-size: 14px;
+    color: #828282;
+    padding: 0 15px;
+    border-radius: 3px;
+}
+#modelview .m-box .m-content .col-1 textarea{
+    border-radius: 3px;
+    border: 1px solid #ecedee;
+    width: 348px;
+    padding: 15px;
+    height: 75px;
+    margin-top: 25px;
+}
+#modelview .m-box .m-content .col-2{
+    line-height: 45px;
+    margin-top: 20px;
+}
+#modelview .m-box .m-content .col-2 img{
+    margin-right: 15px;
+    margin-left: 5px;
+}
+#modelview .m-box .m-content .submit{
+    width: 100%;
+    height: 45px;
+    color: #525252;
+    font-size: 14px;
+    background: #F5F5F5;
+    border: 1px solid #ecedee;
+    border-radius: 3px;
+    margin: 25px 0;
+}
+#modelview .m-box .m-content .explain{
+    font-size: 12px;
+    color: #aaaaaa;
+    line-height: 24px;
+    border-top: 1px solid #ecedee;
+    padding-top: 10px;
+}
+#modelview .m-box .m-content .explain a{
+    color: #4ea7d3;
+}
+#modelview .m-box .m-content .m-content-zxjl{
+    display: none;
+}
+/* #modelview .m-box .m-content .m-content-hypj{
+    display: none;
+} */
+#modelview .m-box .m-content .m-content-hypj .col-1 img{
+    margin-top: -3px;
+}
+#modelview .m-box .m-content .m-content-hypj .col-1 span.little{
+    margin: 0 5px;
+    font-size: 12px;
+    color: #aaaaaa;
+}
+#modelview .m-box .m-content .m-content-hypj .discuss{
+    width: 100%;
+}
+#modelview .m-box .m-content .m-content-hypj .discuss button{
+    width: 140px;
+    height: 40px;
+    border: 1px solid #ecedee;
+    background: #fff;
+    color: #525252;
+    font-size: 14px;
+    border-radius: 3px;
+    margin-right: 12px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    outline: none;
+}
+#modelview .m-box .m-content .m-content-hypj .discuss button.active{
+    border: 1px solid #4EA7D3;
+    color: #4EA7D3;
+}
+#modelview .m-box .m-content .m-content-hypj .discuss button:nth-child(3n){
+    margin-right: 0;
+}

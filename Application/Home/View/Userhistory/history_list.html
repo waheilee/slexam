@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>用户中心-历史打榜</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta name=”keyword” content=”桑磊法考,司法考试,考试,司法,律师“>
+    <!-- 公用的css -->
+    <link rel="stylesheet" href="__PUBLIC__/home/css/user-center-public.css"/>
+    <!-- 本页面的css -->
+    <link rel="stylesheet" href="__PUBLIC__/home/css/user-center-lsdb.css"/>
+
+    <style>
+        .Pagination a:hover{background-color: #3482C4;border: 1px solid #3482C4;color: #ffffff; }
+        .Pagination{float: right;height: auto;_height: 45px; line-height: 20px;margin-right: 15px;_margin-right: 5px; color:#565656;margin-top: 10px;_margin-top: 20px; clear:both;}
+        .Pagination a,.Pagination span{ font-size: 14px;text-decoration: none;display: block;float: left;color: #565656;border: 1px solid #ccc;height: 34px;line-height: 34px;margin: 0 2px;width: 34px;text-align: center;}
+
+        .makelisted-title span a{color: #919191;}
+        .makelisted-title span a:hover{color: #919191;}
+        .makelisted-title span a:link{color: #919191;}
+        .makelisted-title span a:active{color: #919191;}
+        .makelisted-title span a:visited{color: #919191;}
+
+        .makelisted-title .active a{color: #fdb610;}
+        .makelisted-title .active a:hover{color: #fdb610;}
+        .makelisted-title .active a:link{color: #fdb610;}
+        .makelisted-title .active a:active{color: #fdb610;}
+        .makelisted-title .active a:visited{color: #fdb610;}
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <!--侧边栏导航-->
+    <div id="sidebar-nav">
+        <!--头像 用户名-->
+        <include file="Public/head" />
+        <!--菜单-->
+        <include file="Public/menucenter" />
+        <!--二维码-->
+        <div class="qrcode">
+            <img src="__PUBLIC__/home/images/usercenter/qrcode.png" alt=""/>
+            <p>扫描二维码登录手机端</p>
+        </div>
+    </div>
+    <!--主导航-->
+    <include file="Public/navcenter" />
+    <!--基本资料   这个元素里面的东西不一样-->
+    <div class="content-box">
+        <!--********-->
+        <div id="makelisted">
+            <div class="vip"><img src="__PUBLIC__/home/images/usercenter/ordinary.png" alt=""/></div>
+            <!--个人打榜信息-->
+            <div class="makelisted-title">
+                <div class="left">
+                    <if condition="$type eq 'mine'"><span class="active">
+                        <else /> <span>
+                    </if>
+                        <a href="{:U('userhistory/historyList')}">【您发起的打榜试卷】({$allrank}张)</a>
+                    </span>
+                    <span>丨</span>
+                    <if condition="$type eq 'all'"><span class="active">
+                        <else /> <span>
+                    </if>
+                        <a href="{:U('userhistory/historyList',array('type'=>'all'))}">【您参与的打榜试卷】({$myrank}张)</a></span>
+                </div>
+                <div class="right">
+                    历史成绩最好排名：第 <span>{$bestscore}</span>位
+                </div>
+            </div>
+            <!--列表-->
+            <div class="makelisted-list-box">
+                <!--*******start*****-->
+                <volist name="band" id="vo">
+                <a href="{:U('answer/lists',array('i'=>base64_encode($vo['scoreid'])))}" class="makelisted-list" target="_blank">
+                    <div class="m-list-title">
+                        <div class="left startnum" data="{$vo['star']}">综合评星：</div>
+                        <div class="right">
+                            排名：<span class="top">{$vo['rank']}</span>
+                            得分：<span class="num">{$vo['score']}</span>分
+                        </div>
+                    </div>
+                    <div class="m-list-name">
+                        <img src="__PUBLIC__/home/images/library-list/word.png" alt=""/>
+                         {$vo['nickname']}
+                    </div>
+                    <div class="m-list-time">
+                        <div class="m-list-time-b">
+                            <span>难易程度：
+                                    <if condition="$vo['difficulty'] eq 1">
+                                       易
+                                 <elseif condition="$vo['difficulty'] eq 2"/>
+                                       中
+                                    <else/>
+                                       难
+                                    </if>
+                                </span>
+                                <span>答题人数：{$vo['usenum']}人</span>
+                                <span>最快用时：{$vo['usetime']}</span>
+                        </div>
+                    </div>
+                </a>
+                </volist>
+                <!--********end**********-->
+                <div class="clearfix"></div>
+            </div>
+            <!--页码-->
+            <div class="ml-list-page">
+                <div class="right">
+                    <div class="Pagination">{$page}</div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!--********-->
+    </div>
+    <div class="clearfix"></div>
+</div>
+<!--底部-->
+<div id="footer">
+    <div class="wrap">
+        <p>
+            <a href="#">首页</a>
+            <span>丨</span>
+            <a href="#">网站声明</a>
+            <span>丨</span>
+            <a href="#">联系方式</a>
+            <span>丨</span>
+            <a href="#">加入我们</a>
+        </p>
+        <p>
+            Copyright&nbsp;&copy;&nbsp;2017-&nbsp;桑磊法考(sangleifk.com)&nbsp;京批字第直123456号&nbsp;京ICP备12345678号-1
+        </p>
+        <p>
+            联系电话：&nbsp;&nbsp;&nbsp;4000-000-000&nbsp;&nbsp;&nbsp;&nbsp;010-12345678
+        </p>
+    </div>
+</div>
+<script src="__PUBLIC__/home/js/jquery-1.11.3.js"></script>
+<script>
+    $(function(){
+        function startNum(){
+            var s =$("#makelisted").find(".startnum");
+            for(var i = 0;i<s.length;i++){
+                for(var k = 0;k<$(s[i]).attr("data");k++){
+                    $(s[i]).append('<img src="__PUBLIC__/home/images/makelist/yellow-star.png"/>');
+                }
+            }
+        };
+//        星星的追加
+        startNum();
+    });
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>用户中心-综合评估</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta name=”keyword” content=”桑磊法考,司法考试,考试,司法,律师“>
+    <!-- 公用的css -->
+    <link rel="stylesheet" href="__PUBLIC__/home/css/user-center-public.css"/>
+    <!-- 本页面的css -->
+    <link rel="stylesheet" href="__PUBLIC__/home/css/user-center-allassess.css"/>
+</head>
+<body>
+<div class="wrap">
+    <!--侧边栏导航-->
+    <div id="sidebar-nav">
+        <!--头像 用户名-->
+        <include file="Public/head" />
+        <!--菜单-->
+        <include file="Public/menucenter" />
+        <!--二维码-->
+        <div class="qrcode">
+            <img src="__PUBLIC__/home/images/usercenter/qrcode.png" alt=""/>
+            <p>扫描二维码登录手机端</p>
+        </div>
+    </div>
+    <!--主导航-->
+    <include file="Public/navcenter" />
+    <!--基本资料   这个元素里面的东西不一样-->
+    <div class="content-box">
+        <!--********-->
+        <div id="allassess">
+            <div class="vip"><img src="__PUBLIC__/home/images/usercenter/ordinary.png" alt=""/></div>
+            <div class="allassess-title">
+                综合评估
+            </div>
+            <div class="allassess-chose">
+                <div class="left">
+                    <select name="" id="">
+                        <option value="">选择科目</option>
+                    </select>
+                    <select name="" id="">
+                        <option value="">选择知识点</option>
+                    </select>
+                </div>
+                <div class="right">
+                    <button type="button" onclick="clickAddclass(this)" data="1">周评估</button>
+                    <button type="button" onclick="clickAddclass(this)" data="2">月评估</button>
+                    <button type="button" class="active" onclick="clickAddclass(this)" data="3">年评估</button>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div id="main" style="width: 100%;height:350px;"></div>
+            <div class="allassess-title">成绩报告</div>
+            <div class="allassess-title-text">
+                共计{$coursecount}门科目 本数据截止{$nowtime}日
+            </div>
+            <div id="main1" style="width: 100%;height:350px;"></div>
+            <div class="allassess-title-text">
+                <!--
+                <span>其中：法制史（20%）</span>
+                <span>民事诉讼法（15.9%）</span>
+                <span>法理学（13.6%）</span>
+                <span>错误各超过<span>3</span>道</span>
+                -->其中：{$errornum}
+            </div>
+            <div class="allassess-title-text">
+                <div style="width: 450px;margin: 0 auto;">
+                    <a href="{:U('home/answer/mistake',array('p'=>1))}">查看错误题目</a>
+                    <a href="{:U('video/madevideo')}">订制相关视频课堂解析</a>
+                    <a href="{:U('online/index')}">我要提问</a>
+                    <a href="{:U('online/index')}">在线交流</a>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <!--********-->
+    </div>
+    <div class="clearfix"></div>
+</div>
+<!--底部-->
+<div id="footer">
+    <div class="wrap">
+        <p>
+            <a href="#">首页</a>
+            <span>丨</span>
+            <a href="#">网站声明</a>
+            <span>丨</span>
+            <a href="#">联系方式</a>
+            <span>丨</span>
+            <a href="#">加入我们</a>
+        </p>
+        <p>
+            Copyright&nbsp;&copy;&nbsp;2017-&nbsp;桑磊法考(sangleifk.com)&nbsp;京批字第直123456号&nbsp;京ICP备12345678号-1
+        </p>
+        <p>
+            联系电话：&nbsp;&nbsp;&nbsp;4000-000-000&nbsp;&nbsp;&nbsp;&nbsp;010-12345678
+        </p>
+    </div>
+</div>
+<script src="__PUBLIC__/home/js/jquery-1.11.3.js"></script>
+<script src="__PUBLIC__/home/js/echarts.common.min.js"></script>
+<script>
+    function clickAddclass(t){
+        $(t).addClass("active").siblings("button").removeClass("active");
+        $.post("{:U('Userhistory/assessment')}",{"type":$(t).attr("data")},function(data){
+            var json = JSON.parse(data);
+            var str = json["chart"].split(",");
+            haveLine(str);
+            haveBar(str);
+            if(json["font"]==""||json["font"]==null){
+                $(".allassess-title-text").eq(1).text();
+            }else{
+                $(".allassess-title-text").eq(1).text("其中："+json["font"]);
+            }
+        });
+    }
+//    折线图
+    function haveLine(e){
+
+        var markData = {course:[{$coursename}],
+            data:e}
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+        // 指定图表的配置项和数据
+        var option = {
+            title : {
+                text: '成绩详情',
+                subtext: '百分比'
+            },
+            tooltip : {
+                trigger: 'axis'
+            },
+            legend: {
+                data: markData.course
+            },
+            toolbox: {
+                show : false,
+                feature : {
+                    mark : {show: true},
+                    dataView : {show: true, readOnly: false},
+                    magicType : {show: true, type: ['line', 'bar']},
+                    restore : {show: true},
+                    saveAsImage : {show: true}
+                }
+            },
+            calculable : false,
+            xAxis : [
+                {
+                    name:'科目',
+                    type : 'category',
+                    data : markData.course,
+                    axisLabel:{
+                        interval:0,//横轴信息全部显示
+                        rotate:-30,//-30度角倾斜显示
+                    }
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value',
+//                name: '单位: %',
+                    axisLabel: {
+                        formatter: '{value}%',
+                        textStyle: {
+                            color: 'rgba(33,33,33,1)',
+                        }
+                    },
+                }
+            ],
+            series : [
+                {
+                    name:'百分比',
+                    type:'line',
+                    data:markData.data,
+                    itemStyle: {
+                        normal: {
+                            lineStyle:{
+                                color:'#4EA6D2'
+                            },
+                            color: "#FFC766"
+//                                    function(params) {
+//                                        var colorList = [
+//                                            '#FFC766','#84B4DC','#67D4D9','#ED6B77','#84B4DC',
+//                                            '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
+//                                            '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+//                                        ];
+//                                        return colorList[params.dataIndex]
+//                                    }
+                            ,label: {
+                                show: true,
+                                color: "#525252",
+                                position: 'top',
+                                formatter: '{c}%'//{b}\n
+                            },
+                            //柱形图圆角，初始化效果
+                            barBorderRadius:[0, 0, 0, 0]
+                        }
+                    }
+                }
+            ]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    };
+    //haveLine();
+    var str = [{$coursepercount}];
+    haveLine(str);
+
+</script>
+<script>
+    function haveBar(e){
+
+         var markData = {course:[{$coursename}],
+             data:e}
+
+        // 基于准备好的dom，初始化echarts实例
+        var myChart1 = echarts.init(document.getElementById('main1'));
+        // 指定图表的配置项和数据
+        var option1 = {
+            title : {
+                text: '成绩详情',
+                subtext: '百分比'
+            },
+            tooltip : {
+                trigger: 'axis'
+            },
+            legend: {
+                data: markData.course
+            },
+            toolbox: {
+                show : false,
+                feature : {
+                    mark : {show: true},
+                    dataView : {show: true, readOnly: false},
+                    magicType : {show: true, type: ['line', 'bar']},
+                    restore : {show: true},
+                    saveAsImage : {show: true}
+                }
+            },
+            calculable : false,
+            xAxis : [
+                {
+                    name:'科目',
+                    type : 'category',
+                    data : markData.course,
+                    axisLabel:{
+                        interval:0,//横轴信息全部显示
+                        rotate:-30,//-30度角倾斜显示
+                    }
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value',
+//                name: '单位: %',
+                    axisLabel: {
+                        formatter: '{value}%',
+                        textStyle: {
+                            color: 'rgba(33,33,33,1)',
+                        }
+                    },
+                }
+            ],
+            series : [
+                {
+                    name:'百分比',
+                    type:'bar',
+                    data:markData.data,
+                    itemStyle: {
+                        normal: {
+                            color: function(params) {
+                                var colorList = [
+                                    '#FFC766','#84B4DC','#67D4D9','#ED6B77','#84B4DC',
+                                    '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
+                                    '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+                                ];
+                                return colorList[params.dataIndex]
+                            },label: {
+                                show: true,
+                                position: 'top',
+                                formatter: '{b}\n{c}%'
+                            },
+                            //柱形图圆角，初始化效果
+                            barBorderRadius:[0, 0, 0, 0]
+                        }
+                    }
+                }
+            ]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        myChart1.setOption(option1);
+    };
+
+    var str = [{$coursepercount}];
+    haveBar(str);
+</script>
+</body>
+</html>

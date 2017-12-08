@@ -1,0 +1,263 @@
+<include file="Public/head"/>
+<body class="no-skin">
+<include file="Public/header"/>
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+        ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+    <style>
+        .file {
+            position: relative;
+            display: inline-block;
+            background: #D0EEFF;
+            border: 1px solid #99D3F5;
+            border-radius: 4px;
+            padding: 4px 12px;
+            overflow: hidden;
+            color: #1E88C7;
+            text-decoration: none;
+            text-indent: 0;
+            line-height: 20px;
+        }
+        .file input {
+            position: absolute;
+            font-size: 100px;
+            right: 0;
+            top: 0;
+            opacity: 0;
+        }
+        .file:hover {
+            background: #AADFFD;
+            border-color: #78C3F3;
+            color: #004974;
+            text-decoration: none;
+        }
+    </style>
+    <include file="Public/sidebar"/>
+    <div class="main-content">
+        <div class="main-content-inner">
+            <!-- #section:basics/content.breadcrumbs -->
+            <include file="Public/breadcrumbs"/>
+
+            <!-- /section:basics/content.breadcrumbs -->
+            <div class="page-content">
+                <include file="Public/set"/>
+
+                <!-- /section:settings.box -->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <!-- PAGE CONTENT BEGINS -->
+                        <form class="form-horizontal" action="{:U('update')}" method="post" enctype="multipart/form-data">
+
+                            <div class="space-4"></div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">用户名: </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="username" id="username" placeholder="用户名"
+                                           class="col-xs-10 col-sm-5" value="">
+                                    <span class="help-inline col-xs-12 col-sm-7">
+                                        <span class="middle">用户名</span>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">密码: </label>
+                                <div class="col-sm-9">
+                                    <input type="password" name="userpass" id="userpass" placeholder="密码"
+                                           class="col-xs-10 col-sm-5" value="">
+                                    <span class="help-inline col-xs-12 col-sm-7">
+                                        <span class="middle">密码</span>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">确认密码: </label>
+                                <div class="col-sm-9">
+                                    <input type="password" name="repassword" id="repassword" placeholder="确认密码"
+                                           class="col-xs-10 col-sm-5" value="">
+                                    <span class="help-inline col-xs-12 col-sm-7">
+                                        <span class="middle">确认密码</span>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">姓名: </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="name" id="name" placeholder="姓名"
+                                           class="col-xs-10 col-sm-5" value="">
+                                    <span class="help-inline col-xs-12 col-sm-7">
+                                        <span class="middle">姓名</span>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">邮箱: </label>
+                                <div class="col-sm-9">
+                                    <input type="email" name="email" id="email" placeholder="邮箱"
+                                           class="col-xs-10 col-sm-5" value="">
+                                    <span class="help-inline col-xs-12 col-sm-7">
+                                        <span class="middle">邮箱</span>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-4">
+                                    选择头像: </label>
+                                <div class="col-sm-9">
+                                    <div class="col-xs-10 col-sm-5">
+                                        <!--{:UpImage("logo",88,31,$link['logo'])}-->
+                                        <ul id="warp" style="list-style-type:none">
+                                            <li>
+                                                <img id="imgShow_WU_FILE_0" width="100" height="100" src="__ROOT__{$link['logo']}" style="float:left"/>
+                                                <a href="javascript:;" class="file">选择文件
+                                                    <input type="file" id="up_img_WU_FILE_0" name='file'  style="float:left;margin-left: 10px;"/>
+                                                </a>
+                                                <input type="hidden" name='files' value="{$link['logo']}"/>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <span class="help-inline col-xs-12 col-sm-7">
+                                        <span class="middle">仅支持jpg、gif、png、bmp、jpeg，且小于1MB。</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-4"> 性别 </label>
+                                <div class="col-sm-9">
+                                    <select id="sex" name="sex" class="multiselect">    
+                                        <option value="1"
+                                    <if condition="$member['sex'] eq 1">selected="selected"</if>
+                                    >男</option>
+                                    <option value="2"
+                                <if condition="$member['sex'] eq 2">selected="selected"</if>
+                                >女</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="space-4"></div>
+                    <div class="form-group">
+                        <label class="col-sm-1 control-label no-padding-right" for="id-date-picker-1">生日</label>
+                        <div class="col-xs-9 col-sm-9">
+                            <div class="input-group col-xs-5">
+                                <input class="form-control" id="birthday" name="birthday" value="<if condition="
+                                       $member['birthday'] neq '' ">{$member['birthday']|date="Y-m-d",###}</if>"
+                                type="text" data-date-format="yyyy-mm-dd" />
+                                <span class="input-group-addon">
+                                    <i class="ace-icon fa fa-calendar bigger-110"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="space-4"></div>
+                    <div class="form-group">
+                        <label class="col-sm-1 control-label no-padding-right" for="form-field-6"> 分组: </label>
+                        <div class="col-sm-9">
+                            <input type="text" name="class" id="class" placeholder="分组"
+                                   class="col-xs-10 col-sm-5" value="{$member['class']}">
+                            <span class="help-inline col-xs-12 col-sm-7">
+                                <span class="middle">分组</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="space-4"></div>
+
+                    <div class="form-group">
+                        <label class="col-sm-1 control-label no-padding-right" for="form-field-7"> 介绍: </label>
+                        <div class="col-sm-9">
+                            <input type="text" name="introduce" id="introduce" placeholder="介绍" class="col-xs-10 col-sm-5"
+                                   value="{$member['introduce']}">
+                            <span class="help-inline col-xs-12 col-sm-7">
+                                <span class="middle">介绍</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="space-4"></div>
+                    <div class="form-group">
+                        <label class="col-sm-1 control-label no-padding-right" for="form-field-8">
+                            积分: </label>
+                        <div class="col-sm-9">
+                            <input type="text" name="point" id="point" placeholder="积分"
+                                   class="col-xs-10 col-sm-5" value="{$member['email']}">
+                            <span class="help-inline col-xs-12 col-sm-7">
+                                <span class="middle">积分</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="space-4"></div>
+                    <div class="form-group">
+                        <label class="col-sm-1 control-label no-padding-right" for="form-field-8">
+                            等级: </label>
+                        <div class="col-sm-9">
+                            <input type="text" name="level" id="level" placeholder="等级"
+                                   class="col-xs-10 col-sm-5" value="{$member['level']}">
+                            <span class="help-inline col-xs-12 col-sm-7">
+                                <span class="middle">等级</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="space-4"></div>
+
+                    <div class="col-md-offset-2 col-md-9">
+                        <button class="btn btn-info" type="submit">
+                            <i class="icon-ok bigger-110"></i>
+                            提交
+                        </button>
+
+                        &nbsp; &nbsp; &nbsp;
+                        <button class="btn" type="reset">
+                            <i class="icon-undo bigger-110"></i>
+                            重置
+                        </button>
+                    </div>
+                </form>
+                <!-- PAGE CONTENT ENDS -->
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.page-content -->
+</div>
+</div><!-- /.main-content -->
+<include file="Public/footer"/>
+
+</div><!-- /.main-container -->
+
+<include file="Public/footerjs"/>
+<!-- inline scripts related to this page -->
+<script src="__PUBLIC__/admin/js/date-time/bootstrap-datepicker.js"></script>
+<script src="__PUBLIC__/admin/js/uploadPreview.js"></script>
+<script src="__PUBLIC__/admin/js/function.js"></script>
+<script type="text/javascript">
+    jQuery(function ($) {
+    $('#birthday').datepicker({
+    format: 'yyyy-mm-dd',
+            weekStart: 1,
+            autoclose: true,
+            todayBtn: 'linked',
+            language: 'cn'
+    });
+    });
+    
+    
+</script>
+</body>
+</html>

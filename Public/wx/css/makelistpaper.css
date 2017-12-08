@@ -1,0 +1,150 @@
+@charset "UTF-8";
+/*列表*/
+#oldexam{
+    width: 100%;
+}
+#oldexam li{
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+#oldexam li .oe-topmenu{
+    width: 100%;
+    height: 1.05rem;
+    line-height: 1.05rem;
+    border-top: 1px solid #ecedee;
+    background: #F5F5F5;
+    font-size: 0.28rem;
+    color: #9c9c9c;
+}
+#oldexam li .oe-topmenu a{
+    color: #9c9c9c;
+}
+#oldexam li .oe-topmenu a.blue{
+    color: #3482c4;
+}
+#oldexam li .oe-topmenu span{
+    margin: 0.15rem;
+}
+.startnum img{
+    margin-top: -0.1rem;
+    margin-right: 0.05rem;
+}
+#oldexam li .oe-middlename{
+    height: 1.5rem;
+    line-height: 1.5rem;
+}
+#oldexam li .oe-middlename .left{
+    height: 1.5rem;
+    font-size: 0;
+}
+#oldexam li .oe-middlename .left img{
+    width: 0.6rem;
+    margin-right: 0.25rem;
+    float: left;
+    margin-top: 0.4rem;
+}
+#oldexam li .oe-middlename .left .oem-name{
+    font-size: 0.36rem;
+    color: #666;
+    width: 6.7rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: left;
+}
+#oldexam li .oe-middlename .oe-num{
+    width: 1rem;
+    font-size: 0.32rem;
+    color: #666666;
+}
+#oldexam li .oe-middlename .oe-rank{
+    color: #9c9c9c;
+    font-size: 0.34rem;
+}
+#oldexam li .oe-middlename .oe-rank span{
+    color: #ffcd04;
+    font-size: 0.42rem;
+    margin-left: 0.1rem;
+}
+#oldexam li .oe-middlename .right img{
+    width: 0.5rem;
+    margin-top: -0.3rem;
+}
+#oldexam .oe-bottom{
+    width: 100%;
+    height: 1.04rem;
+    line-height: 1.04rem;
+    font-size: 0.26rem;
+    color: #9c9c9c;
+    background: url("../images/yearoldexam/listbg.jpg") center bottom;
+}
+#oldexam .oe-bottom span{
+    margin-right: 0.1rem;
+}
+.notmore{
+    width: 100%;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    text-align: center;
+    background: #fff;
+    color: #9c9c9c;
+    font-size: 0.28rem;
+}
+#topmenu{
+    width: 100%;
+}
+#topmenu ul{
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #ecedee;
+}
+#topmenu ul li{
+    float: left;
+    width: 33.33%;
+    line-height: 1rem;
+    text-align: center;
+    font-size: 0.4rem;
+    color: #666666;
+}
+#topmenu ul li.active{
+    color: #fdb610;
+    border-bottom: 1px solid #fdb610;
+}
+#choselist{
+    width: 100%;
+    margin-top: 0.4rem;
+    height: 0.32rem;
+    line-height: 0.32rem;
+    margin-bottom: 0.8rem;
+    color: #999;
+    position: relative;
+}
+#choselist .cl-box{
+    width: 2.2rem;
+    float: left;
+    font-size: 0.32rem;
+    position: relative;
+    text-align: center;
+}
+#choselist .cl-box img{
+    width: 0.3rem;
+}
+#choselist .right{
+    font-size: 0.26rem;
+}
+#choselist .cl-box .cl-select{
+    width: 100%;
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+    background: #fff;
+    display: none;
+}
+#choselist .cl-box .cl-select li{
+    width: 100%;
+    color: #999;
+    line-height: 0.8rem;
+    text-align: center;
+}

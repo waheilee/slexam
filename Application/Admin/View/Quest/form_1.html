@@ -1,0 +1,331 @@
+<include file="Public/head"/>
+<body class="no-skin">
+<include file="Public/header"/>
+<link href="__PUBLIC__/admin/css/common.css" type="text/css" rel="stylesheet">
+<link href="__PUBLIC__/admin/css/index.css" type="text/css" rel="stylesheet">
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+
+    <include file="Public/sidebar"/>
+    <div class="main-content">
+        <div class="main-content-inner">
+            <!-- #section:basics/content.breadcrumbs -->
+            <include file="Public/breadcrumbs"/>
+
+            <!-- /section:basics/content.breadcrumbs -->
+            <div class="page-content">
+                <include file="Public/set"/>
+
+                <!-- /section:settings.box -->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <form class="form-horizontal" id="form" method="post" action="{:U('update')}">
+
+                            <!-- PAGE CONTENT BEGINS -->
+
+                            <input type="hidden" name="id" value="{$quest.id}" id="aid"/>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-0">
+                                    题目分类 </label>
+                                <div class="col-sm-9">
+                                <select name="course" id="province">
+                                    <option value="" >课程</option>
+                                    <volist name="province" id="vo">
+                                        <option  value="{$vo.id}" <if condition="$vo.id eq $quest['kid']"> selected="selected" </if>>{$vo.name}</option>
+                                    </volist>
+                                </select>
+                            <select name="chapter" id="city"> 
+                                <option value="">章节</option>
+                            </select>
+                            <select name="point" id="town">
+                                <option value="">知识点</option>
+                            </select>   
+                                </div>
+                            </div>
+                             <div class="space-4"></div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-0">
+                                    题目类型 </label>
+                                <div class="col-sm-9">
+                                <select name="model" id="model">
+                                    <option value="" >类型</option>
+                                        <option  value="1" <if condition="1 eq $quest['model']"> selected="selected" </if>>模拟题</option>
+                                        <option  value="2" <if condition="2 eq $quest['model']"> selected="selected" </if>>真题</option>
+                               
+                                </select>
+                                </div>
+                            </div>
+                          <div class="space-4"></div>
+                          <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-0">
+                                    试题时间 </label>
+                                       
+                                           <div class="col-sm-9">
+                                        <input  id="birthday" placeholder="选择时间" name="questtime" type="text" data-date-format="yyyy-mm-dd" 
+                                                value="{$quest['questtime']|date='Y-m-d ',###}"
+                                         />
+                                        <span >
+                                            <i class="ace-icon fa fa-calendar bigger-110"></i>
+                                        </span>
+                                    </div>
+                            </div>
+                            
+                            <div class="space-4"></div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-1">
+                                    题目 </label>
+                                <div class="col-sm-9">
+                                    <textarea name="content" id="title" placeholder="题目"
+                                              class="col-xs-10 col-sm-5"
+                                              rows="8">{$quest['content']}</textarea>
+                                    <span class="help-inline col-xs-12 col-sm-7">
+                                        <span class="middle">题目不能为空。</span>
+                                    </span>
+                                </div>
+                            </div>
+                           
+                            
+                            <div class="space-4"></div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-3">
+                                    A</label>
+                                <div class="col-sm-9">
+                                    <textarea name="aa" id="description" placeholder="A选项"
+                                              class="col-xs-10 col-sm-5"
+                                              rows="5">{$quest['aa']}</textarea>
+                                    <span class="help-inline col-xs-12 col-sm-7">
+                                        <span class="middle">A选项</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-3">
+                                    B</label>
+                                <div class="col-sm-9">
+                                    <textarea name="bb" id="description" placeholder="B选项"
+                                              class="col-xs-10 col-sm-5"
+                                              rows="5">{$quest['bb']}</textarea>
+                                    <span class="help-inline col-xs-12 col-sm-7">
+                                        <span class="middle">B选项</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-3">
+                                    C</label>
+                                <div class="col-sm-9">
+                                    <textarea name="cc" id="description" placeholder="C选项"
+                                              class="col-xs-10 col-sm-5"
+                                              rows="5">{$quest['cc']}</textarea>
+                                    <span class="help-inline col-xs-12 col-sm-7">
+                                        <span class="middle">C选项</span>
+                                    </span>
+                                </div>
+                            </div>
+                             <div class="space-4"></div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-3">
+                                    D</label>
+                                <div class="col-sm-9">
+                                    <textarea name="dd" id="description" placeholder="D选项"
+                                              class="col-xs-10 col-sm-5"
+                                              rows="5">{$quest['dd']}</textarea>
+                                    <span class="help-inline col-xs-12 col-sm-7">
+                                        <span class="middle">D选项</span>
+                                    </span>
+                                </div>
+                            </div>
+                             <div class="space-4"></div>
+                              <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    单选/多选 </label>
+                                   <div class="col-sm-9">
+                             <select name="multiple" class="col-xs-10 col-sm-5">
+                                    <option value="1" <if condition="1 eq $quest['multiple']"> selected="selected"</if>>--单选--</option>
+                                    <option value="2" <if condition="2 eq $quest['multiple']"> selected="selected"</if>>--多选--</option>
+                                </select>
+                                   </div>
+                              </div>
+                              <div class="space-4"></div>
+                              <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    答案： </label>
+                                   <div class="col-sm-9">
+                                    
+                             <label>A<input name="answer[]" type="checkbox" value="aa" <foreach name='string' item='v'><if condition="$quest['aa'] eq $v"> checked="checked"</if></foreach>  style='margin-left: 10px;'/></label> 
+                            <label style='margin-left: 10px;'>B <input name="answer[]" type="checkbox" value="bb" <foreach name='string' item='v'><if condition="$quest['bb'] eq $v"> checked="checked"</if></foreach> style='margin-left: 10px;'/></label> 
+                            <label style='margin-left: 10px;'>C <input name="answer[]" type="checkbox" value="cc" <foreach name='string' item='v'><if condition="$quest['cc'] eq $v"> checked="checked"</if></foreach> style='margin-left: 10px;'/></label> 
+                            <label style='margin-left: 10px;'>D<input name="answer[]" type="checkbox" value="dd" <foreach name='string' item='v'><if condition="$quest['dd'] eq $v"> checked="checked"</if></foreach> style='margin-left: 10px;'/></label>
+                                
+                                   </div>
+                              </div>
+                              
+                              <div class="space-4"></div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    关键词 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="keywords" id="keywords" placeholder="关键词"
+                                           class="col-xs-10 col-sm-5" value="{$quest['keywords']}">
+                                    <span class="help-inline col-xs-12 col-sm-7">
+                                        <span class="middle">关键词。</span>
+                                    </span>
+                                </div>
+                            </div>
+                              <div class="space-4"></div>
+                              <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-0">
+                                    题目难度 </label>
+                                <div class="col-sm-9">
+                                <select name="difficulty" id="province">
+                                    <option value="" >难度</option>
+                                     <option  value="易" <if condition="易 eq $quest['difficulty']"> selected="selected" </if>>易</option>
+                                     <option  value="中" <if condition="中 eq $quest['difficulty']"> selected="selected" </if>>中</option>
+                                     <option  value="难" <if condition="难 eq $quest['difficulty']"> selected="selected" </if>>难</option>
+                                </select>
+                                </div> 
+                              </div>
+                            <div class="space-4"></div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    详解： </label>
+                                <div class="col-sm-9">
+                                    <textarea name="explain" id="content"
+                                              style="width:100%;height:400px;visibility:hidden;">{$quest['explain']}</textarea>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+
+                            <div class="col-md-offset-2 col-md-9">
+                                <button class="btn btn-info submit" type="button">
+                                    <i class="icon-ok bigger-110"></i>
+                                    提交
+                                </button>
+
+                                &nbsp; &nbsp; &nbsp;
+                                <button class="btn" type="reset">
+                                    <i class="icon-undo bigger-110"></i>
+                                    重置
+                                </button>
+                            </div>
+
+                            <!-- PAGE CONTENT ENDS -->
+
+
+                        </form>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.page-content -->
+        </div>
+    </div><!-- /.main-content -->
+    <include file="Public/footer"/>
+
+</div><!-- /.main-container -->
+
+<include file="Public/footerjs"/>
+<script src="__PUBLIC__/admin/js/date-time/bootstrap-datepicker.js"></script>
+<!-- inline scripts related to this page -->
+<script type="text/javascript">
+    $(function () {
+        loadRegion('#city', {$quest['kid']},'',{$quest['zid']});
+        loadRegion('#town', {$quest['zid']},'',{$quest['did']});
+        $("#tabs").tabs();
+        var content = $("#Content").val();
+        var editor = KindEditor.create('textarea[name="explain"]', {
+            uploadJson: '__PUBLIC__/kindeditor/php/upload_json.php',
+            fileManagerJson: '__PUBLIC__/kindeditor/php/file_manager_json.php',
+            allowFileManager: true,
+            afterBlur: function () {
+                this.sync();
+            }
+        });
+        $(".submit").click(function () {
+            var sid = $("#sid").val();
+            var title = $("#title").val();
+            var content = $("#content").val();
+            if (sid == 0) {
+                bootbox.dialog({
+                    title: '友情提示：',
+                    message: "文章分类必须选择。",
+                    buttons: {
+                        "success": {
+                            "label": "确定",
+                            "className": "btn-danger"
+                        }
+                    }
+                });
+                return;
+            }
+            if (title == '') {
+                bootbox.dialog({
+                    title: '友情提示：',
+                    message: "文章标题必须填写。",
+                    buttons: {
+                        "success": {
+                            "label": "确定",
+                            "className": "btn-danger"
+                        }
+                    }
+                });
+                return;
+            }
+            if (content == '') {
+                bootbox.dialog({
+                    title: '友情提示：',
+                    message: "文章内容需要填写。",
+                    buttons: {
+                        "success": {
+                            "label": "确定",
+                            "className": "btn-danger"
+                        }
+                    }
+                });
+                return;
+                return;
+            }
+            $("#form").submit();
+        });
+    });
+    $(function () {
+        jQuery(function ($) {
+            $('#birthday').datepicker({
+                format: 'yyyy-mm-dd',
+                weekStart: 1,
+                autoclose: true,
+                todayBtn: 'linked',
+                language: 'cn'
+            });
+                 });
+        });
+    
+    function loadRegion(obj,id,type,check){
+        $.ajax({
+            url:"{:U('getRegion')}",
+            type:'post',
+            data:{'id':id,'type':type,'check':check},
+            success:function(data){
+                $(obj).html(data);
+            }
+            
+        })
+    }
+    
+    $('#province').change(function(){
+        var val = $('#province option:selected').val();
+        loadRegion('#city',val);
+    })
+    $('#city').change(function(){
+        var val = $('#city option:selected').val();
+        loadRegion('#town',val);
+    })
+</script>
+</body>
+</html>

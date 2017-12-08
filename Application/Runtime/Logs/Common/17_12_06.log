@@ -1,0 +1,42 @@
+[ 2017-12-06T09:53:07+08:00 ] 127.0.0.1 /www/slcms/Public/qwadmin/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000825s ]
+ERR: 无法加载模块:Public
+
+[ 2017-12-06T15:25:45+08:00 ] 127.0.0.1 /www/slcms/Upload/head/2017/12/06/5a279b642ab8f.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000635s ]
+ERR: 无法加载模块:Upload
+
+[ 2017-12-06T15:26:18+08:00 ] 127.0.0.1 /www/slcms/Upload/head/2017/12/06/5a279b642ab8f.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000567s ]
+ERR: 无法加载模块:Upload
+
+[ 2017-12-06T16:50:30+08:00 ] 127.0.0.1 /www/slcms/Public/admin/js/uploadPreview.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000823s ]
+ERR: 无法加载模块:Public
+
+[ 2017-12-06T16:50:30+08:00 ] 127.0.0.1 /www/slcms/Public/admin/js/function.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000651s ]
+ERR: 无法加载模块:Public
+
+[ 2017-12-06T16:50:31+08:00 ] 127.0.0.1 /www/slcms/Public/admin/js/uploadPreview.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000946s ]
+ERR: 无法加载模块:Public
+
+[ 2017-12-06T16:50:31+08:00 ] 127.0.0.1 /www/slcms/Public/admin/js/function.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000765s ]
+ERR: 无法加载模块:Public
+

@@ -1,0 +1,24 @@
+ <div class="list">
+            <ul>
+                <a href="{:U('usercenter/indexx')}"><li class="<?php if($Think.ACTION_NAME == 'indexx'){echo 'active' ;} ?>">基本资料</li></a>
+                <a href="{:U('Recharge/recharge')}"><li class="<?php if($Think.ACTION_NAME == 'recharge'){echo 'active' ;} ?>">账户充值</li></a>
+                <a href=""><li>桑磊会员</li></a>
+                <a href="{:U('userhistory/historicalAnswer')}"><li class="<?php if($Think.ACTION_NAME == 'historicalAnswer'){echo 'active' ;} ?>">历史答卷</li></a>
+                <a href="{:U('userhistory/historyList')}"><li class="<?php if($Think.ACTION_NAME == 'historyList'){echo 'active' ;} ?>">历史打榜</li></a>
+                <a href="{:U('userhistory/assess')}"><li class="<?php if($Think.ACTION_NAME == 'assess'){echo 'active' ;} ?>">综合评估</li></a>
+                <a href="{:U('classroom/collect')}"><li class="<?php if($Think.ACTION_NAME == 'collect'){echo 'active' ;} ?>">课堂收藏</li></a>
+                <if condition='I("typeid") eq "1" or I("typeid") eq "2" or I("typeid") eq "3" or I("typeid") eq "4" or I("typeid") eq "5"'>
+                     <a href="{:U('classroom/customizationa',array('typeid'=>1))}"><li class="<?php if($Think.ACTION_NAME == 'customizationa'){echo 'active' ;} ?>">课堂订制</li></a>
+                 <else/>
+                     <a href="{:U('classroom/customizationa',array('typeid'=>1))}"><li class="<?php if($Think.ACTION_NAME == 'customizationa'){echo 'active' ;} ?>">课堂订制</li></a>
+                </if>
+                <if condition='I("typeid") eq "6" or I("typeid") eq "7" or I("typeid") eq "8" or I("typeid") eq "9" or I("typeid") eq "10"'>
+                     <a href="{:U('classroom/customizationa',array('typeid'=>1))}"><li class="<?php if($Think.ACTION_NAME == 'customizationb'){echo 'active' ;} ?>">课堂订制</li></a>
+                </if>
+                <if condition='I("typeid") eq "11" or I("typeid") eq "12" or I("typeid") eq "13" or I("typeid") eq "14" or I("typeid") eq "15"'>
+                     <a href="{:U('classroom/customizationa',array('typeid'=>1))}"><li class="<?php if($Think.ACTION_NAME == 'customizationc'){echo 'active' ;} ?>">课堂订制</li></a>
+                </if>
+               
+                <a href="{:U('classroom/share')}"><li class="<?php if($Think.ACTION_NAME == 'share'){echo 'active' ;} ?>">分享课堂</li></a>
+            </ul>
+        </div>

@@ -1,0 +1,238 @@
+<extend name="Random/index" />
+<block name="content">
+    <!--自定义模拟试卷-->
+    <div id="userdefined">
+        <div class="wrap">
+            <!--自定义模拟试卷 标题-->
+            <div class="radom-answer-title">
+                <img src="__PUBLIC__/home/images/random-answer/paper.png" alt=""/>
+                <span class="radom-answer-title-name">自定义模拟试卷</span>
+                为随机抽选题型；自定义选择章节/知识点进行模拟考核；本卷计时答题（不限时，选择计入打榜）。
+            </div>
+            <p class="userdefined-title">请选择科目（12门）/&nbsp;章节&nbsp;/&nbsp;知识点</p>
+            <div class="chosebox" >
+                <!--题名在下面的js里解析-->
+                <!--法分类-->
+                <ul class="chose chose-book left" id='choseBook'>
+                    <volist name="course" id='vo'>
+                        <li data="{$vo['id']}" data-name="{$vo['name']}" check='1' class="">
+                            <div class="chose-rect left"></div>
+                            <div class="chose-text left">{$vo['name']}</div>
+                            <div class="left chose-arrow">
+                                <img src="__PUBLIC__/home/images/random-answer/chose-arrow.png" alt="">
+                            </div>
+                        </li>
+                    </volist>
+                </ul>
+                <!--章-->
+                <ul class="chose chose-chapter left" id='choseChapter'>
+                    
+                </ul>
+                <!--节-->
+                <ul class="chose chose-part left" id='chosePart'>
+                    
+                </ul>
+                <!--知识点-->
+                <ul class="chose chose-lore left" id='choseLore'></ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="look-chose">
+                <span>自定义题型为:</span>
+                <span class="list" id="lookChose"></span>
+            </div>
+            <div class="look-chose" style="text-align: center">
+                 <form action="{:U('Answer/index')}" id='form' method="post">
+                    <input type="hidden" name='kid' id='kid'>
+                    <input type="hidden" name='zid' id='zid'>
+                    <input type="hidden" name='jid' id='jid'>
+                    <input type="hidden" name='did' id='did'>
+                    难度系数：
+                    <input type="radio" name="nycd" value="1" id="jiandan"/><label for="jiandan" style="cursor: pointer;margin-right: 15px;margin-left: 3px;">简单</label>
+                    <input type="radio" name="nycd" value="2" id="zhongdeng"/><label for="zhongdeng" style="cursor: pointer;margin-right: 15px;margin-left: 3px;">中等</label>
+                    <input type="radio" name="nycd" value="3" id="kunnan"/><label for="kunnan" style="cursor: pointer;margin-right: 15px;margin-left: 3px;">困难</label>
+                </form>
+            </div>
+            <div class="gotoanswer" onclick="goToAnswer()">开始答题</div>
+        </div>
+    </div>
+    <!--自定义模拟试卷  选择列表的课程-->
+    <script>
+        function change(t,type,name){
+            $('#lookChose').html('');
+            if(type == 'choseBook'){
+                $('#lookChose').html(name);    
+            }
+            if(type == 'choseChapter'){
+                var choseBook = $("#userdefined").find(".chose-book").find(".active");
+                var choseBook =  getIdName(choseBook);
+                $('#lookChose').html( choseBook[0].name +'　>　'+name); 
+            }
+
+            if(type == 'chosePart'){
+                var choseBook = $("#userdefined").find(".chose-book").find(".active");
+                var choseBook =  getIdName(choseBook);
+                var choseChapter = $("#userdefined").find(".chose-chapter").find(".active");
+                var choseChapter =  getIdName(choseChapter);
+                $('#lookChose').html( choseBook[0].name +'　>　'+choseChapter[0].name+'　>　'+name);
+            }
+        }
+
+        // 知识点点击事件
+        function changeLore(t,name){
+            var choseBook = $("#userdefined").find(".chose-book").find(".active");
+            var choseBook =  getIdName(choseBook);
+            var choseChapter = $("#userdefined").find(".chose-chapter").find(".active");
+            var choseChapter =  getIdName(choseChapter);
+            var chosePart = $("#userdefined").find(".chose-part").find(".active");
+            var chosePart =  getIdName(chosePart);
+
+            $('#lookChose').html( choseBook[0].name +'　>　'+choseChapter[0].name+'　>　'+chosePart[0].name+'　>　'+name);
+        }
+
+        function haveanwername(id,t,type)
+        {
+            $.ajax({
+                url:'{:U("select")}',
+                type:'post',
+                data:{'id':id,'type':type},
+                success:function(data){
+                    $(t).html(data);
+                }
+            })
+        }
+
+        // 公用获取选中元素的id和name
+        function getIdName(t){
+            var arr = '';
+            var array = '';
+            var data = [];
+            if(t.length>0){
+                for(var i = 0;i<t.length;i++){
+                    var id = $(t[i]).attr("data");
+                    var name = $(t[i]).attr("data-name");
+                    arr = arr +',' + id;
+                    if(i == 0){
+                        array = array + name;
+                    }else{   
+                        array = array +' , ' + name;
+                    }    
+                }
+            }
+            data.push({id:arr+',',name:array});
+            return data;
+        }
+
+//        课题li的点击事件
+        $('#choseBook').on("click","li",function(){
+            if($(this).hasClass('active')){
+                $(this).removeClass('active');
+            }else{
+                $(this).addClass('active');
+            }
+
+            var choseBook = $("#userdefined").find(".chose-book").find(".active");
+            var arr = getIdName(choseBook);
+
+            $('#choseChapter').html('');
+            $('#chosePart').html('');
+            $('#choseLore').html('');
+            $('#zid').val('');
+            $('#jid').val('');
+            $('#did').val('');
+
+            if(arr[0].id != '' && arr[0].id != ','){
+                change(this,'choseBook',arr[0].name);
+                haveanwername(arr[0].id,"#choseChapter",'Chapter');
+            }
+            $('#kid').val(arr[0].id);
+        });
+
+//        章li的点击事件
+        $('#choseChapter').on("click","li",function(){
+            if($(this).hasClass('active')){
+                $(this).removeClass('active');
+            }else{
+                $(this).addClass('active');
+            }
+
+            var choseChapter = $("#userdefined").find(".chose-chapter").find(".active");
+
+            var arr = getIdName(choseChapter);
+            $('#chosePart').html('');
+            $('#choseLore').html('');
+            $('#jid').val('');
+            $('#did').val('');
+            if(arr[0].id != '' && arr[0].id != ','){
+                change(this,'choseChapter',arr[0].name);
+                haveanwername(arr[0].id,"#chosePart");    
+            }
+            $('#zid').val(arr[0].id);
+        });
+
+//      节li点击事件
+        $('#chosePart').on("click","li",function(){
+            if($(this).hasClass('active')){
+                $(this).removeClass('active');
+            }else{
+                $(this).addClass('active');
+            }
+
+            var chosePart = $("#userdefined").find(".chose-part").find(".active");
+            var arr = getIdName(chosePart);
+            $('#choseLore').html('');
+            $('#did').val('');
+            console.log(arr[0].id)
+            if(arr[0].id != '' && arr[0].id != ','){
+                change(this,'chosePart',arr[0].name);
+                haveanwername(arr[0].id,"#choseLore",'kid');
+            }
+            $('#jid').val(arr[0].id);
+        })
+//        知识点li的点击事件
+        $('#choseLore').on("click","li",function(){
+            if($(this).attr('check') == '1'){
+                $(this).addClass("active").siblings("li");
+                $(this).attr('check','2') ;
+            }else{
+                $(this).removeClass("active").siblings("li");
+                $(this).attr('check','1');
+            }
+
+            var lore = $("#choseLore").find(".active");
+            var arr = getIdName(lore);
+            changeLore(this,arr[0].name);
+            $('#did').val(arr[0].id);
+        });
+
+//        li的鼠标移入事件添加active
+        $("#userdefined").find(".chose").on("mouseover","li",function(){
+            $(this).addClass("actives");
+        });
+//        li的鼠标移出事件移除active
+        $("#userdefined").find(".chose").on("mouseout","li",function(){
+            $(this).removeClass("actives");
+        });
+//  提交课题开始答题
+    function goToAnswer(){
+        var choseBook = $("#userdefined").find(".chose-book").find(".active");
+        choseBook = getIdName(choseBook);
+        var choseChapter = $("#userdefined").find(".chose-chapter").find(".active");
+        choseChapter = getIdName(choseChapter);
+        var chosePart = $("#userdefined").find(".chose-part").find(".active");
+        chosePart = getIdName(chosePart);
+        var lore = $("#userdefined").find(".chose-lore").find(".active");
+        lore = getIdName(lore);
+        var difficulty = $('input[name="nycd"]:checked').val();
+
+        if(choseBook[0].id==''){
+            alert("请选择科目名称");
+            return  false;
+        }else if(difficulty==undefined){
+            alert("请选择难度");
+            return  false;
+        }
+//        需要传走的数据
+        $('#form').submit();
+    };
+</script>
+</block>

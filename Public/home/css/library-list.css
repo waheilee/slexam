@@ -1,0 +1,196 @@
+@charset "utf-8";
+body{
+    background: #f5f5f5;
+}
+#summary{
+    width: 100%;
+    background: #fff;
+}
+#summary .summary-content{
+    width: 90%;
+    margin: 0 auto;
+}
+#summary .summary-content .img{
+    line-height: 300px;
+}
+#summary .summary-content .img img{
+    width: 142px;
+    margin-right: 40px;
+}
+#summary .summary-content .title{
+    margin-right: 30px;
+    margin-top: 100px;
+}
+#summary .summary-content .title .name{
+    color: #525252;
+    font-size: 32px;
+    width: 459px;
+    margin-bottom: 20px;
+}
+#summary .summary-content .title .num{
+    color: #919191;
+    font-size: 20px;
+}
+#summary .summary-content .title .num span{
+    font-size: 22px;
+}
+#summary .summary-content .randomlibrary{
+    display: block;
+    line-height: 300px;
+}
+#summary .summary-content .qrcode{
+    width: 165px;
+    margin-top: 30px;
+}
+#summary .summary-content .qrcode .qrcode-title{
+    font-size: 14px;
+    color: #e1091e;
+    line-height: 28px;
+    text-align: center;
+}
+#summary .summary-content .qrcode .qrcode-img{
+    border: 1px solid #ecedee;
+    padding: 3px;
+    margin-bottom: 5px;
+}
+#summary .summary-content .qrcode .qrcode-img img{
+    width: 162px;
+}
+#summary .summary-content .qrcode .qrcode-text{
+    color: #848484;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+}
+#questionbanklist{
+    width: 100%;
+    background: #f5f5f5;
+    border: 1px solid #f5f5f5;
+}
+#questionbanklist .bank-list{
+    width: 92%;
+    background: #fff;
+    padding: 4%;
+    position: relative;
+    margin-top: 15px;
+}
+#questionbanklist .bank-list .topone{
+    position: absolute;
+    left: -6px;
+    top: 6px;
+    display: none;
+}
+#questionbanklist .bank-list:nth-child(1) .topone{
+    display: block;
+}
+#questionbanklist .bank-list:nth-child(2) .topone{
+    display: block;
+}
+#questionbanklist .bank-list:nth-child(3) .topone{
+    display: block;
+}
+#questionbanklist .bank-list .bank-img{
+    line-height: 60px;
+}
+#questionbanklist .bank-list .bank-img img{
+    width: 44px;
+}
+#questionbanklist .bank-list .bank-img{
+    margin-right: 20px;
+}
+#questionbanklist .bank-list .bank-name{
+    width: 540px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 18px;
+    color: #525252;
+    margin-bottom: 15px;
+}
+#questionbanklist .bank-list .bank-num{
+    width: 540px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 12px;
+    color: #9c9c9c;
+}
+#questionbanklist .bank-list .bank-num span{
+    margin-right: 20px;
+}
+#questionbanklist .bank-list .bank-time{
+    color: #525252;
+    font-size: 16px;
+    width: 335px;
+    text-align: center;
+    line-height: 60px;
+}
+#questionbanklist .bank-list .bank-time span{
+    font-size: 20px;
+}
+#questionbanklist .bank-list .bank-gotoquestion{
+    display: block;
+    width: 107px;
+    height: 26px;
+    margin-top: 14px;
+    background: url("../images/library-list/gotoquestion.png") no-repeat center center;
+}
+#questionbanklist .bank-list .bank-gotoquestion:hover{
+    background: url("../images/library-list/gotoquestion-blue.png") no-repeat center center;
+}
+#questionbanklist .page{
+    text-align: center;
+    margin: 50px auto;
+}
+#bottomnav{
+    width: 100%;
+    background: #f5f5f5;
+    margin-bottom: 50px;
+}
+#bottomnav .bottomnav-list{
+    width: 379px;
+}
+#bottomnav .mlr20{
+    margin: 0 20px;
+}
+#bottomnav .bottomnav-list .bottomnav-top{
+    width: 100%;
+    position: relative;
+}
+#bottomnav .bottomnav-list .bottomnav-top img{
+    width: 379px;
+}
+#bottomnav .bottomnav-list .bottomnav-top a{
+    display: block;
+    width: 180px;
+    height: 55px;
+    line-height: 55px;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -27px;
+    margin-left: -90px;
+    border: 1px solid #fff;
+}
+#bottomnav .bottomnav-list .bottomnav-bottom{
+    background: #fff;
+    width: 80%;
+    padding: 7% 10%;
+    font-size: 18px;
+    color: #525252;
+}
+#bottomnav .bottomnav-list .bottomnav-bottom img{
+    margin-right: 15px;
+}
+#bottomnav .bottomnav-list .bottomnav-bottom .bottomnav-num{
+    font-size: 14px;
+    color: #aaa9a9;
+    line-height: 24px;
+}
+#bottomnav .bottomnav-list .bottomnav-bottom .bottomnav-num span{
+    margin: 0 5px;
+}

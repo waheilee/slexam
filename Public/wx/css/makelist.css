@@ -1,0 +1,283 @@
+@charset "UTF-8";
+.topnote{
+    width: 100%;
+    padding: 0.25rem 0;
+    line-height: 0.6rem;
+    font-size: 0.24rem;
+    color: #999999;
+    text-align: justify;
+}
+.topnote.gray{
+    background: #F1F1F1;
+}
+.topnote.fff{
+    background: #fff;
+}
+#analogtopmenu{
+    width: 100%;
+    margin-top: 0.4rem;
+}
+#analogtopmenu a{
+    display: block;
+    width: 30%;
+    float: left;
+}
+#analogtopmenu a.mlr{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+#analogtopmenu a .atm-top{
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 1.1rem;
+    text-align: center;
+    line-height: 1.1rem;
+    color: #666;
+    font-size: 0.32rem;
+    background: #E0E0E0;
+}
+#analogtopmenu a img{
+    width: 100%;
+}
+#analogtopmenu a .atm-bottom{
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 1.1rem;
+    text-align: center;
+    line-height: 1.1rem;
+    color: #666;
+    font-size: 0.28rem;
+    background: #E0E0E0;
+}
+/*列表*/
+#oldexam{
+    width: 100%;
+}
+#oldexam li{
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+#oldexam li .oe-topmenu{
+    width: 100%;
+    height: 1.05rem;
+    line-height: 1.05rem;
+    border-top: 1px solid #dedede;
+    background: #F5F5F5;
+    font-size: 0.28rem;
+    color: #9c9c9c;
+}
+#oldexam li .oe-topmenu a{
+    color: #9c9c9c;
+}
+#oldexam li .oe-topmenu a.blue{
+    color: #3482c4;
+}
+#oldexam li .oe-topmenu span{
+    margin: 0.15rem;
+}
+.startnum img{
+    margin-top: -0.1rem;
+    margin-right: 0.05rem;
+}
+#oldexam li .oe-middlename{
+    height: 1.5rem;
+    line-height: 1.5rem;
+}
+#oldexam li .oe-middlename .left{
+    height: 1.5rem;
+    font-size: 0;
+}
+#oldexam li .oe-middlename .left img{
+    width: 0.6rem;
+    margin-right: 0.25rem;
+    float: left;
+    margin-top: 0.4rem;
+}
+#oldexam li .oe-middlename .left .oem-name{
+    font-size: 0.36rem;
+    color: #666;
+    width: 4.7rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: left;
+}
+#oldexam li .oe-middlename .right img{
+    width: 0.5rem;
+}
+#oldexam .oe-bottom{
+    width: 100%;
+    height: 1.05rem;
+    line-height: 1.05rem;
+    font-size: 0.26rem;
+    color: #9c9c9c;
+    background: url("../images/yearoldexam/listbg.jpg") center bottom;
+}
+#oldexam .oe-bottom span{
+    margin-right: 0.1rem;
+}
+.notmore{
+    width: 100%;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    text-align: center;
+    background: #fff;
+    color: #9c9c9c;
+    font-size: 0.28rem;
+}
+#analogslider{
+    width: 100%;
+    border-bottom: 1px solid #dedede;
+    height: 1.05rem;
+    line-height: 1.05rem;
+    font-size: 0.28rem;
+    color: #666;
+    margin-bottom: 0.4rem;
+}
+#analogslider .right a{
+    display: block;
+    width: 2rem;
+    float: left;
+    text-align: center;
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#analogslider .right a.active{
+    border-bottom: 1px solid #3482c4;
+}
+#selectdifficulty{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    padding-bottom: 0.3rem;
+    z-index: 1001;
+}
+#selectdifficulty .sd-title{
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    color: #9c9c9c;
+    font-size: 0.32rem;
+}
+#selectdifficulty a{
+    display: block;
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    color: #666666;
+    font-size: 0.42rem;
+}
+#makelistcontent{
+    width: 100%;
+}
+#makelistcontent .ml-list-title{
+    color: #666;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    font-size: 0.32rem;
+    margin-bottom: 0.2rem;
+}
+#makelistcontent .ml-list-title-2{
+    width: 100%;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    background: #EDB800;
+    color: #fff;
+    font-size: 0.26rem;
+}
+#makelistcontent .ml-list-title-2 span{
+    margin-right: 0.4rem;
+}
+#makelistcontent .ml-list-title-3{
+    width: 100%;
+    height: 1.05rem;
+    line-height: 1.05rem;
+    background: #3482C4;
+    color: #fff;
+    font-size: 0.26rem;
+    text-align: center;
+}
+#makelistcontent .dbph-one{
+    width: 28%;
+}
+#makelistcontent .dbph-two{
+    width: 12%;
+}
+#makelistcontent .dbph-three{
+    width: 18%;
+}
+#makelistcontent .dbph-four{
+    width: 12%;
+}
+#makelistcontent .dbph-five{
+    width: 28%;
+    float: right;
+    height: 1.15rem;
+}
+#makelistcontent .dbph-big-box{
+    width: 100%;
+    background: #F5F5F5;
+}
+#makelistcontent .dbph-box{
+    width: 100%;
+    background: #fff;
+    height: 1.15rem;
+    line-height: 1.15rem;
+    margin-bottom: 0.25rem;
+    font-size: 0.24rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 0.2rem;
+    position: relative;
+}
+#makelistcontent .dbph-box.active{
+    background: #EDB800;
+    color: #fff;
+}
+#makelistcontent .dbph-box a{
+    color: #666;
+}
+#makelistcontent .dbph-box .bor{
+    border-right: 1px solid #ecedee;
+}
+#makelistcontent .dbph-box .dbph-one{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#makelistcontent .dbph-box .dbph-one img{
+    width: 0.7rem;
+    height: 0.7rem;
+    border: 1px solid #EDB800;
+    border-radius: 50%;
+}
+#makelistcontent .dbph-box.active .dbph-five a{
+    display: none;
+}
+#makelistcontent .dbph-box .dbph-five img{
+    width: 0.35rem;
+    margin-right: 0.05rem;
+    margin-top: -0.2em;
+}
+#makelistcontent .dbph-box .dbph-five span.rank{
+    font-size: 0.4rem;
+}
+#makelistcontent .dbph-box .dbph-five a.mr{
+    margin-right: 0.3rem;
+}
+#makelistcontent .dbph-box .top{
+    position: absolute;
+    top: 0;
+    left: 2.5%;
+    width: 0.7rem;
+}

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>成绩报告</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta name=”keyword” content=”桑磊法考,司法考试,考试,司法,律师“>
+    <!-- 公用的css -->
+    <link rel="stylesheet" href="__PUBLIC__/home/css/public.css"/>
+    <!-- 本页面的css -->
+    <link rel="stylesheet" href="__PUBLIC__/home/css/mark.css"/>
+    <style>
+        #loading{
+            background-color: rgba(0,0,0,.6);
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            z-index: 9999;
+            margin-top: 0px;
+            top: 0px;
+            display:none;
+        }
+        #loading-center{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            }
+        #loading-center-absolute {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            height: 50px;
+            width: 150px;
+            margin-top: -25px;
+            margin-left: -75px;
+
+        }
+        .object{
+            width: 8px;
+            height: 50px;
+            margin-right:5px;
+            background-color: #FFF;
+            -webkit-animation: animate 1s infinite;
+            animation: animate 1s infinite;
+            float: left;
+            }
+
+        .object:last-child {
+            margin-right: 0px;
+            }
+
+        .object:nth-child(10){
+            -webkit-animation-delay: 0.9s;
+            animation-delay: 0.9s;  
+            }
+        .object:nth-child(9){
+            -webkit-animation-delay: 0.8s;
+            animation-delay: 0.8s;  
+            }   
+        .object:nth-child(8){
+            -webkit-animation-delay: 0.7s;
+            animation-delay: 0.7s;  
+            }
+        .object:nth-child(7){
+            -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;  
+            }
+        .object:nth-child(6){
+            -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;  
+            }
+        .object:nth-child(5){
+            -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+            }
+        .object:nth-child(4){
+            -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;      
+            }
+        .object:nth-child(3){
+            -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;  
+            }
+        .object:nth-child(2){
+            -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s;
+        }                       
+            
+        @-webkit-keyframes animate {
+            50%{
+                -ms-transform: scaleY(0); 
+                -webkit-transform: scaleY(0);
+                transform: scaleY(0);
+            }
+        }
+
+        @keyframes animate {
+            50% {
+                -ms-transform: scaleY(0); 
+                -webkit-transform: scaleY(0);
+                transform: scaleY(0);
+            }
+        }
+</style>
+</head>
+<body>
+<!--主导航-->
+<!--白色的-->
+<include file='Public/nav_2' />
+<!--成绩-->
+<div id="banner">
+    <div class="wrap">
+        <!--用户名  试卷名-->
+        <p class="mark-title">亲爱的用户<span class="name">Yukii</span>，您在 <span>“题霸随手题库-随机 / 自定义抽选题型” 中{$examin['nickname']}</span></p>
+        <!--所得分数-->
+        <div class="examscore">
+            <p class="score-title">所得分数：</p>
+            <div class="score-num">{$score['score']}<span>分</span></div>
+            <div class="score-time"><span>用时：</span>{$score['usetime']}</div>
+        </div>
+        <!--排名数据-->
+        <div class="ranking">
+            预计打榜排名：{$ranking} &nbsp;名<span>丨</span>成绩报告评选：{:checkGb($score['score'])} <span>丨</span>本卷最佳：{$good['score']}分（{$good['usetime']}）
+        </div>
+        <div class="link">
+            <!--再来一套-->
+            <a href="javascript:void(0)" onClick="document.getElementById('form').submit()" class="zlyt">再来一套</a>
+            <!--分享成绩-->
+            <a href="#" class="fxcj">分享成绩</a>
+            <!--参与打榜-->
+            <a href="javascript:void(0)" onClick="goBand(this)" class="cydb">参与打榜</a>
+            <!--历史打榜-->
+            <a href="{:U('Band/index')}" target='_blank' class="lsdb">历史打榜</a>
+        </div>
+    </div>
+</div>
+<form action="{:U('Answer/index')}" id='form' method="post">
+    <input type="hidden" name='kid' value='{$examin["kid"]}'>
+    <input type="hidden" name='zid' value='{$examin["zid"]}'>
+    <input type="hidden" name='did' value='{$examin["did"]}'>
+    <input type="hidden" name='nycd' value='{$examin["difficulty"]}'>
+</form>
+
+<form action="{:U('wrong')}" id='goError' method='post'>
+    <input type="hidden" name='id' id='id' value='{$score["id"]}'>
+</form>
+<!--成绩报告-->
+<div id="scorereport">
+    <div class="wrap">
+        <p class="report-title">成绩报告</p>
+        <!--对错的个数-->
+        <p class="report-titletab">共计 {$examin['num']}道选择题（{$r_count}道单选题+{$c_count}道多选题+{$t_count}道不定项选择题） 答对 {$right}题 错误 {$score['error_num']}题</p>
+        <!--成绩图表-->
+        <div id="main" style="width: 90%;margin:0 auto;margin-top: 50px;height:500px;"></div>
+        <!--错误详情-->
+        <p class="report-details">
+            其中：
+            <volist name='show' id="vo">
+                <span>{$vo['name']}（{$vo['percent']}%）错误<span>{$vo['error']}</span>道</span>
+            </volist>
+        </p>
+        <!--查看更多-->
+        <div class="lookmore">
+            <a href="javascript:void(0)" onClick="document.getElementById('goError').submit()"><button type="button">查看错误题目</button></a>
+            <a href="#"><button type="button">订制相关视频课堂解析</button></a>
+            <a href="javascript:void(0)" onClick="lookClass()"><button type="button">我要评价</button></a>
+            <a href="#"><button type="button">在线交流</button></a>
+        </div>
+    </div>
+</div>
+<!--订制课堂的弹出框-->
+<div id="modelview">
+    <div class="m-box">
+        <div class="m-title">
+            <ul>
+                <li class="active">欢迎评价</li>
+            </ul>
+            <img onclick="closeLookClass()" src="__PUBLIC__/Home/images/usercenter/close-white.png" alt=""/>
+        </div>
+        <div class="m-content">
+            <div class="m-content-view m-content-hypj">
+                <form action="" id="discussform">
+                    <div class="col-1">
+                        <span>出题星级：</span>
+                        <span id="givestart"></span>
+                        <span class="little">（感谢您的评星！）</span>
+                    </div>
+                    <!--这个input的value是评星的个数-->
+                    <input type="hidden" value="" name="" id="havestarnum"/>
+                    <!--这个input的value 是用户评论的内容 以text分隔-->
+                    <input type="hidden" id="havediscuss"/>
+                    <!--数据传过来时的 评价语  放在data里-->
+                    <div class="discuss">
+                        <button type="button" data="题霸打榜必争题型"></button>
+                        <button type="button" data="难易程度还算适中"></button>
+                        <button type="button" data="题型刁钻还有难度"></button>
+                        <button type="button" data="知识点很全面精细"></button>
+                        <button type="button" data="谁来敢挑战我？"></button>
+                        <button type="button" data="拿下容易打榜难"></button>
+                        <button type="button" data="想要打榜还有难度"></button>
+                        <button type="button" data="每年必考的题目"></button>
+                        <button type="button" data="这就是个坑"></button>
+                    </div>
+                    <button type="button" class="submit" onclick="discussSubmit()">提交星级评价</button>
+                </form>
+                <div class="explain">
+                    <a href="javascript:void(0)">*</a>您的评价对我们而言是非常宝贵的，能够帮助我们针对性的完善题型与课程。
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="loading">
+    <div id="loading-center">
+        <div id="loading-center-absolute">
+            <div class="object"></div>
+            <div class="object"></div>
+            <div class="object"></div>
+            <div class="object"></div>
+            <div class="object"></div>
+            <div class="object"></div>
+            <div class="object"></div>
+            <div class="object"></div>
+            <div class="object"></div>
+            <div class="object"></div>
+        </div>
+    </div>
+</div>
+
+<!--底部-->
+<include file="Public/foot" />
+</body>
+<script src="__PUBLIC__/home/js/echarts.common.min.js"></script>
+<script src="__PUBLIC__/home/js/jquery-1.11.3.js" type="text/javascript"></script>
+<script src="__PUBLIC__/home/js/jquery.raty.js" type="text/javascript"></script>
+<!--星星的追加-->
+<script>
+    $(function(){
+        function startNum(){
+            var s =$("#historyanswer").find(".startnum");
+            for(var i = 0;i<s.length;i++){
+                for(var k = 0;k<$(s[i]).attr("data");k++){
+                    $(s[i]).append('<img style="margin-top: -2px" src="images/makelist/yellow-star.png"/>');
+                }
+            }
+        };
+//        星星的追加
+        startNum();
+    });
+</script>
+<!--弹出层-->
+<script>
+//    显示
+    function lookClass(){
+      $("#modelview").fadeIn(500);
+    };
+function closeLookClass(){
+    $("#modelview").fadeOut(500);
+};
+</script>
+<!--评星-->
+<script>
+//    评星
+    $('#givestart').raty({
+        path:"__PUBLIC__/Home/images/img",
+        click: function (score, evt){
+            $("#havestarnum").val(score);
+        }
+    });
+//    评论
+    function discuss(){
+        var box = $("#modelview .m-box .m-content .m-content-hypj").find(".discuss");
+        var btn = box.find("button");
+        for(var i = 0;i<btn.length;i++){
+            $(btn[i]).html($(btn[i]).attr("data"));
+        }
+        $(box).on("click","button",function(){
+            if($(this).attr("yn")=="no"){
+                $(this).removeClass("active");
+                $(this).attr("yn","yes");
+            }else{
+                $(this).addClass("active");
+                $(this).attr("yn","no");
+            }
+        })
+    };
+    discuss();
+    //提交
+    function discussSubmit(){
+        var btn = $("#modelview .m-box .m-content .m-content-hypj").find(".discuss").find("button");
+        var str = "";
+        for(var i = 0;i<btn.length;i++){
+            if($(btn[i]).hasClass("active")){
+                str += "__" + $(btn[i]).attr("data");
+            }
+        }
+        $("#havediscuss").val(str);
+
+        var id = {$score["exmainid"]};
+        var star = $('#havestarnum').val();
+        $.ajax({
+            url:'{:U("assess")}',
+            type:'post',
+            data:{'id':id,'star':star,'assess':str},
+            beforeSend: function () {
+                $('#loading').show();
+                $(".submit").attr('disabled',true);
+            },
+            success:function(msg){
+                $('#loading').hide();
+                $(".submit").attr('disabled',false);
+                closeLookClass()
+                if(msg == 'ok'){
+                    alert('评价已提交！');
+                }else if(msg == 'cz'){
+                    alert('您已评价过此试卷！');
+                }else{
+                    alert('评价失败！');
+                }
+            }
+        })
+    };
+
+//参与打榜
+    function goBand(t){
+       var id = {$score["id"]};
+       var eid = {$score["exmainid"]};
+       $.ajax({
+            url:'Band',
+            type:'post',
+            data:{'id':id,'eid':eid},
+            beforeSend: function () {
+                $('#loading').show();
+                $(t).attr('disabled',true);
+            },
+            success:function(msg){
+                console.log(msg);
+                $('#loading').hide();
+                alert('参与打榜成功！');
+            }
+       }) 
+    }
+</script>
+<script>
+    //图表的数据
+    var markData = {$record}
+
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'));
+    // 指定图表的配置项和数据
+    var option = {
+        title : {
+            text: '成绩详情',
+            subtext: '百分比'
+        },
+        tooltip : {
+            trigger: 'axis'
+        },
+        legend: {
+            data: markData.course
+        },
+        toolbox: {
+            show : false,
+            feature : {
+                mark : {show: true},
+                dataView : {show: true, readOnly: false},
+                magicType : {show: true, type: ['line', 'bar']},
+                restore : {show: true},
+                saveAsImage : {show: true}
+            }
+        },
+        calculable : true,
+        xAxis : [
+            {
+                type : 'category',
+                data : markData.course,
+                axisLabel:{
+                    interval:0,//横轴信息全部显示
+                    rotate:-30,//-30度角倾斜显示
+                }
+            }
+        ],
+//        y轴
+        yAxis : [
+            {
+                type : 'value',
+//                name: '单位: %',
+                axisLabel: {
+                    formatter: '{value}%',
+                    textStyle: {
+                        color: 'rgba(33,33,33,1)',
+                    }
+                },
+            }
+        ],
+        series : [
+            {
+                name:'百分比',
+                type:'bar',
+                data:markData.data,
+                barWidth : 30,//柱图宽度
+                itemStyle: {
+                    normal: {
+                        color: function(params) {
+                            var colorList = [
+                                '#FFC766','#84B4DC','#67D4D9','#ED6B77','#84B4DC',
+                                '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
+                                '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+                            ];
+                            return colorList[params.dataIndex]
+                        },label: {
+                            show: true,
+                            position: 'top',
+                            formatter: '{b}\n{c}%'
+                        },
+                        //柱形图圆角，初始化效果
+                        barBorderRadius:[0, 0, 0, 0]
+                    }
+                }
+            }
+        ]
+    };
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>
+</html>

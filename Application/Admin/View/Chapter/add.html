@@ -1,0 +1,137 @@
+<include file="Public/head"/>
+<body class="no-skin">
+<include file="Public/header"/>
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+
+    <include file="Public/sidebar"/>
+    <div class="main-content">
+        <div class="main-content-inner">
+            <!-- #section:basics/content.breadcrumbs -->
+            <include file="Public/breadcrumbs"/>
+
+            <!-- /section:basics/content.breadcrumbs -->
+            <div class="page-content">
+                <include file="Public/set"/>
+
+                <!-- /section:settings.box -->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <!-- PAGE CONTENT BEGINS -->
+                        <form class="form-horizontal" action="{:U('update')}" method="post" >
+           <a href="#" id="AddMoreFileBox" class="btn btn-info">添加更多的章节</a></span></p>  
+        <div id="InputsWrapper">  
+            <div>
+                
+                          <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-0">
+                                    课程 </label>
+                                <div class="col-sm-9">
+                                    <select id="courses" name="courses" class="col-xs-10 col-sm-5">
+                                        <option value="">--课程--</option>
+                                        <volist name="course" id="vo">
+                                           <option value="{$vo.id}">{$vo.name}</option>
+                                         </volist>  
+                                    </select>
+
+                                    <span class="help-inline col-xs-12 col-sm-7">
+						<span class="middle">选择所属课程</span>
+				   </span>
+                                </div>
+                            </div>
+                        <div class="space-4"></div>
+                                <div class="form-group">
+                                    <label class="col-sm-1 control-label no-padding-right" for="form-field-8">
+                                        章: </label>
+                                    <div class="col-sm-9">
+                                        <input type="text" name="chapter[]" id="field_1" placeholder="章名称"
+                                               class="col-xs-10 col-sm-5" value="{$member['email']}">
+                                        <span class="help-inline col-xs-12 col-sm-7">
+                                            <span class="middle">章</span>
+                                        </span>
+                                    </div>
+                                </div>
+</div>  
+</div> 
+
+                            <div class="space-4"></div>
+
+                            <div class="col-md-offset-2 col-md-9">
+                                <button class="btn btn-info" type="submit">
+                                    <i class="icon-ok bigger-110"></i>
+                                    提交
+                                </button>
+
+                                &nbsp; &nbsp; &nbsp;
+                                <button class="btn" type="reset">
+                                    <i class="icon-undo bigger-110"></i>
+                                    重置
+                                </button>
+                            </div>
+                        </form>
+                        <!-- PAGE CONTENT ENDS -->
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.page-content -->
+        </div>
+    </div><!-- /.main-content -->
+    <include file="Public/footer"/>
+
+</div><!-- /.main-container -->
+
+<include file="Public/footerjs"/>
+<!-- inline scripts related to this page -->
+<script src="__PUBLIC__/admin/js/date-time/bootstrap-datepicker.js"></script>
+<script src="__PUBLIC__/admin/js/uploadPreview.js"></script>
+<script src="__PUBLIC__/admin/js/function.js"></script>
+<script type="text/javascript">
+                                 jQuery(function ($) {
+                                     $('#birthday').datepicker({
+                                         format: 'yyyy-mm-dd',
+                                         weekStart: 1,
+                                         autoclose: true,
+                                         todayBtn: 'linked',
+                                         language: 'cn'
+                                     });
+                                 });
+//追加
+            $(document).ready(function() {  
+
+                var MaxInputs       = 12; //maximum input boxes allowed  
+                var InputsWrapper   = $("#InputsWrapper"); //Input boxes wrapper ID  
+                var AddButton       = $("#AddMoreFileBox"); //Add button ID  
+
+                var x = InputsWrapper.length; //initlal text box count  
+                var FieldCount=1; //to keep track of text box added  
+
+            $(AddButton).click(function (e)  //on add input button click  
+            {  
+                    if(x <= MaxInputs) //max input box allowed  
+                    {  
+                        FieldCount++; //text box added increment  
+                        //add input box  
+                        $(InputsWrapper).append('<div><div class="form-group"><label class="col-sm-1 control-label no-padding-right" for="form-field-8">章节: </label> <div class="col-sm-9"><input type="text" name="chapter[]" class="col-xs-10 col-sm-5" id="field_'+ FieldCount +'" placeholder="章节名称 '+ FieldCount +'"/><a href="#" class="removeclass">×</a></div></div></div>');  
+                        x++; //text box increment  
+                    }  
+            return false;  
+            });  
+  
+        $("body").on("click",".removeclass", function(e){ //user click on remove text  
+                if( x > 1 ) {  
+                        $(this).parent('div').prev("label").remove();
+                        $(this).parent('div').remove(); //remove text box  
+                        x--; //decrement textbox  
+                }  
+        return false;  
+        })   
+
+        });  
+
+</script>
+</body>
+</html>

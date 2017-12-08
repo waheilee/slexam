@@ -1,0 +1,18 @@
+<ul class="left nav">
+    <if condition="$firstid neq ''">
+        <a href="{:U('Video/index',array('id'=>$firstid))}"><li class="<?php if(strtolower($Think.ACTION_NAME) == 'index'){echo 'active' ;} ?>">热点视频</li></a>
+    <else/>
+       <a href="{:U('Video/index')}"><li class="<?php if(strtolower($Think.ACTION_NAME) == 'index'){echo 'active' ;} ?>">热点视频</li></a>
+    </if>
+    <if condition="$firstid neq ''">
+         <a href="{:U('Video/boutique',array('id'=>$firstid))}"><li class="<?php if(strtolower($Think.ACTION_NAME) == 'boutique'){echo 'active' ;} ?>">精品推荐视频</li></a>
+     <else/>
+         <a href="{:U('Video/boutique')}"><li class="<?php if(strtolower($Think.ACTION_NAME) == 'boutique'){echo 'active' ;} ?>">精品推荐视频</li></a>
+     </if>
+     <if condition="$firstid neq ''">
+          <a href="{:U('Video/videoclass',array('id'=>$firstid))}"><li class="<?php if(strtolower($Think.ACTION_NAME) == 'videoclass'){echo 'active' ;} ?>">视频课堂</li></a>
+      <else/>
+        <a href="{:U('Video/videoclass')}"><li class="<?php if(strtolower($Think.ACTION_NAME) == 'videoclass'){echo 'active' ;} ?>">视频课堂</li></a>
+      </if>
+        <a href="{:U('Video/madevideo')}"><li class="<?php if(strtolower($Think.ACTION_NAME) == 'madevideo'){echo 'active' ;} ?>">订制视频</li></a>
+</ul>

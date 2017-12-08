@@ -1,0 +1,115 @@
+@charset "UTF-8";
+#chosesubject{
+    width: 100%;
+}
+#chosesubject .cs-title{
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    background: #F1F1F1;
+    color: #999;
+    font-size: 0.38rem;
+}
+#chosesubject .cs-content{
+    width: 100%;
+    background: #fff;
+}
+#chosesubject .cs-content li{
+    width: 95%;
+    padding: 0 2.5%;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 0.46rem;
+    color: #050505;
+    border-bottom: 1px solid #ecedee;
+}
+#chosesubject .cs-content .cs-addall img{
+    width: 0.6rem;
+    margin-right: 0.4rem;
+    margin-top: -0.15rem;
+}
+#chosesubject .cs-content .cs-name{
+    width: 5.8rem;
+}
+#chosesubject .cs-content .cs-chosed{
+    color: #9c9c9c;
+    font-size: 0;
+    height: 1.5rem;
+}
+#chosesubject .cs-content .cs-chosed .cs-text{
+    color: #9c9c9c;
+    font-size: 0.36rem;
+}
+#chosesubject .cs-content .cs-chosed img{
+    width: 0.2rem;
+    margin-top: -0.28rem;
+    margin-left: 0.3rem;
+}
+#chosesubject .cs-content .cs-chosed .cs-num{
+    color: #3482c4;
+    margin: 0 0.2rem;
+}
+#chosesubject .cs-content .cs-chosed .cs-ed{
+    display: none;
+}
+#chosesubject .cs-content .cs-chosed .cs-arrow{
+}
+#chosed li .right img{
+    width: 0.6rem;
+}
+#chosesubject .cs-content li.active .right img{
+    display: inline-block;
+}
+#paperdifficulty{
+    width: 100%;
+    height: 1.3rem;
+    line-height: 1.3rem;
+    background: #F1F1F1;
+    color: #3482c4;
+    font-size: 0.44rem;
+    position: relative;
+}
+#paperdifficulty .pd-chosed{
+    font-size: 0.28rem;
+}
+#paperdifficulty img{
+    width: 0.2rem;
+    margin-top: -0.08rem;
+    margin-left: 0.3rem;
+}
+#paperdifficulty .pd-select{
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    top: 1.3rem;
+    left: 0;
+    display: none;
+}
+#paperdifficulty .pd-select .pd-option{
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    color: #999;
+    font-size: 0.5rem;
+    border-bottom: 1px solid #ecedee;
+}
+#chosesubject .submitpaper{
+    width: 100%;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    background: #3582C4;
+    text-align: center;
+    color: #fff;
+    font-size: 0.5rem;
+    margin-top: 0.4rem;
+}
+#chosesubject .notmore{
+    width: 100%;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    text-align: center;
+    background: #fff;
+    color: #9c9c9c;
+    font-size: 0.28rem;
+}

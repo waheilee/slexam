@@ -1,0 +1,29 @@
+<script>
+    function getRes(t,type,order,data)
+    {   
+        $.ajax({
+            url:'{:U("getRes")}',
+            type:'post',
+            data:{'type':type,'order':order,'data':data,'page':page},
+            beforeSend: function () {
+                $(t).attr('disabled',true);
+            },
+            success:function(msg){
+                console.log(msg)
+                if(page == 1){
+                    $('#oldexam').html('');
+                    $('#oldexam').html(msg);
+                }else{
+                    $('#oldexam').append(msg);
+                }
+                if((page * 5) >= count){
+                    $('#getMore').hide();
+                }   
+                page ++ ;
+                if(type != 'all'){
+                    startNum();
+                }
+            }
+        })
+    }
+</script>

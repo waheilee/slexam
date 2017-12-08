@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>精彩推荐视频</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta name=”keyword” content=”桑磊法考,司法考试,考试,司法,律师“>
+    <!-- 公用的css -->
+    <link rel="stylesheet" href="__PUBLIC__/home/css/public.css"/>
+    <!-- 本页面的css -->
+    <link rel="stylesheet" href="__PUBLIC__/home/css/video-js.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/home/css/share.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/home/css/videoplay.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/home/css/jquery.mCustomScrollbar.min.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/home/css/jquery.emoji.css"/>
+    <style>
+        .socialShare{
+            width: 52px;
+            height: 19px;
+        }
+        .msb_main{
+            display: block;
+            width: 52px;
+            height: 19px;
+            background: url("__PUBLIC__/home/images/videoplay/share.png") no-repeat;
+        }
+        .socialShare .msb_network_button{
+            z-index: 999999;
+        }
+        .video-js{
+            width: 100%;
+        }
+        .video-js .vjs-big-play-button{
+            display: none;
+        }
+        #vjs-big-play-button-self{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: url("__PUBLIC__/home/images/videoplay/play.png") no-repeat;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -50px;
+            margin-left: -50px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<!--主导航-->
+<!--白色的-->
+<include file="Public/nav_2" />
+<!--分导航-->
+<div id="subnav">
+    <div class="wrap">
+        <include file="Public/video_nav" />
+        <div class="right search">
+             <form action="{:U('index')}" method="post" id="want">
+                <input type="text" placeholder="想要看..." name="wantsee" value='{$wantsee}'/>
+                <button type="submit">搜索</button>
+            </form>
+        </div>
+        <div class="right keyword">
+            <span>热搜：</span>
+            <volist name='searchwords' id='va'> 
+                <a href="#" style="text-decoration:none">{$va['wantsee']}</a>
+            </volist>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!--内容区-->
+<!--播放视频-->
+<div id="playvideo">
+    <div class="wrap">
+        <!--视频-->
+        <div class="left video-box" style="position: relative;">
+            <div id="videoplayself" style="position: absolute;top: 0;bottom: 0;left: 0;right: 0;background: rgba(0,0,0,.5);
+            z-index: 999;">
+                <!--播放-->
+                <div id="vjs-big-play-button-self" style="z-index: 1000"></div>
+                <!--分享-->
+                <div id="socialShare" style="position: absolute;top: 62%;left: 42.5%;cursor: pointer;z-index: 1111;"></div>
+                <!--收藏-->
+                <img src="__PUBLIC__/home/images/videoplay/haveself.png" alt="" style="position: absolute;
+                top: 62%;left: 52.5%;cursor: pointer;z-index: 999;"/>
+                <!--二维码-->
+                <div style="width: 130px;padding: 15px;background: rgba(124,127,128,.4);
+                position: absolute;bottom: 10%;right: 5%;">
+                    <div style="width: 120px;height: 120px;padding: 10px;background: rgba(124,127,128,.6)">
+                        <img src="__PUBLIC__/home/images/videoplay/ewm.png" width="100%" alt=""/>
+                    </div>
+                    <p style="font-size: 12px;color: #fff;text-align: center;line-height: 22px;margin-top: 5px;">扫描二维码</p>
+                    <p style="font-size: 12px;color: #fff;text-align: center;line-height: 22px;">手机观看视频</p>
+                </div>
+            </div>
+        <!--视频-->
+            <video id="my-video" class="video-js" controls="controls" preload="auto" width="100%" height="550" poster="" data-setup="{}">
+                <source src="__ROOT__{$hotvideoid['url']}" type="video/mp4">
+            </video>
+
+        </div>
+        <div class="right playlist">
+            <div class="playlist-title" style="font-size: 12px">
+
+                正在播放:{$hotvideoid['title']|msubstr=0,10,'utf-8',false}..
+
+            </div>
+            <div class="playlist-box">
+                <ul>
+                <volist name="hotvideo" id="val">
+                    <a href="{:U('video/index',array('id'=>$val['id']))}">
+                      <if condition="$val['id'] eq I('id')">
+                        <li class="active">
+                           <else/>
+                         <li>
+                      </if>
+                            <div class="bor"><div class="borchildren"></div></div>
+                            <p class="playlist-box-name"><span style="text-decoration:none;color:white">{$val['title']}</span></p>
+                            <p>{$val['name']}</p>
+                        </li>
+                    </a>
+                </volist>
+                </ul>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="leaveword-content">
+    <div class="wrap">
+        <!--在线留言-->
+        <div class="left">
+            <div id="leaveword">
+                <div class="leaveword-title">
+                    <span>在线留言</span>
+                    <!--登录-->
+                    <a href="#">
+                        <img src="__PUBLIC__/home/images/videoplay/login.png" alt=""/>登录/注册
+                    </a>
+                </div>
+                <!--留言板-->
+                <div class="messageboard">
+                    <textarea name="" id="browcontent"  style="resize:none;" cols="30" rows="10" placeholder="说说您的疑虑或者问题在此交流..."></textarea>
+                    <div id="editor"></div>
+                    <button class="browcontent-button" onclick="addmessage({$id})" type="submit">发表评论</button>
+                </div>
+                <!--评论展示-->
+                <div class="lookleaveword-title">
+                    <div class="left">
+                        <a href="javascript:void(0)" class="active">全部评论</a>
+                        <a href="javascript:void(0)">我的评论</a>
+                    </div>
+                    <div class="right">
+                        <a href="javascript:void(0)">共 <span id='count'>{$count}</span>条评论</a>
+                        <a href="javascript:void(0)" data="{$Think.get.p | default=1}" onClick="goLimit(this,'prev')" class='limit'>上一页</a>
+                        <a href="javascript:void(0)" data="{$Think.get.p | default=1}" onClick="goLimit(this,'next')" class='limit'>下一页</a>
+                    </div>
+                </div>
+                <ul class="lookleaveword-list">
+                    <volist name='comment' id='vo'>
+                        <li>
+                            <div class="left img">
+                                <img src="{$vo['head']}" alt=""/>
+                            </div>
+                            <div class="left text">
+                                <p>
+                                    <span class="name">{$vo['username']}</span>
+                                    <span class="time">{:date('Y-m-d H:i:s',$vo['time'])}</span>
+                                </p>
+                                <p>{$vo['comment'] | htmlspecialchars_decode}</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </li>
+                    </volist>
+                </ul>
+            </div>
+        </div>
+        <!--最新上传-->
+        <div class="right">
+            <div id="newupload">
+                <div class="newupload-title">
+                    最新上传
+                </div>
+                <ul>
+                    <volist name="new" id="vo">
+                        <a href="{:U('index',array('id'=>$vo['id']))}">
+                            <li>
+                                <div class="newupload-img">
+                                    <img src="___ROOT__{$vo['thumb']}" alt=""/>
+                                    <p class="newupload-img-title">{$vo['title']}</p>
+                                </div>
+                                <div class="newupload-img-news">
+                                    <div class="left">{:date("Y-m-d",$vo['addtime'])}</div>
+                                    <div class="right">{$vo['views']}次播放</div>
+                                </div>
+                            </li>
+                        </a>
+                    </volist>
+                </ul>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!--底部-->
+<include file="Public/foot" />
+</body>
+<script src="__PUBLIC__/home/js/jquery-1.11.3.js"></script>
+<script src="__PUBLIC__/home/js/jquery.mousewheel-3.0.6.min.js"></script>
+<script src="__PUBLIC__/home/js/jquery.mCustomScrollbar.min.js"></script>
+<script src="__PUBLIC__/home/js/jquery.emoji.js"></script>
+<script src="__PUBLIC__/home/js/video.min.js"></script>
+<script src="__PUBLIC__/home/js/videojs-ie8.min.js"></script>
+<script src="__PUBLIC__/home/js/share.js"></script>
+<!--视频-->
+<script>
+    $(function(){
+        var myPlayer = videojs('my-video');
+            videojs("my-video").ready(function(){
+                var myPlayer = this;
+                myPlayer.play();
+                myPlayer.pause();
+            });
+        $("#vjs-big-play-button-self").bind("click",function(){
+            myPlayer.play();
+            closeMyVideoSelf();
+        });
+        $(".vjs-play-control").on("click",function(){
+            if($(this).hasClass("vjs-playing")){
+                openMyVideoSelf();
+            }else if($(this).hasClass("vjs-paused")){
+                closeMyVideoSelf();
+            }
+        });
+//        打开摸态层
+        function openMyVideoSelf(){
+            $("#videoplayself").show();
+        }
+//        关闭摸态层
+        function closeMyVideoSelf(){
+            $("#videoplayself").hide();
+        }
+    })
+</script>
+<!--分享-->
+<script>
+    $(function(){
+        $("#socialShare").socialShare({
+            content: '',
+            url:'',
+            titile:''
+        });
+    })
+</script>
+<!--表情-->
+<script>
+    $("#editor").emoji('show');
+    $("#browcontent").emoji({
+        icons: [{
+            name: "QQ表情",
+            path: "__PUBLIC__/Home/images/img/qq/",
+            maxNum: 91,
+            excludeNums: [41, 45, 54],
+            file: ".gif",
+            placeholder: "#qq_{alias}#"
+        }]
+    });
+//    转化表情
+    function parse(){
+        $("body").find(".text").emojiParse({
+            icons: [{
+                path: "__PUBLIC__/Home/images/img/qq/",
+                file: ".gif",
+                placeholder: "#qq_{alias}#"
+            }]
+        });
+    }
+    parse();
+</script>
+<!--提交评论-->
+<script>
+    function goLimit(t,type){  
+        var count = {$count};
+        var p = parseInt($(t).attr('data'));
+
+        var id = {$id};
+        if(type == 'prev'){
+            var page = p-1;
+            if(page<1){
+                return false;
+            }
+        }else{
+            var page = p+1;
+            if(page>Math.ceil(count/5)){
+                return false;
+            }
+        }
+
+        $.ajax({
+            url:'{:U("getComment")}',
+            type:'post',
+            data:{'id':id,'p':page},
+            beforeSend: function () {
+                $(t).attr('disabled',true);    
+            },
+            success:function(msg){
+                $('.limit').attr('data',page);
+                 $("#leaveword .lookleaveword-list").html(msg);
+                 parse();
+            }
+        })
+    }
+
+    function addmessage(id){
+        // var use = {$Think.cookie.userid};
+        var use = 1;
+        if(!Boolean(use)){
+            alert('请登录!');
+            return false;
+        }else{
+    //        获取时间
+            var times =  new Date().toLocaleString( );//获取日期与时间
+    //        获取评论内容
+            var text = $("#browcontent").val();
+
+            var count = parseInt($('#count').text());
+
+            $.ajax({
+                url:'{:U("addComment")}',
+                type:'post',
+                data:{'id':id,'text':text},
+                beforeSend: function () {
+                    $('.browcontent-button').attr('disabled',true);    
+                },
+                success:function(msg){
+                    if(msg != 'false'){
+                        $('#count').text(count+1);
+                        var str = '<li>' +
+                                    '<div class="left img"><img src="__ROOT__' +
+                                        msg['head'] +
+                                    '" alt="" /></div>' +
+                                    '<div class="left text">' +
+                                        '<p>' +
+                                        '<span class="name">'+msg['username']+'</span>' +
+                                        '<span class="time">'+times+'</span>' +
+                                        '</p>' +
+                                        '<p>'+text+'</p>' +
+                                    '</div>' +
+                                    '<div class="clearfix"></div>' +
+                                '</li>';
+                        $("#leaveword .lookleaveword-list").prepend(str);
+                        $('.browcontent-button').attr('disabled',false);
+                        parse();
+                    }
+                }
+
+            })
+        } 
+    }
+</script>
+<!--菜单点击-->
+<script>
+//    菜单点击
+    $(function(){
+        $("#video-content .listnav li").bind("click",function(){
+            $(this).addClass("active").siblings("li").removeClass("active");
+            if($(this).index()==0){
+                $("#explain").fadeIn(500);
+                $("#madeclassroom").hide();
+                $("#partin").hide();
+                $("#askfor").hide();
+            }else if($(this).index()==1){
+                $("#explain").hide();
+                $("#madeclassroom").fadeIn(500);
+                $("#partin").hide();
+                $("#askfor").hide();
+            }else if($(this).index()==2){
+                $("#explain").hide();
+                $("#madeclassroom").hide();
+                $("#partin").fadeIn(500);
+                $("#askfor").hide();
+            }else if($(this).index()==3){
+                $("#explain").hide();
+                $("#madeclassroom").hide();
+                $("#partin").hide();
+                $("#askfor").fadeIn(500);
+            }
+        });
+    });
+</script>
+</html>

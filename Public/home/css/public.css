@@ -1,0 +1,121 @@
+@charset "utf-8";
+html{margin:0;padding:0;font-size:14px;font-family:"微软雅黑";min-width: 1180px;}
+body{margin: 0;}
+a{text-decoration: none;}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,p,button,img,button,select,iframe{text-decoration: none;list-style: none;text-decoration: none;padding:0;margin:0;border:0;}
+img,input,button,select,textarea,fieldset,iframe{vertical-align:middle;*vertical-align:middle;}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+input[type="number"]{
+    -moz-appearance:textfield;
+}
+.clearfix{
+    clear: both;
+}
+.wrap{
+    width: 1180px;
+    margin: 0 auto;
+}
+.transition{
+    transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+/*头部导航*/
+#mainnav{
+    width: 100%;
+    height: 83px;
+    background: #3482C4;
+}
+#mainnav.mainnavwhite{
+    background: #fff;
+}
+#mainnav ul{
+    margin-left: 30px;
+    width: 480px;
+}
+#mainnav ul li{
+    float: left;
+    line-height: 83px;
+    margin: 0 20px;
+    color: #fff;
+    font-size: 14px;
+}
+#mainnav.mainnavwhite ul li{
+    color: #525252;
+}
+#mainnav .user{
+    height: 83px;
+    line-height: 83px;
+    color: #fff;
+}
+#mainnav.mainnavwhite .user{
+    color: #525252;
+}
+#mainnav .user img{
+    width: 16px;
+    margin: 0 5px;
+    margin-top: -5px;
+}
+#footer{
+    width: 100%;
+    height: 110px;
+    padding-top: 40px;
+    background: #F5F5F5;
+    margin-top: 40px;
+}
+#footer p{
+    font-size: 14px;
+    color: #989797;
+    text-align: center;
+    line-height: 28px;
+}
+#footer p a,#footer p span{
+    color: #989797;
+    margin: 0 10px;
+}
+
+/*分页样式*/
+.pages a,.pages span {
+     display: inline-block;
+     height:30px;
+     line-height:30px;
+     padding: 0px 13px;
+     background:#ffffff;
+     margin: 0 2px;
+     border: 1px solid #eeeeee;
+     -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+     border-radius: 5px;
+ }
+
+.pages a,.pages li {
+    display: inline-block;
+    list-style: none;
+    text-decoration: none;
+    color: #585858;
+    font-weight: bold;
+    font-family: '微软雅黑';
+}
+
+.pages a.first,.pages a.prev,.pages a.next,.pages a.end {
+    margin: 0;
+}
+.pages a:hover {
+    background: #3483c5;
+    color:#fff;
+}
+.pages li.disabled a{
+    background: #3483c5;
+    color: #FFF;
+}

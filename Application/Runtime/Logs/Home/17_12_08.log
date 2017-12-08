@@ -1,0 +1,1210 @@
+[ 2017-12-08T09:45:25+08:00 ] 127.0.0.1 /www/slcms/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000613s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000861s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000906s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0271s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0089s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0210s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0047s ]
+SQL: SHOW COLUMNS FROM `qw_video` [ RunTime:0.0168s ]
+SQL: SELECT `id`,`title` FROM `qw_video` WHERE ( groom=1 ) ORDER BY addtime desc LIMIT 4   [ RunTime:0.0040s ]
+SQL: SELECT `id`,`title` FROM `qw_video` WHERE ( groom=2 ) ORDER BY addtime desc LIMIT 4   [ RunTime:0.0043s ]
+SQL: SHOW COLUMNS FROM `qw_tree` [ RunTime:0.0176s ]
+SQL: SELECT `id`,`name` FROM `qw_tree` WHERE ( pid=0 )  [ RunTime:0.0059s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0035s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0121s ]
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 1 AND `zid` <> ''  [ RunTime:0.0112s ]
+NOTIC: [8] Undefined variable: count D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%1%' LIMIT 1   [ RunTime:0.0064s ]
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 2 AND `zid` <> ''  [ RunTime:0.0072s ]
+NOTIC: [8] Undefined variable: count D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%2%' LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 3 AND `zid` <> ''  [ RunTime:0.0048s ]
+NOTIC: [8] Undefined variable: count D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%3%' LIMIT 1   [ RunTime:0.0076s ]
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 4 AND `zid` <> ''  [ RunTime:0.0073s ]
+NOTIC: [8] Undefined variable: count D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%4%' LIMIT 1   [ RunTime:0.0041s ]
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 5 AND `zid` <> ''  [ RunTime:0.0077s ]
+NOTIC: [8] Undefined variable: count D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%5%' LIMIT 1   [ RunTime:0.0054s ]
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 6 AND `zid` <> ''  [ RunTime:0.0052s ]
+NOTIC: [8] Undefined variable: count D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%6%' LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 7 AND `zid` <> ''  [ RunTime:0.0046s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%7%' LIMIT 1   [ RunTime:0.0041s ]
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\IndexController.class.php 第 29 行.
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 8 AND `zid` <> ''  [ RunTime:0.0045s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%8%' LIMIT 1   [ RunTime:0.0057s ]
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\IndexController.class.php 第 29 行.
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 9 AND `zid` <> ''  [ RunTime:0.0045s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%9%' LIMIT 1   [ RunTime:0.0038s ]
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\IndexController.class.php 第 29 行.
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 10 AND `zid` <> ''  [ RunTime:0.0078s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%10%' LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\IndexController.class.php 第 29 行.
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 11 AND `zid` <> ''  [ RunTime:0.0053s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%11%' LIMIT 1   [ RunTime:0.0038s ]
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\IndexController.class.php 第 29 行.
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 12 AND `zid` <> ''  [ RunTime:0.0043s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%12%' LIMIT 1   [ RunTime:0.0041s ]
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\IndexController.class.php 第 29 行.
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 13 AND `zid` <> ''  [ RunTime:0.0045s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%13%' LIMIT 1   [ RunTime:0.0038s ]
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\IndexController.class.php 第 29 行.
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 14 AND `zid` <> ''  [ RunTime:0.0043s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%14%' LIMIT 1   [ RunTime:0.0039s ]
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\IndexController.class.php 第 29 行.
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 15 AND `zid` <> ''  [ RunTime:0.0041s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%15%' LIMIT 1   [ RunTime:0.0039s ]
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\IndexController.class.php 第 29 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000200s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000297s ]
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 28 行.
+NOTIC: [8] Undefined offset: 16 D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 194 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054144s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054231s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001073s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001144s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001713s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001792s ]
+
+[ 2017-12-08T09:49:28+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001368s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002604s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002727s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0171s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0041s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0167s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0047s ]
+SQL: SHOW COLUMNS FROM `qw_users` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `qw_users` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0055s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `qw_areas` WHERE `parent_id` = 1  [ RunTime:0.0082s ]
+SQL: SHOW COLUMNS FROM `qw_message` [ RunTime:0.0199s ]
+SQL: SELECT b.username,b.head,a.* FROM qw_message a,qw_users b WHERE ( a.senderid=b.id and a.receiverid=1 ) ORDER BY a.sendtime desc  [ RunTime:0.0054s ]
+SQL: SHOW COLUMNS FROM `qw_tree` [ RunTime:0.0162s ]
+SQL: SELECT * FROM `qw_tree` WHERE `pid` = 0 AND `type` = 1  [ RunTime:0.0050s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000487s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000727s ]
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\7d4dfcc8d0e199bdf8f9736ff2dfcd6b.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039290s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039433s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001927s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002035s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002176s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002279s ]
+
+[ 2017-12-08T09:49:28+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/1.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000526s ]
+
+[ 2017-12-08T09:49:28+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/3.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000765s ]
+
+[ 2017-12-08T09:49:28+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/2.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000484s ]
+
+[ 2017-12-08T09:49:28+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/4.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000522s ]
+
+[ 2017-12-08T09:49:28+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/5.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000509s ]
+
+[ 2017-12-08T09:49:28+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/6.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000482s ]
+
+[ 2017-12-08T09:49:28+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/7.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000452s ]
+
+[ 2017-12-08T09:49:28+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/8.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000667s ]
+
+[ 2017-12-08T09:49:28+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/9.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000488s ]
+
+[ 2017-12-08T09:49:28+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/10.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000510s ]
+
+[ 2017-12-08T09:49:28+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/11.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000545s ]
+
+[ 2017-12-08T09:49:28+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/12.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002839s ]
+
+[ 2017-12-08T09:49:28+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/13.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000386s ]
+
+[ 2017-12-08T09:49:28+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/14.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000350s ]
+
+[ 2017-12-08T09:49:28+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/15.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000437s ]
+
+[ 2017-12-08T09:49:28+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/16.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000327s ]
+
+[ 2017-12-08T09:49:28+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/17.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000332s ]
+
+[ 2017-12-08T09:49:28+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/18.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000605s ]
+
+[ 2017-12-08T09:49:28+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/19.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000332s ]
+
+[ 2017-12-08T09:49:28+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/20.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000339s ]
+
+[ 2017-12-08T09:49:28+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/21.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000335s ]
+
+[ 2017-12-08T09:49:28+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/22.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000343s ]
+
+[ 2017-12-08T09:49:28+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/23.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000327s ]
+
+[ 2017-12-08T09:49:28+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/24.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+
+[ 2017-12-08T09:49:28+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/25.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000470s ]
+
+[ 2017-12-08T09:49:28+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/26.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000467s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/31.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000449s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/32.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000440s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/27.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000581s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/30.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000566s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/29.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000584s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/28.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000557s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/34.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000471s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/33.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000479s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/35.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000477s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/37.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000511s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/36.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000601s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/38.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000603s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/44.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000546s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/43.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000505s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/47.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000466s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/40.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000391s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/42.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000464s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/46.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000486s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/48.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000431s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/50.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000621s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/51.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000487s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/53.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000451s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/56.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000449s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/57.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000464s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/55.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000474s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/49.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001148s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/52.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000543s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/60.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000441s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/62.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007229s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/61.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007743s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/63.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000653s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/64.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000561s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/58.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000486s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/59.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000473s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/69.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000559s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/67.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001520s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/68.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000489s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/71.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000514s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/72.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000427s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/65.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000468s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/66.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002080s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/70.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000522s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/73.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000495s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/78.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000459s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/74.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.018795s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/75.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001403s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/79.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000572s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/82.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000446s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/76.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000431s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/81.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000476s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/80.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000476s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/85.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000464s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/77.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000492s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/83.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000449s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/84.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000627s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/86.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000580s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/88.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000559s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/91.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000457s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/89.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000459s ]
+
+[ 2017-12-08T09:49:29+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/images/img/qq/87.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000532s ]
+
+[ 2017-12-08T09:49:31+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/usercenter/indexx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001761s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003492s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0338s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0258s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0052s ]
+SQL: SHOW COLUMNS FROM `qw_users` [ RunTime:0.0307s ]
+SQL: SELECT * FROM `qw_users` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0074s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0187s ]
+SQL: SELECT * FROM `qw_areas` WHERE `parent_id` = 1  [ RunTime:0.0048s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000653s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000803s ]
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\5ef89f7e12a54492b4bd531454a8862a.php 第 40 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\5ef89f7e12a54492b4bd531454a8862a.php 第 41 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\5ef89f7e12a54492b4bd531454a8862a.php 第 43 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\5ef89f7e12a54492b4bd531454a8862a.php 第 44 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\5ef89f7e12a54492b4bd531454a8862a.php 第 45 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\5ef89f7e12a54492b4bd531454a8862a.php 第 46 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\5ef89f7e12a54492b4bd531454a8862a.php 第 49 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\5ef89f7e12a54492b4bd531454a8862a.php 第 53 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046847s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046946s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002009s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002602s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002726s ]
+
+[ 2017-12-08T09:49:31+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Usercenter/getRegion.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000452s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000624s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000680s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0390s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0177s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0043s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `qw_areas` WHERE `parent_id` = 54  [ RunTime:0.0088s ]
+
+[ 2017-12-08T09:49:31+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Usercenter/getRegion.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000468s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001133s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001180s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0105s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0135s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0067s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0208s ]
+SQL: SELECT * FROM `qw_areas` WHERE `parent_id` = 4  [ RunTime:0.0035s ]
+
+[ 2017-12-08T09:49:34+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Recharge/recharge.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001165s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001941s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002076s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0209s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0319s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0071s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000335s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000493s ]
+NOTIC: [8] Undefined variable: user D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 24 行.
+NOTIC: [8] Undefined variable: user D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 28 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 37 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 38 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 40 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 41 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 42 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 43 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 46 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 50 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056019s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056124s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001509s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001591s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002526s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002615s ]
+
+[ 2017-12-08T09:49:35+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Recharge/recharge.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001064s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001914s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002098s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0186s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0361s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0068s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000266s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000375s ]
+NOTIC: [8] Undefined variable: user D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 24 行.
+NOTIC: [8] Undefined variable: user D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 28 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 37 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 38 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 40 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 41 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 42 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 43 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 46 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 50 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026721s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000959s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001038s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001520s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001619s ]
+
+[ 2017-12-08T09:49:37+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/classroom/customizationa/typeid/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001468s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0197s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.1323s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0075s ]
+SQL: SHOW COLUMNS FROM `qw_handlist` [ RunTime:0.0579s ]
+SQL: SHOW COLUMNS FROM `qw_handlist` [ RunTime:0.0639s ]
+SQL: SELECT * FROM qw_handlist a,qw_orderlist b,qw_tree c WHERE ( a.orderid = b.id and b.zid=c.id and b.jid="" and b.handnum=5 and a.peopleid=1 and b.status=2 ) ORDER BY a.id desc  [ RunTime:0.0099s ]
+SQL: SHOW COLUMNS FROM `qw_handlist` [ RunTime:0.0141s ]
+SQL: SELECT * FROM qw_handlist a,qw_orderlist b,qw_tree c WHERE ( a.orderid = b.id and b.jid=c.id and b.jid!="" and b.did="" and b.handnum=5 and a.peopleid=1 and b.status=2 ) ORDER BY a.id desc  [ RunTime:0.0052s ]
+SQL: SHOW COLUMNS FROM `qw_handlist` [ RunTime:0.0090s ]
+SQL: SELECT * FROM qw_handlist a,qw_orderlist b,qw_tree c WHERE ( a.orderid = b.id and b.did !="" and b.handnum=5 and a.peopleid=1 and b.status=2 ) ORDER BY a.id desc  [ RunTime:0.0067s ]
+SQL: SHOW COLUMNS FROM `qw_orderlist` [ RunTime:0.0088s ]
+SQL: SHOW COLUMNS FROM `qw_orderlist` [ RunTime:0.0265s ]
+SQL: SELECT a.*,b.name FROM qw_orderlist a,qw_tree b WHERE ( a.zid=b.id and a.jid=0 and a.people=1 and a.status =2 and a.handnum=5 and a.pay=2 )  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `qw_orderlist` [ RunTime:0.0258s ]
+SQL: SELECT a.*,b.name FROM qw_orderlist a,qw_tree b WHERE ( a.jid=b.id and a.jid!=0 and a.did="" and a.people=1 and a.status =2 and a.handnum=5 and a.pay=2 )  [ RunTime:0.0042s ]
+SQL: SELECT * FROM `qw_orderlist` WHERE ( did!="" and people=1 and status =2 and handnum=5 and pay=2 ) ORDER BY id desc  [ RunTime:0.0047s ]
+SQL: SHOW COLUMNS FROM `qw_tree` [ RunTime:0.0272s ]
+SQL: SELECT * FROM `qw_tree` WHERE `type` = 1  [ RunTime:0.0045s ]
+SQL: SELECT * FROM `qw_tree` WHERE `type` = 2  [ RunTime:0.0064s ]
+SQL: SELECT * FROM `qw_tree` WHERE `type` = 3  [ RunTime:0.0115s ]
+NOTIC: [8] Undefined variable: custompri D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ClassroomController.class.php 第 88 行.
+NOTIC: [8] Undefined variable: customcom D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ClassroomController.class.php 第 89 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000146s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000204s ]
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\478aeebe8b7a67647e064fd770dfc1cc.php 第 33 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\478aeebe8b7a67647e064fd770dfc1cc.php 第 34 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\478aeebe8b7a67647e064fd770dfc1cc.php 第 36 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\478aeebe8b7a67647e064fd770dfc1cc.php 第 37 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\478aeebe8b7a67647e064fd770dfc1cc.php 第 38 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\478aeebe8b7a67647e064fd770dfc1cc.php 第 39 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\478aeebe8b7a67647e064fd770dfc1cc.php 第 40 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\478aeebe8b7a67647e064fd770dfc1cc.php 第 46 行.
+NOTIC: [8] Undefined index: name D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\478aeebe8b7a67647e064fd770dfc1cc.php 第 117 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045959s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046013s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000571s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000629s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000815s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000865s ]
+
+[ 2017-12-08T09:49:44+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/classroom/collect.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000394s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001020s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001071s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0194s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0688s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000269s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000382s ]
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\4f6e777c603b4ab40297cbb358af839a.php 第 32 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\4f6e777c603b4ab40297cbb358af839a.php 第 33 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\4f6e777c603b4ab40297cbb358af839a.php 第 35 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\4f6e777c603b4ab40297cbb358af839a.php 第 36 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\4f6e777c603b4ab40297cbb358af839a.php 第 37 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\4f6e777c603b4ab40297cbb358af839a.php 第 38 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\4f6e777c603b4ab40297cbb358af839a.php 第 41 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\4f6e777c603b4ab40297cbb358af839a.php 第 45 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049011s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049122s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001694s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001781s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002017s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002122s ]
+
+[ 2017-12-08T09:49:50+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/classroom/share.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001593s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001392s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001494s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0106s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0119s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0072s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000493s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000611s ]
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\1f0d58f1f3b916e9d7c39e22bb1bf872.php 第 32 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\1f0d58f1f3b916e9d7c39e22bb1bf872.php 第 33 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\1f0d58f1f3b916e9d7c39e22bb1bf872.php 第 35 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\1f0d58f1f3b916e9d7c39e22bb1bf872.php 第 36 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\1f0d58f1f3b916e9d7c39e22bb1bf872.php 第 37 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\1f0d58f1f3b916e9d7c39e22bb1bf872.php 第 38 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\1f0d58f1f3b916e9d7c39e22bb1bf872.php 第 41 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\1f0d58f1f3b916e9d7c39e22bb1bf872.php 第 45 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032708s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032807s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001030s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001109s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002565s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002679s ]
+
+[ 2017-12-08T09:49:52+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Recharge/recharge.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001224s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001574s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0168s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0190s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000296s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000451s ]
+NOTIC: [8] Undefined variable: user D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 24 行.
+NOTIC: [8] Undefined variable: user D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 28 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 37 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 38 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 40 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 41 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 42 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 43 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 46 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 50 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031570s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031696s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001275s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001384s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003003s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003117s ]
+
+[ 2017-12-08T09:49:52+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Recharge/recharge.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001165s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001563s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001688s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0185s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0492s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0045s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+NOTIC: [8] Undefined variable: user D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 24 行.
+NOTIC: [8] Undefined variable: user D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 28 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 37 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 38 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 40 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 41 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 42 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 43 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 46 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\745eb7f47cdf5e798fa7d6283cfe21f8.php 第 50 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010784s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010823s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000397s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000431s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001185s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001243s ]
+
+[ 2017-12-08T09:49:56+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/usercenter/indexx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001058s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001399s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001505s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0207s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0091s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0271s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `qw_users` [ RunTime:0.0153s ]
+SQL: SELECT * FROM `qw_users` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0044s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0351s ]
+SQL: SELECT * FROM `qw_areas` WHERE `parent_id` = 1  [ RunTime:0.0122s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000626s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000725s ]
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\5ef89f7e12a54492b4bd531454a8862a.php 第 40 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\5ef89f7e12a54492b4bd531454a8862a.php 第 41 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\5ef89f7e12a54492b4bd531454a8862a.php 第 43 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\5ef89f7e12a54492b4bd531454a8862a.php 第 44 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\5ef89f7e12a54492b4bd531454a8862a.php 第 45 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\5ef89f7e12a54492b4bd531454a8862a.php 第 46 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\5ef89f7e12a54492b4bd531454a8862a.php 第 49 行.
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\5ef89f7e12a54492b4bd531454a8862a.php 第 53 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035558s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035656s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000929s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002769s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002926s ]
+
+[ 2017-12-08T09:49:56+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Usercenter/getRegion.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000476s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000637s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000689s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0146s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0129s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0102s ]
+SQL: SELECT * FROM `qw_areas` WHERE `parent_id` = 4  [ RunTime:0.0037s ]
+
+[ 2017-12-08T09:49:56+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Usercenter/getRegion.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000565s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000761s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000821s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0172s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0145s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0043s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0104s ]
+SQL: SELECT * FROM `qw_areas` WHERE `parent_id` = 54  [ RunTime:0.0036s ]
+
+[ 2017-12-08T09:50:19+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Usercenter/upload.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001071s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002810s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002942s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0180s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0163s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0065s ]
+SQL: SHOW COLUMNS FROM `qw_users` [ RunTime:0.0094s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\MAMP\htdocs\www\slcms\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+NOTIC: [2] imagejpeg(/Upload/head/2017/12/08/5a29efdb46689.jpg): failed to open stream: No such file or directory D:\MAMP\htdocs\www\slcms\ThinkPHP\Library\Think\Image\Driver\Gd.class.php 第 94 行.
+SQL: UPDATE `qw_users` SET `head`='/Upload/head/2017/12/08/5a29efdb46689.jpg' WHERE `id` = 1 [ RunTime:0.0098s ]
+SQL: SELECT * FROM `qw_users` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0047s ]
+
+[ 2017-12-08T09:50:34+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/getRegion.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001413s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001830s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001960s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0191s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0138s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0043s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0485s ]
+SQL: SELECT * FROM `qw_areas` WHERE `parent_id` = 2  [ RunTime:0.0040s ]
+
+[ 2017-12-08T09:50:35+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/postRegion.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001422s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002883s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002935s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0188s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0201s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0054s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0233s ]
+SQL: SELECT * FROM `qw_areas` WHERE ( area_id=2 ) LIMIT 1   [ RunTime:0.0103s ]
+SQL: SHOW COLUMNS FROM `qw_users` [ RunTime:0.0195s ]
+SQL: SELECT `id`,`username`,`head` FROM `qw_users` WHERE `province` = '2'  [ RunTime:0.0038s ]
+
+[ 2017-12-08T09:50:35+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/null
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001288s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002134s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002193s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0165s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0047s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0187s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0056s ]
+ERR: 非法操作:null
+
+[ 2017-12-08T09:50:37+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/postRegion.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001123s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001381s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001480s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0152s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0163s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0096s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0231s ]
+SQL: SELECT * FROM `qw_areas` WHERE ( area_id=7 ) LIMIT 1   [ RunTime:0.0079s ]
+SQL: SHOW COLUMNS FROM `qw_users` [ RunTime:0.0178s ]
+SQL: SELECT `id`,`username`,`head` FROM `qw_users` WHERE `province` = '7'  [ RunTime:0.0041s ]
+
+[ 2017-12-08T09:50:38+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/getRegion.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002173s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005684s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005820s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0181s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0290s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0048s ]
+SQL: SHOW COLUMNS FROM `qw_areas` [ RunTime:0.0173s ]
+SQL: SELECT * FROM `qw_areas` WHERE `parent_id` = 7  [ RunTime:0.0073s ]
+
+[ 2017-12-08T09:50:39+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/week/s/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002239s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005497s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0172s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0160s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0048s ]
+SQL: SHOW COLUMNS FROM `qw_score` [ RunTime:0.0160s ]
+SQL: SELECT DISTINCT  `people` FROM `qw_score` ORDER BY score  [ RunTime:0.0053s ]
+SQL: SHOW COLUMNS FROM `qw_users` [ RunTime:0.0173s ]
+SQL: SELECT `id`,`username`,`head` FROM `qw_users`  [ RunTime:0.0041s ]
+
+[ 2017-12-08T09:50:40+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/null
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001442s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003537s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003621s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0148s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0234s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0050s ]
+ERR: 非法操作:null
+
+[ 2017-12-08T09:50:41+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/week/s/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002098s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005721s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005844s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0167s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0157s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0047s ]
+SQL: SHOW COLUMNS FROM `qw_score` [ RunTime:0.0184s ]
+SQL: SELECT DISTINCT  `people` FROM `qw_score` ORDER BY score  [ RunTime:0.0076s ]
+SQL: SHOW COLUMNS FROM `qw_users` [ RunTime:0.0357s ]
+SQL: SELECT `id`,`username`,`head` FROM `qw_users`  [ RunTime:0.0039s ]
+
+[ 2017-12-08T09:50:41+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/null
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001020s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000924s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000996s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0426s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0476s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0043s ]
+ERR: 非法操作:null
+
+[ 2017-12-08T09:50:42+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/week/s/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001064s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001411s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0332s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0047s ]
+SQL: SHOW COLUMNS FROM `qw_score` [ RunTime:0.0244s ]
+SQL: SHOW COLUMNS FROM `qw_users` [ RunTime:0.0157s ]
+SQL: SELECT `id` FROM `qw_users`  [ RunTime:0.0038s ]
+SQL: SELECT AVG(score) AS tp_avg FROM `qw_score` WHERE ( people=1 ) LIMIT 1   [ RunTime:0.0230s ]
+SQL: UPDATE `qw_users` SET `avg`='3.25' WHERE ( id=1 ) [ RunTime:0.0042s ]
+SQL: SELECT AVG(score) AS tp_avg FROM `qw_score` WHERE ( people=2 ) LIMIT 1   [ RunTime:0.0037s ]
+SQL: UPDATE `qw_users` SET `avg`=NULL WHERE ( id=2 ) [ RunTime:0.0038s ]
+SQL: SELECT AVG(score) AS tp_avg FROM `qw_score` WHERE ( people=3 ) LIMIT 1   [ RunTime:0.0037s ]
+SQL: UPDATE `qw_users` SET `avg`=NULL WHERE ( id=3 ) [ RunTime:0.0038s ]
+SQL: SELECT AVG(score) AS tp_avg FROM `qw_score` WHERE ( people=4 ) LIMIT 1   [ RunTime:0.0042s ]
+SQL: UPDATE `qw_users` SET `avg`=NULL WHERE ( id=4 ) [ RunTime:0.0061s ]
+SQL: SELECT AVG(score) AS tp_avg FROM `qw_score` WHERE ( people=5 ) LIMIT 1   [ RunTime:0.0042s ]
+SQL: UPDATE `qw_users` SET `avg`=NULL WHERE ( id=5 ) [ RunTime:0.0084s ]
+SQL: SELECT AVG(score) AS tp_avg FROM `qw_score` WHERE ( people=6 ) LIMIT 1   [ RunTime:0.0058s ]
+SQL: UPDATE `qw_users` SET `avg`=NULL WHERE ( id=6 ) [ RunTime:0.0037s ]
+SQL: SELECT AVG(score) AS tp_avg FROM `qw_score` WHERE ( people=7 ) LIMIT 1   [ RunTime:0.0038s ]
+SQL: UPDATE `qw_users` SET `avg`=NULL WHERE ( id=7 ) [ RunTime:0.0037s ]
+SQL: SELECT AVG(score) AS tp_avg FROM `qw_score` WHERE ( people=8 ) LIMIT 1   [ RunTime:0.0037s ]
+SQL: UPDATE `qw_users` SET `avg`=NULL WHERE ( id=8 ) [ RunTime:0.0061s ]
+SQL: SELECT AVG(score) AS tp_avg FROM `qw_score` WHERE ( people=9 ) LIMIT 1   [ RunTime:0.0041s ]
+SQL: UPDATE `qw_users` SET `avg`=NULL WHERE ( id=9 ) [ RunTime:0.0037s ]
+SQL: SELECT AVG(score) AS tp_avg FROM `qw_score` WHERE ( people=10 ) LIMIT 1   [ RunTime:0.0037s ]
+SQL: UPDATE `qw_users` SET `avg`=NULL WHERE ( id=10 ) [ RunTime:0.0037s ]
+NOTIC: [8] Undefined variable: map D:\MAMP\htdocs\www\slcms\Application\Home\Controller\OnlineController.class.php 第 86 行.
+SQL: SELECT DISTINCT  `people` FROM `qw_score` ORDER BY score  [ RunTime:0.0041s ]
+SQL: SELECT `id`,`username`,`head` FROM `qw_users` ORDER BY avg desc  [ RunTime:0.0048s ]
+
+[ 2017-12-08T09:50:42+08:00 ] 127.0.0.1 /www/slcms/index.php/Home/Online/null
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000723s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002160s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002216s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0166s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0160s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0076s ]
+ERR: 非法操作:null
+
+[ 2017-12-08T10:40:53+08:00 ] 127.0.0.1 /www/slcms/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001473s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003628s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003797s ]
+SQL: SHOW COLUMNS FROM `qw_quest` [ RunTime:0.0206s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0045s ]
+SQL: SHOW COLUMNS FROM `qw_question` [ RunTime:0.0296s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0077s ]
+SQL: SHOW COLUMNS FROM `qw_video` [ RunTime:0.0191s ]
+SQL: SELECT `id`,`title` FROM `qw_video` WHERE ( groom=1 ) ORDER BY addtime desc LIMIT 4   [ RunTime:0.0060s ]
+SQL: SELECT `id`,`title` FROM `qw_video` WHERE ( groom=2 ) ORDER BY addtime desc LIMIT 4   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `qw_tree` [ RunTime:0.0176s ]
+SQL: SELECT `id`,`name` FROM `qw_tree` WHERE ( pid=0 )  [ RunTime:0.0055s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` LIMIT 1   [ RunTime:0.0036s ]
+SQL: SELECT SUM(contentcount) AS tp_sum FROM `qw_question` GROUP BY story LIMIT 1   [ RunTime:0.0055s ]
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 1 AND `zid` <> ''  [ RunTime:0.0048s ]
+NOTIC: [8] Undefined variable: count D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%1%' LIMIT 1   [ RunTime:0.0044s ]
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 2 AND `zid` <> ''  [ RunTime:0.0111s ]
+NOTIC: [8] Undefined variable: count D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%2%' LIMIT 1   [ RunTime:0.0045s ]
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 3 AND `zid` <> ''  [ RunTime:0.0052s ]
+NOTIC: [8] Undefined variable: count D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%3%' LIMIT 1   [ RunTime:0.0042s ]
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 4 AND `zid` <> ''  [ RunTime:0.0054s ]
+NOTIC: [8] Undefined variable: count D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%4%' LIMIT 1   [ RunTime:0.0061s ]
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 5 AND `zid` <> ''  [ RunTime:0.0056s ]
+NOTIC: [8] Undefined variable: count D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%5%' LIMIT 1   [ RunTime:0.0049s ]
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 6 AND `zid` <> ''  [ RunTime:0.0166s ]
+NOTIC: [8] Undefined variable: count D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\ExaminController.class.php 第 85 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%6%' LIMIT 1   [ RunTime:0.0047s ]
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 7 AND `zid` <> ''  [ RunTime:0.0048s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%7%' LIMIT 1   [ RunTime:0.0045s ]
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\IndexController.class.php 第 29 行.
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 8 AND `zid` <> ''  [ RunTime:0.0075s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%8%' LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\IndexController.class.php 第 29 行.
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 9 AND `zid` <> ''  [ RunTime:0.0054s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%9%' LIMIT 1   [ RunTime:0.0056s ]
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\IndexController.class.php 第 29 行.
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 10 AND `zid` <> ''  [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%10%' LIMIT 1   [ RunTime:0.0044s ]
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\IndexController.class.php 第 29 行.
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 11 AND `zid` <> ''  [ RunTime:0.0047s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%11%' LIMIT 1   [ RunTime:0.0042s ]
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\IndexController.class.php 第 29 行.
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 12 AND `zid` <> ''  [ RunTime:0.0048s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%12%' LIMIT 1   [ RunTime:0.0043s ]
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\IndexController.class.php 第 29 行.
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 13 AND `zid` <> ''  [ RunTime:0.0076s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%13%' LIMIT 1   [ RunTime:0.0048s ]
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\IndexController.class.php 第 29 行.
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 14 AND `zid` <> ''  [ RunTime:0.0048s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%14%' LIMIT 1   [ RunTime:0.0044s ]
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\IndexController.class.php 第 29 行.
+SQL: SELECT `name` FROM `qw_tree` WHERE `cid` = 15 AND `zid` <> ''  [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qw_quest` WHERE `kid` LIKE '%15%' LIMIT 1   [ RunTime:0.0041s ]
+NOTIC: [8] Undefined index: point D:\MAMP\htdocs\www\slcms\Application\Home\Controller\IndexController.class.php 第 29 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000307s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000471s ]
+NOTIC: [8] Undefined variable: Think D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 28 行.
+NOTIC: [8] Undefined offset: 16 D:\MAMP\htdocs\www\slcms\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 194 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043422s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043614s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001812s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001926s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003576s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003759s ]
+

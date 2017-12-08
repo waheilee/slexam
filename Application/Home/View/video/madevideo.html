@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>订制视频</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta name=”keyword” content=”桑磊法考,司法考试,考试,司法,律师“>
+    <!-- 公用的css -->
+    <link rel="stylesheet" href="__PUBLIC__/home/css/public.css"/>
+    <!-- 本页面的css -->
+    <link rel="stylesheet" href="__PUBLIC__/home/css/madevideo.css"/>
+</head>
+<body>
+<!--主导航-->
+<!--白色的-->
+<include file="Public/nav_2" />
+<!--分导航-->
+<div id="subnav">
+    <div class="wrap">
+<include file="Public/video_nav" />
+<div class="right search">
+     <form action="{:U('index')}" method="post" id="want">
+                <input type="text" placeholder="想要看..." name="wantsee" value='{$wantsee}'/>
+                <button type="submit">搜索</button>
+            </form>
+        </div>
+        <div class="right keyword">
+            <span>热搜：</span>
+            <volist name='searchwords' id='va'> 
+                <a href="#" style="text-decoration:none">{$va['wantsee']}</a>
+            </volist>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!--页面内容-->
+<div id="video-content">
+    <div class="wrap">
+        <!--菜单-->
+        <div class="left">
+            <p class="listnav-title">订制与共享视频</p>
+            <ul class="listnav">
+                <li>
+                    <div class="listnav-dot"><div class="dot"></div></div>
+                    <p class="listnav-name">订制与分享订制收益</p>
+                    <p>如何订制？如何分享？</p>
+                    <div class="listnav-triangle"></div>
+                </li>
+                <li>
+                    <div class="listnav-dot"><div class="dot"></div></div>
+                    <p class="listnav-name">订制视频课堂</p>
+                    <p>100个法豆（20元/次）</p>
+                    <div class="listnav-triangle"></div>
+                </li>
+                <li class="active">
+                    <div class="listnav-dot"><div class="dot"></div></div>
+                    <p class="listnav-name">参与预约订制视频</p>
+                    <p>团购折扣 5元/人 满50开讲</p>
+                    <div class="listnav-triangle"></div>
+                </li>
+                <li>
+                    <div class="listnav-dot"><div class="dot"></div></div>
+                    <p class="listnav-name">索取已预约订制视频</p>
+                    <p>如何向他人索取订制的视频</p>
+                    <div class="listnav-triangle"></div>
+                </li>
+                <!--二维码-->
+                <div class="qrcode">
+                    <div class="ewm">
+                        <img src="__PUBLIC__/home/images/madevideo/ewm.png" alt=""/>
+                    </div>
+                    <p>扫描二维码</p>
+                    <p>手机订制视频</p>
+                </div>
+            </ul>
+        </div>
+        <!--菜单对应的内容-->
+        <div class="right video-content-box">
+            <!--如何订制说明-->
+            <div id="explain">
+                <div class="partin-title">
+                    亲爱的 <span>大法官123</span>，订制规则如下：
+                </div>
+                <div class="explain-content">
+                    <p>1.规则规则规则规则规则规则，规则规则规则规则规则规则规则规则规则规则</p>
+                    <p>2.规则规则规则规则规则规则规，则规则规则规则</p>
+                    <p>3.规则规则规则规则规则规。则规则规则规则规则</p>
+                    <p>4.规则规则规则规则规则规则规则规则规则规则则规则规则规</p>
+                    <p>5.规则规则规则规则，规则规则规则规则规则、规则</p>
+                    <p>6.规则规则规则规，则规则规则规则规则规则规则</p>
+                    <p>7.规则规则规则规则规则规则规则规则、规则规则</p>
+                    <p>8.规则规则规则规则规则规则，规则规则规则规则规则规则规则规则规则规则</p>
+                    <p>9.规则规则规则规则规则规则规，则规则规则规则</p>
+                    <p>10.规则规则规则规则规则规。则规则规则规则规则</p>
+                    <p>11.规则规则规则规则规则规则规则规则规则规则则规则规则规</p>
+                    <p>12.规则规则规则规则，规则规则规则规则规则、规则</p>
+                    <p>13.规则规则规则规，则规则规则规则规则规则规则</p>
+                    <p>14.规则规则规则规则规则规则规则规则、规则规则</p>
+                </div>
+            </div>
+            <!--订制视频课堂-->
+            <div id="madeclassroom">
+                <div class="partin-title">
+                    <div class="left">亲爱的 <span>大法官123</span>，请详细填写下面表单：</div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="madeclassroom-content">
+                    <form action="{:U('orderpay')}" method="post">
+                        <div>
+                            <div class="entry">
+                                <span>真实姓名：</span>
+                                <input type="text" value="" name="name" id='name'/>
+                            </div>
+                            <div class="entry">
+                                <span>联系方式：</span>
+                                <input type="text" value="" name="mobile" id='mobile'/>
+                            </div>
+                            <div class="entry">
+                                <span>电子邮件：</span>
+                                <input type="email" value="" name="email" id='email'/>
+                            </div>
+                            <div class="entry" >
+                                <span>选择科目：</span>
+                                <select name="course" id="province">
+                                    <option value="" >课程</option>
+                                    <volist name="province" id="vo">
+                                        <option  value="{$vo.id}" <if condition="$vo.id eq $quest['kid']"> selected="selected" </if>>{$vo.name}</option>
+                                    </volist>
+                                </select>
+                            </div>
+                            <div class="entry">
+                                <span>选择章：</span>
+                                <select name="chapter" id="city"> 
+                                <option value="">章</option>
+                            </select>
+                            </div>
+                            <div class="entry">
+                                <span>选择节：</span>
+                                 <select name="point" id="town">
+                                <option value="">节</option>
+                                 </select>   
+                                  
+                            </div>
+                             <div class="entry">
+                                <span>选择知识点：</span>
+                                 <select name="know" id="village">
+                                <option value="">知识点</option>
+                                 </select>   
+                                  
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="trea">
+                            <span>添加备注：</span>
+                            <textarea name="remark" id="remark"></textarea>
+                        </div>
+                        <div class="paystyle">
+                            <span>支付方式：</span>
+                            
+                            <input type="radio" id="wxzf" name="pay" value="1"/>
+                            <label for="wxzf">
+                                <img src="__PUBLIC__/home/images/madevideo/wxzf.png" alt=""/>
+                            </label>
+                            <input type="radio" id="zjdz" name="pay" value="2"/>
+                            <label for="zjdz">
+                                <img src="__PUBLIC__/home/images/madevideo/zjdz.png" alt=""/>
+                            </label>
+                        </div>
+                        <button class="submit" type="submit">提交订制申请</button>
+                    </form>
+                </div>
+            </div>
+            <!--参与预约订制视频-->
+            <div id="partin">
+                <div class="partin-title">
+                    <div class="left">亲爱的 <span>大法官123</span>，预备订制视频如下：</div>
+                    <div class="right">
+                        <a href="{:U('madevideo')}" <if condition='I("typeid") eq ""'> class="active" </if>>全部</a>
+                        <span>丨</span>
+                        <a href="{:U('madevideo',array('typeid'=>1))}" <if condition='I("typeid") eq "1"'> class="active" </if>>章</a>
+                        <span>丨</span>
+                         <a href="{:U('madevideo',array('typeid'=>2))}" <if condition='I("typeid") eq "2"'> class="active" </if>>节</a>
+                        <span>丨</span>
+                        <a href="{:U('madevideo',array('typeid'=>3))}" <if condition='I("typeid") eq "3"'> class="active" </if>>按知识点</a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <ul class="partin-content">
+                    <volist name='orderlist' id='value'> 
+                    <li>
+                        <div class="partin-content-lore">
+                          
+                            <img src="__PUBLIC__/home/images/madevideo/{$value['shi']}.png" alt=""/>
+                           
+                        </div>
+                        <div class="partin-content-name">
+                            <if condition='$value["name"] neq ""'>
+                                {$value['name']}
+                                <else/>
+                                {$value['did']}
+                            </if>
+                           
+                        </div>
+                        <div class="partin-content-title">
+                            <div class="left">参与人数：{$value['handnum']}/5</div>
+                            <div class="right">[{$value['course']}]</div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <a href="{:U('order',array('id'=>$value['id']))}" class="partin-content-submit">参与订制</a>
+                    </li>
+                    </volist>
+                    
+                    <div class="clearfix"></div>
+                </ul>
+                <div class="partin-page">
+                   {$page}
+                </div>
+            </div>
+            <!--索取已预约订制视频-->
+            <div id="askfor">
+                <div class="partin-title">
+                    <div class="left">亲爱的 <span>大法官123</span>，索取已预约订制视频如下：</div>
+                    <div class="right">
+                        <a href="#">全部</a>
+                        <span>丨</span>
+                        <a href="#">章节</a>
+                        <span>丨</span>
+                        <a href="#" class="active">按知识点</a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <ul class="partin-content">
+                    
+                    <li>
+                        <div class="partin-content-lore">
+                            <img src="__PUBLIC__/home/images/madevideo/zsd.png" alt=""/>
+                        </div>
+                        <div class="partin-content-name">
+                            国际保险运输保险合同的原则
+                        </div>
+                        <div class="partin-content-title">
+                            <div class="left">参与人数：3/5</div>
+                            <div class="right">[国际经济法]</div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <a href="#" class="partin-content-submit">购买</a>
+                    </li>
+                   
+                    
+                    
+                    <div class="clearfix"></div>
+                </ul>
+                <div class="partin-page">
+                    <img src="__PUBLIC__/home/images/madevideo/page.jpg" alt=""/>
+                </div>
+            </div>
+            <div class="video-content--note">
+                * 注：此订单为预约订单，提交审核过后，1.自己买断，独家订制；2.等待满额人数，人数满每单所需的法豆/金额，会给您发送邮件，请求完成您的支付。
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!--底部-->
+<div id="footer">
+    <div class="wrap">
+        <p>
+            <a href="#">首页</a>
+            <span>丨</span>
+            <a href="#">网站声明</a>
+            <span>丨</span>
+            <a href="#">联系方式</a>
+            <span>丨</span>
+            <a href="#">加入我们</a>
+        </p>
+        <p>
+            Copyright&nbsp;&copy;&nbsp;2017-&nbsp;桑磊法考(sangleifk.com)&nbsp;京批字第直123456号&nbsp;京ICP备12345678号-1
+        </p>
+        <p>
+            联系电话：&nbsp;&nbsp;&nbsp;4000-000-000&nbsp;&nbsp;&nbsp;&nbsp;010-12345678
+        </p>
+    </div>
+</div>
+</body>
+<script src="__PUBLIC__/home/js/jquery-1.11.3.js"></script>
+<script>
+    //    菜单点击
+    $(function(){
+        $("#video-content .listnav li").bind("click",function(){
+            $(this).addClass("active").siblings("li").removeClass("active");
+            if($(this).index()==0){
+                $("#explain").fadeIn(500);
+                $("#madeclassroom").hide();
+                $("#partin").hide();
+                $("#askfor").hide();
+            }else if($(this).index()==1){
+                $("#explain").hide();
+                $("#madeclassroom").fadeIn(500);
+                $("#partin").hide();
+                $("#askfor").hide();
+            }else if($(this).index()==2){
+                $("#explain").hide();
+                $("#madeclassroom").hide();
+                $("#partin").fadeIn(500);
+                $("#askfor").hide();
+            }else if($(this).index()==3){
+                $("#explain").hide();
+                $("#madeclassroom").hide();
+                $("#partin").hide();
+                $("#askfor").fadeIn(500);
+            }
+        });
+    });
+    function loadRegion(obj,id,type,check){
+        $.ajax({
+            url:"{:U('getRegion')}",
+            type:'post',
+            data:{'id':id,'type':type,'check':check},
+            success:function(data){
+                $(obj).html(data);
+            }
+            
+        })
+    }
+    
+    $('#province').change(function(){
+        var val = $('#province option:selected').val();
+        loadRegion('#city',val);
+    })
+    $('#city').change(function(){
+        var val = $('#city option:selected').val();
+        loadRegion('#town',val);
+    })
+    $('#town').change(function(){
+        var val = $('#town option:selected').val();
+        loadRegion('#village',val);
+    })
+</script>
+</html>

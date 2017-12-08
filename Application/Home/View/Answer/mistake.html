@@ -1,0 +1,146 @@
+<extend name="index" />
+    <block name="answernum"></block>
+    <block name='content'>
+    <style>
+        #answer-box .list{
+            margin:10px 0;
+        }
+
+        #answer-box .list .list-answer p{
+            color: #8e8e8e;
+            font-size: 16px;
+            line-height: 28px;
+            text-align: justify;
+        }
+        #answer-box .list .list-answer p.dis{
+            display: none;
+        }
+        #answer-box .list .list-answer p span{
+            color: #3482C4;
+        }
+        #answer-box .list .list-answer p span.bold{
+            font-size: 18px;
+            color: #000;
+        }
+        
+        .active{color:red!important;}
+        .active i{background-image: url(__PUBLIC__/home/images/answer/error.png)!important}
+        .Pagination a:hover{background-color: #3482C4;border: 1px solid #3482C4;color: #ffffff; }
+        .Pagination{float: right;height: auto;_height: 45px; line-height: 20px;margin-right: 15px;_margin-right: 5px; color:#565656;margin-top: 10px;_margin-top: 20px; clear:both;}
+        .Pagination a,.Pagination span{ font-size: 14px;text-decoration: none;display: block;float: left;color: #565656;border: 1px solid #ccc;height: 34px;line-height: 34px;margin: 0 2px;width: 34px;text-align: center;}
+    </style>
+    <div id="testpaper" class="right">
+        <!--题卷名-->
+        <div class="col-2">
+            {$nickname}
+        </div>
+        <div class="col-3" style='margin-bottom:30px;'>
+            <img src="__PUBLIC__/home/images/answer/boldrect.png" style="margin-top: -3px;" alt=""/>
+            <span>错误题目：</span>
+        </div>
+        <!--题-->
+        <div id="answer-box">
+            <div id="answer-box-1"></div>
+            <div id="answer-box-2"></div>
+        </div>
+        <div class="Pagination" style='margin-bottom:20px;'>
+            {$page}
+        </div>
+    </div>
+    <div class="clearfix"></div>
+<!--底部-->
+<include file="Public/foot" />
+</body>
+<script src="__PUBLIC__/home/js/jquery-1.11.3.js"></script>
+<!--卷面排题-->
+<script>
+//    <!--卷面排题-->
+    var rankTestPaper = function(){
+        var testData = {$data};
+        var storyData = {$story};
+//        生成一个从0开始的定义个数的随机不重复数组
+        function randomNum(n){
+            var arr = [];
+            for(var i=0;i<n;i++){
+                getx(arr);
+            }
+            function getx(arr){
+                for(var i=0;i>-1;i++){
+                    var flag = true;
+                    var num = Math.floor(Math.random()*n);
+                    for(var i in arr){
+                        if(arr[i] == num){
+                            flag= false;
+                            break;
+                        }
+                    }
+                    if(flag == true){
+                        arr.push(num);
+                        return;
+                    }
+                }
+            }
+            return arr;
+        }
+        function startRankOne(){
+            var answerBox = $("#answer-box-1");
+            for(var i=0; i<testData.length; i++) {
+                var str = '<div class="list">' +
+                        '<div class="list-title" id="'+(i+1)+'">' +
+                        '<i>'+ (i+1) +'.</i>' +
+                        '<p data="'+ testData[i].sign +'">'+ testData[i].name +'</p> ' +
+                        '</div>' +
+                        '<dl class="list-answer">';
+                    var arr = randomNum(testData[i].option.length);
+                    var abcd = ["A.","B.","C.","D.","F.","E.","G.","H."];
+                   for(var k=0; k<testData[i].option.length; k++){
+                       str += '<dd class="'+testData[i].option[k].active+'" data="'+ testData[i].option[k].sign +'"><i></i>'+ abcd[k] + testData[i].option[k].answer+'</dd>';
+                       str += '<p class="dis"><span>解析：</span>'+testData[i].option[k].sign+'</p>'
+                   }
+                    str += '<p><span>正确答案：</span><span class="bold">'+testData[i].sign+'</span>（点击选项即可查看答案解析）</p>'
+                   str +=  '</dl> '+
+                           '</div>'
+                answerBox.append(str);
+            };
+        };
+//        页面初始化加载 故事题
+        function startRankThree(){
+            var answerBox = $("#answer-box-2");
+            for(var i=0;i<storyData.length;i++) {
+                var str = '<div class="list">'+
+                            '<div class="list-title-story">' +
+                                '<p>题干：'+storyData[i].name+'<span>请回答下面'+(i+testData.length+1)+'—'+(i+testData.length+2)+'题'+'</p>' +
+                            '</div>';
+                for(var z=0;z<storyData[i].option.length;z++){
+                    str += '<div class="list-title" id="'+(i+86+z)+'">' +
+                            '<i>'+ (i+testData.length+z+1) +'.</i>' +
+                            '<p data="'+ storyData[i].option[z].sign +'">'+ storyData[i].option[z].name +'</p> ' +
+                            '</div>' +
+                            '<dl class="list-answer">';
+                    var arr = randomNum(storyData[i].option[z].option.length);
+                    var abcd = ["A.","B.","C.","D.","F.","E.","G.","H."];
+                    for(var k=0; k<storyData[i].option[z].option.length; k++){
+                        str += '<dd class="'+storyData[i].option[z].option[k].active+'" data="'+ storyData[i].option[z].option[k].sign +'"><i></i>'+ abcd[k] + storyData[i].option[z].option[k].answer+'</dd>';
+                        str += '<p class="dis"><span>解析：</span>'+storyData[i].option[z].option[k].sign+'</p>'
+                    };
+                    str += '<p><span>正确答案：</span><span class="bold">'+storyData[i].option[z].sign+'</span>（点击选项即可查看答案解析）</p>'
+                    str +=  '</dl> '
+                }
+                    str+= '</div>'
+                answerBox.append(str);
+            };
+        };
+        startRankOne();
+        startRankThree();
+
+         // 单项选择题选项绑定事件
+        $("#answer-box-1,#answer-box-2").find("dl").on("click","dd",function(){
+            $(this).next(".dis").show().siblings(".dis").hide();
+        });
+
+        $("#answer-box-1,#answer-box-2").find(".active").next(".dis").show();
+    }
+    rankTestPaper();
+</script>
+</block>
+</html>

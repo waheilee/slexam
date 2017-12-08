@@ -1,0 +1,164 @@
+@charset "UTF-8";
+#headr{
+    width: 100%;
+    font-size: 0;
+    background: #fff;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+#headr .headimg{
+    text-align: center;
+    width: 1.94rem;
+    height: 1.94rem;
+    border: 1px solid #ecedee;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    margin-top: -0.97rem;
+}
+#headr .headimg img{
+    width: 100%;
+    border-radius: 50%;
+}
+#headr .headimg .headimgtext{
+    width: 100%;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    text-align: center;
+    position: absolute;
+    top: 0.25rem;
+    left: 0;
+    font-size: 0.28rem;
+    color: #fff;
+    background: #3482C4;
+}
+#headr .headname{
+    width: 100%;
+    height: 1.25rem;
+    line-height: 1.25rem;
+    font-size: 0.42rem;
+    color: #333333;
+    text-align: center;
+}
+#headr .headmessage{
+    width: 100%;
+    color: #666666;
+    font-size: 0.36rem;
+    margin-bottom: 0.4rem;
+    text-align: center;
+}
+#headr .headmessage span.mr{
+    margin: 0 0.6rem;
+}
+#headr .headmessage .goup{
+    font-size: 0.36rem;
+    color: #9c9c9c;
+}
+#account-title{
+    width: 100%;
+    background: #fff;
+    border-top: 0.2rem solid #f7f7f7;
+}
+#account-title ul{
+    width: 100%;
+}
+#account-title ul li{
+    width: 25%;
+    float: left;
+}
+#account-title ul li .at-num{
+    width: 100%;
+    font-size: 0.4rem;
+    color: #333333;
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.4rem;
+}
+#account-title ul li .at-text{
+    width: 100%;
+    font-size: 0.34rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 0.6rem;
+}
+#account-title ul li .at-text span{
+    color: #9c9c9c;
+    font-size: 0.32rem;
+}
+#menuhrefnav{
+    width: 100%;
+    background: #fff;
+}
+#menuhrefnav .menuhref{
+    width: 100%;
+    background: #fff;
+    border-top: 0.2rem solid #f7f7f7;
+}
+#menuhrefnav .menuhref a{
+    display: block;
+    width: 100%;
+    height: 1.1rem;
+    line-height: 1.1rem;
+}
+#menuhrefnav .menuhref a .left{
+    width: 9%;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    text-align: left;
+}
+#menuhrefnav .menuhref a .left img{
+    width: 0.49rem;
+    margin-top: -0.2rem;
+}
+#menuhrefnav .menuhref a .right{
+    width: 91%;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    border-bottom: 1px solid #ecedee;
+    font-size: 0;
+}
+#menuhrefnav .menuhref a:last-child .right{
+    border-bottom: none;
+}
+#menuhrefnav .menuhref a .right .r-left{
+    font-size: 0.4rem;
+    color: #333333;
+}
+#menuhrefnav .menuhref a .right .r-left {
+    float: left;
+}
+#menuhrefnav .menuhref a .right .r-right{
+    float: right;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    font-size: 0;
+}
+#menuhrefnav .menuhref a .right .r-right img{
+    width: 0.2rem;
+    margin-left: 0.4rem;
+    vertical-align: top;
+    margin-top: 0.4rem;
+}
+#menuhrefnav .menuhref a .right .r-right span{
+    font-size: 0.36rem;
+    color: #9c9c9c;
+}
+#menuhrefnav .menuhref a .right .r-right span.blue{
+    font-size: 0.4rem;
+    color: #3583c5;
+    margin: 0 0.1rem;
+}
+#menuhrefnav .menuhref a .right .r-left .message-num{
+    display: inline-block;
+    width: 0.4rem;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    background: #E53053;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    position: relative;
+    top: -0.2rem;
+    font-size: 0.28rem;   
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- 编码格式 -->
+    <meta charset="utf-8">
+    <!-- IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 设置 viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <meta name="Keywords" content="桑磊法考,司法考试,考试,司法,律师">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- 兼容国产浏览器的高速模式 -->
+    <meta name="renderer" content="webkit">
+    <title>桑磊法考 - 用户中心 </title>
+    <!--设置网页的图标-->
+    <link rel="shortcut icon" href="">
+    <!--公用的css-->
+    <link type="text/css" href="__PUBLIC__/wx/css/public.css" rel="stylesheet"/>
+    <!--本页面的css-->
+    <link type="text/css" href="__PUBLIC__/wx/css/usecenter.css" rel="stylesheet"/>
+</head>
+<body>
+<!--顶部背景图-->
+<img src="__PUBLIC__/wx/images/usecenter/nav/topbg.png" width="100%" alt=""/>
+<!--头部基本信息-->
+<div id="headr">
+    <!--头像-->
+    <div class="headimg">
+        <p class="headimgtext">普通会员</p>
+        <img src="__PUBLIC__/wx/images/usecenter/nav/tx.png" alt=""/>
+    </div>
+    <div class="headname">朝阳大法官</div>
+    <div class="headmessage">
+        <span class="mr">消息(0)</span>
+        <span class="goup">升级(暂未开放)</span>
+    </div>
+</div>
+<!--账户信息-->
+<div id="account-title">
+    <ul>
+        <li>
+            <p class="at-num">130.00</p>
+            <p class="at-text"><a href='{:U("account/index")}'>余额</a><span>(元)</span></p>
+        </li>
+        <li>
+            <p class="at-num">80</p>
+            <p class="at-text">法豆<span>(个)</span></p>
+        </li>
+        <li>
+            <p class="at-num">{$sum}</p>
+            <p class="at-text"><a href='{:U("Usercenter/paper")}'>答卷量</a><span>(张)</span></p>
+        </li>
+        <li>
+            <p class="at-num">130.00</p>
+            <p class="at-text"><a href='{:U("centerorder/indexp")}'>订制视频</a><span>(个)</span></p>
+        </li>
+        <div class="clearfix"></div>
+    </ul>
+</div>
+<!--菜单导航-->
+<div id="menuhrefnav">
+    <div class="menuhref">
+        <div class="wrap">
+            <!--打卷错题-->
+            <a href="{:U('Usercenter/wrong')}">
+                <div class="left">
+                    <img src="__PUBLIC__/wx/images/usecenter/nav/1.png" alt=""/>
+                </div>
+                <div class="right">
+                    <div class="r-left">打卷错题</div>
+                    <div class="r-right"><img src="__PUBLIC__/wx/images/usecenter/nav/rightarrow.png" alt=""/></div>
+                </div>
+            </a>
+            <!--历史打榜-->
+            <a href="{:U('Usercenter/band')}">
+                <div class="left">
+                    <img src="__PUBLIC__/wx/images/usecenter/nav/2.png" alt=""/>
+                </div>
+                <div class="right">
+                    <div class="r-left">历史打榜</div>
+                    <div class="r-right">
+                        <span>最高第<span class="blue">1</span>位</span>
+                        <img src="__PUBLIC__/wx/images/usecenter/nav/rightarrow.png" alt=""/>
+                    </div>
+                </div>
+            </a>
+            <!--综合评估-->
+            <a href="{:U('access/index')}">
+                <div class="left">
+                    <img src="__PUBLIC__/wx/images/usecenter/nav/3.png" alt=""/>
+                </div>
+                <div class="right">
+                    <div class="r-left">综合评估</div>
+                    <div class="r-right"><img src="__PUBLIC__/wx/images/usecenter/nav/rightarrow.png" alt=""/></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="menuhref">
+        <div class="wrap">
+            <!--课堂收藏-->
+            <a href="{:U('collect/index')}">
+                <div class="left">
+                    <img src="__PUBLIC__/wx/images/usecenter/nav/3.png" alt=""/>
+                </div>
+                <div class="right">
+                    <div class="r-left">课堂收藏</div>
+                    <div class="r-right">
+                        <span>132</span>
+                        <img src="__PUBLIC__/wx/images/usecenter/nav/rightarrow.png" alt=""/>
+                    </div>
+                </div>
+            </a>
+            <!--分享课堂-->
+            <a href="{:U('share/indexp')}">
+                <div class="left">
+                    <img src="__PUBLIC__/wx/images/usecenter/nav/2.png" alt=""/>
+                </div>
+                <div class="right">
+                    <div class="r-left">分享课堂</div>
+                    <div class="r-right">
+                        <img src="__PUBLIC__/wx/images/usecenter/nav/rightarrow.png" alt=""/>
+                    </div>
+                </div>
+            </a>
+            <!--微课堂-->
+            <a href="{:U('small/index')}">
+                <div class="left">
+                    <img src="__PUBLIC__/wx/images/usecenter/nav/3.png" alt=""/>
+                </div>
+                <div class="right">
+                    <div class="r-left">微课堂</div>
+                    <div class="r-right"><img src="__PUBLIC__/wx/images/usecenter/nav/rightarrow.png" alt=""/></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="menuhref">
+        <div class="wrap">
+            <!--我的下载-->
+            <a href="#">
+                <div class="left">
+                    <img src="__PUBLIC__/wx/images/usecenter/nav/1.png" alt=""/>
+                </div>
+                <div class="right">
+                    <div class="r-left">我的下载</div>
+                    <span>21</span>
+                    <div class="r-right"><img src="__PUBLIC__/wx/images/usecenter/nav/rightarrow.png" alt=""/></div>
+                </div>
+            </a>
+            <!--在线交流-->
+            <a href="#">
+                <div class="left">
+                    <img src="__PUBLIC__/wx/images/usecenter/nav/2.png" alt=""/>
+                </div>
+                <div class="right">
+                    <div class="r-left">在线交流 <div class="message-num">3</div></div>
+                    <div class="r-right">
+                        <img src="__PUBLIC__/wx/images/usecenter/nav/rightarrow.png" alt=""/>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<!--底部-->
+<div id="footer">
+    CopyRight©2017&nbsp;&nbsp;&nbsp;桑磊法考中心版权所有&nbsp;&nbsp;&nbsp;侵者必究
+</div>
+</body>
+</html>

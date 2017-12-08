@@ -1,0 +1,6 @@
+<div class="ml-list-nav">
+    <a href="{:U('index')}" class="{$type == '' ? 'active' : ''} rjbd"><span>热卷榜单</span><img src="__PUBLIC__/home/images/makelist/dialogbox.png" alt=""/></a>
+    <a href="{:U('index',array('type'=>base64_encode('难')))}" class="{$type == '难' ? 'active' : ''} njbd"><span>难卷榜单</span><img src="__PUBLIC__/home/images/makelist/dialogbox.png" alt=""/></a>
+    <a href="{:U('index',array('type'=>base64_encode('新')))}" class="{$type == '新' ? 'active' : ''} xcbd"><span>新出榜单</span><img style="left: -11px;" src="__PUBLIC__/home/images/makelist/dialogbox-right.png" alt=""/></a>
+    <a href="{:U('Random/custom')}" class="fqbd"><span>发起榜单</span><img style="left: -11px;" src="__PUBLIC__/home/images/makelist/dialogbox-right.png" alt=""/></a>
+</div> 

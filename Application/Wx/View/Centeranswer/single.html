@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- 编码格式 -->
+    <meta charset="utf-8">
+    <!-- IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 设置 viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <meta name="Keywords" content="桑磊法考,司法考试,考试,司法,律师">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- 兼容国产浏览器的高速模式 -->
+    <meta name="renderer" content="webkit">
+    <title>用户中心 - 答卷统计</title>
+    <!--设置网页的图标-->
+    <link rel="shortcut icon" href="">
+    <!--公用的css-->
+    <link type="text/css" href="__PUBLIC__/wx/css/public.css" rel="stylesheet"/>
+    <!--本页面的css-->
+    <link type="text/css" href="__PUBLIC__/wx/css/videopublic.css" rel="stylesheet"/>
+    <link type="text/css" href="__PUBLIC__/wx/css/makelistpaper.css" rel="stylesheet"/>
+</head>
+<body>
+<!--答卷nav-->
+<div id="makeclass">
+    <div class="wrap">
+        <p class="mc-title">完成答卷量</p>
+        <p class="mc-num"><span class="smalt">103</span>（张）</p>
+    </div>
+    <div class="mc-menu-nav mc-menu-nav-four">
+        <a href="#" class="smalt">
+            <p>历年真题</p>
+            <p class="mc-m-num">10</p>
+        </a>
+        <div class="bor"></div>
+        <div class="bor one"></div>
+        <div class="bor two"></div>
+        <a href="#" class="smalt">
+            <p>模拟真题</p>
+            <p class="mc-m-num">28</p>
+        </a>
+        <a href="#" class="smalt">
+            <p>自定义题型</p>
+            <p class="mc-m-num">28</p>
+        </a>
+        <a href="#" class="smalt active">
+            <p>单科练习</p>
+            <p class="mc-m-num">28</p>
+        </a>
+    </div>
+</div>
+<!--排序按钮-->
+<div id="rankmenunav" class="white">
+    <div class="wrap">
+        <div class="left">
+            <a href="javascript:void(0)" class="smalt active" onclick="shopNavTop(this)">全部试卷</a>
+            <a href="javascript:void(0)" class="smalt" onclick="shopNavTop(this),triangle(this)">难易程度<div class="triangle"><div class="top"></div><div class="bottom"></div></div></a>
+            <a href="javascript:void(0)" class="smalt" onclick="shopNavTop(this),triangle(this)">分值排序<div class="triangle"><div class="top"></div><div class="bottom"></div></div></a>
+        </div>
+        <div class="right">
+            共计 <span>10</span> 张试卷
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!--列表-->
+<ul id="oldexam">
+    <!--自定义 题卷lidata为d 模拟题卷lidata为m 真题题卷lidata为z-->
+    <li data="d">
+        <div class="oe-topmenu">
+            <div class="wrap">
+                <div class="left">
+                    综合评星：<span class="startnum" data="3"></span>
+                </div>
+                <div class="right">
+                    <a href="javascript:void(0)" onclick="shopNav('dzkt')">订制课堂</a>
+                    <span>丨</span>
+                    <a href="javascript:void(0)">分享试卷</a>
+                    <span>丨</span>
+                    <a href="javascript:void(0)" class="blue">查看打榜</a>
+                </div>
+            </div>
+        </div>
+        <div class="oe-middlename wrap">
+            <div class="left">
+                <img src="__PUBLIC__/wx/images/makelist/zdypaper.png" alt=""/>
+                <p class="oem-name">2017年国家司法考试试卷一</p>
+            </div>
+            <div class="left oe-num"><span>105分</span></div>
+            <div class="right oe-rank">
+                <a href="#"><img src="__PUBLIC__/wx/images/yearoldexam/penanswer.png" alt=""/></a>
+            </div>
+        </div>
+        <div class="oe-bottom">
+            <div class="wrap">
+                <span>难易程度：中</span>
+                <span>答题人数：26369人</span>
+                <span>最快用时：01:03:25</span>
+            </div>
+        </div>
+    </li>
+    <li data="m">
+        <div class="oe-topmenu">
+            <div class="wrap">
+                <div class="left">
+                    综合评星：<span class="startnum" data="3"></span>
+                </div>
+                <div class="right">
+                    <a href="javascript:void(0)" onclick="shopNav('dzkt')">订制课堂</a>
+                    <span>丨</span>
+                    <a href="javascript:void(0)">分享试卷</a>
+                    <span>丨</span>
+                    <a href="javascript:void(0)" class="blue">查看打榜</a>
+                </div>
+            </div>
+        </div>
+        <div class="oe-middlename wrap">
+            <div class="left">
+                <img src="__PUBLIC__/wx/images/makelist/zdypaper.png" alt=""/>
+                <p class="oem-name">2017年国家司法考试试卷一</p>
+            </div>
+            <div class="left oe-num"><span>105分</span></div>
+            <div class="right oe-rank">
+                <a href="#"><img src="__PUBLIC__/wx/images/yearoldexam/penanswer.png" alt=""/></a>
+            </div>
+        </div>
+        <div class="oe-bottom">
+            <div class="wrap">
+                <span>难易程度：中</span>
+                <span>答题人数：26369人</span>
+                <span>最快用时：01:03:25</span>
+            </div>
+        </div>
+    </li>
+    <li data="z">
+        <div class="oe-topmenu">
+            <div class="wrap">
+                <div class="left">
+                    综合评星：<span class="startnum" data="3"></span>
+                </div>
+                <div class="right">
+                    <a href="javascript:void(0)" onclick="shopNav('dzkt')">订制课堂</a>
+                    <span>丨</span>
+                    <a href="javascript:void(0)">分享试卷</a>
+                    <span>丨</span>
+                    <a href="javascript:void(0)" class="blue">查看打榜</a>
+                </div>
+            </div>
+        </div>
+        <div class="oe-middlename wrap">
+            <div class="left">
+                <img src="__PUBLIC__/wx/images/makelist/zdypaper.png" alt=""/>
+                <p class="oem-name">2017年国家司法考试试卷一</p>
+            </div>
+            <div class="left oe-num"><span>105分</span></div>
+            <div class="right oe-rank">
+                <a href="#"><img src="__PUBLIC__/wx/images/yearoldexam/penanswer.png" alt=""/></a>
+            </div>
+        </div>
+        <div class="oe-bottom">
+            <div class="wrap">
+                <span>难易程度：中</span>
+                <span>答题人数：26369人</span>
+                <span>最快用时：01:03:25</span>
+            </div>
+        </div>
+    </li>
+    <li data="d">
+        <div class="oe-topmenu">
+            <div class="wrap">
+                <div class="left">
+                    综合评星：<span class="startnum" data="3"></span>
+                </div>
+                <div class="right">
+                    <a href="javascript:void(0)" onclick="shopNav('dzkt')">订制课堂</a>
+                    <span>丨</span>
+                    <a href="javascript:void(0)">分享试卷</a>
+                    <span>丨</span>
+                    <a href="javascript:void(0)" class="blue">查看打榜</a>
+                </div>
+            </div>
+        </div>
+        <div class="oe-middlename wrap">
+            <div class="left">
+                <img src="__PUBLIC__/wx/images/makelist/zdypaper.png" alt=""/>
+                <p class="oem-name">2017年国家司法考试试卷一</p>
+            </div>
+            <div class="left oe-num"><span>105分</span></div>
+            <div class="right oe-rank">
+                <a href="#"><img src="__PUBLIC__/wx/images/yearoldexam/penanswer.png" alt=""/></a>
+            </div>
+        </div>
+        <div class="oe-bottom">
+            <div class="wrap">
+                <span>难易程度：中</span>
+                <span>答题人数：26369人</span>
+                <span>最快用时：01:03:25</span>
+            </div>
+        </div>
+    </li>
+    <li data="m">
+        <div class="oe-topmenu">
+            <div class="wrap">
+                <div class="left">
+                    综合评星：<span class="startnum" data="3"></span>
+                </div>
+                <div class="right">
+                    <a href="javascript:void(0)" onclick="shopNav('dzkt')">订制课堂</a>
+                    <span>丨</span>
+                    <a href="javascript:void(0)">分享试卷</a>
+                    <span>丨</span>
+                    <a href="javascript:void(0)" class="blue">查看打榜</a>
+                </div>
+            </div>
+        </div>
+        <div class="oe-middlename wrap">
+            <div class="left">
+                <img src="__PUBLIC__/wx/images/makelist/zdypaper.png" alt=""/>
+                <p class="oem-name">2017年国家司法考试试卷一</p>
+            </div>
+            <div class="left oe-num"><span>105分</span></div>
+            <div class="right oe-rank">
+                <a href="#"><img src="__PUBLIC__/wx/images/yearoldexam/penanswer.png" alt=""/></a>
+            </div>
+        </div>
+        <div class="oe-bottom">
+            <div class="wrap">
+                <span>难易程度：中</span>
+                <span>答题人数：26369人</span>
+                <span>最快用时：01:03:25</span>
+            </div>
+        </div>
+    </li>
+</ul>
+<!--没有更多了-->
+<div class="notmore">
+    没有更多了
+</div>
+<!--底部-->
+<div id="footer">
+    CopyRight©2017&nbsp;&nbsp;&nbsp;桑磊法考中心版权所有&nbsp;&nbsp;&nbsp;侵者必究
+</div>
+<!--弹出层-->
+<div id="modelbox" style="display: none">
+    <!--订制课堂-->
+    <div id="madetoclass" style="display: none" class="modelbox-children">
+        <!--title-->
+        <div class="mtc-title">
+            订制课堂
+            <span>(5元/题，20元/卷)</span>
+        </div>
+        <!--这个隐藏域是订制题的值-->
+        <input type="hidden" name="" value=""/>
+        <div class="m-name" data="no" onclick="gainMessageName(this)">
+            <div class="wrap">
+                <div class="left">
+                    您即将订制的是
+                </div>
+                <div class="right m-arrow">
+                    <span>&nbsp;&nbsp;&gt;</span>
+                </div>
+                <div class="m-name-look right">
+                    本道题
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="m-name-children">
+            <div class="wrap">
+                <div class="m-name-children-text">测试测试测测试测试测测试测试测测试测试测测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
+                <div class="m-name-children-text">测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
+                <div class="m-name-children-text">测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
+            </div>
+        </div>
+        <!--这个隐藏域是付费分类的值-->
+        <input type="hidden" name="" value=""/>
+        <div class="m-name" data="no" onclick="gainMessageName(this)">
+            <div class="wrap">
+                <div class="left">
+                    您选择付费分类
+                </div>
+                <div class="right m-arrow">
+                    <span>&nbsp;&nbsp;&gt;</span>
+                </div>
+                <div class="m-name-look right">
+                    众筹预定 <span>（9.5折）</span>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="m-name-children">
+            <div class="wrap">
+                <div class="m-name-children-text">测试测试测测试测试测测试测试测测试测试测测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
+                <div class="m-name-children-text">测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
+                <div class="m-name-children-text">测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
+            </div>
+        </div>
+        <!--备注信息-->
+        <div class="wrap">
+            <div class="m-name">
+                <div class="left">
+                    请添加备注信息
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <textarea name=""></textarea>
+        </div>
+        <!--法豆支付-->
+        <button onclick="submitMadeToClass(this)" type="button" class="mtc-button">
+            <img src="__PUBLIC__/wx/images/answer/pay/fd.png" alt=""/>
+            <span>法豆支付</span>
+            <span class="little">(法豆不足，余28法豆)</span>
+        </button>
+        <!--微信支付-->
+        <button onclick="submitMadeToClass(this)" type="button" class="mtc-button mtc-button-wx">
+            <img src="__PUBLIC__/wx/images/answer/pay/wx.png" alt=""/>
+        </button>
+        <div class="mtc-note">
+            <div class="wrap">
+                * 注：此订单为预约订单，提交审核过后，1.自己买断，独家订制；2.等待满额人数，人数满每单所需的法豆/金额，会给您发送邮件。
+            </div>
+        </div>
+    </div>
+    <!--关闭的掩盖层-->
+    <div id="closemodelbox" onclick="closeModelBox()"></div>
+</div>
+<script type="text/javascript" src="__PUBLIC__/wx/js/jquery-1.11.3.js"></script>
+<!--热词搜索的显示-->
+<script type="text/javascript">
+    function hotWordShow(t){
+        $(t).parents("#search").find(".hotword").slideDown();
+    };
+    function hotWordHide(t){
+        $(t).parents("#search").find(".hotword").slideUp();
+    };
+</script>
+<!--功能菜单的点击事件-->
+<script type="text/javascript">
+    function shopNavTop(t){
+        $(t).addClass("active").siblings("a").removeClass("active");
+    }
+//    小三角的高亮
+    function triangle(t){
+        $(t).parents("#rankmenunav").find(".top").removeClass("active");
+        $(t).parents("#rankmenunav").find(".bottom").removeClass("active");
+        if($(t).hasClass("ed")===false){
+            $(t).find(".triangle").children(".top").addClass("active")
+            $(t).find(".triangle").children(".bottom").removeClass("active")
+            $(t).addClass("ed");
+        }else{
+            $(t).find(".triangle").children(".bottom").addClass("active")
+            $(t).find(".triangle").children(".top").removeClass("active")
+            $(t).removeClass("ed");
+        }
+    }
+</script>
+<!--功能菜单-->
+<script type="text/javascript">
+    //    关闭弹出层
+    function closeModelBox(){
+        $("#modelbox").slideUp();
+        $("#modelbox").find(".modelbox-children").slideUp();
+    };
+    //菜单
+    function shopNav(t){
+        if(t=="dzkt"){
+            $("#modelbox").slideDown();
+            $("#modelbox").find(".modelbox-children").slideUp();
+            $("#madetoclass").slideDown();
+        }
+    }
+</script>
+<!--选择问题调用函数-->
+<script type="text/javascript">
+    //    选择问题
+    function gainMessageName(t){
+        if($(t).attr("data")=="no"){
+            $(t).attr("yesno","yes").find(".m-arrow").addClass("active");
+            $(t).next(".m-name-children").slideDown();
+            $(t).attr("data","yes");
+        }else{
+            $(t).attr("yesno","yes").find(".m-arrow").removeClass("active");
+            $(t).next(".m-name-children").slideUp();
+            $(t).attr("data","no");
+        }
+//        绑定事件点击把值赋给隐藏域
+        $(t).next(".m-name-children").find(".m-name-children-text").bind("click",function(){
+            $(t).find(".m-name-look").html($(this).html());
+            $(t).prev("input").val($(this).html());
+            $(t).attr("yesno","yes").find(".m-arrow").removeClass("active");
+            $(t).next(".m-name-children").slideUp();
+            $(t).attr("data","no");
+        });
+    };
+</script>
+<!--订制课堂-->
+<script type="text/javascript">
+    function submitMadeToClass(t){
+        $(t).parents("#madetoclass").slideUp(200);
+        $(t).parents("#modelbox").fadeOut();
+    };
+</script>
+<!--星星的追加-->
+<script type="text/javascript">
+    $(function(){
+        function startNum(){
+            var s =$('body').find(".startnum");
+            for(var i = 0;i<s.length;i++){
+                for(var k = 0;k<$(s[i]).attr("data");k++){
+                    $(s[i]).append('<img src="images/img/yellow-star.png"/>');
+                }
+            }
+        };
+        startNum();
+    });
+</script>
+<!--不同题卷的标识图片不同-->
+<script type="text/javascript">
+    $(function(){
+        function tjBsImg(){
+            var d = $("#oldexam").find("li");
+            for(var i =0;i<d.length;i++){
+                if($(d[i]).attr("data")=="d"){
+                    $(d[i]).find(".oe-middlename").children(".left").children("img").attr("src","images/makelist/zdypaper.png");
+                }else if($(d[i]).attr("data")=="m"){
+                    $(d[i]).find(".oe-middlename").children(".left").children("img").attr("src","images/makelist/mnpaper.png");
+                }else if($(d[i]).attr("data")=="z"){
+                    $(d[i]).find(".oe-middlename").children(".left").children("img").attr("src","images/makelist/ztpaper.png")
+                }
+            }
+        }
+        tjBsImg();
+    })
+</script>
+</body>
+</html>

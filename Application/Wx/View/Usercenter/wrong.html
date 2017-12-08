@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- 编码格式 -->
+    <meta charset="utf-8">
+    <!-- IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 设置 viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <meta name="Keywords" content="桑磊法考,司法考试,考试,司法,律师">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- 兼容国产浏览器的高速模式 -->
+    <meta name="renderer" content="webkit">
+    <title>用户中心 - 答卷错题</title>
+    <!--设置网页的图标-->
+    <link rel="shortcut icon" href="">
+    <!--公用的css-->
+    <link type="text/css" href="__PUBLIC__/Wx/css/public.css" rel="stylesheet"/>
+    <!--本页面的css-->
+    <link type="text/css" href="__PUBLIC__/Wx/css/videopublic.css" rel="stylesheet"/>
+</head>
+<body>
+<!--搜索-->
+<div id="search">
+    <div class="wrap">
+        <form action="{:U('wrong')}" method='post' id='goSearch'>
+            <input type="text" name='name' placeholder="请输入关键字查询" value="{$name}"/>
+            <img class="search-submit" src="__PUBLIC__/Wx/images/video/img/search.png" onClick="document.getElementById('goSearch').submit()"/>
+        </form>
+    </div>
+    <!--热词搜索-->
+    <div class="hotword">
+        <div class="hw-title">
+            <div class="wrap">
+                <div class="left">热词搜索</div>
+                <div class="right">
+                    换一批 <img src="__PUBLIC__/Wx/images/video/img/hyp.png" alt=""/>
+                </div>
+            </div>
+        </div>
+        <div class="hw-content wrap">
+            <a href="#" class="active">国际经济法</a>
+            <a href="#" class="active">刑事诉讼法</a>
+            <a href="#" class="active">桑磊法考</a>
+            <a href="#">知识点解析</a>
+        </div>
+        <div class="hw-goback" onclick="hotWordHide(this)">
+            <img src="__PUBLIC__/Wx/images/video/img/goback.png" alt="">返回
+        </div>
+    </div>
+</div>
+<!--排序按钮-->
+<div id="rankmenunav">
+    <div class="wrap">
+        <div class="left">
+            <a href="javascript:void(0)" class="pink active" onclick="triangle(this,'all')">全部试卷</a>
+            <a href="javascript:void(0)" class="pink" onclick="triangle(this)">按错误率<div class="triangle"><div class="top"></div><div class="bottom"></div></div></a>
+        </div>
+        <div class="right">
+            共计 <span>{$count}</span>张含错误的试卷
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!--列表-->
+<ul id="errorsubjectlist">
+    <div id="piewidthlighthouse"></div>
+    <!--*****-->
+    <div id='contents'>
+        <volist name='score' id='vo'>
+            <li>
+                <div class="wrap">
+                    <div class="left">
+                        <p class="ebl-name">
+                            <img src="__PUBLIC__/Wx/images/usecenter/djct/error.png" alt=""/>
+                            <span>{$vo['nickname']}</span>
+                        </p>
+                        <if condition="$vo['knum'] eq 1">
+                            <p class="ebl-subject">所属科目：{$data[trim($vo['kid'],',')]}</p>
+                        <else />
+                            <p class="ebl-subject">所属科目：综合科目</p>
+                        </if>
+                        <p class="ebl-content">
+                            <span>正确率：{:getAccuracy($vo['error_num'],$vo['num'])}%</span>
+                            <span>错误：{$vo['error_num']}道题</span>
+                            <a href="javascript:void(0)" onClick="goMark({$vo['id']})">查看试卷评估</a>
+                        </p>
+                    </div>
+                    <div class="right">
+                        <!--data 为错题的百分比-->
+                        <a href="javascript:void(0)" onClick="goError({$vo['id']})">
+                            <figure class="pie" data="{:getAccuracy($vo['error_num'],$vo['num'],'error')}" data-behavior="pie-chart"></figure>
+                        </a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </li>
+        </volist>
+    </div>
+    <!--****-->
+</ul>
+<if condition="$count GT 5">
+    <!--没有更多了-->
+    <div class="notmore" id='getMore'>
+        查看更多
+    </div>
+</if>
+<!--底部-->
+<include file="Public/foot" />
+<form action="{:U('Answers/mark')}" method="post" id='form'> 
+    <input type="hidden" name='answer' id='answer' value=''>
+</form>
+<form action="{:U('Answers/wrong')}" id='goError' method='post'>
+    <input type="hidden" name='id' id='id' value=''>
+</form>
+<script type="text/javascript" src="__PUBLIC__/Wx/js/jquery-1.11.3.js"></script>
+<!--热词搜索的显示-->
+<script type="text/javascript">
+    function hotWordShow(t){
+        $(t).parents("#search").find(".hotword").slideDown();
+    };
+    function hotWordHide(t){
+        $(t).parents("#search").find(".hotword").slideUp();
+    };
+</script>
+<script type="text/javascript" src="__PUBLIC__/Wx/js/jquery-pie-loader.js"></script>
+<!--功能菜单的点击事件-->
+<script type="text/javascript">
+    var order,type,page=2;
+    var count = {$count};
+    var name = {$name};
+    //    小三角的高亮
+    function triangle(t,data){
+        $(t).addClass("active").siblings("a").removeClass("active");
+        $(t).parents("#rankmenunav").find(".top").removeClass("active");
+        $(t).parents("#rankmenunav").find(".bottom").removeClass("active");
+        if($(t).hasClass("ed")===false){
+            $(t).find(".triangle").children(".top").addClass("active")
+            $(t).find(".triangle").children(".bottom").removeClass("active")
+            $(t).addClass("ed");
+            order = 'desc';
+        }else{
+            $(t).find(".triangle").children(".bottom").addClass("active")
+            $(t).find(".triangle").children(".top").removeClass("active")
+            $(t).removeClass("ed");
+            order = 'asc';
+        }
+
+        if(data == 'all'){
+            $(t).parents('#rankmenunav').find('.pink').removeClass("ed");    
+        }
+        page = 1;
+
+        if((page * 5) < count){
+            $('#getMore').show();
+        }  
+        getRes(t,order,name);
+    }
+    $('#getMore').click(function(){
+        getRes(this,order,name);
+    })
+     function getRes(t,order)
+    {   
+        $.ajax({
+            url:'{:U("wrong")}',
+            type:'post',
+            data:{'order':order,'page':page,'name':name},
+            beforeSend: function () {
+                $(t).attr('disabled',true);
+            },
+            success:function(msg){
+                if(page == 1){
+                    $('#contents').html('');
+                    $('#contents').html(msg);
+                }else{
+                    $('#contents').append(msg);
+                }
+                if((page * 5) >= count){
+                    $('#getMore').hide();
+                }   
+                page ++ ;
+                chart()
+            }
+        })
+    }
+    function goMark(id){
+        $('#answer').val(id);
+        $('#form').submit();
+    }
+    function goError(id){
+        $('#id').val(id);
+        $('#goError').submit();
+    }
+</script>
+<!--比例图-->
+
+<script type="text/javascript">
+
+        function chart(){
+            $('*[data-behavior="pie-chart"]').each(function() {
+                var rand = parseFloat($(this).attr("data"));
+                $(this).svgPie({percentage: rand});
+            });
+        }
+        chart();
+
+</script>
+</body>
+</html>

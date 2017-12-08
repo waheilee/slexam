@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- 编码格式 -->
+    <meta charset="utf-8">
+    <!-- IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 设置 viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <meta name="Keywords" content="桑磊法考,司法考试,考试,司法,律师">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- 兼容国产浏览器的高速模式 -->
+    <meta name="renderer" content="webkit">
+    <title>桑磊题库 - 模拟卷题库</title>
+    <!--设置网页的图标-->
+    <link rel="shortcut icon" href="">
+    <!--公用的css-->
+    <link type="text/css" href="__PUBLIC__/wx/css/public.css" rel="stylesheet"/>
+    <!--本页面的css-->
+    <link type="text/css" href="__PUBLIC__/wx/css/analoganswer.css" rel="stylesheet"/>
+</head>
+<body>
+<!--提示信息-->
+<div class="topnote gray">
+    <div class="wrap">友情提示：司法考试分为客观题与主观题，桑磊法考题库抽取的全部为客观题，共三卷。</div>
+</div>
+<!--banner图-->
+<img src="__PUBLIC__/Wx/images/analoganswer/banner.png" width="100%" alt=""/>
+<!--模拟试卷菜单-->
+<div id="analogtopmenu">
+    <a href="javascript:void(0)" onclick="shopNav('xznd')">
+        <div class="atm-top">随机模拟卷一</div>
+        <img src="__PUBLIC__/Wx/images/analoganswer/topmenu/1.jpg" alt=""/>
+        <div class="atm-bottom">答题人数：{$count['Cone'] | default=0}人</div>
+    </a>
+    <a href="javascript:void(0)" class="mlr" onclick="shopNav('xznd')">
+        <div class="atm-top">随机模拟卷二</div>
+        <img src="__PUBLIC__/Wx/images/analoganswer/topmenu/1.jpg" alt=""/>
+        <div class="atm-bottom">答题人数：{$count['Ctwo'] | default=0}人</div>
+    </a>
+    <a href="javascript:void(0)" onclick="shopNav('xznd')">
+        <div class="atm-top">随机模拟卷三</div>
+        <img src="__PUBLIC__/Wx/images/analoganswer/topmenu/1.jpg" alt=""/>
+        <div class="atm-bottom">答题人数：{$count['Cthree'] | default=0}人</div>
+    </a>
+    <div class="clearfix"></div>
+</div>
+<!--试卷要求-->
+<div class="topnote fff">
+    <div class="wrap">
+        本试卷为随机模拟试卷（根据历年真题题型模拟仿真试卷），计时限时答题（3小时/卷），150分/卷。
+    </div>
+</div>
+<!--试卷切换-->
+<div id="analogslider">
+    <div class="wrap">
+        <div class="left">
+            大家做过的模拟卷
+        </div>
+        <div class="right">
+            <a href="javascript:void(0)" class="active">试卷一</a>
+            <a href="javascript:void(0)">试卷二</a>
+            <a href="javascript:void(0)">试卷三</a>
+        </div>
+    </div>
+</div>
+<!--列表-->
+<ul id="oldexam">
+    <volist name="examin" id='vo'>
+        <li>
+            <div class="oe-topmenu">
+                <div class="wrap">
+                    <div class="left">
+                        综合评星：<span class="startnum" data="{$vo['star'] | default=0}"></span>
+                    </div>
+                    <div class="right">
+                        <a href="javascript:void(0)" onclick="shopNav('dzkt')">订制课堂</a>
+                        <span>丨</span>
+                        <a href="javascript:void(0)">分享试卷</a>
+                        <span>丨</span>
+                        <a href="javascript:void(0)" class="blue">查看打榜</a>
+                    </div>
+                </div>
+            </div>
+            <div class="oe-middlename wrap">
+                <div class="left">
+                    <img src="__PUBLIC__/Wx/images/analoganswer/analoganswer.png" alt=""/>
+                    <p class="oem-name">{$vo['nickname']}</p>
+                </div>
+                <div class="right">
+                    <a href="{:U('Answers/examin',array('code'=>base64_encode($vo['id'])))}"><img src="__PUBLIC__/Wx/images/yearoldexam/penanswer.png" alt=""/></a>
+                </div>
+            </div>
+            <div class="oe-bottom">
+                <div class="wrap">
+                    <span>难易程度：{:checkType($vo['difficulty'])}</span>
+                    <span>答题人数：{$vo['usenum']}人</span>
+                    <span>最快用时：{$vo['usetime']}</span>
+                </div>
+            </div>
+        </li>
+    </volist>
+</ul>
+<!--没有更多了-->
+<div class="notmore">
+    没有更多了
+</div>
+<!--底部-->
+<div id="footer">
+    CopyRight©2017&nbsp;&nbsp;&nbsp;桑磊法考中心版权所有&nbsp;&nbsp;&nbsp;侵者必究
+</div>
+<!--弹出层-->
+<div id="modelbox" style="display: none">
+    <!--订制课堂-->
+    <div id="madetoclass" style="display: none;" class="modelbox-children">
+        <!--title-->
+        <div class="mtc-title">
+            订制课堂
+            <span>(5元/题，20元/卷)</span>
+        </div>
+        <!--这个隐藏域是订制题的值-->
+        <input type="hidden" name="" value=""/>
+        <div class="m-name" data="no" onclick="gainMessageName(this)">
+            <div class="wrap">
+                <div class="left">
+                    您即将订制的是
+                </div>
+                <div class="right m-arrow">
+                    <span>&nbsp;&nbsp;&gt;</span>
+                </div>
+                <div class="m-name-look right">
+                    本道题
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="m-name-children">
+            <div class="wrap">
+                <div class="m-name-children-text">测试测试测测试测试测测试测试测测试测试测测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
+                <div class="m-name-children-text">测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
+                <div class="m-name-children-text">测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
+            </div>
+        </div>
+        <!--这个隐藏域是付费分类的值-->
+        <input type="hidden" name="" value=""/>
+        <div class="m-name" data="no" onclick="gainMessageName(this)">
+            <div class="wrap">
+                <div class="left">
+                    您选择付费分类
+                </div>
+                <div class="right m-arrow">
+                    <span>&nbsp;&nbsp;&gt;</span>
+                </div>
+                <div class="m-name-look right">
+                    众筹预定 <span>（9.5折）</span>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="m-name-children">
+            <div class="wrap">
+                <div class="m-name-children-text">测试测试测测试测试测测试测试测测试测试测测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
+                <div class="m-name-children-text">测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
+                <div class="m-name-children-text">测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
+            </div>
+        </div>
+        <!--备注信息-->
+        <div class="wrap">
+            <div class="m-name">
+                <div class="left">
+                    请添加备注信息
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <textarea name=""></textarea>
+        </div>
+        <!--法豆支付-->
+        <button onclick="submitMadeToClass(this)" type="button" class="mtc-button">
+            <img src="__PUBLIC__/Wx/images/answer/pay/fd.png" alt=""/>
+            <span>法豆支付</span>
+            <span class="little">(法豆不足，余28法豆)</span>
+        </button>
+        <!--微信支付-->
+        <button onclick="submitMadeToClass(this)" type="button" class="mtc-button mtc-button-wx">
+            <img src="__PUBLIC__/Wx/images/answer/pay/wx.png" alt=""/>
+        </button>
+        <div class="mtc-note">
+            <div class="wrap">
+                * 注：此订单为预约订单，提交审核过后，1.自己买断，独家订制；2.等待满额人数，人数满每单所需的法豆/金额，会给您发送邮件。
+            </div>
+        </div>
+    </div>
+    <!--选择题型难度-->
+    <div id="selectdifficulty" style="display: none;" class="modelbox-children">
+        <div class="sd-title">请选择题型难度</div>
+        <a href="javascript:void(0)">简单题型</a>
+        <a href="javascript:void(0)">中等题型</a>
+        <a href="javascript:void(0)">偏难题型</a>
+    </div>
+    <!--关闭的掩盖层-->
+    <div id="closemodelbox" onclick="closeModelBox()"></div>
+</div>
+<script src="__PUBLIC__/Wx/js/jquery-1.11.3.js" type="text/javascript"></script>
+<!--试卷菜单-->
+<script type="text/javascript">
+    $("#analogslider").find("a").bind("click",function(){
+        $("#analogslider").find("a").removeClass("active");
+        $(this).addClass("active");
+    });
+</script>
+<!--功能菜单-->
+<script type="text/javascript">
+    //    关闭弹出层
+    function closeModelBox(){
+        $("#modelbox").slideUp();
+        $("#modelbox").find(".modelbox-children").slideUp();
+    };
+    //菜单
+    function shopNav(t){
+        if(t=="dzkt"){
+            $("#modelbox").slideDown();
+            $("#modelbox").find(".modelbox-children").slideUp();
+            $("#madetoclass").slideDown();
+        }else if(t=="xznd"){
+            $("#modelbox").slideDown();
+            $("#modelbox").find(".modelbox-children").slideUp();
+            $("#selectdifficulty").slideDown();
+        }
+    }
+</script>
+<!--选择问题调用函数-->
+<script type="text/javascript">
+    //    选择问题
+    function gainMessageName(t){
+        if($(t).attr("data")=="no"){
+            $(t).attr("yesno","yes").find(".m-arrow").addClass("active");
+            $(t).next(".m-name-children").slideDown();
+            $(t).attr("data","yes");
+        }else{
+            $(t).attr("yesno","yes").find(".m-arrow").removeClass("active");
+            $(t).next(".m-name-children").slideUp();
+            $(t).attr("data","no");
+        }
+//        绑定事件点击把值赋给隐藏域
+        $(t).next(".m-name-children").find(".m-name-children-text").bind("click",function(){
+            $(t).find(".m-name-look").html($(this).html());
+            $(t).prev("input").val($(this).html());
+            $(t).attr("yesno","yes").find(".m-arrow").removeClass("active");
+            $(t).next(".m-name-children").slideUp();
+            $(t).attr("data","no");
+        });
+    };
+</script>
+<!--订制课堂-->
+<script type="text/javascript">
+    function submitMadeToClass(t){
+        $(t).parents("#madetoclass").slideUp(200);
+        $(t).parents("#modelbox").fadeOut();
+    };
+</script>
+<!--星星的追加-->
+<script type="text/javascript">
+    $(function(){
+        function startNum(){
+            var s =$('body').find(".startnum");
+            for(var i = 0;i<s.length;i++){
+                for(var k = 0;k<$(s[i]).attr("data");k++){
+                    $(s[i]).append('<img src="__PUBLIC__/Wx/images/img/yellow-star.png"/>');
+                }
+            }
+        };
+        startNum();
+    });
+</script>
+</body>
+</html>

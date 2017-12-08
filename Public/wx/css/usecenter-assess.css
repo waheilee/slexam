@@ -1,0 +1,71 @@
+@charset "UTF-8";
+#main,#main1{
+    width: 100%;
+    height: 6rem;
+}
+.assess-bor{
+    border-top: 0.4rem solid #f5f5f5;
+}
+.assess-title{
+    width: 100%;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    color: #525252;
+    font-size: 0.46rem;
+    text-align: center;
+}
+.assess-bav{
+    width: 100%;
+}
+.assess-bav ul{
+    width: 100%;
+    height: 1.1rem;
+    border-bottom: 1px solid #ecedee;
+}
+.assess-bav ul li{
+    float: left;
+    width: 33.33%;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    text-align: center;
+    font-size: 0.44rem;
+    color: #666666;
+}
+.assess-bav ul li.active{
+    color: #fdb610;
+    border-bottom: 1px solid #fdb610;
+}
+.assess-select{
+    width: 100%;
+    margin-top: 0.4rem;
+    margin-bottom: 0.6rem;
+    height: 0.7rem;
+    font-size: 0;
+}
+.assess-select select{
+    height: 0.7rem;
+    padding: 0 0.2rem;
+    border: 1px solid #ecedee;
+    border-radius: 0.5rem;
+    font-size: 0.34rem;
+    color: #666;
+    margin: 0 0.08rem;
+    max-width: 23%;
+    padding-right: 0.45rem;
+}
+.assess-title-two{
+    width: 100%;
+    font-size: 0.36rem;
+    color: #9c9c9c;
+    line-height: 0.6rem;
+    text-align: center;
+}
+.assess-title-three{
+    width: 100%;
+    font-size: 0.36rem;
+    color: #666;
+    line-height: 0.6rem;
+    text-align: center;
+    margin: 0.4rem 0;
+    text-align: center;
+}

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <!-- 编码格式 -->
+    <meta charset="utf-8">
+    <!-- IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 设置 viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <meta name="Keywords" content="桑磊法考,司法考试,考试,司法,律师">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- 兼容国产浏览器的高速模式 -->
+    <meta name="renderer" content="webkit">
+    <title>用户中心 - 综合评估</title>
+    <!--设置网页的图标-->
+    <link rel="shortcut icon" href="">
+    <!--公用的css-->
+    <link type="text/css" href="__PUBLIC__/wx/css/public.css" rel="stylesheet"/>
+    <!--本页面的css-->
+    <!--本页面的css-->
+    <link type="text/css" href="__PUBLIC__/wx/css/usecenter-assess.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="assess-title">综合评估</div>
+<!--周月年切换-->
+<div class="assess-bav">
+    <ul>
+        <li class="active" onclick="assessNav(this)">周评估</li>
+        <li onclick="assessNav(this)">月评估</li>
+        <li onclick="assessNav(this)">年评估</li>
+    </ul>
+</div>
+<div class="wrap">
+    <!--科目  章  节  知识点 下拉框-->
+    <div class="assess-select">
+        <select name="" onchange="assessChange('km')">
+            <option value="">选择科目</option>
+            <option value="">12313</option>
+            <option value="">12dsssss</option>
+            <option value="">12d546464645</option>
+        </select>
+        <select name="" onchange="assessChange('z')">
+            <option value="">选择章</option>
+            <option value="">12313</option>
+            <option value="">12dsssss</option>
+            <option value="">12d546464645</option>
+        </select>
+        <select name="" onchange="assessChange('j')">
+            <option value="">选择节</option>
+            <option value="">12313</option>
+            <option value="">12dsssss</option>
+            <option value="">12d546464645</option>
+        </select>
+        <select name="" onchange="assessChange('zsd')">
+            <option value="">选择知识点</option>
+            <option value="">12313</option>
+            <option value="">12dsssss</option>
+            <option value="">12d546464645</option>
+        </select>
+    </div>
+    <div id="main"></div>
+</div>
+<div class="assess-bor"></div>
+<div class="wrap">
+    <div class="assess-title">成绩报告</div>
+    <div class="assess-title-two">共做了103张试卷&nbsp;&nbsp;&nbsp;综合正确率73%</div>
+    <div id="main1"></div>
+    <div class="assess-title-three">
+        其中：法制史(20%)&nbsp;&nbsp;&nbsp;民事诉讼法(15.9%)&nbsp;&nbsp;&nbsp;法理学(13.6%)得分比较低
+    </div>
+</div>
+<!--底部-->
+<div id="footer">
+    CopyRight©2017&nbsp;&nbsp;&nbsp;桑磊法考中心版权所有&nbsp;&nbsp;&nbsp;侵者必究
+</div>
+<script src="__PUBLIC__/wx/js/jquery-1.11.3.js"></script>
+<script src="__PUBLIC__/wx/js/echarts.common.min.js"></script>
+<!--评估切换-->
+<script type="text/javascript">
+    function assessNav(t){
+        $(t).addClass("active").siblings("li").removeClass("active");
+    }
+</script>
+<!--折线图-->
+<script>
+//    初始化
+    var markData = {yname:"百分比",xname:"法理学",course:["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月",],
+        data:["35","55","45","25","15","35","55","45","25","15","80","20"]}
+    haveLine();
+//        下拉框改变数据
+    function assessChange(t){
+        if(t=="km"){
+            //图表的数据
+            markData = {yname:"百分比",xname:"法理学",course:["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月",],
+                data:["35","55","45","25","15","35","55","45","25","15","80","20"]}
+            haveLine();
+        }else if(t=="z"){
+            //图表的数据
+            markData = {yname:"百分比",xname:"法理学",course:["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月",],
+                data:["100","10","45","25","15","35","55","45","25","15","80","20"]}
+            haveLine();
+        }else if(t=="j"){
+            //图表的数据
+             markData = {yname:"百分比",xname:"法理学",course:["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月",],
+                data:["10","100","80","20","55","10","30","38","25","15","80","20"]}
+            haveLine();
+        }else if(t=="zsd"){
+            //图表的数据
+            markData = {yname:"百分比",xname:"法理学",course:["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月",],
+                data:["50","5","400","25","15","35","20","45","25","90","80","20"]}
+            haveLine();
+        }
+    }
+//    生成图表
+    function haveLine(){
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+        // 指定图表的配置项和数据
+        var option = {
+            title : {
+                text: '',
+                subtext: markData.yname
+            },
+            tooltip : {
+                trigger: 'false'
+            },
+            legend: {
+                data: markData.course
+            },
+            toolbox: {
+                show : false,
+                feature : {
+                    mark : {show: true},
+                    dataView : {show: true, readOnly: false},
+                    magicType : {show: true, type: ['line', 'bar']},
+                    restore : {show: true},
+                    saveAsImage : {show: true}
+                }
+            },
+            calculable : false,
+            xAxis : [
+                {
+                    name: markData.xname,
+                    type : 'category',
+                    data : markData.course,
+                    axisLabel:{
+                        interval:0,//横轴信息全部显示
+                        rotate:-30,//-30度角倾斜显示
+                        textStyle: {
+                            color: '#666',
+                        }
+                    }
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value',
+//                name: '单位: %',
+                    axisLabel: {
+                        formatter: '{value}%',
+                        textStyle: {
+                            color: '#666',
+                        }
+                    },
+                }
+            ],
+            series : [
+                {
+
+                    type:'line',
+                    data:markData.data,
+                    itemStyle: {
+                        normal: {
+                            lineStyle:{
+                                color:'#4EA6D2'
+                            },
+                            color: "#FFC766"
+//                                    function(params) {
+//                                        var colorList = [
+//                                            '#FFC766','#84B4DC','#67D4D9','#ED6B77','#84B4DC',
+//                                            '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
+//                                            '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+//                                        ];
+//                                        return colorList[params.dataIndex]
+//                                    }
+                            ,label: {
+                                show: true,
+                                color: "#525252",
+                                position: 'top',
+                                formatter: '{c}%'//{b}\n
+                            },
+                            //柱形图圆角，初始化效果
+                            barBorderRadius:[0, 0, 0, 0]
+                        }
+                    }
+                }
+            ]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    };
+</script>
+<!--柱形图-->
+<script>
+    //图表的数据
+    var markData = {yname:"百分比",xname:"科目",course:["法理学","法理学","国际经济法","民事诉讼法","法理学","法制史","法制史","国际经济法","民事诉讼法","法理学",],
+        data:["35","55","45","25","15","35","55","45","25","15",]};
+    haveBar();
+    //    生成图表
+    function haveBar(){
+        // 基于准备好的dom，初始化echarts实例
+        var myChart1 = echarts.init(document.getElementById('main1'));
+        // 指定图表的配置项和数据
+        var option1 = {
+            title : {
+                text: '',
+                subtext: '百分比'
+            },
+            tooltip : {
+                trigger: 'false'
+            },
+            legend: {
+                data: markData.course
+            },
+            toolbox: {
+                show : false,
+                feature : {
+                    mark : {show: true},
+                    dataView : {show: true, readOnly: false},
+                    magicType : {show: true, type: ['line', 'bar']},
+                    restore : {show: true},
+                    saveAsImage : {show: true}
+                }
+            },
+            calculable : false,
+            xAxis : [
+                {
+                    name:'科目',
+                    type : 'category',
+                    data : markData.course,
+                    axisLabel:{
+                        interval:0,//横轴信息全部显示
+                        rotate:-30,//-30度角倾斜显示
+                        textStyle: {
+                            color: '#666',
+                        }
+                    }
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value',
+//                name: '单位: %',
+                    axisLabel: {
+                        formatter: '{value}%',
+                        textStyle: {
+                            color: '#666',
+                        }
+                    },
+                }
+            ],
+            series : [
+                {
+                    type:'bar',
+                    barMaxWidth:20,//最大宽度
+                    data:markData.data,
+                    itemStyle: {
+                        normal: {
+                            color: function(params) {
+                                var colorList = [
+                                    '#FFC766','#84B4DC','#67D4D9','#ED6B77','#84B4DC',
+                                    '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
+                                    '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+                                ];
+                                return colorList[params.dataIndex]
+                            },label: {
+                                show: true,
+                                position: 'top',
+                                formatter: '{c}%' //'{b}\n{c}%'
+                            },
+                            //柱形图圆角，初始化效果
+                            barBorderRadius:[0, 0, 0, 0]
+                        }
+                    }
+                }
+            ]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        myChart1.setOption(option1);
+    };
+</script>
+</body>
+</html>

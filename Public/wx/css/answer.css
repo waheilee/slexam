@@ -1,0 +1,419 @@
+@charset "utf-8";
+body{
+    padding-bottom: 3rem;
+    padding-top: 1rem;
+}
+.subject .sj-title{
+    width: 100%;
+    margin: 0.4rem 0;
+    line-height: 0.8rem;
+    font-size: 0.42rem;
+    color: #666;
+    text-align: justify;
+}
+.subject .sj-title span{
+    margin: 0.05rem;
+    color: #3482c4;
+}
+.subject dl{
+    margin-top: 0.4rem;
+}
+.subject dl dd{
+    margin-top: 0.4rem;
+}
+.subject dl dd .sj-circle{
+    float: left;
+    width: 0.65rem;
+    height: 0.65rem;
+    line-height: 0.65rem;
+    text-align: center;
+    border: 1px solid #9c9c9c;
+    border-radius: 50%;
+    font-size: 0.42rem;
+    color: #9c9c9c;
+    margin-top: 0.05rem;
+}
+.subject dl dd.active .sj-circle{
+    border: 1px solid #3482c4;
+    color: #3482c4;
+}
+.subject dl dd.wrong .sj-circle{
+    border: 1px solid #fdb610;
+    color: #fdb610;
+}
+.subject dl dd p{
+    width: 9.2rem;
+    float: right;
+    font-size: 0.42rem;
+    color: #666;
+    line-height: 0.8rem;
+    text-align: justify;
+}
+#iSlider-wrapper{
+    width: 100%;
+}
+#iSlider-wrapper li{
+    width: 100%;
+}
+.rightnote{
+    display: none;
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    background: #F5F5F5;
+    color: #fdb610;
+    font-size: 0.42rem;
+    margin-top: 0.5rem;
+}
+.rightnote img{
+    width: 0.4rem;
+    margin-right: 0.4rem;
+    margin-top: -0.05rem;
+}
+.rightnote .mr80{
+    margin-right: 0.8rem;
+}
+.nextsubject{
+    width: 2.3rem;
+    margin: 0 auto;
+    height: 0.7rem;
+    line-height: 0.7rem;
+    background: #f5f5f5;
+    color: #9c9c9c;
+    border-radius: 0.4rem;
+    text-align: center;
+    font-size: 0.42rem;
+    margin-top: 0.7rem;
+}
+.nextsubject.active{
+    background: #3482C4;
+    color: #fff;
+}
+/*弹出层*/
+#modelbox{
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .6);
+    z-index: 999;
+}
+#closemodelbox{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+/*在线留言*/
+#message{
+    width: 100%;
+    background: #fff;
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1001;
+}
+#message .m-title{
+    width: 100%;
+    background: #f5f5f5;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    font-size: 0.52rem;
+    color: #666;
+    border-bottom: 0.01rem solid #ddd;
+}
+#message .m-name{
+    width: 100%;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    border-bottom:0.01rem solid #ddd;
+}
+#message .m-name.nobor{
+    border-bottom: none;
+}
+#message .m-name .left{
+    font-size: 0.42rem;
+    color: #9c9c9c;
+}
+#message .m-name .right{
+    font-size: 0.42rem;
+    color: #666;
+}
+#message .m-name .m-name-look{
+    width: 5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: right;
+}
+#message .m-name .right span{
+    color: #9c9c9c;
+}
+#message .m-name .m-arrow.active{
+    transform:rotate(90deg);
+    -ms-transform:rotate(90deg); 	/* IE 9 */
+    -moz-transform:rotate(90deg); 	/* Firefox */
+    -webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+    -o-transform:rotate(90deg); 	/* Opera */
+    margin-top: -0.15rem;
+}
+#message .m-name-children{
+    display: none;
+}
+#message .m-name-children .m-name-children-text{
+    width: 100%;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    border-bottom: 0.01rem solid #ddd;
+    font-size: 0.36rem;
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#message textarea{
+    width: 96%;
+    padding: 0.2rem 2%;
+    height: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 0.1rem;
+    font-size: 0.52rem;
+}
+#message .m-submit{
+    width: 100%;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    text-align: center;
+    background: #3482C4;
+    color: #fff;
+    font-size: 0.42rem;
+    margin-top: 0.5rem;
+}
+#message .m-note{
+    margin-top: 0.35rem;
+    margin-bottom: 0.7rem;
+    font-size: 0.24rem;
+    line-height: 0.6rem;
+    color: #9c9c9c;
+}
+#message .m-note a{
+    color: #3482c4;
+}
+/*答题卡*/
+#answersheet{
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: none;
+}
+#answersheet .as-name{
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    color: #666;
+    font-size: 0.42rem;
+}
+#answersheet .as-title{
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    background: #f5f5f5;
+    color: #666;
+    font-size: 0.42rem;
+}
+#answersheet .as-title span{
+    color: #9c9c9c;
+    font-size: 0.34rem;
+    margin-left: 0.45rem;
+}
+#answersheet .as-s-list{
+    width: 0.8rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    text-align: center;
+    font-size: 0.4rem;
+    color: #3482c4;
+    border: 1px solid #9c9c9c;
+    border-radius: 50%;
+    float: left;
+    margin: 0.4rem 0.3rem;
+}
+#answersheet .submitanswersheet{
+    width: 100%;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    text-align: center;
+    background: #3482C4;
+    color: #fff;
+    font-size: 0.42rem;
+    margin-top: 0.5rem;
+}
+/*订制课堂*/
+#madetoclass{
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: none;
+    z-index: 1001;
+}
+#madetoclass .mtc-title{
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    font-size: 0.52rem;
+    color: #666666;
+    background: #F5F5F5;
+}
+#madetoclass .mtc-title span{
+    font-size: 0.34rem;
+    color: #9c9c9c;
+}
+#madetoclass .m-name{
+    width: 100%;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    border-top: 1px solid #ddd;
+}
+#madetoclass .m-name.nobor{
+    border-bottom: none;
+}
+#madetoclass .m-name .left{
+    font-size: 0.42rem;
+    color: #9c9c9c;
+}
+#madetoclass .m-name .right{
+    font-size: 0.42rem;
+    color: #666;
+}
+#madetoclass .m-name .m-name-look{
+    width: 5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: right;
+}
+#madetoclass .m-name .m-name-look span{
+    color: #3482c4;
+    font-size: 0.3rem;
+}
+#madetoclass .right span{
+    color: #9c9c9c;
+}
+#madetoclass .m-name .m-arrow.active{
+    transform:rotate(90deg);
+    -ms-transform:rotate(90deg); 	/* IE 9 */
+    -moz-transform:rotate(90deg); 	/* Firefox */
+    -webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+    -o-transform:rotate(90deg); 	/* Opera */
+    margin-top: -0.15rem;
+}
+#madetoclass .m-name-children{
+    display: none;
+}
+#madetoclass .m-name-children .m-name-children-text{
+    width: 100%;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.36rem;
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#madetoclass textarea{
+    width: 96%;
+    padding: 0.2rem 2%;
+    height: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 0.1rem;
+    margin-top: 0.1rem;
+    font-size: 0.32rem;
+}
+#madetoclass .mtc-button{
+    width: 100%;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    color: #fff;
+    font-size: 0;
+    background: #FCB60F;
+    margin-top: 0.4rem;
+}
+#madetoclass .mtc-button img{
+    width: 0.69rem;
+    margin-right: 0.1rem;
+    margin-top: -0.35rem;
+}
+#madetoclass .mtc-button span{
+    font-size: 0.4rem;
+    margin-right: 0.1rem;
+}
+#madetoclass .mtc-button span.little{
+    font-size: 0.3rem;
+}
+#madetoclass .mtc-button-wx{
+    background: #00B700;
+}
+#madetoclass .mtc-button-wx img{
+    width: 2.44rem;
+    margin-top: 0;
+}
+#madetoclass .mtc-note{
+    font-size: 0.34rem;
+    color: #9c9c9c;
+    line-height: 0.6rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.5rem;
+}
+#usedtime{
+    width: 95%;
+    height: 3rem;
+    border-radius: 0.1rem;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 2.5%;
+    margin-top: -1.5rem;
+    background: #fff;
+    display: none;
+    z-index: 1001;
+}
+#usedtime img{
+    width: 1.45rem;
+    position: absolute;
+    top: 0.3rem;
+    left: 1.5rem;
+}
+#usedtime .ut-title{
+    width: 100%;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    text-align: center;
+    background: #3582C4;
+    color: #fff;
+    font-size: 0.42rem;
+}
+#usedtime .ut-title span{
+    margin-left: 0.2rem;
+}
+#usedtime .ut-button{
+    width: 100%;
+    height: 1.9rem;
+    line-height: 1.9rem;
+    text-align: center;
+    background: #f5f5f5;
+    font-size: 0.5rem;
+}

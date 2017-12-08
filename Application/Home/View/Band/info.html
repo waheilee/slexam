@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>题霸打榜</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta name=”keyword” content=”桑磊法考,司法考试,考试,司法,律师“>
+    <!-- 公用的css -->
+    <link rel="stylesheet" href="__PUBLIC__/home/css/public.css"/>
+    <!-- 本页面的css -->
+    <link rel="stylesheet" href="__PUBLIC__/home/css/makelist.css"/>
+</head>
+<body>
+<!--主导航-->
+<include file="Public/nav_2" />
+<!--banner图-->
+<div id="banner"></div>
+<!--内容框-->
+<div id="ml-content">
+    <div class="ml-list-box">
+        <!--手机二维码-->
+        <div class="qrcode">
+            <img src="__PUBLIC__/Home/images/makelist/qrcode.png" alt=""/>
+            <p class="redtext">扫描二维码</p>
+            <p class="redtext">手机端打榜</p>
+            <p>微信添加“桑磊法考”</p>
+            <p>关注官方微信查看打榜</p>
+        </div>
+        <!--导航菜单-->
+        <include file="Band/nav" />
+        <!--热卷榜单-->
+        <div class="ml-list-dbph">
+            <!--标头 题卷名称   评星-->
+            <div class="ml-list-title">
+                <p class="left">【{$one['nickname']}】题霸排行榜</p>
+                <!--评星个数放在data里-->
+                <p class="right startnum" data="{$one['star']}">综合评星：</p>
+            </div>
+            <!--标头 题卷人数  用时-->
+            <div class="ml-list-title-2">
+                <span style="margin-left: 6px;">难易程度：{:checkType($one['difficulty'])}</span>
+                <span>答题人数：{$one['usenum']}人</span>
+                <span>最高得分用时：{$one['usetime']}</span>
+            </div>
+            <!--标头-->
+            <div class="ml-list-title-3">
+                <div class="dbph-one left">选手</div>
+                <div class="dbph-two left">总分</div>
+                <div class="dbph-three left">用时</div>
+                <div class="dbph-four left">正确率</div>
+                <div class="dbph-five left">操作</div>
+            </div>
+            <!--追加开始-->
+            <div class="dbph-big-box">
+                <volist name="exmain" id="vo">
+                    <div class="dbph-box">
+                        <div class="bor dbph-one left">
+                            <img src="{$vo['head']}" alt=""/>
+                            {$vo['username']}
+                        </div>
+                        <div class="bor dbph-two left">{$vo['score']}分</div>
+                        <div class="bor dbph-three left">{$vo['usetime']}</div>
+                        <div class="bor dbph-four left">{:getBfb($one['num'],$vo['error_num'])}%</div>
+                        <div class="dbph-five left">
+                            <a href="javascript:void(0)" data="{$vo['laud']}">（{$vo['laud']}个）</a>
+                            <if condition="checkLaud($vo['laud_info'],$userid) eq 'yes'">
+                                <a href="javascript:void(0)" data="yes" onclick="giveZz(this,{$vo['id']})">
+                                    <img src="__PUBLIC__/Home/images/makelist/z.png" alt=""/>
+                                    点赞
+                                </a>
+                            <else />
+                                <a href="javascript:void(0)" data="no" onclick="giveZz(this,{$vo['id']})">
+
+                                    <img src="__PUBLIC__/Home/images/makelist/zed.png" alt=""/>
+                                    已赞
+                                </a>
+                            </if>
+                            <a href="javascript:void(0)"><img src="__PUBLIC__/Home/images/makelist/send.png" alt=""/>发消息</a>
+                        </div>
+                    </div>
+                </volist>  
+            </div>
+            <!--追加结束-->
+            <div class="ml-list-page">
+                <!-- <a href="#" class="history left">
+                    返回热卷榜单
+                </a> -->
+                <div class="right page">
+                    <div id="pagination" style="position: relative;">
+                    　　{$page}        
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/foot" />
+<script src="__PUBLIC__/Home/js/jquery-1.11.3.js"></script>
+<script>
+    $(function(){
+        function startNum(){
+            var s =$("#ml-content").find(".startnum");
+            for(var i = 0;i<s.length;i++){
+                for(var k = 0;k<$(s[i]).attr("data");k++){
+                    $(s[i]).append('<img src="__PUBLIC__/Home/images/makelist/yellow-star.png"/>');
+                }
+            }
+        };
+//        星星的追加
+        startNum();
+//        榜单nav的绑定事件
+        $("#ml-content").find(".ml-list-nav").children("a").bind("click",function(){
+            $(this).addClass("active").siblings("a").removeClass("active");
+        });
+//        榜单抬头的追加
+        function addTop(){
+            var b = $("#ml-content").find(".dbph-big-box").children(".dbph-box");
+            var i = 0;
+            while(i!=3){
+                $(b[i]).append('<img class="top" src="__PUBLIC__/Home/images/makelist/'+(i+1)+'.png"/>')
+                i++;
+            }
+        };
+        addTop();
+    });
+    //        点赞
+    function giveZz(t,id){
+        var img = $(t).find("img");
+        var s = img.attr("src");
+        var num = parseInt($(t).prev('a').attr('data')) +1;
+        if($(t).attr("data")=="yes"){
+            img.attr("src",s.slice(0,-4)+"ed.png");
+            $.ajax({
+                url:'{:U("laud")}',
+                type:'post',
+                data:{'id':id},
+                beforeSend: function () {
+                    $(t).attr('disabled',true);    
+                },
+                success:function(msg){
+                    $(t).attr('disabled',true);
+                    if(msg == 'true'){
+                        alert('点赞成功');
+                        $(t).attr("data","no");
+                        $(t).prev('a').html('（'+num+'）个')
+                    }
+                }
+            })
+        }else if($(t).attr("data")=="no"){
+            alert("您已经点过赞了!");
+        }
+    };
+    
+</script>
+</body>
+</html>
